@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SparkleXRTemplates
 {
-    public class DummyHandler : Handler
+    /*public class DummyHandler : Handler
     {
         // Start is called before the first frame update
         void Start()
@@ -17,7 +17,7 @@ namespace SparkleXRTemplates
         {
 
         }
-    }
+    }*/
 
 }
 

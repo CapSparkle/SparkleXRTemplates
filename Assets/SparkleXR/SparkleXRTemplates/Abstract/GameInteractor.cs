@@ -4,11 +4,12 @@ using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
 
+
 namespace SparkleXRTemplates
 {
     public abstract class GameInteractor : MonoBehaviour
     {
-        public XRNodeData myXRNode;
+        public XRInputProvider myXRInputProvider;
 
         List<GameInteractable> _currentGameInteractables = new List<GameInteractable>();
         public List<GameInteractable> currentGameInteractables

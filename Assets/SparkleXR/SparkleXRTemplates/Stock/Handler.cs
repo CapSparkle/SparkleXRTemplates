@@ -11,7 +11,7 @@ using UnityEngine.UIElements;
 
 namespace SparkleXRTemplates
 {
-    public enum InputSourceType
+ /*   public enum InputSourceType
     {
         HMD,
         Hand,
@@ -116,5 +116,5 @@ namespace SparkleXRTemplates
         {
             inputSourceVariant = pairedHandler.inputSourceVariant;
         }
-    }
+    }*/
 }
