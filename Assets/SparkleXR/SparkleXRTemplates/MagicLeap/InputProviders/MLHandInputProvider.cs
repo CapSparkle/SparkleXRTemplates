@@ -4,6 +4,7 @@ using UnityEngine;
 using SparkleXRTemplates;
 using UnityEngine.XR;
 using UnityEngine.XR.MagicLeap;
+using UnityEngine.XR.InteractionSubsystems;
 
 enum Handedness
 { 
@@ -12,6 +13,8 @@ enum Handedness
     Right = 512
 }
 
+//MagicLeapKeyPose
+//MagicLeapKeyPoseGestureEvent
 
 public class MLHandInputProvider : XRInputProvider
 {

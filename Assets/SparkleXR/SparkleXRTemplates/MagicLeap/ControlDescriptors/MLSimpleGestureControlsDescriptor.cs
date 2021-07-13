@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using SparkleXRTemplates;
-using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.Events;
+using UnityEngine.XR.InteractionSubsystems;
 
 using System.Linq;
 using System.Diagnostics;
@@ -15,15 +16,35 @@ using UnityEngine.XR.MagicLeap;
 
 namespace SparkleXRLib.MagicLeap
 {
-    public enum CallMoment
+    [Flags]
+	public enum MLGestureMask 
     {
-        onBegin,
-        onEnd
+        None = 0,
+        Finger = 1,
+        Fist = 2,
+        Pinch = 4,
+        Thumb = 8,
+        LShape = 16,
+        OpenHand = 32,
+        Ok = 64,
+        CShape = 128,
+        NoPose = 256,
+        NoHand = 512
     }
 
-    public class MLGestureControlsDescriptor : ControlsDescriptor
+
+	public class MLSimpleGestureControlsDescriptor : ControlsDescriptor
     {
-#region -tracking requests-
+        //TODO: beautify inspector interface
+
+        [OdinSerialize]
+        List<List<Action<GameInteractor>>> methods;
+        [OdinSerialize]
+        List<GestureState> gestureStates;
+        [OdinSerialize]
+        List<MLGestureMask> mlGestureMasks;
+        
+        #region -tracking requests-
 
         static bool isKeyPoseTrackingRequestsInitialized = false;
         static Dictionary<MLHandTracking.HandKeyPose, int> KeyPoseTrackingRequests = new Dictionary<MLHandTracking.HandKeyPose, int>();
@@ -53,12 +74,12 @@ namespace SparkleXRLib.MagicLeap
 
         }
 
-#endregion -tracking requests-
+        #endregion -tracking requests-
 
 
-        [OdinSerialize]
-        CallMoment alphaGestureCallMoment = CallMoment.onBegin,
-                   bravoGestureCallMoment = CallMoment.onBegin;
+        //[OdinSerialize]
+        //CallMoment alphaGestureCallMoment = CallMoment.onBegin,
+                   //bravoGestureCallMoment = CallMoment.onBegin;
 
         [OdinSerialize]
         MLHandTracking.HandKeyPose AlphaGesture, BravoGesture;
@@ -72,7 +93,6 @@ namespace SparkleXRLib.MagicLeap
 
         void Start()
         {
-
             MLHandTracking.Start();
 
             if(!isKeyPoseTrackingRequestsInitialized)
