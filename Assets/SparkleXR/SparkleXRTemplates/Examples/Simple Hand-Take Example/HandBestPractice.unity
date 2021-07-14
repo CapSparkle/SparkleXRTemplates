@@ -500,8 +500,8 @@ GameObject:
   - component: {fileID: 1355920009}
   - component: {fileID: 1355920008}
   - component: {fileID: 1355920007}
-  - component: {fileID: 1355920012}
   - component: {fileID: 1355920011}
+  - component: {fileID: 1355920012}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -623,9 +623,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: onAttachTransform
-      Entry: 6
-      Data: 
 --- !u!114 &1355920012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,111 +638,106 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1355920011}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: alphaGestureCallMoment
-      Entry: 3
-      Data: 0
-    - Name: bravoGestureCallMoment
-      Entry: 3
+    - Name: methods
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Action`1[[SparkleXRTemplates.GameInteractor,
+        Assembly-CSharp]], mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[System.Action`1[[SparkleXRTemplates.GameInteractor,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
       Data: 1
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|MS.Internal.Xml.XPath.ClonableStack`1[[System.Action`1[[SparkleXRTemplates.GameInteractor,
+        Assembly-CSharp]], mscorlib]], System.Xml
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: gestureStates
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[UnityEngine.XR.InteractionSubsystems.GestureState,
+        Unity.XR.InteractionSubsystems]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: mlGestureMasks
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[SparkleXRLib.MagicLeap.MLGestureMask,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 70
+    - Name: 
+      Entry: 3
+      Data: 953
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: AlphaGesture
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: BravoGesture
       Entry: 3
-      Data: 1
-    - Name: AlphaGestureOccured
-      Entry: 7
-      Data: 0|System.Action`1[[SparkleXRTemplates.GameInteractor, Assembly-CSharp]],
-        mscorlib
-    - Name: target
-      Entry: 10
       Data: 0
-    - Name: declaringType
-      Entry: 7
-      Data: 1|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: SparkleXRTemplates.Examples.Takeable, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: methodName
-      Entry: 1
-      Data: Take
-    - Name: delegateType
-      Entry: 7
-      Data: 2|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Action`1[[SparkleXRTemplates.GameInteractor, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: signature
-      Entry: 7
-      Data: 3|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 4|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: SparkleXRTemplates.GameInteractor, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+    - Name: AlphaGestureOccured
+      Entry: 6
       Data: 
     - Name: BravoGestureOccured
-      Entry: 7
-      Data: 5|System.Action`1[[SparkleXRTemplates.GameInteractor, Assembly-CSharp]],
-        mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 9
-      Data: 1
-    - Name: methodName
-      Entry: 1
-      Data: Drop
-    - Name: delegateType
-      Entry: 9
-      Data: 2
-    - Name: signature
-      Entry: 7
-      Data: 6|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 9
-      Data: 4
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
 --- !u!1 &1385358589
 GameObject:
@@ -787,7 +779,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1610453172}
   - component: {fileID: 1610453170}
-  - component: {fileID: 1610453171}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -807,23 +798,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738b9640c42ca70448b80794a9e7cb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myXRNode: {fileID: 1610453171}
+  myXRInputProvider: {fileID: 0}
   busy: 0
   _handPivot: {fileID: 656154486}
---- !u!114 &1610453171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610453169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f433748190e1df47827e8d55d189089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputSourceType: 1
-  _inputSourceVariant: 0
 --- !u!4 &1610453172
 Transform:
   m_ObjectHideFlags: 0

@@ -80,12 +80,11 @@ namespace SparkleXRTemplates.Examples
         private Vector3 savedScale;
         private Transform previousParent;
 
-        public void Take(GameInteractor interactor)
+        public void Take(Hand takingHand)
         {
             if (holdingHand != null)
                 return;
 
-            Hand takingHand = interactor.GetComponent<Hand>();
             if (takingHand == null)
                 return;
 
@@ -111,10 +110,10 @@ namespace SparkleXRTemplates.Examples
             holdingHand = takingHand;
             
         }
-        public void Drop(GameInteractor interactor)
+        public void Drop(Hand dropingHand)
         {
             print("drop");
-            if (holdingHand != interactor)
+            if (holdingHand != dropingHand)
                 return;
 
             transform.parent = previousParent;

@@ -10,6 +10,11 @@ namespace SparkleXRTemplates
     {
         protected static List<Selector> s_selectorsList = new List<Selector>();
 
+        private void Awake()
+        {
+            s_selectorsList.Add(this);
+        }
+
         #region -interactables list operations-
 
         protected List<GameInteractable> m_selectedInteractables = new List<GameInteractable>() { };
@@ -43,7 +48,7 @@ namespace SparkleXRTemplates
         }
 
         [SerializeField]
-        protected SelectingPredicate m_selectingPredicate;
+        protected SelectionPredicate m_selectingPredicate;
 
         #endregion -interactables list operations-
 
@@ -69,7 +74,6 @@ namespace SparkleXRTemplates
         [SerializeField]
         static List<string> s_descriptorsList = new List<string>();
 
-        #endregion -naming-
         void Naming()
         {
             s_selectorUIDCounter += 1;
@@ -93,10 +97,9 @@ namespace SparkleXRTemplates
             s_descriptorsList.Add(m_selectorDescriptor);
         }
 
-        private void Awake()
-        {
-            s_selectorsList.Add(this);
-        }
+        #endregion -naming-
+
+        protected abstract void GetInteractables();
 
         public virtual List<GameInteractable> SortInteractables(List<GameInteractable> interactables = null)
         {

@@ -7,7 +7,7 @@ using UnityEngine;
 namespace SparkleXRTemplates
 {
     
-    public class HandSelectingPredicate : SelectingPredicate
+    public class HandSelectingPredicate : SelectionPredicate
     {
         public override bool Check(GameInteractable objectToCheck, Object additionalData = null)
         {

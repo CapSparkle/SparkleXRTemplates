@@ -7,16 +7,38 @@ namespace SparkleXRTemplates
 {
     public class SpherecastSelector : Selector
     {
+        // Director and cast source must be different GameObjects!
 
-        // Director and cast source must be different!
         [SerializeField]
-        public Transform director;
+        Transform _director;
+        public Transform director
+		{
+            get 
+            {
+                return _director;
+            }
+            private set
+			{
+                _director = value;
+			}
+        }
+
         [SerializeField]
-        public Transform castSource;
+        Transform _castSource;
+        public Transform castSource
+        {
+            get
+            {
+                return _castSource;
+            }
+            private set
+            {
+                _castSource = value;
+            }
+        }
 
         [SerializeField]
         float _radius;
-
         public float radius 
         {
             get
@@ -31,7 +53,6 @@ namespace SparkleXRTemplates
 
         [SerializeField]
         float _maxDistance;
-
         public float maxDistance
         {
             get
@@ -43,16 +64,13 @@ namespace SparkleXRTemplates
                 _maxDistance = value;
             }
         }
-        [SerializeField]
+
+		[SerializeField]
         LayerMask ignoredLayers;
 
-
-        public delegate void hitInfoNotification(RaycastHit[] hits);
-        public hitInfoNotification spherecastHitInfo;
+        public Action<RaycastHit[]> spherecastHitInfo;
         
-
-
-        void GetInteractables()
+        protected override void GetInteractables()
         {
             selectedInteractables.Clear();
 
@@ -83,8 +101,6 @@ namespace SparkleXRTemplates
                     i++;
                 }
             }
-
-
         }
 
         #region -sorting-

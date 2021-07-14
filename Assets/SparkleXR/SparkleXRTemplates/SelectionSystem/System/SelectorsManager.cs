@@ -11,13 +11,21 @@ namespace SparkleXRTemplates
 {
     public class SelectorsManager : MonoBehaviour
     {
-        [SerializeField] private GameInteractor correspondingGameInteractor;
+        [SerializeField] 
+        GameInteractor correspondingGameInteractor;
 
         [SerializeField]
         List<Selector> selectors;
 
+        //TODO: Apply to every GameInteractable from every selector
         [SerializeField]
-        string selectionPolicy = "";
+        SelectionPredicate selectionPredicate;
+
+
+        [SerializeField]
+        string selectionRules = "";
+
+        #region -selection rules parsing-
 
         List<List<int>> minSelectRequirments = new List<List<int>>
         {
@@ -28,48 +36,14 @@ namespace SparkleXRTemplates
         };
         // Priority by list index
 
-        List<GameInteractable> selectedSet = new List<GameInteractable>() { };
-        List<GameInteractable> previousSelectedSet = new List<GameInteractable>() { };
-
-        int lastSelectingMinGroupIndex;
-        List<GameInteractable> ChooseInteractables()
-        {
-            lastSelectingMinGroupIndex = 0;
-            List<GameInteractable> IntersectSet = new List<GameInteractable>() { };
-            foreach (List<int> selectorsSet in minSelectRequirments)
-            {
-                IntersectSet = selectors[selectorsSet[0]].selectedInteractables;
-              
-                List<int> listOfInts = new List<int>(selectorsSet);
-                listOfInts.RemoveAt(0);
-
-                foreach (int selectorIndex in listOfInts)
-                {
-                    if (IntersectSet != null)
-                        IntersectSet = IntersectSet.Intersect(selectors[selectorIndex].selectedInteractables).ToList();
-                    else
-                        break;
-                }
-
-                if (IntersectSet.Count != 0)
-                    return IntersectSet;
-
-                lastSelectingMinGroupIndex ++;
-            }
-
-            return IntersectSet;
-        }
-
-        #region -policy parsing-
-
         void ParseSelectionPolicy()
         {
             int i = 0;
             int list_index = -1;
             minSelectRequirments = new List<List<int>>();
-            while (i < selectionPolicy.Length)
+            while (i < selectionRules.Length)
             {
-                if(selectionPolicy[i] == '(')
+                if (selectionRules[i] == '(')
                 {
                     i += 1;
 
@@ -77,19 +51,19 @@ namespace SparkleXRTemplates
                     {
                         minSelectRequirments.Add(new List<int>());
                         list_index += 1;
-                    }    
+                    }
 
-                    for (; i < selectionPolicy.Length; i += 1)
+                    for (; i < selectionRules.Length; i += 1)
                     {
                         try
                         {
-                            if(selectionPolicy[i] == ')')
+                            if (selectionRules[i] == ')')
                             {
                                 i += 1;
                                 break;
                             }
 
-                            int currentInt = Convert.ToInt32(selectionPolicy[i]) - 48;
+                            int currentInt = Convert.ToInt32(selectionRules[i]) - 48;
 
                             if ((0 <= currentInt) && (currentInt < selectors.Count))
                             {
@@ -125,7 +99,7 @@ namespace SparkleXRTemplates
 
                 //print(strToPrint);
             }
-                
+
         }
 
         void ParseErrorOccured()
@@ -134,26 +108,57 @@ namespace SparkleXRTemplates
             print("selection policy string is incorrect");
         }
 
-        #endregion -policy parsing-
+        #endregion -selection rules parsing-
 
-        // Start is called before the first frame update
-        void Start()
+
+        int lastSelectingMinGroupIndex;
+        List<GameInteractable> ChooseInteractables()
         {
-            if (selectionPolicy != "")
-                ParseSelectionPolicy();
+            lastSelectingMinGroupIndex = 0;
+            List<GameInteractable> IntersectSet = new List<GameInteractable>() { };
+            foreach (List<int> selectorsSet in minSelectRequirments)
+            {
+                IntersectSet = selectors[selectorsSet[0]].selectedInteractables;
 
-            SelectedInteractables += DummyMethod;
+                List<int> listOfInts = new List<int>(selectorsSet);
+                listOfInts.RemoveAt(0);
+
+                foreach (int selectorIndex in listOfInts)
+                {
+                    if (IntersectSet != null)
+                        IntersectSet = IntersectSet.Intersect(selectors[selectorIndex].selectedInteractables).ToList();
+                    else
+                        break;
+                }
+
+                if (IntersectSet.Count != 0)
+                    return IntersectSet;
+
+                lastSelectingMinGroupIndex++;
+            }
+
+            return IntersectSet;
         }
 
-        public delegate void InteractabelSetNotify(List<GameInteractable> lint);
-        public InteractabelSetNotify SelectedInteractables;
+        List<GameInteractable> selectedSet = new List<GameInteractable>() { };
+        List<GameInteractable> previousSelectedSet = new List<GameInteractable>() { };
 
+
+        public Action<List<GameInteractable>> SelectedInteractables;
         public void DummyMethod (List<GameInteractable> linteractables)
         {
             //Do nothing;
         }
 
-        // Update is called once per frame
+        void Start()
+        {
+            if (selectionRules != "")
+                ParseSelectionPolicy();
+
+            SelectedInteractables += DummyMethod;
+        }
+
+
         void Update()
         {
             previousSelectedSet = selectedSet;
@@ -176,7 +181,6 @@ namespace SparkleXRTemplates
             correspondingGameInteractor.SetGameInteractables(selectedSet);
 
             //==== Debug output ==========
-
             if (selectedSet.Count != 0)
             {
                 bool fflag = true;
@@ -193,11 +197,5 @@ namespace SparkleXRTemplates
             }
             // ============================
         }
-
-        public virtual GameInteractable ChooseFirstSelected()
-        {
-            return selectedSet[0];
-        }
-
     }
 }

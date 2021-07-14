@@ -9,13 +9,35 @@ namespace SparkleXRTemplates
     public class RaycastSelector : Selector
     {
         [SerializeField]
-        public Transform director;
+        Transform _director;
+        public Transform director
+        {
+            get
+            {
+                return _director;
+            }
+            private set
+            {
+                _director = value;
+            }
+        }
+
         [SerializeField]
-        public Transform castSource;
+        Transform _castSource;
+        public Transform castSource
+        {
+            get
+            {
+                return _castSource;
+            }
+            private set
+            {
+                _castSource = value;
+            }
+        }
 
         [SerializeField]
         float _maxDistance;
-
         public float maxDistance
         {
             get
@@ -27,19 +49,17 @@ namespace SparkleXRTemplates
                 _maxDistance = value;
             }
         }
+        
         [SerializeField]
         LayerMask ignoredLayers;
 
+        public Action<RaycastHit[]> raycastHitInfo;
 
-        public delegate void hitInfoNotification(RaycastHit[] hits);
-        public hitInfoNotification raycastHitInfo;
-        RaycastHit[] hits;
-
-        void GetInteractables()
+        protected override void GetInteractables()
         {
             m_selectedInteractables.Clear();
 
-            hits = Physics.RaycastAll(castSource.position, director.position - castSource.position, _maxDistance);
+            RaycastHit[] hits = Physics.RaycastAll(castSource.position, director.position - castSource.position, _maxDistance);
 
             int i = 0;
             foreach (RaycastHit hit in hits)

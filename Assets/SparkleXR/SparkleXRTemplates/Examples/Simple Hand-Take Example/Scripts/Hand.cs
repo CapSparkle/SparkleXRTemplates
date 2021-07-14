@@ -27,14 +27,14 @@ namespace SparkleXRTemplates.Examples
 		}
 	}
 
-
 	//As element of game content Hand "don't know" anything about XR input system.
 	//Hand "lives" the most independent way it can
 	public class Hand : GameInteractor
     {
         public bool busy = false;
+
+        // <who have assigned that label, and the label itself>
         private Dictionary<GameInteractable, StateLabel> _stateOfHand = new Dictionary<GameInteractable, StateLabel>();
-        // <who have assigned that label, the label itself>
         public Dictionary<GameInteractable, StateLabel> StateOfHand
         {
             get
@@ -51,17 +51,6 @@ namespace SparkleXRTemplates.Examples
             }
         }
 
-        bool HaveIFlag(StateLabelType stateLabelType)
-		{
-            foreach (KeyValuePair<GameInteractable, StateLabel> kvp in _stateOfHand)
-                if(kvp.Value.stateLabelType == stateLabelType)
-                    return true;
-
-            return false;
-		}
-
-        
-
         [SerializeField]
         Transform _handPivot;
         public Transform handPivot
@@ -75,5 +64,15 @@ namespace SparkleXRTemplates.Examples
                 _handPivot = value;
             }
         }
+
+        bool HaveIFlag(StateLabelType stateLabelType)
+		{
+            foreach (KeyValuePair<GameInteractable, StateLabel> kvp in _stateOfHand)
+                if(kvp.Value.stateLabelType == stateLabelType)
+                    return true;
+
+            return false;
+		}
+
     }
 }
