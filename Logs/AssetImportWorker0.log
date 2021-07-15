@@ -301,3 +301,115 @@ System memory in use after: 86.4 MB.
 Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2312.
 Total: 29.267200 ms (FindLiveObjects: 0.407500 ms CreateObjectMapping: 0.197100 ms MarkObjects: 28.615600 ms  DeleteObjects: 0.044600 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015633 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.086 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1809 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.3 MB.
+System memory in use after: 86.4 MB.
+
+Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2316.
+Total: 29.882900 ms (FindLiveObjects: 0.458600 ms CreateObjectMapping: 0.224000 ms MarkObjects: 29.150000 ms  DeleteObjects: 0.048200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 87920.085146 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/SelectionSystem/System/SelectorsManager.cs
+  artifactKey: Guid(b5a435dda786f0042926ef9ca194b975) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/SelectionSystem/System/SelectorsManager.cs using Guid(b5a435dda786f0042926ef9ca194b975) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42bb6a9c708837ef183d495bf753480') in 0.109493 seconds
+  Import took 0.174355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1011.482559 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab
+  artifactKey: Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab using Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f6d81c8759d59ced18d889eb6e84a89') in 0.217129 seconds
+  Import took 0.221902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.108192 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlDescriptors/MLSimpleGestureControlsDescriptor.cs
+  artifactKey: Guid(12f51579e14abea439ec72dc308178ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlDescriptors/MLSimpleGestureControlsDescriptor.cs using Guid(12f51579e14abea439ec72dc308178ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee222d988f75f80d91466fd75fb270f6') in 0.006847 seconds
+  Import took 0.018041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000473 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlDescriptors/MLSimpleGestureControlsDescriptor.cs
+  artifactKey: Guid(12f51579e14abea439ec72dc308178ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlDescriptors/MLSimpleGestureControlsDescriptor.cs using Guid(12f51579e14abea439ec72dc308178ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee222d988f75f80d91466fd75fb270f6') in 0.003262 seconds
+  Import took 0.006023 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 2.546088 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.561 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.04 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 1809 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.5 MB.
+System memory in use after: 86.6 MB.
+
+Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2321.
+Total: 18.082700 ms (FindLiveObjects: 0.649300 ms CreateObjectMapping: 0.126500 ms MarkObjects: 17.256300 ms  DeleteObjects: 0.048600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 340.331931 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlDescriptors/MLSimpleGestureControlsDescriptor.cs
+  artifactKey: Guid(12f51579e14abea439ec72dc308178ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlDescriptors/MLSimpleGestureControlsDescriptor.cs using Guid(12f51579e14abea439ec72dc308178ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf65d9ef30a43349ebbb4297e3f7ed7') in 0.009445 seconds
+  Import took 0.012914 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016417 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.199 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.03 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1809 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.5 MB.
+System memory in use after: 86.7 MB.
+
+Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2325.
+Total: 20.656400 ms (FindLiveObjects: 0.367500 ms CreateObjectMapping: 0.129300 ms MarkObjects: 20.111800 ms  DeleteObjects: 0.046600 ms)
+

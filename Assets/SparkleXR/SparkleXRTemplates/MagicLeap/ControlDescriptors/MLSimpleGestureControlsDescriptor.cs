@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using SparkleXRTemplates;
@@ -35,15 +36,6 @@ namespace SparkleXRLib.MagicLeap
 
 	public class MLSimpleGestureControlsDescriptor : ControlsDescriptor
     {
-        //TODO: beautify inspector interface
-
-        [OdinSerialize]
-        List<List<Action<GameInteractor>>> methods;
-        [OdinSerialize]
-        List<GestureState> gestureStates;
-        [OdinSerialize]
-        List<MLGestureMask> mlGestureMasks;
-        
         #region -tracking requests-
 
         static bool isKeyPoseTrackingRequestsInitialized = false;
@@ -51,7 +43,7 @@ namespace SparkleXRLib.MagicLeap
         private static void RequestKeyPoseTracking(MLHandTracking.HandKeyPose[] requestToBeEnabled)
         {
             MLHandTracking.KeyPoseManager.EnableKeyPoses(requestToBeEnabled, true);
-            foreach(MLHandTracking.HandKeyPose handKeyPose in requestToBeEnabled)
+            foreach (MLHandTracking.HandKeyPose handKeyPose in requestToBeEnabled)
                 KeyPoseTrackingRequests[handKeyPose] += 1;
         }
 
@@ -60,42 +52,21 @@ namespace SparkleXRLib.MagicLeap
             foreach (MLHandTracking.HandKeyPose handKeyPose in requestToBeDisabled)
                 KeyPoseTrackingRequests[handKeyPose] -= 1;
 
-            foreach(KeyValuePair<MLHandTracking.HandKeyPose, int> handKeyPose in KeyPoseTrackingRequests)
+            foreach (KeyValuePair<MLHandTracking.HandKeyPose, int> handKeyPose in KeyPoseTrackingRequests)
             {
                 if (handKeyPose.Value == 0)
                 {
-                    MLHandTracking.KeyPoseManager.EnableKeyPoses(new MLHandTracking.HandKeyPose[1]{ handKeyPose.Key}, false);
+                    MLHandTracking.KeyPoseManager.EnableKeyPoses(new MLHandTracking.HandKeyPose[1] { handKeyPose.Key }, false);
                 }
-                else if(handKeyPose.Value < 0)
+                else if (handKeyPose.Value < 0)
                 {
                     throw new Exception("To many MLHandTracking.HandKeyPose tracking withdrawals!");
                 }
             }
-
         }
-
-        #endregion -tracking requests-
-
-
-        //[OdinSerialize]
-        //CallMoment alphaGestureCallMoment = CallMoment.onBegin,
-                   //bravoGestureCallMoment = CallMoment.onBegin;
-
-        [OdinSerialize]
-        MLHandTracking.HandKeyPose AlphaGesture, BravoGesture;
-
-        [OdinSerialize]
-        public Action<GameInteractor> AlphaGestureOccured, BravoGestureOccured;
-
-
-        //public delegate void OnKeyPose(InputSourceVariant inpSV, MLHandTracking.HandKeyPose handKP, MLHandTracking.HandType handT);
-
-
         void Start()
         {
-            MLHandTracking.Start();
-
-            if(!isKeyPoseTrackingRequestsInitialized)
+            if (!isKeyPoseTrackingRequestsInitialized)
             {
                 foreach (MLHandTracking.HandKeyPose handKeyPose in Enum.GetValues(typeof(MLHandTracking.HandKeyPose)))
                     KeyPoseTrackingRequests[handKeyPose] = 0;
@@ -104,100 +75,81 @@ namespace SparkleXRLib.MagicLeap
             }
         }
 
+        #endregion -tracking requests-
 
-        //TODO: Speciall class for handling certain gesture in certain time moment!!!
 
-        /*Dictionary<InputSourceVariant, MLHandTracking.KeyposeManager.OnHandKeyPoseEndDelegate> xrNodeEndHandlingMethods =
-            new Dictionary<InputSourceVariant, MLHandTracking.KeyposeManager.OnHandKeyPoseEndDelegate>();
+        //TODO: beautify inspector interface
 
-        Dictionary<InputSourceVariant, MLHandTracking.KeyposeManager.OnHandKeyPoseBeginDelegate> xrNodeBeginHandlingMethods =
-            new Dictionary<InputSourceVariant, MLHandTracking.KeyposeManager.OnHandKeyPoseBeginDelegate>();*/
+        [OdinSerialize]
+        List<List<Action<GameInteractor>>> methods;
+
+        Dictionary<GameInteractor, List<Action>> methodGroups = new Dictionary<GameInteractor, List<Action>>();
+        
+        [OdinSerialize]
+        List<MLGestureMask> mlGestureMasks;
+        [OdinSerialize]
+        List<GestureState> gestureStates;
+
+        
+        void SetupSubscribingMethodGroups(GameInteractor interactor)
+		{
+            methodGroups[interactor] = new List<Action>();
+
+            for (int i = 0; i < methods.Count; i++)
+			{
+                methodGroups[interactor].Add(() =>
+                {
+                    foreach(Action<GameInteractor> method in methods[i])
+                        method(interactor);
+                });
+			}
+        }
 
 
         public override bool StartHandling(GameInteractor interactor)
         {
-            return base.StartHandling(interactor);
-           /* XRNodeData xrNodeData = interactor.myXRNode;
+            base.StartHandling(interactor);
 
-            if (xrNodeData.inputSourceType != requiredInputSourceType)
-                return;
+            if(interactor.myXRInputProvider.xrNodeFeatureGroup == XRNodeFeatureGroup.Hand)
+			{
+                MLHandInputProvider mLHandInputProvider = null;
+                mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
+                
+                if (mLHandInputProvider != null)
+				{
+                    SetupSubscribingMethodGroups(interactor);
 
-            if (alphaGestureCallMoment == CallMoment.onEnd)
-            {
-                MLHandTracking.KeyposeManager.OnHandKeyPoseEndDelegate method = (keyPose, handType) =>
-                {
-                    if (keyPose == AlphaGesture)
-                        if (handType == MLHandTracking.HandType.Left && xrNodeData.inputSourceVariant == InputSourceVariant.Left ||
-                            handType == MLHandTracking.HandType.Right && xrNodeData.inputSourceVariant == InputSourceVariant.Right)
-                            {
-                                AlphaGestureOccured(interactor);
-                            }
-                };
+                    for (int i = 0; i < methods.Count; i++)
+                        mLHandInputProvider.AddGestureListener(methodGroups[interactor][i], mlGestureMasks[i], gestureStates[i]);
 
-                MLHandTracking.KeyPoseManager.OnKeyPoseEnd += method;
-                xrNodeEndHandlingMethods[xrNodeData.inputSourceVariant] = method;
-            }
-            else
-            {
-                MLHandTracking.KeyposeManager.OnHandKeyPoseBeginDelegate method = (keyPose, handType) =>
-                {
-                    if (keyPose == AlphaGesture)
-                        if (handType == MLHandTracking.HandType.Left && xrNodeData.inputSourceVariant == InputSourceVariant.Left ||
-                            handType == MLHandTracking.HandType.Right && xrNodeData.inputSourceVariant == InputSourceVariant.Right)
-                            {
-                                AlphaGestureOccured(interactor);
-                            }
-                };
-                MLHandTracking.KeyPoseManager.OnKeyPoseBegin += method;
-                xrNodeBeginHandlingMethods[xrNodeData.inputSourceVariant] = method;
+                    return true;
+                }
             }
 
-
-            if (bravoGestureCallMoment == CallMoment.onEnd)
-            {
-                MLHandTracking.KeyposeManager.OnHandKeyPoseEndDelegate method = (keyPose, handType) =>
-                {
-                    if (keyPose == BravoGesture)
-                        if (handType == MLHandTracking.HandType.Left && xrNodeData.inputSourceVariant == InputSourceVariant.Left ||
-                            handType == MLHandTracking.HandType.Right && xrNodeData.inputSourceVariant == InputSourceVariant.Right)
-                            {
-                                BravoGestureOccured(interactor);
-                            }
-                };
-
-                MLHandTracking.KeyPoseManager.OnKeyPoseEnd += method;
-                xrNodeEndHandlingMethods[xrNodeData.inputSourceVariant] = method;
-            }
-            else
-            {
-                MLHandTracking.KeyposeManager.OnHandKeyPoseBeginDelegate method = (keyPose, handType) =>
-                {
-                    if (keyPose == BravoGesture)
-                        if (handType == MLHandTracking.HandType.Left && xrNodeData.inputSourceVariant == InputSourceVariant.Left ||
-                            handType == MLHandTracking.HandType.Right && xrNodeData.inputSourceVariant == InputSourceVariant.Right)
-                            {
-                                BravoGestureOccured(interactor);
-                            }
-                };
-                MLHandTracking.KeyPoseManager.OnKeyPoseBegin += method;
-                xrNodeBeginHandlingMethods[xrNodeData.inputSourceVariant] = method;
-            }*/
+            return false;
         }
 
         public override bool StopHandling(GameInteractor interactor)
         {
-            return base.StopHandling(interactor);
-            /*XRNodeData xrNodeData = interactor.myXRNode;
-            if (xrNodeEndHandlingMethods.ContainsKey(xrNodeData.inputSourceVariant))
-                MLHandTracking.KeyPoseManager.OnKeyPoseEnd -= xrNodeEndHandlingMethods[xrNodeData.inputSourceVariant];
+            base.StopHandling(interactor);
 
-            if (xrNodeBeginHandlingMethods.ContainsKey(xrNodeData.inputSourceVariant))
-                MLHandTracking.KeyPoseManager.OnKeyPoseBegin -= xrNodeBeginHandlingMethods[xrNodeData.inputSourceVariant];*/
-        }
+            if (interactor.myXRInputProvider.xrNodeFeatureGroup == XRNodeFeatureGroup.Hand)
+            {
+                MLHandInputProvider mLHandInputProvider = null;
+                mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
 
-        private void OnDestroy()
-        {
-            MLHandTracking.Stop();
+                if (mLHandInputProvider != null)
+                {
+                    if(methodGroups.ContainsKey(interactor))
+
+                    for (int i = 0; i < methods.Count; i++)
+                        mLHandInputProvider.RemoveGestureListener(methodGroups[interactor][i]);
+
+                    return true;
+                }
+            }
+            return false;
+
         }
     }
 }
