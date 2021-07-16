@@ -89,7 +89,6 @@ namespace SparkleXRLib.MagicLeap
         List<MLGestureMask> mlGestureMasks;
         [OdinSerialize]
         List<GestureState> gestureStates;
-
         
         void SetupSubscribingMethodGroups(GameInteractor interactor)
 		{
@@ -104,7 +103,6 @@ namespace SparkleXRLib.MagicLeap
                 });
 			}
         }
-
 
         public override bool StartHandling(GameInteractor interactor)
         {
@@ -128,7 +126,6 @@ namespace SparkleXRLib.MagicLeap
 
             return false;
         }
-
         public override bool StopHandling(GameInteractor interactor)
         {
             base.StopHandling(interactor);

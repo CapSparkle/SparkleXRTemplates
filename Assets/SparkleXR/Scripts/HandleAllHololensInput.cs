@@ -49,8 +49,8 @@ public class HandleAllHololensInput : MonoBehaviour
     {
         text.text = "";
         //All hard devices data
-        var inputDevices = new List<UnityEngine.XR.InputDevice>();
-        UnityEngine.XR.InputDevices.GetDevices(inputDevices);
+        var inputDevices = new List<InputDevice>();
+        InputDevices.GetDevices(inputDevices);
         print(inputDevices.Count);
         text.text += "inputDevices.Count = " + inputDevices.Count.ToString() + ":" + "\n";
 

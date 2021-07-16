@@ -10,25 +10,46 @@ using UnityEngine.XR.InteractionSubsystems;
 
 namespace SparkleXRLib.MagicLeap
 {
-    enum Handedness
-    {
-        None,
-        Left = 256,
-        Right = 512
-    }
+    
 
     //MagicLeapKeyPose
     //MagicLeapKeyPoseGestureEvent
 
-    public class MLHandInputProvider : XRInputProvider
+    public class MLHandInputProvider : SimpleHandInputProvider
     {
-        [SerializeField]
-        Handedness handedness = Handedness.None;
+        MLHandTracking.Hand handGesturesDevice;
+        
+        List<Action> subscribers = new List<Action>();
+        /*public List<Action> subscribers
+        {
+            get
+            {
+                return _subscribers;
 
-        List<Action> methods;
-        List<GestureState> gestureStates;
-        List<MLGestureMask> mlGestureMasks;
+            }
+            protected set
+            {
+                _subscribers = value;
 
+                if (_subscribers == null || _subscribers.Count == 0)
+                {
+                    if(notificationCoroutine != null)
+					{
+
+					}
+				}
+                else
+				{
+                    if (notificationCoroutine != null)
+                    {
+
+                    }
+                }
+            }
+        }*/
+
+        List<GestureState> gestureStates = new List<GestureState>();
+        List<MLGestureMask> mlGestureMasks = new List<MLGestureMask>();
 
         private void Start()
         {
@@ -52,22 +73,37 @@ namespace SparkleXRLib.MagicLeap
 
             #endregion
 
-            xrNodeFeatureGroup = XRNodeFeatureGroup.Hand;
-
 
             if (handedness == Handedness.Right)
-            {
-                MLHandTracking.Right.OnHandKeyPoseBegin += HandleBeginGestures;
-                MLHandTracking.Right.OnHandKeyPoseEnd += HandleEndGestures;
-            }
+                handGesturesDevice = MLHandTracking.Right;
             else if (handedness == Handedness.Left)
-            {
-                MLHandTracking.Left.OnHandKeyPoseBegin += HandleBeginGestures;
-                MLHandTracking.Left.OnHandKeyPoseEnd += HandleEndGestures;
+                handGesturesDevice = MLHandTracking.Left;
+
+            handGesturesDevice.OnHandKeyPoseBegin += NotifyBeginGestures;
+            handGesturesDevice.OnHandKeyPoseEnd += NotifyEndGestures;
+        }
+		private void Update()
+		{
+			if (subscribers != null && subscribers.Count != 0)
+			{
+                NotifyUpdatedGestures();
+            }
+		}
+
+        public void NotifyUpdatedGestures()
+        {
+            for(int i = 0; i < gestureStates.Count; i ++)
+			{
+                if (gestureStates[i] == GestureState.Updated)
+                {
+                    if (mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)myHand.KeyPose)))
+                    {
+                        subscribers[i].Invoke();
+                    }
+                }
             }
         }
-
-        public void HandleBeginGestures(MLHandTracking.HandKeyPose keyPose)
+		public void NotifyBeginGestures(MLHandTracking.HandKeyPose keyPose)
         {
             for(int i = 0; i < gestureStates.Count; i ++)
 			{
@@ -75,12 +111,12 @@ namespace SparkleXRLib.MagicLeap
 				{
                     if(mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)keyPose)))
 					{
-                        methods[i].Invoke();
+                        subscribers[i].Invoke();
                     }
 				}
 			}
         }
-        public void HandleEndGestures(MLHandTracking.HandKeyPose keyPose)
+        public void NotifyEndGestures(MLHandTracking.HandKeyPose keyPose)
         {
             for (int i = 0; i < gestureStates.Count; i++)
             {
@@ -88,7 +124,7 @@ namespace SparkleXRLib.MagicLeap
                 {
                     if (mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)keyPose)))
                     {
-                        methods[i].Invoke();
+                        subscribers[i].Invoke();
                     }
                 }
             }
@@ -96,10 +132,32 @@ namespace SparkleXRLib.MagicLeap
 
         public void AddGestureListener(Action methodListener, MLGestureMask mLGestureMask, GestureState gestureState)
         {
-        }
+            if(subscribers.Contains(methodListener))
+			{
+                int indexToExtendSubscription = subscribers.FindIndex(0, methodListener.Equals);
 
+                if(gestureStates[indexToExtendSubscription] == gestureState)
+				{
+                    //Extend mask
+                    mlGestureMasks[indexToExtendSubscription] = (MLGestureMask)((int)mlGestureMasks[indexToExtendSubscription] | (int)mLGestureMask);
+                    return;
+                }
+            }
+
+            subscribers.Add(methodListener);
+            mlGestureMasks.Add(mLGestureMask);
+            gestureStates.Add(gestureState);
+        }
         public void RemoveGestureListener(Action methodListener)
 		{
-		}
+            int indexToRemove = subscribers.FindIndex(0, methodListener.Equals);
+            
+            if(indexToRemove != -1)
+			{
+                subscribers.RemoveAt(indexToRemove);
+                mlGestureMasks.RemoveAt(indexToRemove);
+                gestureStates.RemoveAt(indexToRemove);
+            }
+        }
     }
 }

@@ -13,7 +13,6 @@ namespace SparkleXRTemplates
         HMD
     }
 
-
     // One XRInputProvider may be logically corresponding to several UnityEngine.XR.InputDevice -s
     public abstract class XRInputProvider : MonoBehaviour
     {
