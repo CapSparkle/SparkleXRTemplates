@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,37 +15,108 @@ namespace SparkleXRTemplates
         Right = 512
     }
 
-    public enum DeviceFindState
-	{
-        NotFound,
-        Finding,
-        Found
-	}
-
-    public class SimpleHandInputProvider : XRInputProvider
+	public class SimpleHandInputProvider : XRInputProvider
     {
         [SerializeField]
         protected Handedness handedness = Handedness.None;
-        InputDeviceCharacteristics inputDeviceCharacteristics = InputDeviceCharacteristics.HandTracking;
 
-        InputDevice handDataDevice;
-        DeviceFindState handDataDeviceFindState = DeviceFindState.NotFound;
 
+        #region -Feature representing hand finger points-
+        InputDevice handFingerDataDevice;
+		List<InputFeatureUsage> handFingerFeatures = new List<InputFeatureUsage>()
+		{
+            (InputFeatureUsage) CommonUsages.handData,
+        };
+
+		Hand _handData;
+        public Hand handData
+        {
+            get
+            {
+                if (DeviceFindStates[handFingerDataDevice] == DeviceFindState.Found)
+				{
+                    if (!handFingerDataDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
+					{
+                        DeviceFindStates[handFingerDataDevice] = DeviceFindState.NotFound;
+                        StartCoroutine(GetDeviceWithFeatures(handFingerFeatures, handFingerDataDevice));
+                    }
+                }
+                 else if (DeviceFindStates[handFingerDataDevice] == DeviceFindState.NotFound)
+                    StartCoroutine(GetDeviceWithFeatures(handFingerFeatures, handFingerDataDevice));
+                 
+                return _handData;
+            }
+        }
+        #endregion
+
+        #region -Featrues representing simple hand data-
         InputDevice handSimpleFeaturesDevice;
-        DeviceFindState handSimpleFeaturesDeviceFindState = DeviceFindState.NotFound;
+        List<InputFeatureUsage> handSimpleFeatures = new List<InputFeatureUsage>()
+        {
+            (InputFeatureUsage) CommonUsages.devicePosition,
+            (InputFeatureUsage) CommonUsages.deviceRotation
+        };
+        
+        Quaternion _handOrientation;
+        public Quaternion handOrientation
+        {
+            get
+            {
+                if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.Found)
+				{
+                    
+                    if(!handSimpleFeaturesDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion _handOrientation))
+					{
+                        DeviceFindStates[handSimpleFeaturesDevice] = DeviceFindState.NotFound;
+                        StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+                    }
+                }
+                else if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.NotFound)
+                    StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+
+                return _handOrientation;
+            }
+        }
+
+        Vector3 _handCenterPosition;
+        public Vector3 handCenterPosition
+        {
+            get
+            {
+                if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.Found)
+				{
+                    if (!handSimpleFeaturesDevice.TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 _handCenterPosition))
+                    {
+                        DeviceFindStates[handSimpleFeaturesDevice] = DeviceFindState.NotFound;
+                        StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+                    }
+                }
+                else if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.NotFound)
+                    StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+
+                return _handCenterPosition;
+            }
+        }
+        #endregion
 
         void Start()
         {
             xrNodeFeatureGroup = XRNodeFeatureGroup.Hand;
-            StartCoroutine("getHandDataDevice");
+
+            inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness);
+
+            DeviceFindStates.Add(handFingerDataDevice, DeviceFindState.NotFound);
+            DeviceFindStates.Add(handSimpleFeaturesDevice, DeviceFindState.NotFound);
+
+            StartCoroutine(GetDeviceWithFeatures(handFingerFeatures, handFingerDataDevice));
+            StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
         }
 
-        float checkPeriod = -1f;
-        public IEnumerator getHandDataDevice()
+        /*public IEnumerator GetHandDataDevice()
 		{
-            handDataDeviceFindState = DeviceFindState.Finding;
+            handFingerDataDeviceFindState = DeviceFindState.Finding;
 
-            while (handDataDeviceFindState != DeviceFindState.Found)
+            while (handFingerDataDeviceFindState != DeviceFindState.Found)
 			{
                 List<InputDevice> inputDevices = new List<InputDevice>();
                 InputDevices.GetDevicesWithCharacteristics((InputDeviceCharacteristics)(((int)inputDeviceCharacteristics) + ((int)handedness)), inputDevices);
@@ -55,8 +127,8 @@ namespace SparkleXRTemplates
 
                     if (inputDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
 					{
-                        handDataDevice = inputDevice;
-                        handDataDeviceFindState = DeviceFindState.Found;
+                        handFingerDataDevice = inputDevice;
+                        handFingerDataDeviceFindState = DeviceFindState.Found;
                         yield break;
 					}      
 				}
@@ -68,7 +140,7 @@ namespace SparkleXRTemplates
             }
 		}
 
-        public IEnumerator getHandSimpleFeaturesDevice()
+        public IEnumerator GetHandSimpleFeaturesDevice()
         {
             handSimpleFeaturesDeviceFindState = DeviceFindState.Finding;
 
@@ -95,69 +167,6 @@ namespace SparkleXRTemplates
                 else
                     yield return new WaitForEndOfFrame();
             }
-        }
-
-        Hand _handData;
-        public Hand handData
-		{
-			get
-			{
-                if(handDataDeviceFindState == DeviceFindState.Found)
-                    handDataDevice.TryGetFeatureValue(CommonUsages.handData, out _handData);
-                
-                else if(handDataDeviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine("getHandDataDevice");
-                
-                return _handData;
-
-            }
-            protected set
-			{
-                _handData = value;
-
-            }
-		}
-
-
-        Quaternion _handOrientation;
-        public Quaternion handOrientation
-        {
-            get
-            {
-                if (handSimpleFeaturesDeviceFindState == DeviceFindState.Found)
-                    handSimpleFeaturesDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion _handOrientation);
-
-                else if (handSimpleFeaturesDeviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine("getHandSimpleFeaturesDevice");
-
-                return _handOrientation;
-
-            }
-            protected set
-            {
-                _handOrientation = value;
-            }
-        }
-
-
-        Vector3 _handCenterPosition;
-        public Vector3 HandCenterPosition
-        {
-            get
-            {
-                if (handSimpleFeaturesDeviceFindState == DeviceFindState.Found)
-                    handSimpleFeaturesDevice.TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 _handCenterPosition);
-
-                else if (handSimpleFeaturesDeviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine("getHandSimpleFeaturesDevice");
-
-                return _handCenterPosition;
-
-            }
-            protected set
-            {
-                _handCenterPosition = value;
-            }
-        }
+        }*/
     }
 }

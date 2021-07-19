@@ -96,10 +96,10 @@ namespace SparkleXRLib.MagicLeap
 			{
                 if (gestureStates[i] == GestureState.Updated)
                 {
-                    if (mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)myHand.KeyPose)))
+                   /* if (mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)myHand.KeyPose)))
                     {
                         subscribers[i].Invoke();
-                    }
+                    }*/
                 }
             }
         }

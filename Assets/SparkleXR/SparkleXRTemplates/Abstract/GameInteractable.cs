@@ -17,7 +17,6 @@ namespace SparkleXRTemplates
             {
                 controls.StartHandling(interactor);
             }
-            StartInteraction(interactor);
         }
 
         public void UnInteract(GameInteractor interactor)
@@ -27,18 +26,6 @@ namespace SparkleXRTemplates
             {
                 controls.StopHandling(interactor);
             }
-
-            StopInteraction(interactor);
-        }
-
-
-        protected virtual bool StartInteraction(GameInteractor interactor)
-        {
-            return false;
-        }
-        protected virtual bool StopInteraction(GameInteractor interactor)
-        {
-            return false;
         }
     }
 }
