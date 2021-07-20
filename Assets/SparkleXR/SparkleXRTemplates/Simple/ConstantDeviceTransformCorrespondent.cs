@@ -7,8 +7,7 @@ namespace SparkleXRTemplates
     public class ConstantDeviceTransformCorrespondent : MonoBehaviour
     {
         [SerializeField]
-		SimpleHandInputProvider inputProvider;
-
+        SimpleHandInputProvider inputProvider;
 
 		[SerializeField]
 		XRNodeType deviceTypeToCorrespond = XRNodeType.Hand;

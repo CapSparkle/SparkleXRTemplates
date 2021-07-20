@@ -23,20 +23,23 @@ namespace SparkleXRTemplates
     public class FeatureGroupDataSource
     {
         List<InputFeatureUsage> inputFeatureUsages;
+        InputDeviceCharacteristics inputDeviceCharacteristics;
 
         public InputDevice inputDevice;
         public DeviceFindState deviceFindState = DeviceFindState.NotFound;
 
-        public FeatureGroupDataSource(List<InputFeatureUsage> inputFeatureUsages, float checkPeriod = -1f)
+        public FeatureGroupDataSource(List<InputFeatureUsage> inputFeatureUsages, InputDeviceCharacteristics inputDeviceCharacteristics, float checkPeriod = -1f)
         {
             this.inputFeatureUsages = inputFeatureUsages;
+            this.inputDeviceCharacteristics = inputDeviceCharacteristics;
         }
 
         float checkPeriod = -1f;
         public IEnumerator GetDevice()
         {
-            deviceFindState = DeviceFindState.Finding;
             Debug.Log("Finding");
+            deviceFindState = DeviceFindState.Finding;
+
             while (deviceFindState != DeviceFindState.Found)
             {
 
@@ -45,18 +48,41 @@ namespace SparkleXRTemplates
 
                 InputDevices.GetDevices(inputDevices);
 
-                //Debug.Log("inputDevices with characteristics = " + inputDevices.Count().ToString());
-                //Debug.Log("inputDevices = " + InputDevices.GetDevices().;
-                
+
                 foreach (InputDevice currentInputDevice in inputDevices)
                 {
-                    if (!inputDevice.isValid)
+                    Debug.Log(string.Format("Device found with name '{0}' and role '{1}'",
+                          currentInputDevice.name, currentInputDevice.characteristics.ToString()));
+
+                    List<InputFeatureUsage> _currentDeviceInputFeatureUsages = new List<InputFeatureUsage>();
+                    currentInputDevice.TryGetFeatureUsages(_currentDeviceInputFeatureUsages);
+
+                    foreach (InputFeatureUsage IFUsage in _currentDeviceInputFeatureUsages)
+                    {
+                        Debug.Log(currentInputDevice.name + "__Feature(name: \"" + IFUsage.name + "\", type: \"" + IFUsage.type + "\"");
+                    }
+                }
+
+                foreach (InputDevice currentInputDevice in inputDevices)
+                {
+
+                    if (!currentInputDevice.isValid)
+                        continue;
+
+                    Debug.Log("Valid?");
+
+                    Debug.Log((uint)currentInputDevice.characteristics);
+                    //Debug.Log((uint)inputDeviceCharacteristics);
+                    //Debug.Log((uint)currentInputDevice.characteristics & (uint)inputDeviceCharacteristics);
+
+                    if ((InputDeviceCharacteristics)((uint)currentInputDevice.characteristics & (uint)inputDeviceCharacteristics) != inputDeviceCharacteristics)
                         continue;
 
                     currentDeviceInputFeatureUsages = new List<InputFeatureUsage>();
-                    inputDevice.TryGetFeatureUsages(currentDeviceInputFeatureUsages);
-
+                    currentInputDevice.TryGetFeatureUsages(currentDeviceInputFeatureUsages);
+                    
                     Debug.Log("Intersects?");
+                    
                     if (((IEnumerable<InputFeatureUsage>)currentDeviceInputFeatureUsages).Intersect(inputFeatureUsages).Count() == inputFeatureUsages.Count())
                     {
                         inputDevice = currentInputDevice;
@@ -80,7 +106,7 @@ namespace SparkleXRTemplates
     {
         //This is designation of what this InputProvider is for others 
         XRNodeType _xrNodeFeatureGroup;
-        public XRNodeType xrNodeFeatureType
+        public XRNodeType xrNodeFeatureGroup
         {
             get
             {
@@ -92,9 +118,9 @@ namespace SparkleXRTemplates
             }
         }
 
-
+        
         //This variable is using for choose subset of devices to find features in them
-        protected InputDeviceCharacteristics inputDeviceCharacteristics = InputDeviceCharacteristics.HandTracking;
+        protected InputDeviceCharacteristics inputDeviceCharacteristics;
     }
 }
 

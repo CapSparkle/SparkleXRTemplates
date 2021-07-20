@@ -10,7 +10,7 @@ namespace SparkleXRTemplates
 {
     public enum Handedness
     {
-        None,
+        None = 0,
         Left = 256,
         Right = 512
 	}
@@ -100,12 +100,17 @@ namespace SparkleXRTemplates
 
 
 
-        void Awake()
+        void Start()
         {
-            xrNodeFeatureType = XRNodeType.Hand;
+            xrNodeFeatureGroup = XRNodeType.Hand;
 
-            handFingerData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.handData });
-            handSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.devicePosition, (InputFeatureUsage)CommonUsages.deviceRotation });
+            inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness + (int)InputDeviceCharacteristics.HandTracking);
+
+
+            handFingerData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.handData },
+                inputDeviceCharacteristics);
+            handSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.devicePosition, (InputFeatureUsage)CommonUsages.deviceRotation },
+                inputDeviceCharacteristics);
             
             StartCoroutine(handFingerData.GetDevice());
             StartCoroutine(handSimpleFeaturesData.GetDevice());
