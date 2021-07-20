@@ -24,7 +24,7 @@ namespace SparkleXRTemplates
 
         bool CheckInputProvider(GameInteractor interactor)
         {
-            if (interactor.myXRInputProvider.xrNodeFeatureGroup.HasFlag(inputDeviceCharacteristics))
+            if (interactor.myXRInputProvider.xrNodeFeatureType.HasFlag(inputDeviceCharacteristics))
                 return true;
             else
                 return false;

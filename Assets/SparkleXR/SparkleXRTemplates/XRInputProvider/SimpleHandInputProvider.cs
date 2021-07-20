@@ -16,18 +16,7 @@ namespace SparkleXRTemplates
 	}
 
     //TODO: consistent naming!
-	public class FeatureGroupData
-	{
-        List<InputFeatureUsage> inputFeatureUsages;
-        InputDevice inputDevice;
-        DeviceFindState deviceFindState = DeviceFindState.NotFound;
-
-		public FeatureGroupData(List<InputFeatureUsage> inputFeatureUsages)
-		{
-			this.inputFeatureUsages = inputFeatureUsages;
-		}
-	}
-
+	
 
 
 
@@ -38,57 +27,51 @@ namespace SparkleXRTemplates
 
 
         #region -Feature representing hand finger points-
-        InputDevice handFingerDataDevice;
-		List<InputFeatureUsage> handFingerFeatures = new List<InputFeatureUsage>()
-		{
-            (InputFeatureUsage) CommonUsages.handData,
-        };
+
+        FeatureGroupDataSource handFingerData;
 
 		Hand _handData;
         public Hand handData
         {
             get
             {
-                if (DeviceFindStates[handFingerDataDevice] == DeviceFindState.Found)
+                if (handFingerData.deviceFindState == DeviceFindState.Found)
 				{
-                    if (!handFingerDataDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
+                    if (!handFingerData.inputDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
 					{
-                        DeviceFindStates[handFingerDataDevice] = DeviceFindState.NotFound;
-                        StartCoroutine(GetDeviceWithFeatures(handFingerFeatures, handFingerDataDevice));
+                        handFingerData.deviceFindState = DeviceFindState.NotFound;
+                        StartCoroutine(handFingerData.GetDevice());
                     }
                 }
-                 else if (DeviceFindStates[handFingerDataDevice] == DeviceFindState.NotFound)
-                    StartCoroutine(GetDeviceWithFeatures(handFingerFeatures, handFingerDataDevice));
+                 else if (handFingerData.deviceFindState == DeviceFindState.NotFound)
+                    StartCoroutine(handFingerData.GetDevice());
                  
                 return _handData;
             }
         }
         #endregion
 
+
         #region -Featrues representing simple hand data-
-        InputDevice handSimpleFeaturesDevice;
-        List<InputFeatureUsage> handSimpleFeatures = new List<InputFeatureUsage>()
-        {
-            (InputFeatureUsage) CommonUsages.devicePosition,
-            (InputFeatureUsage) CommonUsages.deviceRotation
-        };
+
+        FeatureGroupDataSource handSimpleFeaturesData;
         
         Quaternion _handOrientation;
         public Quaternion handOrientation
         {
             get
             {
-                if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.Found)
+                if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
 				{
                     
-                    if(!handSimpleFeaturesDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion _handOrientation))
+                    if(!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion _handOrientation))
 					{
-                        DeviceFindStates[handSimpleFeaturesDevice] = DeviceFindState.NotFound;
-                        StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+                        handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
+                        StartCoroutine(handSimpleFeaturesData.GetDevice());
                     }
                 }
-                else if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.NotFound)
-                    StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+                else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
+                    StartCoroutine(handSimpleFeaturesData.GetDevice());
 
                 return _handOrientation;
             }
@@ -99,16 +82,16 @@ namespace SparkleXRTemplates
         {
             get
             {
-                if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.Found)
-				{
-                    if (!handSimpleFeaturesDevice.TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 _handCenterPosition))
+                if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
+                {
+                    if (!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 _handCenterPosition))
                     {
-                        DeviceFindStates[handSimpleFeaturesDevice] = DeviceFindState.NotFound;
-                        StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+                        handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
+                        StartCoroutine(handSimpleFeaturesData.GetDevice());
                     }
                 }
-                else if (DeviceFindStates[handSimpleFeaturesDevice] == DeviceFindState.NotFound)
-                    StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+                else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
+                    StartCoroutine(handSimpleFeaturesData.GetDevice());
 
                 return _handCenterPosition;
             }
@@ -117,74 +100,15 @@ namespace SparkleXRTemplates
 
 
 
-        void Start()
+        void Awake()
         {
-            xrNodeFeatureGroup = XRNodeFeatureGroup.Hand;
+            xrNodeFeatureType = XRNodeType.Hand;
 
-            inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness);
-
-            DeviceFindStates.Add(handFingerDataDevice, DeviceFindState.NotFound);
-            DeviceFindStates.Add(handSimpleFeaturesDevice, DeviceFindState.NotFound);
-
-            StartCoroutine(GetDeviceWithFeatures(handFingerFeatures, handFingerDataDevice));
-            StartCoroutine(GetDeviceWithFeatures(handSimpleFeatures, handSimpleFeaturesDevice));
+            handFingerData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.handData });
+            handSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.devicePosition, (InputFeatureUsage)CommonUsages.deviceRotation });
+            
+            StartCoroutine(handFingerData.GetDevice());
+            StartCoroutine(handSimpleFeaturesData.GetDevice());
         }
-
-        /*public IEnumerator GetHandDataDevice()
-		{
-            handFingerDataDeviceFindState = DeviceFindState.Finding;
-
-            while (handFingerDataDeviceFindState != DeviceFindState.Found)
-			{
-                List<InputDevice> inputDevices = new List<InputDevice>();
-                InputDevices.GetDevicesWithCharacteristics((InputDeviceCharacteristics)(((int)inputDeviceCharacteristics) + ((int)handedness)), inputDevices);
-                foreach (InputDevice inputDevice in inputDevices)
-                {
-                    if (!inputDevice.isValid)
-                        continue;
-
-                    if (inputDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
-					{
-                        handFingerDataDevice = inputDevice;
-                        handFingerDataDeviceFindState = DeviceFindState.Found;
-                        yield break;
-					}      
-				}
-
-                if (checkPeriod > 0)
-                    yield return new WaitForSeconds(checkPeriod);
-                else
-                    yield return new WaitForEndOfFrame();
-            }
-		}
-
-        public IEnumerator GetHandSimpleFeaturesDevice()
-        {
-            handSimpleFeaturesDeviceFindState = DeviceFindState.Finding;
-
-            while (handSimpleFeaturesDeviceFindState != DeviceFindState.Found)
-            {
-                List<InputDevice> inputDevices = new List<InputDevice>();
-                InputDevices.GetDevicesWithCharacteristics((InputDeviceCharacteristics)(((int)inputDeviceCharacteristics) + ((int)handedness)), inputDevices);
-                foreach (InputDevice inputDevice in inputDevices)
-                {
-                    if (!inputDevice.isValid)
-                        continue;
-
-                    if (inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out _handCenterPosition) &&
-                        inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out _handOrientation))
-                    {
-                        handSimpleFeaturesDevice = inputDevice;
-                        handSimpleFeaturesDeviceFindState = DeviceFindState.Found;
-                        yield break;
-                    }
-                }
-
-                if (checkPeriod > 0)
-                    yield return new WaitForSeconds(checkPeriod);
-                else
-                    yield return new WaitForEndOfFrame();
-            }
-        }*/
     }
 }

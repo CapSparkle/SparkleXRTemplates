@@ -108,7 +108,7 @@ namespace SparkleXRLib.MagicLeap
         {
             base.StartHandling(interactor);
 
-            if(interactor.myXRInputProvider.xrNodeFeatureGroup == XRNodeFeatureGroup.Hand)
+            if(interactor.myXRInputProvider.xrNodeFeatureType == XRNodeType.Hand)
 			{
                 MLHandInputProvider mLHandInputProvider = null;
                 mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
@@ -130,7 +130,7 @@ namespace SparkleXRLib.MagicLeap
         {
             base.StopHandling(interactor);
 
-            if (interactor.myXRInputProvider.xrNodeFeatureGroup == XRNodeFeatureGroup.Hand)
+            if (interactor.myXRInputProvider.xrNodeFeatureType == XRNodeType.Hand)
             {
                 MLHandInputProvider mLHandInputProvider = null;
                 mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();

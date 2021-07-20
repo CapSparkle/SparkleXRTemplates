@@ -13,18 +13,13 @@ namespace SparkleXRLib.MagicLeap
 {
     public class HandleAllData : MonoBehaviour
     {
-        List<InputFeatureUsage> ifus = new List<InputFeatureUsage>()
-        {
-            (InputFeatureUsage)CommonUsages.deviceRotation,
-            (InputFeatureUsage)CommonUsages.devicePosition
-        };
+		private void Start()
+		{
 
-        void Start()
+		}
+
+		void Update ()
         {
-            foreach (InputFeatureUsage IFUsage in ifus)
-            {
-                print("Feature(name: \"" + IFUsage.name + "\", type: \"" + IFUsage.type + "\"");
-            }
 
 
             //All hard devices data
@@ -32,9 +27,7 @@ namespace SparkleXRLib.MagicLeap
             UnityEngine.XR.InputDevices.GetDevices(inputDevices);
             foreach (var device in inputDevices)
             {
-                List<InputFeatureUsage> oifus = new List<InputFeatureUsage>();
-                device.TryGetFeatureUsages(oifus);
-                //((IEnumerable<InputFeatureUsage>)ifus).Intersect<InputFeatureUsage>((IEnumerable<InputFeatureUsage>)oifus)
+                
                
                 Debug.Log(string.Format("Device found with name '{0}' and role '{1}'", 
                           device.name, device.characteristics.ToString()));

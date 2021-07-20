@@ -7,25 +7,16 @@ namespace SparkleXRTemplates
     public class ConstantDeviceTransformCorrespondent : MonoBehaviour
     {
         [SerializeField]
-        XRInputProvider inputProvider;
+		SimpleHandInputProvider inputProvider;
+
 
 		[SerializeField]
-		XRNodeFeatureGroup deviceTypeToCorrespond = XRNodeFeatureGroup.Hand;
-
-		private void Start()
-		{
-
-			if (inputProvider.xrNodeFeatureGroup != deviceTypeToCorrespond ||
-				inputProvider.GetComponent<SimpleHandInputProvider>() == null)
-			{
-				Destroy(this);
-			}
-		}
+		XRNodeType deviceTypeToCorrespond = XRNodeType.Hand;
 
 		private void Update()
 		{
-			transform.position = inputProvider.GetComponent<SimpleHandInputProvider>().handCenterPosition;
-			transform.rotation = inputProvider.GetComponent<SimpleHandInputProvider>().handOrientation;
+			transform.position = inputProvider.handCenterPosition;
+			transform.rotation = inputProvider.handOrientation;
 		}
 	}
 
