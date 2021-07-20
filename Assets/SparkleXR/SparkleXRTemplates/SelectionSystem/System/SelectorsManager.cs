@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Xml.Serialization;
+using Sirenix.Serialization;
+using Sirenix.OdinInspector;
 
 namespace SparkleXRTemplates
 {
-    public class SelectorsManager : MonoBehaviour
+    public class SelectorsManager : SerializedMonoBehaviour
     {
         [SerializeField] 
         GameInteractor correspondingGameInteractor;
@@ -19,24 +21,16 @@ namespace SparkleXRTemplates
 
         //TODO: Apply to every GameInteractable from every selector
         [SerializeField]
-        SelectionPredicate selectionPredicate;
+        SelectionController selectionPredicate;
 
 
-        [SerializeField]
-        string selectionRules = "";
+        #region -selection rules forming-
 
-        #region -selection rules parsing-
-
-        List<List<int>> minSelectRequirments = new List<List<int>>
-        {
-            new List<int>
-            {
-                0,
-            },
-        };
+        [OdinSerialize]
+        public List<List<int>> minSelectRequirments = new List<List<int>>();
         // Priority by list index
 
-        void ParseSelectionPolicy()
+        /*void ParseSelectionPolicy()
         {
             int i = 0;
             int list_index = -1;
@@ -106,7 +100,7 @@ namespace SparkleXRTemplates
         {
             minSelectRequirments = new List<List<int>>();
             print("selection policy string is incorrect");
-        }
+        }*/
 
         #endregion -selection rules parsing-
 
@@ -140,24 +134,19 @@ namespace SparkleXRTemplates
             return IntersectSet;
         }
 
+        public Action<List<GameInteractable>> SelectedInteractables;
         List<GameInteractable> selectedSet = new List<GameInteractable>() { };
         List<GameInteractable> previousSelectedSet = new List<GameInteractable>() { };
 
 
-        public Action<List<GameInteractable>> SelectedInteractables;
         public void DummyMethod (List<GameInteractable> linteractables)
         {
             //Do nothing;
         }
-
         void Start()
         {
-            if (selectionRules != "")
-                ParseSelectionPolicy();
-
             SelectedInteractables += DummyMethod;
         }
-
 
         void Update()
         {

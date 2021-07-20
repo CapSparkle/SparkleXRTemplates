@@ -285,10 +285,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a435dda786f0042926ef9ca194b975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: minSelectRequirments
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[System.Int32,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SelectedInteractables
+      Entry: 6
+      Data: 
   correspondingGameInteractor: {fileID: 1610453170}
   selectors:
   - {fileID: 802776821}
-  selectionPolicy: (0)
+  selectionPredicate: {fileID: 0}
 --- !u!1 &656154485
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,9 +455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_selectingPredicate: {fileID: 1687859963}
   m_selectorUID: 0
-  m_selectorDescriptor: 
-  director: {fileID: 198093537}
-  castSource: {fileID: 802776822}
+  m_selectorDescriptor: SHS
+  _director: {fileID: 198093537}
+  _castSource: {fileID: 198093537}
   _radius: 0.2
   _maxDistance: 0
   ignoredLayers:
@@ -638,7 +678,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 1355920011}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -659,7 +700,57 @@ MonoBehaviour:
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 6
+      Entry: 7
+      Data: 2|System.Action`1[[SparkleXRTemplates.GameInteractor, Assembly-CSharp]],
+        mscorlib
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: declaringType
+      Entry: 7
+      Data: 3|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: SparkleXRTemplates.Examples.Takeable, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: Take
+    - Name: delegateType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Action`1[[SparkleXRTemplates.GameInteractor, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: signature
+      Entry: 7
+      Data: 5|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: SparkleXRTemplates.GameInteractor, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 13
@@ -669,39 +760,51 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|MS.Internal.Xml.XPath.ClonableStack`1[[System.Action`1[[SparkleXRTemplates.GameInteractor,
+      Data: 7|MS.Internal.Xml.XPath.ClonableStack`1[[System.Action`1[[SparkleXRTemplates.GameInteractor,
         Assembly-CSharp]], mscorlib]], System.Xml
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: gestureStates
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[UnityEngine.XR.InteractionSubsystems.GestureState,
-        Unity.XR.InteractionSubsystems]], mscorlib
+      Data: 8|System.Action`1[[SparkleXRTemplates.GameInteractor, Assembly-CSharp]],
+        mscorlib
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: declaringType
+      Entry: 9
+      Data: 3
+    - Name: methodName
+      Entry: 1
+      Data: Drop
+    - Name: delegateType
+      Entry: 9
+      Data: 4
+    - Name: signature
+      Entry: 7
+      Data: 9|System.Type[], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
-      Entry: 3
-      Data: 3
+      Entry: 9
+      Data: 6
     - Name: 
-      Entry: 3
-      Data: 3
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -710,7 +813,7 @@ MonoBehaviour:
       Data: 
     - Name: mlGestureMasks
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[SparkleXRLib.MagicLeap.MLGestureMask,
+      Data: 10|System.Collections.Generic.List`1[[SparkleXRLib.MagicLeap.MLGestureMask,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -727,17 +830,24 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: AlphaGesture
+    - Name: gestureStates
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[UnityEngine.XR.InteractionSubsystems.GestureState,
+        Unity.XR.InteractionSubsystems]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
       Entry: 3
-      Data: 0
-    - Name: BravoGesture
+      Data: 3
+    - Name: 
       Entry: 3
-      Data: 0
-    - Name: AlphaGestureOccured
-      Entry: 6
+      Data: 3
+    - Name: 
+      Entry: 13
       Data: 
-    - Name: BravoGestureOccured
-      Entry: 6
+    - Name: 
+      Entry: 8
       Data: 
 --- !u!1 &1385358589
 GameObject:
@@ -798,7 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738b9640c42ca70448b80794a9e7cb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myXRInputProvider: {fileID: 0}
+  myXRInputProvider: {fileID: 1967579099}
   busy: 0
   _handPivot: {fileID: 656154486}
 --- !u!4 &1610453172
@@ -816,6 +926,7 @@ Transform:
   - {fileID: 1687859962}
   - {fileID: 508050467}
   - {fileID: 99713140}
+  - {fileID: 1967579098}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -955,3 +1066,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1967579097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967579098}
+  - component: {fileID: 1967579099}
+  m_Layer: 0
+  m_Name: HandInputProvider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1967579098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967579097}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1610453172}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967579099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967579097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5f3b079e128de41b7002c41a45ae2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handedness: 512

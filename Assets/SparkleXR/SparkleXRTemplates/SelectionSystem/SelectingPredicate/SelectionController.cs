@@ -5,10 +5,9 @@ using UnityEngine;
 namespace SparkleXRTemplates
 {
     // Base class for selector-side selection analysis logic
-    public class SelectionPredicate : MonoBehaviour
+    public class SelectionController : MonoBehaviour
     {
-        public virtual
-        public virtual bool Check(GameInteractable objectToCheck, Object additionalData = null)
+        public virtual bool CheckConditions(GameInteractable objectToCheck, Object additionalData = null)
         {
             return true;
         }

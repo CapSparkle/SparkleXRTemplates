@@ -13,7 +13,23 @@ namespace SparkleXRTemplates
         None,
         Left = 256,
         Right = 512
-    }
+	}
+
+    //TODO: consistent naming!
+	public class FeatureGroupData
+	{
+        List<InputFeatureUsage> inputFeatureUsages;
+        InputDevice inputDevice;
+        DeviceFindState deviceFindState = DeviceFindState.NotFound;
+
+		public FeatureGroupData(List<InputFeatureUsage> inputFeatureUsages)
+		{
+			this.inputFeatureUsages = inputFeatureUsages;
+		}
+	}
+
+
+
 
 	public class SimpleHandInputProvider : XRInputProvider
     {
@@ -98,6 +114,8 @@ namespace SparkleXRTemplates
             }
         }
         #endregion
+
+
 
         void Start()
         {

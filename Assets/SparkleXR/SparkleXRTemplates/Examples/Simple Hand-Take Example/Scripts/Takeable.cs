@@ -37,56 +37,22 @@ namespace SparkleXRTemplates.Examples
 			}        
         }
 
-        /*protected override bool StartInteraction(GameInteractor interactor)
-        {
-            if(holdingHand != null)
-                return false;
-
-            //if(hoveringHand == null ||
-                (
-                    (hoveringHand.handPivot.position - transform.position).magnitude > 
-                    (interactor.GetComponent<Hand>().handPivot.position - transform.position).magnitude
-                )
-            )
-            {
-                hoveringHand = interactor.GetComponent<Hand>();
-                return true;
-            }
-            return false;
-        }
-
-        protected override bool StopInteraction(GameInteractor interactor)
-        {
-            bool returnValue = false;
-
-            if (hoveringHand == interactor.GetComponent<Hand>())
-            {
-                hoveringHand = null;
-                return true;
-            }
-            
-            if (holdingHand == interactor.GetComponent<Hand>())
-            {
-                holdingHand = null;
-                return
-
-            }
-            else
-            {
-                return false;
-            }
-        }*/
 
         private Vector3 savedScale;
         private Transform previousParent;
 
-        public void Take(Hand takingHand)
+        public void Take(GameInteractor interactor)
         {
-            if (holdingHand != null)
+            Hand takingHand;
+
+            if ((takingHand = interactor.GetComponent<Hand>()) == null)
                 return;
 
-            if (takingHand == null)
+            if (holdingHand != null ||
+                takingHand == null ||
+                takingHand.busy)
                 return;
+
 
             previousParent = transform.parent;
             savedScale = transform.localScale;
@@ -110,8 +76,13 @@ namespace SparkleXRTemplates.Examples
             holdingHand = takingHand;
             
         }
-        public void Drop(Hand dropingHand)
+        public void Drop(GameInteractor interactor)
         {
+            Hand dropingHand;
+
+            if ((dropingHand = interactor.GetComponent<Hand>()) == null)
+                return;
+
             print("drop");
             if (holdingHand != dropingHand)
                 return;

@@ -41,14 +41,14 @@ namespace SparkleXRTemplates
             {
                 m_selectedInteractables.Add(extention);
             }
-            else if (m_selectingPredicate.Check(extention))
+            else if (m_selectingPredicate.CheckConditions(extention))
             {
                 m_selectedInteractables.Add(extention);
             }
         }
 
         [SerializeField]
-        protected SelectionPredicate m_selectingPredicate;
+        protected SelectionController m_selectingPredicate;
 
         #endregion -interactables list operations-
 
