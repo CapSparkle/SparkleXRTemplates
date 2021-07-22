@@ -53,6 +53,7 @@ namespace SparkleXRLib.MagicLeap
 
         private void Start()
         {
+            base.Start();
             #region -enable key poses-
             //TODO: bring that code block to the separate class
 

@@ -19,7 +19,7 @@ public class SphereCastVisualizer : MonoBehaviour
     GameObject CylinderVisualizer;
     GameObject[] SphereModels = new GameObject[2] { null, null};
 
-    static float trasparency = 0.33f;
+    static float trasparency = 0.25f;
     
     [SerializeField]
     Color color = Color.clear;
@@ -43,8 +43,8 @@ public class SphereCastVisualizer : MonoBehaviour
             SphereCasterToVisualize.maxDistance / 2f,
             SphereCasterToVisualize.radius * 2);
 
-        if(color == Color.clear)
-            color = new Vector4(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), trasparency);
+      
+        color = new Vector4(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), trasparency);
 
         CylinderVisualizer.GetComponent<MeshRenderer>().material.color = color;
         SphereModels[0].GetComponent<MeshRenderer>().material.color = color;

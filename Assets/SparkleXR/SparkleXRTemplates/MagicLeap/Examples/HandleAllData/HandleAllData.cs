@@ -15,12 +15,18 @@ namespace SparkleXRLib.MagicLeap
     {
 		private void Start()
 		{
+            print(MLHandTracking.Left);
+            print(MLHandTracking.Right);
+            print(MLHandTracking.KeyPoseManager);
 
-		}
+            print(MLHeadTracking.TrackingState);
+            print(MLHeadTracking.TrackingState);
+            print(MLHandTracking.Right);
+        }
 
 		void Update ()
         {
-
+            /*
 
             //All hard devices data
             var inputDevices = new List<UnityEngine.XR.InputDevice>();
@@ -41,14 +47,9 @@ namespace SparkleXRLib.MagicLeap
             }
 
             //All ML hand data
-            print(MLHandTracking.Left);
-            print(MLHandTracking.Right);
-            print(MLHandTracking.KeyPoseManager);
-
-            print(MLHeadTracking.TrackingState);
-            print(MLHeadTracking.TrackingState);
-            print(MLHandTracking.Right);
+            
             //print(MLHandTracking.KeyPoseManager);
+            */
         }
     }
 }

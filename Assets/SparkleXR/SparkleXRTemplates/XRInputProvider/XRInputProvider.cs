@@ -37,7 +37,6 @@ namespace SparkleXRTemplates
         float checkPeriod = -1f;
         public IEnumerator GetDevice()
         {
-            Debug.Log("Finding");
             deviceFindState = DeviceFindState.Finding;
 
             while (deviceFindState != DeviceFindState.Found)
@@ -46,22 +45,7 @@ namespace SparkleXRTemplates
                 List<InputDevice> inputDevices = new List<InputDevice>();
                 List<InputFeatureUsage> currentDeviceInputFeatureUsages;
 
-                InputDevices.GetDevices(inputDevices);
-
-
-                foreach (InputDevice currentInputDevice in inputDevices)
-                {
-                    Debug.Log(string.Format("Device found with name '{0}' and role '{1}'",
-                          currentInputDevice.name, currentInputDevice.characteristics.ToString()));
-
-                    List<InputFeatureUsage> _currentDeviceInputFeatureUsages = new List<InputFeatureUsage>();
-                    currentInputDevice.TryGetFeatureUsages(_currentDeviceInputFeatureUsages);
-
-                    foreach (InputFeatureUsage IFUsage in _currentDeviceInputFeatureUsages)
-                    {
-                        Debug.Log(currentInputDevice.name + "__Feature(name: \"" + IFUsage.name + "\", type: \"" + IFUsage.type + "\"");
-                    }
-                }
+                InputDevices.GetDevicesWithCharacteristics(inputDeviceCharacteristics ,inputDevices);
 
                 foreach (InputDevice currentInputDevice in inputDevices)
                 {
@@ -69,25 +53,21 @@ namespace SparkleXRTemplates
                     if (!currentInputDevice.isValid)
                         continue;
 
-                    Debug.Log("Valid?");
-
-                    Debug.Log((uint)currentInputDevice.characteristics);
+                    //Debug.Log((uint)currentInputDevice.characteristics);
                     //Debug.Log((uint)inputDeviceCharacteristics);
                     //Debug.Log((uint)currentInputDevice.characteristics & (uint)inputDeviceCharacteristics);
 
-                    if ((InputDeviceCharacteristics)((uint)currentInputDevice.characteristics & (uint)inputDeviceCharacteristics) != inputDeviceCharacteristics)
-                        continue;
+                    //if ((InputDeviceCharacteristics)((uint)currentInputDevice.characteristics & (uint)inputDeviceCharacteristics) != inputDeviceCharacteristics)
+                    //    continue;
 
                     currentDeviceInputFeatureUsages = new List<InputFeatureUsage>();
                     currentInputDevice.TryGetFeatureUsages(currentDeviceInputFeatureUsages);
-                    
-                    Debug.Log("Intersects?");
                     
                     if (((IEnumerable<InputFeatureUsage>)currentDeviceInputFeatureUsages).Intersect(inputFeatureUsages).Count() == inputFeatureUsages.Count())
                     {
                         inputDevice = currentInputDevice;
                         deviceFindState = DeviceFindState.Found;
-                        Debug.Log("Found");
+                        Debug.Log("Device found with features: " + inputFeatureUsages[0].name + ", " + (inputFeatureUsages.Count > 1 ? inputFeatureUsages[1].name : " ") + (inputFeatureUsages.Count > 2 ? ", ..." : " "));
                         yield break;
                     }
                 }
@@ -106,7 +86,7 @@ namespace SparkleXRTemplates
     {
         //This is designation of what this InputProvider is for others 
         XRNodeType _xrNodeFeatureGroup;
-        public XRNodeType xrNodeFeatureGroup
+        public XRNodeType xrNodeType
         {
             get
             {

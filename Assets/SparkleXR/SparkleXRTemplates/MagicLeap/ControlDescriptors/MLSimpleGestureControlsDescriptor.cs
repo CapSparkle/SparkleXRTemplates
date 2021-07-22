@@ -64,8 +64,14 @@ namespace SparkleXRLib.MagicLeap
                 }
             }
         }
+
+
+        #endregion -tracking requests-
+
         void Start()
         {
+            requiredXRNodetypeOfInputProvider = XRNodeType.Hand; 
+
             if (!isKeyPoseTrackingRequestsInitialized)
             {
                 foreach (MLHandTracking.HandKeyPose handKeyPose in Enum.GetValues(typeof(MLHandTracking.HandKeyPose)))
@@ -74,9 +80,6 @@ namespace SparkleXRLib.MagicLeap
                 isKeyPoseTrackingRequestsInitialized = true;
             }
         }
-
-        #endregion -tracking requests-
-
 
         //TODO: beautify inspector interface
 
@@ -89,7 +92,8 @@ namespace SparkleXRLib.MagicLeap
         List<MLGestureMask> mlGestureMasks;
         [OdinSerialize]
         List<GestureState> gestureStates;
-        
+
+
         void SetupSubscribingMethodGroups(GameInteractor interactor)
 		{
             methodGroups[interactor] = new List<Action>();
@@ -98,26 +102,31 @@ namespace SparkleXRLib.MagicLeap
 			{
                 methodGroups[interactor].Add(() =>
                 {
-                    foreach(Action<GameInteractor> method in methods[i])
-                        method(interactor);
+                    for (int j = 0; j < methods[i].Count; j++)  //Action<GameInteractor> method in )s
+                    {
+                        print(j.ToString());
+                        methods[i][j](interactor);
+                    }                                   
                 });
 			}
         }
 
         public override bool StartHandling(GameInteractor interactor)
         {
-            base.StartHandling(interactor);
+            if (!CheckInputProvider(interactor))
+                return false;
 
-            if(interactor.myXRInputProvider.xrNodeFeatureGroup == XRNodeType.Hand)
+            if(interactor.myXRInputProvider.xrNodeType == XRNodeType.Hand)
 			{
                 MLHandInputProvider mLHandInputProvider = null;
                 mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
                 
                 if (mLHandInputProvider != null)
 				{
+                    print("interactor has came");
                     SetupSubscribingMethodGroups(interactor);
 
-                    for (int i = 0; i < methods.Count; i++)
+                    for (int i = 0; i < methodGroups[interactor].Count; i++)
                         mLHandInputProvider.AddGestureListener(methodGroups[interactor][i], mlGestureMasks[i], gestureStates[i]);
 
                     return true;
@@ -130,7 +139,7 @@ namespace SparkleXRLib.MagicLeap
         {
             base.StopHandling(interactor);
 
-            if (interactor.myXRInputProvider.xrNodeFeatureGroup == XRNodeType.Hand)
+            if (interactor.myXRInputProvider.xrNodeType == XRNodeType.Hand)
             {
                 MLHandInputProvider mLHandInputProvider = null;
                 mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();

@@ -476,9 +476,9 @@ MonoBehaviour:
   _castSource: {fileID: 198093537}
   _radius: 0.2
   _maxDistance: 0
-  ignoredLayers:
+  includedLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
 --- !u!4 &802776822
 Transform:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   SphereModel: {fileID: 4695170559696334036, guid: c34e9033e80297940aa30b851cdda217,
     type: 3}
   Wrapper: {fileID: 4165676560934610314, guid: 8bc60c072e6acbb408d1719bf9ab819c, type: 3}
-  color: {r: 0.6603774, g: 0.52643293, b: 0.52643293, a: 0}
+  color: {r: 0, g: 0, b: 0, a: 0.24705882}
 --- !u!1 &1355920006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,7 +1108,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2134358260}
   m_Father: {fileID: 1610453172}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1121,7 +1122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967579097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5f3b079e128de41b7002c41a45ae2e, type: 3}
+  m_Script: {fileID: 11500000, guid: f32cf3cd371066048b2b47c38d91a95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handedness: 512
@@ -1161,10 +1162,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134358258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2558386, y: -0.09163904, z: 0.50455534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58344924, y: -3.1072116, z: -0.65125966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1967579098}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -66,7 +66,7 @@ namespace SparkleXRTemplates
         }
 
 		[SerializeField]
-        LayerMask ignoredLayers;
+        LayerMask includedLayers;
 
         public Action<RaycastHit[]> spherecastHitInfo;
         
@@ -89,14 +89,15 @@ namespace SparkleXRTemplates
             }
             else
             {
-                Collider[] colliders = Physics.OverlapSphere(castSource.position, _radius, ignoredLayers);
+                Collider[] colliders = Physics.OverlapSphere(castSource.position, _radius, includedLayers);
                 int i = 0;
+                print("i am working");
                 foreach (Collider collider in colliders)
                 {
                     print("Sphere Caster (uid:" + m_selectorUID + ") " + "hit №" + i + " - " + collider.transform.name);
-                    GameInteractable handler = null;
-                    if (handler = collider.transform.GetComponent<GameInteractable>())
-                        AddInteractable(handler);
+                    GameInteractable gameInteractable = null;
+                    if (gameInteractable = collider.transform.GetComponent<GameInteractable>())
+                        AddInteractable(gameInteractable);
 
                     i++;
                 }

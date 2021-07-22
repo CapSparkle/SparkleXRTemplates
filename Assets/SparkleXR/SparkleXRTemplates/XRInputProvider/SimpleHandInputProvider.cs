@@ -6,6 +6,8 @@ using UnityEngine.XR;
 using UnityEngine.XR.InteractionSubsystems;
 
 
+using UnityEngine.XR.MagicLeap;
+
 namespace SparkleXRTemplates
 {
     public enum Handedness
@@ -47,6 +49,8 @@ namespace SparkleXRTemplates
                     StartCoroutine(handFingerData.GetDevice());
                  
                 return _handData;
+
+                //return MLHandTracking.Right.Center
             }
         }
         #endregion
@@ -64,7 +68,7 @@ namespace SparkleXRTemplates
                 if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
 				{
                     
-                    if(!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion _handOrientation))
+                    if(!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out _handOrientation))
 					{
                         handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
                         StartCoroutine(handSimpleFeaturesData.GetDevice());
@@ -84,7 +88,7 @@ namespace SparkleXRTemplates
             {
                 if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
                 {
-                    if (!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 _handCenterPosition))
+                    if (!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out _handCenterPosition))
                     {
                         handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
                         StartCoroutine(handSimpleFeaturesData.GetDevice());
@@ -100,9 +104,9 @@ namespace SparkleXRTemplates
 
 
 
-        void Start()
+        protected void Start()
         {
-            xrNodeFeatureGroup = XRNodeType.Hand;
+            xrNodeType = XRNodeType.Hand;
 
             inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness + (int)InputDeviceCharacteristics.HandTracking);
 
