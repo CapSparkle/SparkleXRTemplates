@@ -19,7 +19,7 @@ namespace SparkleXRLib.MagicLeap
     {
         MLHandTracking.Hand handGesturesDevice;
         
-        List<Action> subscribers = new List<Action>();
+        List<Action> mySubscribers = new List<Action>();
         /*public List<Action> subscribers
         {
             get
@@ -85,7 +85,7 @@ namespace SparkleXRLib.MagicLeap
         }
 		private void Update()
 		{
-			if (subscribers != null && subscribers.Count != 0)
+			if (mySubscribers != null && mySubscribers.Count != 0)
 			{
                 NotifyUpdatedGestures();
             }
@@ -112,7 +112,7 @@ namespace SparkleXRLib.MagicLeap
 				{
                     if(mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)keyPose)))
 					{
-                        subscribers[i].Invoke();
+                        mySubscribers[i].Invoke();
                     }
 				}
 			}
@@ -125,7 +125,7 @@ namespace SparkleXRLib.MagicLeap
                 {
                     if (mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)keyPose)))
                     {
-                        subscribers[i].Invoke();
+                        mySubscribers[i].Invoke();
                     }
                 }
             }
@@ -133,9 +133,9 @@ namespace SparkleXRLib.MagicLeap
 
         public void AddGestureListener(Action methodListener, MLGestureMask mLGestureMask, GestureState gestureState)
         {
-            if(subscribers.Contains(methodListener))
+            if(mySubscribers.Contains(methodListener))
 			{
-                int indexToExtendSubscription = subscribers.FindIndex(0, methodListener.Equals);
+                int indexToExtendSubscription = mySubscribers.FindIndex(0, methodListener.Equals);
 
                 if(gestureStates[indexToExtendSubscription] == gestureState)
 				{
@@ -145,17 +145,17 @@ namespace SparkleXRLib.MagicLeap
                 }
             }
 
-            subscribers.Add(methodListener);
+            mySubscribers.Add(methodListener);
             mlGestureMasks.Add(mLGestureMask);
             gestureStates.Add(gestureState);
         }
         public void RemoveGestureListener(Action methodListener)
 		{
-            int indexToRemove = subscribers.FindIndex(0, methodListener.Equals);
+            int indexToRemove = mySubscribers.FindIndex(0, methodListener.Equals);
             
             if(indexToRemove != -1)
 			{
-                subscribers.RemoveAt(indexToRemove);
+                mySubscribers.RemoveAt(indexToRemove);
                 mlGestureMasks.RemoveAt(indexToRemove);
                 gestureStates.RemoveAt(indexToRemove);
             }

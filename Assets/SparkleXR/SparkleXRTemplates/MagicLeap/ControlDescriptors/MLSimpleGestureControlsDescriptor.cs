@@ -33,6 +33,28 @@ namespace SparkleXRLib.MagicLeap
         NoHand = 512
     }
 
+    public class SubscriptionBlock
+	{
+        //On certain determined event from this interactor 
+        GameInteractor _interactor;
+
+        //Subscribed the following methods
+        List<Action<GameInteractor>> _observingMethods;
+
+		public SubscriptionBlock(List<Action<GameInteractor>> observingMethods, GameInteractor interactor)
+		{
+			_observingMethods = observingMethods;
+            _interactor = interactor;
+
+        }
+
+		public void Notify()
+		{
+            foreach (Action<GameInteractor> method in _observingMethods)
+                method(_interactor);
+        }
+	}
+
 
 	public class MLSimpleGestureControlsDescriptor : ControlsDescriptor
     {
@@ -83,32 +105,27 @@ namespace SparkleXRLib.MagicLeap
 
         //TODO: beautify inspector interface
 
+        // method groups subscribed on the certain same gestures in certain state
         [OdinSerialize]
-        List<List<Action<GameInteractor>>> methods;
-
-        Dictionary<GameInteractor, List<Action>> methodGroups = new Dictionary<GameInteractor, List<Action>>();
-        
+        List<List<Action<GameInteractor>>> methodsToControll;
         [OdinSerialize]
         List<MLGestureMask> mlGestureMasks;
         [OdinSerialize]
         List<GestureState> gestureStates;
 
 
-        void SetupSubscribingMethodGroups(GameInteractor interactor)
-		{
-            methodGroups[interactor] = new List<Action>();
+        Dictionary<GameInteractor, List<SubscriptionBlock>> subscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock>>();
 
-            for (int i = 0; i < methods.Count; i++)
-			{
-                methodGroups[interactor].Add(() =>
-                {
-                    for (int j = 0; j < methods[i].Count; j++)  //Action<GameInteractor> method in )s
-                    {
-                        print(j.ToString());
-                        methods[i][j](interactor);
-                    }                                   
-                });
-			}
+        List<SubscriptionBlock> FormSubscriptionBlocks(GameInteractor interactor)
+        {
+            List<SubscriptionBlock> subscriptionBlocks = new List<SubscriptionBlock>();
+
+            for (int i = 0; i < methodsToControll.Count; i++)
+            {
+                subscriptionBlocks.Add(new SubscriptionBlock(methodsToControll[i], interactor));
+            }
+
+            return subscriptionBlocks;
         }
 
         public override bool StartHandling(GameInteractor interactor)
@@ -116,21 +133,19 @@ namespace SparkleXRLib.MagicLeap
             if (!CheckInputProvider(interactor))
                 return false;
 
-            if(interactor.myXRInputProvider.xrNodeType == XRNodeType.Hand)
-			{
-                MLHandInputProvider mLHandInputProvider = null;
-                mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
+            MLHandInputProvider mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
                 
-                if (mLHandInputProvider != null)
-				{
-                    print("interactor has came");
-                    SetupSubscribingMethodGroups(interactor);
+            if (mLHandInputProvider != null)
+			{
+                print("interactor has came");
+                
+                List<SubscriptionBlock> newSubscriptionBlocks = FormSubscriptionBlocks(interactor);
+                subscriptions[interactor] = newSubscriptionBlocks;
 
-                    for (int i = 0; i < methodGroups[interactor].Count; i++)
-                        mLHandInputProvider.AddGestureListener(methodGroups[interactor][i], mlGestureMasks[i], gestureStates[i]);
+                for (int i = 0; i < subscriptions[interactor].Count; i++)
+                    mLHandInputProvider.AddGestureListener(subscriptions[interactor][i].Notify, mlGestureMasks[i], gestureStates[i]);
 
-                    return true;
-                }
+                return true;
             }
 
             return false;
@@ -139,23 +154,19 @@ namespace SparkleXRLib.MagicLeap
         {
             base.StopHandling(interactor);
 
-            if (interactor.myXRInputProvider.xrNodeType == XRNodeType.Hand)
+            if (subscriptions.ContainsKey(interactor))
             {
-                MLHandInputProvider mLHandInputProvider = null;
-                mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
+                MLHandInputProvider mLHandInputProvider = interactor.myXRInputProvider.GetComponent<MLHandInputProvider>();
+                
+                for (int i = 0; i < subscriptions[interactor].Count; i++)
+                    mLHandInputProvider.RemoveGestureListener(subscriptions[interactor][i].Notify);
 
-                if (mLHandInputProvider != null)
-                {
-                    if(methodGroups.ContainsKey(interactor))
+                subscriptions.Remove(interactor);
 
-                    for (int i = 0; i < methods.Count; i++)
-                        mLHandInputProvider.RemoveGestureListener(methodGroups[interactor][i]);
-
-                    return true;
-                }
+                return true;
             }
-            return false;
 
+            return false;
         }
     }
 }

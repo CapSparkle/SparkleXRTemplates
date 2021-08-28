@@ -55,20 +55,20 @@ namespace SparkleXRTemplates.Examples
 
 
             previousParent = transform.parent;
-            savedScale = transform.localScale;
+            //savedScale = transform.localScale;
 
             transform.parent = takingHand.transform;
 
             if (takingHand.handPivot != null)
             {
-                transform.parent = holdingHand.handPivot;
-                transform.position = holdingHand.handPivot.position;
-                transform.rotation = holdingHand.handPivot.rotation;
-                transform.localScale = holdingHand.handPivot.localScale;
+                transform.parent = takingHand.handPivot;
+                transform.position = takingHand.handPivot.position;
+                transform.rotation = takingHand.handPivot.rotation;
+                //transform.localScale = takingHand.handPivot.localScale;
             }
             else
             {
-                transform.parent = holdingHand.handPivot;
+                transform.parent = takingHand.transform;
                 transform.position = Vector3.zero;
                 transform.rotation = Quaternion.identity;
             }
@@ -88,7 +88,7 @@ namespace SparkleXRTemplates.Examples
                 return;
 
             transform.parent = previousParent;
-            transform.localScale = savedScale;
+            //transform.localScale = savedScale;
             holdingHand = null;
         }
     }
