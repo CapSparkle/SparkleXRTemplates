@@ -9,7 +9,7 @@ using UnityEngine.XR;
 #if PLATFORM_LUMIN
 
 using UnityEngine.XR.MagicLeap;
-namespace SparkleXRLib.MagicLeap
+namespace SparkleXRTemplates.MagicLeap
 {
     public class HandleAllData : MonoBehaviour
     {

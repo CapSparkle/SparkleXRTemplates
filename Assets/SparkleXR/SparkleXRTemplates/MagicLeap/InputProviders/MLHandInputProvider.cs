@@ -8,7 +8,7 @@ using UnityEngine.XR.MagicLeap;
 using UnityEngine.XR.InteractionSubsystems;
 
 
-namespace SparkleXRLib.MagicLeap
+namespace SparkleXRTemplates.MagicLeap
 {
     
 

@@ -10,7 +10,8 @@ namespace SparkleXRTemplates.Examples
         smeared,
 
         carrying,
-        
+        rotating,
+
         tired,
 		tensed
 	}

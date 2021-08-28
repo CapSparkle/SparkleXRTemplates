@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using Sirenix.OdinInspector;
+
 using Sirenix.Serialization;
-using SparkleXRTemplates;
-using UnityEngine.XR;
-using UnityEngine.Events;
+
 using UnityEngine.XR.InteractionSubsystems;
 
-using System.Linq;
-using System.Diagnostics;
 
 #if PLATFORM_LUMIN
 using UnityEngine.XR.MagicLeap;
 
-namespace SparkleXRLib.MagicLeap
+namespace SparkleXRTemplates.MagicLeap
 {
     [Flags]
 	public enum MLGestureMask 

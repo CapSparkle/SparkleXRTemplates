@@ -9,7 +9,7 @@ using UnityEngine;
 using MagicLeap;
 using UnityEngine.XR.MagicLeap;
 
-namespace SparkleXRLib.MagicLeap
+namespace SparkleXRTemplates.MagicLeap
 
 {
     public class EyeFixationPointFollower : MonoBehaviour
