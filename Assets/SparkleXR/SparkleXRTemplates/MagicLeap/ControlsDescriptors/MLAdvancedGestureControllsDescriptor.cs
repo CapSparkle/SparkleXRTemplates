@@ -1,35 +1,31 @@
 using System;
 using System.Collections.Generic;
-
-using SparkleXRTemplates;
-
-using UnityEngine.XR.InteractionSubsystems;
+using UnityEngine;
 
 using Sirenix.Serialization;
+
+using UnityEngine.XR.InteractionSubsystems;
 
 #if PLATFORM_LUMIN
 using UnityEngine.XR.MagicLeap;
 
 namespace SparkleXRTemplates.MagicLeap
 {
-
-    public class MLRotationGestureControlsDescriptor : ControlsDescriptor
+    public class MLAdvancedGestureControllsDescriptor : MonoBehaviour
     {
-        void Start()
-        {
+        //TODO: add gesture drawer
 
-
-        }
-
-        //TODO: beautify inspector interface
-
-        // method groups subscribed on the certain same gestures in certain state
         [OdinSerialize]
-        List<List<Action<GameInteractor>>> methodsToControll;
+        List<Action<GameInteractor>> methodsToControll;
+
         [OdinSerialize]
         List<MLGestureMask> mlGestureMasks;
 
+        // Start is called before the first frame update
+        void Start()
+        {
 
+        }
 
         // Update is called once per frame
         void Update()
