@@ -101,3 +101,99 @@ Received Import Request.
 Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/ProgrammTemplate.unity using Guid(32f6721386ce761408ed603eb19e8dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c5f5582773222fa2fff2fe8ab7f756') in 0.014799 seconds
   Import took 0.018010 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 141.526988 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
+  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbcdda1a54d054e1c3511815651941a0') in 0.008110 seconds
+  Import took 0.011649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.708839 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
+  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a41e7d837f9c56ee90b0d86455db6ef') in 0.004357 seconds
+  Import took 0.006976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 223.892737 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
+  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42550aa3d3eea48a0d531ea1d6ea0a09') in 0.003270 seconds
+  Import took 0.006022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 74.617361 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
+  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d3d799d116abd88b4f097dcda037702') in 0.003388 seconds
+  Import took 0.006700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002224 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
+  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d3d799d116abd88b4f097dcda037702') in 0.004295 seconds
+  Import took 0.007196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.602126 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
+  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe69a945254d1ceeb65bb0712678b3a1') in 0.003538 seconds
+  Import took 0.006602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.602584 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
+  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce90461eae0a88bba3cf7c528842ffbb') in 0.003256 seconds
+  Import took 0.006042 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016684 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.120 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.97 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1815 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.1 MB.
+System memory in use after: 83.2 MB.
+
+Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2268.
+Total: 30.694400 ms (FindLiveObjects: 0.494000 ms CreateObjectMapping: 0.234900 ms MarkObjects: 29.917300 ms  DeleteObjects: 0.045700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.981320 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
+  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '725dd19c26ad86654c8b8684ef604ea2') in 0.009999 seconds
+  Import took 0.013240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018751 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
+  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '725dd19c26ad86654c8b8684ef604ea2') in 0.002475 seconds
+  Import took 0.005188 seconds .
+
