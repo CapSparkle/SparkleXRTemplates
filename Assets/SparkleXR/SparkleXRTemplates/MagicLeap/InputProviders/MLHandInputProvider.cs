@@ -20,34 +20,7 @@ namespace SparkleXRTemplates.MagicLeap
         MLHandTracking.Hand handGesturesDevice;
         
         List<Action> mySubscribers = new List<Action>();
-        /*public List<Action> subscribers
-        {
-            get
-            {
-                return _subscribers;
-
-            }
-            protected set
-            {
-                _subscribers = value;
-
-                if (_subscribers == null || _subscribers.Count == 0)
-                {
-                    if(notificationCoroutine != null)
-					{
-
-					}
-				}
-                else
-				{
-                    if (notificationCoroutine != null)
-                    {
-
-                    }
-                }
-            }
-        }*/
-
+     
         List<GestureState> gestureStates = new List<GestureState>();
         List<MLGestureMask> mlGestureMasks = new List<MLGestureMask>();
 

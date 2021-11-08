@@ -16,7 +16,8 @@ namespace SparkleXRTemplates
 
 	public class MLHandWristTiltProvider : SimpleHandInputProvider
     {
-        List<Action> mySubscribers = new List<Action>();
+        List<Action<float>> mySubscribers = new List<Action<float>>();
+        List<HandWristTilt> tiltGestureState = new List<HandWristTilt>();
 
         [SerializeField]
         MLHandTracking.HandKeyPose TiltGesture = MLHandTracking.HandKeyPose.Fist;
@@ -25,31 +26,28 @@ namespace SparkleXRTemplates
         float upBentMinAngle = 15f;
 
         [SerializeField]
-        float downBentMinAngle = 15f;
+        float downBentMinAngle = -15f;
 
 
         MLHandTracking.Hand handDevice;
 
-        float stopTiltGestureThreshold = 0.5f; //seconds till gesture become unrecognized since wrong key pose recognition
-
-        float tiltAngle = 0f;
+        //float stopTiltGestureThreshold = 0.5f; //seconds till gesture become unrecognized since wrong key pose recognition has been occured
         
-        Pose tiltStartPose = Pose.identity;
+        float tiltAngle = 0f;
 
-        HandWristTilt _wristTilt = HandWristTilt.UndefindedTilt;
-        public HandWristTilt wristTilt
+        Vector3 startHandDirection = Vector3.zero;
+        
+        protected Vector3 currentHandDirection
         {
             set
-			{
-                //(handDevice.Middle.MCP.Position - handDevice.Wrist.Center.Position)
-
+            {
+            
             }
 
             get
 			{
-                return _wristTilt;
+                return handDevice.Middle.MCP.Position - handDevice.Wrist.Center.Position;
             }
-            
         }
 
         void Start()
@@ -71,35 +69,53 @@ namespace SparkleXRTemplates
 
         void RecognizeGesture()
 		{
-            if (tiltStartPose == Pose.identity)
+            if (startHandDirection == Vector3.zero)
             {
                 if (handDevice.KeyPose == TiltGesture)
                 {
-                    //Gesture started
+                    startHandDirection = currentHandDirection;
                 }
             }
             else
 			{
                 if (handDevice.KeyPose == TiltGesture)
                 {
-
+                    tiltAngle = Vector3.Angle(startHandDirection, Vector3.ProjectOnPlane(currentHandDirection, Vector3.Cross(startHandDirection, Vector3.up)));
                 }
                 else
 				{
-                    if (handDevice.KeyPose == TiltGesture)
-                    {
-                        //Gesture longer presented
-                    }
+                    startHandDirection = Vector3.zero;
+                    tiltAngle = 0f;
                 }
             }
 
 		}
-        
+
+        HandWristTilt currentGesture;
+
         void Update()
         {
+            RecognizeGesture();
+            if (tiltAngle > upBentMinAngle)
+                currentGesture = HandWristTilt.WristBentUp;
+            else if (tiltAngle < downBentMinAngle)
+                currentGesture = HandWristTilt.WristBentDown;
+            else
+			{
+                currentGesture = HandWristTilt.UndefindedTilt;
+                return;
+            }
+
             if(mySubscribers.Count != 0)
 			{
-                
+                for(int i = 0; i < tiltGestureState.Count; i ++)
+				{
+                    if (tiltGestureState[i] == currentGesture)
+					{
+                        float degreesExceedingMinTiltThreshold = Mathf.Abs(tiltAngle - (currentGesture == HandWristTilt.WristBentUp ? upBentMinAngle : downBentMinAngle));
+                        mySubscribers[i](degreesExceedingMinTiltThreshold);
+					}
+				}
 			}
         }
     }
