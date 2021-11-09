@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
@@ -22,6 +23,7 @@ namespace SparkleXRTemplates
         [SerializeField]
         protected Handedness handedness = Handedness.None;
 
+        public Action onHandednessChange;
 
         #region -Feature representing hand finger points-
 

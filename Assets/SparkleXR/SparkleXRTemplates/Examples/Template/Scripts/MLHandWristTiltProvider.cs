@@ -29,7 +29,18 @@ namespace SparkleXRTemplates
         float downBentMinAngle = -15f;
 
 
-        MLHandTracking.Hand handDevice;
+        MLHandTracking.Hand _handDevice;
+        MLHandTracking.Hand handDevice
+		{
+			get
+			{
+                return _handDevice;
+            }
+            set
+			{
+                _handDevice = value;
+			}
+		}
 
         //float stopTiltGestureThreshold = 0.5f; //seconds till gesture become unrecognized since wrong key pose recognition has been occured
         
@@ -53,18 +64,22 @@ namespace SparkleXRTemplates
         void Start()
         {
             base.Start();
+            GetHandDevice();
+        }
 
+        void GetHandDevice()
+		{
             try
-			{
+            {
                 if (handedness == Handedness.Right)
                     handDevice = MLHandTracking.Right;
                 else if (handedness == Handedness.Left)
                     handDevice = MLHandTracking.Left;
             }
             catch (Exception exc)
-			{
+            {
                 print(exc.Message);
-			}
+            }
         }
 
         void RecognizeGesture()
