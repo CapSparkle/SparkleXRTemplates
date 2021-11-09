@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c807268543274680a18e01da06a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputProvider: {fileID: 1967579099}
+  inputProvider: {fileID: 1967579100}
   deviceTypeToCorrespond: 1
 --- !u!1 &198093536
 GameObject:
@@ -425,7 +425,50 @@ MonoBehaviour:
   correspondingGameInteractor: {fileID: 1610453170}
   selectors:
   - {fileID: 802776821}
-  selectionPredicate: {fileID: 0}
+  selectionPredicate: {fileID: 1687859963}
+--- !u!1 &568030329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568030331}
+  - component: {fileID: 568030330}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &568030330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568030329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8e4711332207d448cba6d8b0c7f930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &568030331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568030329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.32761067, y: 3.0155725, z: 1.155815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &656154485
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,8 +566,10 @@ GameObject:
   - component: {fileID: 882086415}
   - component: {fileID: 882086414}
   - component: {fileID: 882086413}
+  - component: {fileID: 882086418}
   - component: {fileID: 882086412}
   - component: {fileID: 882086411}
+  - component: {fileID: 882086417}
   m_Layer: 0
   m_Name: SomeCube
   m_TagString: Untagged
@@ -544,6 +589,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2792fe42ed308e4428e929c801a98345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: myControlls
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[SparkleXRTemplates.ControlsDescriptor,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: OnTake
+      Entry: 6
+      Data: 
 --- !u!114 &882086412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +744,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882086417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882086410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259bc61b9c1fe92429931ac9cd899f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOnTake: 1
+--- !u!54 &882086418
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882086410}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &903047868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1610453172}
   - component: {fileID: 1610453170}
+  - component: {fileID: 1610453171}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -1108,6 +1208,19 @@ MonoBehaviour:
   myXRInputProvider: {fileID: 0}
   busy: 0
   _handPivot: {fileID: 656154486}
+--- !u!114 &1610453171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610453169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96756c436e785a44b8672ef9b0880cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 10
 --- !u!4 &1610453172
 Transform:
   m_ObjectHideFlags: 0
@@ -1271,8 +1384,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1967579098}
-  - component: {fileID: 1967579099}
   - component: {fileID: 1967579100}
+  - component: {fileID: 1967579099}
   m_Layer: 0
   m_Name: HandInputProvider
   m_TagString: Untagged

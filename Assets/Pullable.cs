@@ -41,6 +41,9 @@ namespace SparkleXRTemplates.Examples
         private Vector3 savedScale;
         private Transform previousParent;
 
+
+        public Action<Hand> OnTake;
+
         public void Take(GameInteractor interactor)
         {
             Hand takingHand;
@@ -55,8 +58,13 @@ namespace SparkleXRTemplates.Examples
 
 
             holdingHand = takingHand;
+            holdingHand.GetComponent<GrippingDevice>().OnDamageTaken += () => { Drop(interactor); };
+
+
+            OnTake(holdingHand);
 
         }
+
         public void Drop(GameInteractor interactor)
         {
             Hand dropingHand;
