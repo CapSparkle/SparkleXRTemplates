@@ -8,6 +8,11 @@ public class Score : MonoBehaviour
 	public Action<int> onScoreChange;
     public int score { get; private set; }
 
+	private void Start()
+	{
+		onScoreChange += (int x) => { };
+	}
+
 	public void OnTriggerEnter(Collider other)
 	{
         GoldNugget goldNugget;
@@ -15,7 +20,7 @@ public class Score : MonoBehaviour
 		{
             score += goldNugget.score;
 			onScoreChange(score);
-			Destroy(goldNugget);
+			Destroy(goldNugget.gameObject);
         }
 	}
 }

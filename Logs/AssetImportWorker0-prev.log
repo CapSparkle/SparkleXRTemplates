@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/staging' branch; Version is '2020.2.7f1 (c53830e277f1) revision 12924976'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1288; Version 2009; 64bit' Language: 'ru' Physical Memory: 16303 MB
+OS: 'Windows 10 Pro; OS build 19043.1348; Version 2009; 64bit' Language: 'ru' Physical Memory: 16303 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,19 +15,19 @@ C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55104
+63427
 Successfully changed project path to: C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 65.81 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.59 ms.
+Refreshing native plugins compatible for Editor in 63.56 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.71 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel/Assets
 GfxDevice: creating device client; threaded=0
-Renderer: GeForce RTX 2060/PCIe/SSE2
+Renderer: NVIDIA GeForce RTX 2060/PCIe/SSE2
 Vendor:   NVIDIA Corporation
-Version:  4.5.0 NVIDIA 457.49
+Version:  4.5.0 NVIDIA 496.76
 GLES:     0
  GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_layer GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragmen
 t_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoki
@@ -35,34 +35,452 @@ ng_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB
 RB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_t
 ranspose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters 
 GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_provoking_vertex GL_EXT_raster_multisample GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_sparse_texture2 GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_lod G
-L_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_import_sync_object GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_win32 GL_EXT_win32_keyed_mutex GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_win32 GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_blend_equation_advanced_coherent GL_NVX_blend_equation_advanced_multi_draw_buffe
-rs GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_clip_space_w_scaling GL_NV_command_list GL_NV_compute_program5 GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_conservative_raster_pre_snap GL_NV_conservative_raster_pre_snap_triangles GL_NV_conservative_raster_underestimation GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_barycentric GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_shader_passthrough GL_NV_gpu_program4 GL_NV_internalformat_sample_query GL_NV_gpu_p
-rogram4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_mesh_shader GL_NV_multisample_coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_data_range GL_NV_point_sprite GL_NV_primitive_restart GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_representative_fragment_test GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_scissor_exclusive GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_float64 GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_partitioned GL_NV_shader_texture_footprint GL_NV_shading_rate_image GL_NV_stereo_view_rendering GL_NV_texgen_ref
-lection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_vertex_array_range GL_NV_vertex_array_range2 GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NVX_linked_gpu_multicast GL_NV_gpu_multicast GL_NVX_gpu_multicast2 GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NVX_multigpu_info GL_NVX_nvenc_interop GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipmap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX
-_shadow GL_SUN_slice_accum GL_WIN_swap_hint WGL_EXT_swap_control
+L_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_import_sync_object GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_win32 GL_NV_memory_object_sparse GL_EXT_win32_keyed_mutex GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_win32 GL_NV_timeline_semaphore GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_blend_equation_advanced_cohe
+rent GL_NVX_blend_equation_advanced_multi_draw_buffers GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_clip_space_w_scaling GL_NV_command_list GL_NV_compute_program5 GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_conservative_raster_pre_snap GL_NV_conservative_raster_pre_snap_triangles GL_NV_conservative_raster_underestimation GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_barycentric GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_shader_passthrough GL_NV_gpu_pr
+ogram4 GL_NV_internalformat_sample_query GL_NV_gpu_program4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_mesh_shader GL_NV_multisample_coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_data_range GL_NV_point_sprite GL_NV_primitive_restart GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_representative_fragment_test GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_scissor_exclusive GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_float64 GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_partitioned GL_NV_shader_texture_footprint GL_NV_shading_rat
+e_image GL_NV_stereo_view_rendering GL_NV_texgen_reflection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_vertex_array_range GL_NV_vertex_array_range2 GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NVX_linked_gpu_multicast GL_NV_gpu_multicast GL_NVX_gpu_multicast2 GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NVX_multigpu_info GL_NVX_nvenc_interop GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipm
+ap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX_shadow GL_SUN_slice_accum GL_WIN_swap_hint WGL_EXT_swap_control
 OPENGL LOG: Creating OpenGL 4.5 graphics device ; Context level  <OpenGL 4.5> ; Context handle 65537
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56328
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.002348 seconds.
+Registered in 0.002269 seconds.
 Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 33.72 ms, found 69 plugins.
+Refreshing native plugins compatible for Editor in 36.90 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.060 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.015952 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
 Preloading 1 native plugins for Editor in 0.07 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.023 seconds
+- Completed reload, in  1.270 seconds
 Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.22 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1847 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.8 MB.
+System memory in use after: 84.9 MB.
+
+Unloading 102 unused Assets to reduce memory usage. Loaded Objects now: 2272.
+Total: 18.859400 ms (FindLiveObjects: 0.269700 ms CreateObjectMapping: 0.083100 ms MarkObjects: 18.408600 ms  DeleteObjects: 0.096500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94cb322e4e98af2beb1f4a0d78d2d94') in 0.027925 seconds
+  Import took 0.030731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2356.786985 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e28bd45e9bd4dee0c16d9855adc5ac89') in 0.004233 seconds
+  Import took 0.010997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.336053 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a47cb58a22cd2b0625157192bb282480') in 0.003995 seconds
+  Import took 0.007470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006014 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a47cb58a22cd2b0625157192bb282480') in 0.003941 seconds
+  Import took 0.007370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.423250 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fbcdec28468bf98ea82527c758de794') in 0.003388 seconds
+  Import took 0.007169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006592 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fbcdec28468bf98ea82527c758de794') in 0.003239 seconds
+  Import took 0.006712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 195.639161 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c713cb51503036076a1132051294f6') in 0.003819 seconds
+  Import took 0.006780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.215995 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3f8fb9e8605ead0e28d60609c4313b0') in 0.004699 seconds
+  Import took 0.007363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005554 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3f8fb9e8605ead0e28d60609c4313b0') in 0.004300 seconds
+  Import took 0.007460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.553488 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b89f80f4a25d18277d20a914e920a7') in 0.003636 seconds
+  Import took 0.007048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.771516 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '130622ab7352786be3e00efca1f3b7f4') in 0.003986 seconds
+  Import took 0.006740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.806947 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8ebeace396c59ce0fc27088a035722') in 0.004343 seconds
+  Import took 0.007899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.429340 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aee4743dd9b4ccd92273ab5f67378b4') in 0.003692 seconds
+  Import took 0.006225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.532107 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95e57ccbdd0ff2f2d8dd9dcf17efe83d') in 0.002529 seconds
+  Import took 0.005273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.888188 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ee30488fc12e0952c3ca2782d4c8537') in 0.002446 seconds
+  Import took 0.005299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.663203 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f90f24dd208c7558f68fdead78c4255') in 0.002758 seconds
+  Import took 0.006889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.952638 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ede23b4b8b0836d87fe1729d40812b3') in 0.002526 seconds
+  Import took 0.005134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.963396 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f59539d8953d7a0fa1b3de9b63c4646') in 0.002192 seconds
+  Import took 0.005001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.566234 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75022ab9f9b9fe813d07c2271a39888c') in 0.002656 seconds
+  Import took 0.005541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.419468 seconds.
+  path: Assets/HandPushControllsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandPushControllsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8602f9c80a37f30879653e442a8fd57b') in 0.002400 seconds
+  Import took 0.005845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.088290 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b57d02115112e35e346c43af1cd90f23') in 0.007693 seconds
+  Import took 0.011838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004605 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b57d02115112e35e346c43af1cd90f23') in 0.002276 seconds
+  Import took 0.005828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.069551 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fa8381720797dcd89c9429d8b975353') in 0.002172 seconds
+  Import took 0.005367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.453539 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17c21366e2ec507535fbe842e85eac61') in 0.002780 seconds
+  Import took 0.005379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.589694 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9905a2092874b69f5fa24def9a59c21') in 0.002996 seconds
+  Import took 0.005960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.645556 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e3a87531fa09b4570c06c482f1e6c9') in 0.002526 seconds
+  Import took 0.005217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.349246 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288d0441d6d242bfdc2299076a775246') in 0.002053 seconds
+  Import took 0.004834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 155.414536 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed1ab2835d1cd8c3f565e586a95b3382') in 0.003932 seconds
+  Import took 0.006816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.067572 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de05e2fd9c5eec8ef99292b32f7b046') in 0.002466 seconds
+  Import took 0.005249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.449947 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90dac3693b16cae43439cab1d1a10600') in 0.002719 seconds
+  Import took 0.005890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.129104 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65934c583eb938b09374531d48fca372') in 0.002196 seconds
+  Import took 0.005203 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.468357 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba9ba48ee35ac556437d7ea350c7027e') in 0.002047 seconds
+  Import took 0.004957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.276607 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3535fc3114fa03fc7149e40e7a9e3fe3') in 0.002411 seconds
+  Import took 0.005607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.224811 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b4407998b3bbbacfcc6f8b1642851e') in 0.002132 seconds
+  Import took 0.005272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.227558 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd711a4c601ca7a71e2959cdc3705951') in 0.002648 seconds
+  Import took 0.005638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.298479 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5206f300f52ca57006be897cd7d0a42') in 0.002467 seconds
+  Import took 0.005295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.936347 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ea86438733d08edc11f5ea6d8ae192') in 0.002366 seconds
+  Import took 0.005153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.542777 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380395e12fc5f434c258d576244d0372') in 0.002620 seconds
+  Import took 0.005377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.995202 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b035322efb4b04e2278c983a1c804802') in 0.002214 seconds
+  Import took 0.005070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.160016 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c5bb72d8247ca4e4a89dd446c305c1') in 0.002224 seconds
+  Import took 0.006450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.427637 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bec21f0723cf5ae5db34bbfd11bd23c') in 0.002301 seconds
+  Import took 0.004951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.213860 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '412fa34ee264b123cc365246ecee5d7b') in 0.002258 seconds
+  Import took 0.004844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.947409 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22a55aa4265150a1c38665956d7ede2e') in 0.002916 seconds
+  Import took 0.005818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.292236 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b6f6e1e4b82baf9726359189254ca28') in 0.003115 seconds
+  Import took 0.006484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.928616 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '782f289d91ffa249a19d7afd22163638') in 0.002329 seconds
+  Import took 0.004938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.176619 seconds.
+  path: Assets/HandWristTiltControlsDescriptor.cs
+  artifactKey: Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HandWristTiltControlsDescriptor.cs using Guid(9510c961e53539f47962a92d31211b8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b7add3cd47fed857a6827d389b85658') in 0.002674 seconds
+  Import took 0.005457 seconds .
+
+========================================================================
+Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016019 seconds.
+Registered in 0.016834 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.154 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.09 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1823 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.5 MB.
+System memory in use after: 83.7 MB.
+
+Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2276.
+Total: 23.850900 ms (FindLiveObjects: 0.346800 ms CreateObjectMapping: 0.153900 ms MarkObjects: 23.220500 ms  DeleteObjects: 0.128300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017111 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
@@ -72,417 +490,15 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.154 seconds
+- Completed reload, in  1.112 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.89 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1839 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.6 MB.
-System memory in use after: 84.7 MB.
-
-Unloading 102 unused Assets to reduce memory usage. Loaded Objects now: 2264.
-Total: 16.219600 ms (FindLiveObjects: 0.198500 ms CreateObjectMapping: 0.074000 ms MarkObjects: 15.853100 ms  DeleteObjects: 0.092100 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/ProgrammTemplate.unity
-  artifactKey: Guid(32f6721386ce761408ed603eb19e8dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/ProgrammTemplate.unity using Guid(32f6721386ce761408ed603eb19e8dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b1966fa3ada5e16574f2302b3523f3') in 0.014538 seconds
-  Import took 0.019204 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015582 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.43 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.135 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1815 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.1 MB.
-System memory in use after: 83.2 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2268.
-Total: 28.489400 ms (FindLiveObjects: 0.523500 ms CreateObjectMapping: 0.274800 ms MarkObjects: 27.637400 ms  DeleteObjects: 0.050000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015949 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.087 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1815 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.2 MB.
-System memory in use after: 83.3 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2272.
-Total: 30.894800 ms (FindLiveObjects: 0.600100 ms CreateObjectMapping: 0.264700 ms MarkObjects: 29.969400 ms  DeleteObjects: 0.057900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 832.973710 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
-  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f123322ea717120b99537ff0221f1177') in 0.041080 seconds
-  Import took 0.044085 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.291096 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/HandWristTiltControllsDescriptor.cs
-  artifactKey: Guid(2720fa900a87d2a48be52c6ab4ef8c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/HandWristTiltControllsDescriptor.cs using Guid(2720fa900a87d2a48be52c6ab4ef8c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1908a6631a5eb532d226b4de0f82682') in 0.008206 seconds
-  Import took 0.011301 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016877 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.232 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.47 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1816 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.2 MB.
-System memory in use after: 83.3 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2277.
-Total: 17.010800 ms (FindLiveObjects: 0.200100 ms CreateObjectMapping: 0.072700 ms MarkObjects: 16.691300 ms  DeleteObjects: 0.045400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.017188 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.02 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.186 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.10 ms, found 69 plugins.
 Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1816 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.2 MB.
-System memory in use after: 83.3 MB.
+Unloading 1823 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.6 MB.
+System memory in use after: 83.7 MB.
 
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2281.
-Total: 16.611200 ms (FindLiveObjects: 0.175000 ms CreateObjectMapping: 0.067200 ms MarkObjects: 16.323900 ms  DeleteObjects: 0.043800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 207.936129 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/ControllsDescriptors
-  artifactKey: Guid(c1f82e9c408393340b7f32820f632060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/ControllsDescriptors using Guid(c1f82e9c408393340b7f32820f632060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0613ca2448d63b553af659f8a746f20') in 0.010062 seconds
-  Import took 0.013128 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.430381 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/ControlsDescriptors
-  artifactKey: Guid(c1f82e9c408393340b7f32820f632060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/ControlsDescriptors using Guid(c1f82e9c408393340b7f32820f632060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed2e2d896b1ebc9e171e77f85ffe1bfa') in 0.008164 seconds
-  Import took 0.012422 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018365 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.25 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.264 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.06 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1816 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.2 MB.
-System memory in use after: 83.3 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2285.
-Total: 18.048300 ms (FindLiveObjects: 0.285400 ms CreateObjectMapping: 0.098300 ms MarkObjects: 17.616500 ms  DeleteObjects: 0.046900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016535 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.108 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1816 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.3 MB.
-System memory in use after: 83.4 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2289.
-Total: 27.440300 ms (FindLiveObjects: 0.526600 ms CreateObjectMapping: 0.233700 ms MarkObjects: 26.636400 ms  DeleteObjects: 0.040900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.023708 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.164 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.98 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.3 MB.
-System memory in use after: 83.4 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2294.
-Total: 18.434700 ms (FindLiveObjects: 0.300900 ms CreateObjectMapping: 0.080700 ms MarkObjects: 17.945100 ms  DeleteObjects: 0.104700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015747 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.106 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.3 MB.
-System memory in use after: 83.4 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2298.
-Total: 15.300400 ms (FindLiveObjects: 0.285100 ms CreateObjectMapping: 0.082000 ms MarkObjects: 14.894300 ms  DeleteObjects: 0.037800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.017799 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.161 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.3 MB.
-System memory in use after: 83.4 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2302.
-Total: 16.464100 ms (FindLiveObjects: 0.177100 ms CreateObjectMapping: 0.067000 ms MarkObjects: 16.173500 ms  DeleteObjects: 0.044900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016292 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.147 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.03 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.3 MB.
-System memory in use after: 83.4 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2306.
-Total: 16.268500 ms (FindLiveObjects: 0.173900 ms CreateObjectMapping: 0.062400 ms MarkObjects: 15.982100 ms  DeleteObjects: 0.048400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016281 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.113 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.43 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1817 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.3 MB.
-System memory in use after: 83.4 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2310.
-Total: 17.306100 ms (FindLiveObjects: 0.272000 ms CreateObjectMapping: 0.082900 ms MarkObjects: 16.907100 ms  DeleteObjects: 0.042300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.023104 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.105 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.09 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.3 MB.
-System memory in use after: 83.5 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2315.
-Total: 17.621400 ms (FindLiveObjects: 0.200200 ms CreateObjectMapping: 0.075400 ms MarkObjects: 17.295300 ms  DeleteObjects: 0.048400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.024303 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.111 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.03 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.4 MB.
-System memory in use after: 83.5 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2320.
-Total: 16.577400 ms (FindLiveObjects: 0.304900 ms CreateObjectMapping: 0.112500 ms MarkObjects: 16.117100 ms  DeleteObjects: 0.040900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016282 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.12 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.098 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.03 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.4 MB.
-System memory in use after: 83.5 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2324.
-Total: 15.951600 ms (FindLiveObjects: 0.277200 ms CreateObjectMapping: 0.073800 ms MarkObjects: 15.557500 ms  DeleteObjects: 0.041500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.019447 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.77 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.340 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.04 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1820 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.4 MB.
-System memory in use after: 83.5 MB.
-
-Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2329.
-Total: 16.635700 ms (FindLiveObjects: 0.376100 ms CreateObjectMapping: 0.117000 ms MarkObjects: 16.097100 ms  DeleteObjects: 0.043900 ms)
+Unloading 97 unused Assets to reduce memory usage. Loaded Objects now: 2280.
+Total: 30.455600 ms (FindLiveObjects: 0.428100 ms CreateObjectMapping: 0.200500 ms MarkObjects: 29.779600 ms  DeleteObjects: 0.044600 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

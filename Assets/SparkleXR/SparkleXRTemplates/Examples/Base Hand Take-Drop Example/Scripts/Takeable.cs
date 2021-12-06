@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.Serialization;
@@ -9,16 +10,19 @@ namespace SparkleXRTemplates.Examples
     //[RequireComponent(typeof(TakingInputHandler))]
     public class Takeable : GameInteractable
     {
-        string myDescription;
+        [SerializeField]
+        bool childToHoldingHand;
 
-        Hand _holdingHand = null;
-        public Hand holdingHand 
+        protected string myDescription;
+
+        protected Hand _holdingHand = null;
+        public virtual Hand holdingHand 
         {
             get
             {
                 return _holdingHand;   
             }
-            private set
+            protected set
 			{
                 if(value != _holdingHand)
 				{
@@ -37,16 +41,16 @@ namespace SparkleXRTemplates.Examples
 			}        
         }
 
-
-        private Vector3 savedScale;
         private Transform previousParent;
 
+        public Action<Hand> OnTakenBy;
         public void Take(GameInteractor interactor)
         {
-            Hand takingHand;
+            Hand takingHand = interactor.GetComponent<Hand>();
 
-            if ((takingHand = interactor.GetComponent<Hand>()) == null)
+            if (takingHand == null)
                 return;
+
 
             if (holdingHand != null ||
                 takingHand == null ||
@@ -54,41 +58,58 @@ namespace SparkleXRTemplates.Examples
                 return;
 
 
-            previousParent = transform.parent;
-            //savedScale = transform.localScale;
+            if(childToHoldingHand)
+			{
+                previousParent = transform.parent;
+                //savedScale = transform.localScale;
 
-            transform.parent = takingHand.transform;
-
-            if (takingHand.handPivot != null)
-            {
-                transform.parent = takingHand.handPivot;
-                transform.position = takingHand.handPivot.position;
-                transform.rotation = takingHand.handPivot.rotation;
-                //transform.localScale = takingHand.handPivot.localScale;
-            }
-            else
-            {
                 transform.parent = takingHand.transform;
-                transform.position = Vector3.zero;
-                transform.rotation = Quaternion.identity;
+
+                if (takingHand.handPivot != null)
+                {
+                    transform.parent = takingHand.handPivot;
+                    transform.position = takingHand.handPivot.position;
+                    transform.rotation = takingHand.handPivot.rotation;
+                    //transform.localScale = takingHand.handPivot.localScale;
+                }
+                else
+                {
+                    transform.parent = takingHand.transform;
+                    transform.position = takingHand.transform.position;
+                    transform.rotation = Quaternion.identity;
+                }
             }
 
             holdingHand = takingHand;
-            
+
+            OnTakenBy(holdingHand);
         }
-        public void Drop(GameInteractor interactor)
+
+        public Action<Hand> RightBeforeDroppedBy;
+        public void TryDrop(GameInteractor interactor)
         {
             Hand dropingHand;
 
             if ((dropingHand = interactor.GetComponent<Hand>()) == null)
                 return;
 
-            print("drop");
+
             if (holdingHand != dropingHand)
                 return;
 
-            transform.parent = previousParent;
-            //transform.localScale = savedScale;
+            Drop();
+        }
+
+        protected void Drop()
+		{
+            if (childToHoldingHand)
+            {
+                transform.parent = previousParent;
+            }
+
+            print("drop");
+            if(RightBeforeDroppedBy != null)
+                RightBeforeDroppedBy?.Invoke(holdingHand);
             holdingHand = null;
         }
     }

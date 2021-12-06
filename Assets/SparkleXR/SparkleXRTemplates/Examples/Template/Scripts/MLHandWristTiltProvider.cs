@@ -19,6 +19,19 @@ namespace SparkleXRTemplates
         List<Action<float>> mySubscribers = new List<Action<float>>();
         List<HandWristTilt> tiltGestureState = new List<HandWristTilt>();
 
+        public void AddGestureListener(Action<float> newSubscriber, HandWristTilt handWristTilt)
+		{
+            mySubscribers.Add(newSubscriber);
+            tiltGestureState.Add(handWristTilt);
+        }
+
+        public void RemoveGestureListener(Action<float> goingOutSubscriber)
+        {
+            int indexOfGoingOutSubscriber = mySubscribers.IndexOf(goingOutSubscriber);
+            mySubscribers.RemoveAt(indexOfGoingOutSubscriber);
+            tiltGestureState.RemoveAt(indexOfGoingOutSubscriber);
+        }
+
         [SerializeField]
         MLHandTracking.HandKeyPose TiltGesture = MLHandTracking.HandKeyPose.Fist;
 
@@ -57,7 +70,7 @@ namespace SparkleXRTemplates
 
             get
 			{
-                return handDevice.Middle.MCP.Position - handDevice.Wrist.Center.Position;
+                return (handDevice.Middle.MCP.Position - handDevice.Wrist.Center.Position).normalized;
             }
         }
 
@@ -82,7 +95,7 @@ namespace SparkleXRTemplates
             }
         }
 
-        void RecognizeGesture()
+        void RecognizeTiltAngle()
 		{
             if (startHandDirection == Vector3.zero)
             {
@@ -95,7 +108,9 @@ namespace SparkleXRTemplates
 			{
                 if (handDevice.KeyPose == TiltGesture)
                 {
-                    tiltAngle = Vector3.Angle(startHandDirection, Vector3.ProjectOnPlane(currentHandDirection, Vector3.Cross(startHandDirection, Vector3.up)));
+                    Vector3 projectionOnVerticalPlane = Vector3.ProjectOnPlane(currentHandDirection, Vector3.Cross(startHandDirection, Vector3.up));
+                    tiltAngle = Vector3.Angle(startHandDirection, projectionOnVerticalPlane);
+                    tiltAngle *= Mathf.Sign((projectionOnVerticalPlane - startHandDirection).y);
                 }
                 else
 				{
@@ -110,7 +125,7 @@ namespace SparkleXRTemplates
 
         void Update()
         {
-            RecognizeGesture();
+            RecognizeTiltAngle();
             if (tiltAngle > upBentMinAngle)
                 currentGesture = HandWristTilt.WristBentUp;
             else if (tiltAngle < downBentMinAngle)

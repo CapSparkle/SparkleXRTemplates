@@ -6,20 +6,21 @@ using UnityEngine;
 
 namespace SparkleXRTemplates.Examples
 {
+    //Semantically pullable is highly associated with takeable.
+    //By presented logic you cannot pull or push something without takeing it
+    //Pullable is an extension of Takeable
     [RequireComponent(typeof(Rigidbody))]
-    public class Pullable : GameInteractable
+    public class Pullable : Takeable
     {
-        string myDescription;
-
-        Hand _holdingHand = null;
-        public Hand holdingHand
+        GrippingDevice currentlyGrippingDevice = null;
+        public override Hand holdingHand
         {
-            get
-            {
-                return _holdingHand;
-            }
-            private set
-            {
+			get
+			{
+                return base.holdingHand;
+			}
+            protected set
+			{
                 if (value != _holdingHand)
                 {
                     if (_holdingHand != null)
@@ -29,92 +30,59 @@ namespace SparkleXRTemplates.Examples
 
                     _holdingHand = value;
 
+
                     if (_holdingHand != null)
                     {
                         _holdingHand.StateOfHand.Add(this, new StateLabel(StateLabelType.carrying, myDescription));
                     }
+
+
+                    GrippingDevice newGrippingDevice = value.GetComponent<GrippingDevice>();
+
+                    if (currentlyGrippingDevice != newGrippingDevice)
+                    {
+                        if (currentlyGrippingDevice != null)
+                        {
+                            currentlyGrippingDevice.OnDamageTaken -= Drop;
+                        }
+
+                        currentlyGrippingDevice = newGrippingDevice;
+
+                        if (currentlyGrippingDevice != null)
+                        {
+                            currentlyGrippingDevice.OnDamageTaken += Drop;
+                        }
+                    }
                 }
+
+                //GrippingDevice grippingDevice = holdingHand.GetComponent<GrippingDevice>();
+
+                if (currentlyGrippingDevice != null)
+                    currentlyGrippingDevice.OnDamageTaken += Drop;
+
+                targetVelocity = Vector3.zero;
             }
-        }
-
-
-        private Vector3 savedScale;
-        private Transform previousParent;
-
-
-        public Action<Hand> OnTake;
-
-        public void Take(GameInteractor interactor)
-        {
-            Hand takingHand;
-
-            if ((takingHand = interactor.GetComponent<Hand>()) == null)
-                return;
-
-            if (holdingHand != null ||
-                takingHand == null ||
-                takingHand.busy)
-                return;
-
-
-            holdingHand = takingHand;
-            holdingHand.GetComponent<GrippingDevice>().OnDamageTaken += () => { Drop(interactor); };
-
-
-            OnTake(holdingHand);
-
-        }
-
-        public void Drop(GameInteractor interactor)
-        {
-            Hand dropingHand;
-
-            if ((dropingHand = interactor.GetComponent<Hand>()) == null)
-                return;
-
-            print("drop");
-            if (holdingHand != dropingHand)
-                return;
-
-
-            holdingHand = null;
         }
 
 
         Vector3 targetVelocity = Vector3.zero;
         float velocityModifier = 1f;
 
-        public void Pull(GameInteractor interactor, float pullPower)
+        public void PullOrPush(GameInteractor interactor, float pullPower)
         {
-            Hand pullingHand;
-            if ((pullingHand = interactor.GetComponent<Hand>()) == null)
-                return;
-
-            if (holdingHand != pullingHand)
+            GrippingDevice grippingDevice = interactor.GetComponent<GrippingDevice>();
+            if (grippingDevice == null)
                 return;
 
 
-            targetVelocity = (pullingHand.handPivot.position - transform.position).normalized * velocityModifier * pullPower;
-
-            //this.GetComponent<Rigidbody>().AddForce(new Vector3(1f, 1f, 1f), ForceMode.)
-
-        }
-
-        public void Push(GameInteractor interactor, float pullPower)
-        {
-            Hand pushingHand;
-            if ((pushingHand = interactor.GetComponent<Hand>()) == null)
+            if (holdingHand != grippingDevice.GetComponent<Hand>())
                 return;
 
-            if (holdingHand != pushingHand)
-                return;
-
-            targetVelocity = (transform.position - pushingHand.handPivot.position).normalized * velocityModifier * pullPower;
+            targetVelocity = (transform.position - holdingHand.handPivot.position).normalized * velocityModifier * pullPower;
         }
 
 
-        float changingSpeed = 2f;
-
+        float changingSpeed = 1f;
         float limitThreshold = 0.1f;
         private void Move()
 		{
@@ -126,14 +94,14 @@ namespace SparkleXRTemplates.Examples
             rigidbody.velocity += addingVelocityVector;
 
             targetVelocity = Vector3.zero;
+
         }
 
         Rigidbody rigidbody;
-
 		private void Start()
 		{
             rigidbody = GetComponent<Rigidbody>();
-		}
+        }
 
 		void Update()
         {
