@@ -16,6 +16,10 @@ namespace SparkleXRTemplates
 		{
 			transform.position = inputProvider.handCenterPosition;
 			transform.rotation = inputProvider.handOrientation;
+			print("x = " + inputProvider.handOrientation.x.ToString() +
+				"; y = " + inputProvider.handOrientation.y.ToString() +
+				"; z = " + inputProvider.handOrientation.z.ToString() +
+				"; w = " + inputProvider.handOrientation.w.ToString());
 		}
 	}
 

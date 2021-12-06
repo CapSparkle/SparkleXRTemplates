@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.MagicLeap;
 
-namespace SparkleXRTemplates
+namespace SparkleXRTemplates.MagicLeap
 {
 	public enum HandWristTilt
 	{ 
@@ -14,7 +14,7 @@ namespace SparkleXRTemplates
     }
 
 
-	public class MLHandWristTiltProvider : SimpleHandInputProvider
+	public class MLHandWristTiltProvider : MLHandInputProvider
     {
         List<Action<float>> mySubscribers = new List<Action<float>>();
         List<HandWristTilt> tiltGestureState = new List<HandWristTilt>();

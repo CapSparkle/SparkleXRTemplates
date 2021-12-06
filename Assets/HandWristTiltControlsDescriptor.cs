@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO: undepend from magic leap
+using SparkleXRTemplates.MagicLeap;
+
 namespace SparkleXRTemplates
 {
     public class HandWristTiltControlsDescriptor : ControlsDescriptor

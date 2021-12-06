@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.17619601, g: 0.22051579, b: 0.30284056, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -336,8 +336,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c807268543274680a18e01da06a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputProvider: {fileID: 1967579100}
+  inputProvider: {fileID: 1967579099}
   deviceTypeToCorrespond: 1
+--- !u!1 &107706309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107706310}
+  - component: {fileID: 107706313}
+  - component: {fileID: 107706312}
+  - component: {fileID: 107706311}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &107706310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107706309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.14133792, y: 0.14133792, z: 0.14133792}
+  m_Children: []
+  m_Father: {fileID: 198093537}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &107706311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107706309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &107706312
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107706309}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &107706313
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107706309}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &198093536
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,9 +457,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198093536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 107706310}
   m_Father: {fileID: 802776822}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -383,7 +479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &203482589
 Transform:
   m_ObjectHideFlags: 0
@@ -530,7 +626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &568030332
 BoxCollider:
@@ -609,9 +705,9 @@ MonoBehaviour:
   m_selectorUID: 0
   m_selectorDescriptor: SHS
   _director: {fileID: 198093537}
-  _castSource: {fileID: 198093537}
+  _castSource: {fileID: 802776822}
   _radius: 0.2
-  _maxDistance: 0
+  _maxDistance: 20
   includedLayers:
     serializedVersion: 2
     m_Bits: 55
@@ -645,7 +741,6 @@ GameObject:
   - component: {fileID: 882086418}
   - component: {fileID: 882086412}
   - component: {fileID: 882086411}
-  - component: {fileID: 882086417}
   - component: {fileID: 882086419}
   m_Layer: 0
   m_Name: SomeCube
@@ -669,7 +764,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 882086412}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -681,6 +777,9 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
       Data: 0
     - Name: 
       Entry: 13
@@ -688,9 +787,13 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: OnTake
+    - Name: OnTakenBy
       Entry: 6
       Data: 
+    - Name: RightBeforeDroppedBy
+      Entry: 6
+      Data: 
+  childToHoldingHand: 0
 --- !u!114 &882086412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,7 +809,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 882086411}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -720,7 +824,66 @@ MonoBehaviour:
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 6
+      Entry: 7
+      Data: 1|System.Action`2[[SparkleXRTemplates.GameInteractor, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: declaringType
+      Entry: 7
+      Data: 2|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: SparkleXRTemplates.Examples.Pullable, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: PullOrPush
+    - Name: delegateType
+      Entry: 7
+      Data: 3|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Action`2[[SparkleXRTemplates.GameInteractor, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: signature
+      Entry: 7
+      Data: 4|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 5|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: SparkleXRTemplates.GameInteractor, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Single, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 13
@@ -730,13 +893,47 @@ MonoBehaviour:
       Data: 
     - Name: onBentDownSubscribers
       Entry: 7
-      Data: 1|MS.Internal.Xml.XPath.ClonableStack`1[[System.Action`2[[SparkleXRTemplates.GameInteractor,
+      Data: 7|MS.Internal.Xml.XPath.ClonableStack`1[[System.Action`2[[SparkleXRTemplates.GameInteractor,
         Assembly-CSharp],[System.Single, mscorlib]], mscorlib]], System.Xml
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 6
+      Entry: 7
+      Data: 8|System.Action`2[[SparkleXRTemplates.GameInteractor, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: declaringType
+      Entry: 9
+      Data: 2
+    - Name: methodName
+      Entry: 1
+      Data: PullOrPush
+    - Name: delegateType
+      Entry: 9
+      Data: 3
+    - Name: signature
+      Entry: 7
+      Data: 9|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 9
+      Data: 5
+    - Name: 
+      Entry: 9
+      Data: 6
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 13
@@ -744,7 +941,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  requiredXRNodetypeOfInputProvider: 0
+  requiredXRNodetypeOfInputProvider: 1
 --- !u!65 &882086413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -777,7 +974,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 81a95a545e0ecf54389a84f4e760766d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -815,25 +1012,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882086410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32761067, y: 3.0155725, z: 1.155815}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &882086417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882086410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 259bc61b9c1fe92429931ac9cd899f7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageOnTake: 1
 --- !u!54 &882086418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1048,6 +1232,13 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: OnTakenBy
+      Entry: 6
+      Data: 
+    - Name: RightBeforeDroppedBy
+      Entry: 6
+      Data: 
+  childToHoldingHand: 0
 --- !u!114 &1355920012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,38 +1342,7 @@ MonoBehaviour:
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 8|System.Action`1[[SparkleXRTemplates.GameInteractor, Assembly-CSharp]],
-        mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 9
-      Data: 3
-    - Name: methodName
-      Entry: 1
-      Data: Drop
-    - Name: delegateType
-      Entry: 9
-      Data: 4
-    - Name: signature
-      Entry: 7
-      Data: 9|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 9
-      Data: 6
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -1198,7 +1358,7 @@ MonoBehaviour:
       Data: 
     - Name: mlGestureMasks
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[SparkleXRTemplates.MagicLeap.MLGestureMask,
+      Data: 8|System.Collections.Generic.List`1[[SparkleXRTemplates.MagicLeap.MLGestureMask,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -1217,7 +1377,7 @@ MonoBehaviour:
       Data: 
     - Name: gestureStates
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[UnityEngine.XR.InteractionSubsystems.GestureState,
+      Data: 9|System.Collections.Generic.List`1[[UnityEngine.XR.InteractionSubsystems.GestureState,
         Unity.XR.InteractionSubsystems]], mscorlib
     - Name: 
       Entry: 12
@@ -1235,36 +1395,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   requiredXRNodetypeOfInputProvider: 0
---- !u!1 &1385358589
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1385358591}
-  m_Layer: 0
-  m_Name: MLService
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1385358591
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385358589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.603256, y: 2.0447993, z: 1.6032203}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520478848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,22 +1657,10 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: methodsToControll
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[System.Action`1[[UnityEngine.Vector3,
-        UnityEngine.CoreModule]], mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
       Entry: 6
       Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   requiredXRNodetypeOfInputProvider: 1
+  tiltGestureState: 
 --- !u!65 &1752028119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1585,7 +1703,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1595,7 +1713,7 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.16
     m_NormalBias: 0.4
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
@@ -1642,13 +1760,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854969093}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.521419, y: -0.21787, z: 0.13971376, w: 0.81310207}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 65.342, y: -30, z: 0}
 --- !u!1 &1967579097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1776,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1967579098}
-  - component: {fileID: 1967579100}
   - component: {fileID: 1967579099}
   m_Layer: 0
   m_Name: HandInputProvider
@@ -1697,16 +1814,3 @@ MonoBehaviour:
   TiltGesture: 1
   upBentMinAngle: 15
   downBentMinAngle: -15
---- !u!114 &1967579100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967579097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5f3b079e128de41b7002c41a45ae2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handedness: 256
