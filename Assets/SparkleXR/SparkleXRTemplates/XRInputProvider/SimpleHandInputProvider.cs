@@ -105,13 +105,21 @@ namespace SparkleXRTemplates
         {
             xrNodeType = XRNodeType.Hand;
 
-            inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness + (int)InputDeviceCharacteristics.HandTracking);
+            try
+			{
+                inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness + (int)InputDeviceCharacteristics.HandTracking);
 
 
-            handFingerData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.handData },
-                inputDeviceCharacteristics);
-            handSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.devicePosition, (InputFeatureUsage)CommonUsages.deviceRotation },
-                inputDeviceCharacteristics);
+                handFingerData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.handData },
+                    inputDeviceCharacteristics);
+                handSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.devicePosition, (InputFeatureUsage)CommonUsages.deviceRotation },
+                    inputDeviceCharacteristics);
+            }
+            catch (Exception exc)
+			{
+                print(exc.Message);
+			}
+
             
             StartCoroutine(handFingerData.GetDevice());
             StartCoroutine(handSimpleFeaturesData.GetDevice());
