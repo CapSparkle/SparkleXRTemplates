@@ -42,7 +42,7 @@ namespace SparkleXRTemplates.MagicLeap
         float downBentMinAngle = -15f;
 
 
-        MLHandTracking.Hand _handDevice;
+        /*MLHandTracking.Hand _handDevice;
         MLHandTracking.Hand handDevice
 		{
 			get
@@ -53,7 +53,7 @@ namespace SparkleXRTemplates.MagicLeap
 			{
                 _handDevice = value;
 			}
-		}
+		}*/
 
         //float stopTiltGestureThreshold = 0.5f; //seconds till gesture become unrecognized since wrong key pose recognition has been occured
         
@@ -70,16 +70,16 @@ namespace SparkleXRTemplates.MagicLeap
 
             get
 			{
-                return (handDevice.Middle.MCP.Position - handDevice.Wrist.Center.Position).normalized;
+                return (MLHandDevice.Middle.MCP.Position - MLHandDevice.Wrist.Center.Position).normalized;
             }
         }
 
         void Start()
         {
             base.Start();
-            GetHandDevice();
+            //GetHandDevice();
         }
-
+        /*
         void GetHandDevice()
 		{
             try
@@ -93,20 +93,20 @@ namespace SparkleXRTemplates.MagicLeap
             {
                 print(exc.Message);
             }
-        }
+        }*/
 
         void RecognizeTiltAngle()
 		{
             if (startHandDirection == Vector3.zero)
             {
-                if (handDevice.KeyPose == TiltGesture)
+                if (MLHandDevice.KeyPose == TiltGesture)
                 {
                     startHandDirection = currentHandDirection;
                 }
             }
             else
 			{
-                if (handDevice.KeyPose == TiltGesture)
+                if (MLHandDevice.KeyPose == TiltGesture)
                 {
                     Vector3 projectionOnVerticalPlane = Vector3.ProjectOnPlane(currentHandDirection, Vector3.Cross(startHandDirection, Vector3.up));
                     tiltAngle = Vector3.Angle(startHandDirection, projectionOnVerticalPlane);

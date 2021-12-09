@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738b9640c42ca70448b80794a9e7cb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myXRInputProvider: {fileID: 0}
+  myXRInputProvider: {fileID: 1967579099}
   busy: 0
   _handPivot: {fileID: 656154486}
 --- !u!114 &1610453171

@@ -67,7 +67,7 @@ namespace SparkleXRTemplates
                     {
                         inputDevice = currentInputDevice;
                         deviceFindState = DeviceFindState.Found;
-                        Debug.Log("Device found with features: " + inputFeatureUsages[0].name + ", " + (inputFeatureUsages.Count > 1 ? inputFeatureUsages[1].name : " ") + (inputFeatureUsages.Count > 2 ? ", ..." : " "));
+                        Debug.Log("Device '" + inputDevice.name +  "' found with features: " + inputFeatureUsages[0].name + ", " + (inputFeatureUsages.Count > 1 ? inputFeatureUsages[1].name : " ") + (inputFeatureUsages.Count > 2 ? ", ..." : " "));
                         yield break;
                     }
                 }
@@ -100,7 +100,7 @@ namespace SparkleXRTemplates
 
         
         //This variable is using for choose subset of devices to find features in them
-        protected InputDeviceCharacteristics inputDeviceCharacteristics;
+        protected InputDeviceCharacteristics inputDeviceCharacteristics = InputDeviceCharacteristics.None;
     }
 }
 

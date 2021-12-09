@@ -57,7 +57,7 @@ namespace SparkleXRTemplates
 
         FeatureGroupDataSource handSimpleFeaturesData;
         
-        Quaternion _handOrientation;
+        Quaternion _handOrientation = Quaternion.identity;
         public Quaternion handOrientation
         {
             get

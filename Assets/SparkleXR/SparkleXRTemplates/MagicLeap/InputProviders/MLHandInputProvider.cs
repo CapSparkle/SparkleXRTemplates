@@ -17,14 +17,14 @@ namespace SparkleXRTemplates.MagicLeap
 
     public class MLHandInputProvider : SimpleHandInputProvider
     {
-        MLHandTracking.Hand handGesturesDevice;
+        protected MLHandTracking.Hand MLHandDevice;
         
         List<Action> mySubscribers = new List<Action>();
      
         List<GestureState> gestureStates = new List<GestureState>();
         List<MLGestureMask> mlGestureMasks = new List<MLGestureMask>();
 
-        private void Start()
+        protected void Start()
         {
             base.Start();
             #region -enable key poses-
@@ -49,12 +49,12 @@ namespace SparkleXRTemplates.MagicLeap
 
 
             if (handedness == Handedness.Right)
-                handGesturesDevice = MLHandTracking.Right;
+                MLHandDevice = MLHandTracking.Right;
             else if (handedness == Handedness.Left)
-                handGesturesDevice = MLHandTracking.Left;
+                MLHandDevice = MLHandTracking.Left;
 
-            handGesturesDevice.OnHandKeyPoseBegin += NotifyBeginGestures;
-            handGesturesDevice.OnHandKeyPoseEnd += NotifyEndGestures;
+            MLHandDevice.OnHandKeyPoseBegin += NotifyBeginGestures;
+            MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
         }
 		private void Update()
 		{
