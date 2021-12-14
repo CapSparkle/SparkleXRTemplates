@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.MagicLeap;
+using SparkleXRTemplates.MagicLeap;
 
 namespace SparkleXRTemplates
 {
     public class ConstantDeviceTransformCorrespondent : MonoBehaviour
     {
         [SerializeField]
-        SimpleHandInputProvider inputProvider;
+        MLHandInputProvider inputProvider;
 
 		[SerializeField]
 		XRNodeType deviceTypeToCorrespond = XRNodeType.Hand;
@@ -16,8 +17,9 @@ namespace SparkleXRTemplates
 		private void Update()
 		{
 			transform.position = inputProvider.handCenterPosition;
-			transform.rotation = Quaternion.FromToRotation(Vector3.forward, (MLHandTracking.Left.Middle.MCP.Position - MLHandTracking.Left.Center));
+			transform.rotation = inputProvider.handOrientation;
 				
+			print(MLHandTracking.Left.TryGet)
 				/*Quaternion.identity * inputProvider.handOrientation;
 			print("x = " + inputProvider.handOrientation.x.ToString() +
 				"; y = " + inputProvider.handOrientation.y.ToString() +

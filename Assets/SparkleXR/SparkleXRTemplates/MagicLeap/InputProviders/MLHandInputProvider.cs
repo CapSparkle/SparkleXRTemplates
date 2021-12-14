@@ -24,6 +24,33 @@ namespace SparkleXRTemplates.MagicLeap
         List<GestureState> gestureStates = new List<GestureState>();
         List<MLGestureMask> mlGestureMasks = new List<MLGestureMask>();
 
+        protected override void FormFeatureGroupDataSource()
+		{
+            try
+            {
+                inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness + (int)InputDeviceCharacteristics.HandTracking);
+
+
+                handFingerPointsData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { 
+                    (InputFeatureUsage)CommonUsages.handData },
+                    inputDeviceCharacteristics);
+                
+                handSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { 
+                    (InputFeatureUsage)CommonUsages.devicePosition,
+                    (InputFeatureUsage)CommonUsages.handData,
+                    (InputFeatureUsage)MagicLeapHandUsages.WristCenter,
+                    (InputFeatureUsage)MagicLeapHandUsages.WristRadial,
+                    (InputFeatureUsage)MagicLeapHandUsages.WristUlnar,
+                },
+                    inputDeviceCharacteristics);
+            
+            }
+            catch (Exception exc)
+            {
+                print(exc.Message);
+            }
+        }
+
         protected void Start()
         {
             base.Start();
@@ -55,13 +82,85 @@ namespace SparkleXRTemplates.MagicLeap
 
             MLHandDevice.OnHandKeyPoseBegin += NotifyBeginGestures;
             MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
+
+            //MLHandTracking.Left.Wrist.Ulnar.
         }
+
+        public Vector3 ulnarPosition;
+        public Vector3 radialPosition;
+
+        public override Quaternion handOrientation
+		{
+			get
+			{
+                if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
+                {
+                    Vector3 centerPosition = handCenterPosition;
+
+                    
+
+                    //The normal to the plane that is parallel to vector 3 of palm direction
+                    Vector3 directionPlaneNormal;
+
+                    if(handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristRadial, out radialPosition))
+					{
+                        directionPlaneNormal = radialPosition - centerPosition;
+                    }
+                    else if(handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristUlnar, out ulnarPosition))
+					{
+                        directionPlaneNormal = ulnarPosition - centerPosition;
+                    }
+                    else
+					{
+                        handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
+                        StartCoroutine(handSimpleFeaturesData.GetDevice());
+                        return _handOrientation;
+                    }
+
+                    handData
+
+
+
+                    if (!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristRadial, out ulnarPosition)
+                        && !handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristUlnar, out radialPosition))
+                    {
+                        
+                    }
+                }
+                else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
+                    StartCoroutine(handSimpleFeaturesData.GetDevice());
+
+                return _handOrientation;
+
+
+                //Vector3 centerPosition = this.handCenterPosition;
+
+                //Vector3 ulnarPosition = handSimpleFeaturesData.de; 
+                //Vector3 radialPosition = Vector3.zero;
+
+               /* try
+				{
+                    ulnarPosition = MLHandDevice.Wrist.Ulnar.Position;
+                    print("ulnar position = " + ulnarPosition);
+                    radialPosition = MLHandDevice.Wrist.Radial.Position;
+                    print("radial position = " + radialPosition);
+                }
+                catch (Exception Exc)
+				{
+                    print(Exc.Message);
+                }*/
+
+
+                return Quaternion.LookRotation(Vector3.forward, Vector3.Cross(Vector3.forward, (centerPosition - ulnarPosition)));
+			}
+		}
+
 		private void Update()
 		{
-			if (mySubscribers != null && mySubscribers.Count != 0)
+			/*if (mySubscribers != null && mySubscribers.Count != 0)
 			{
                 NotifyUpdatedGestures();
-            }
+            }*/
 		}
 
         public void NotifyUpdatedGestures()
@@ -70,9 +169,9 @@ namespace SparkleXRTemplates.MagicLeap
 			{
                 if (gestureStates[i] == GestureState.Updated)
                 {
-                   /* if (mlGestureMasks[i].HasFlag((MLGestureMask)Math.Pow(2.0, (int)myHand.KeyPose)))
+                    /*if (mlgesturemasks[i].hasflag((mlgesturemask)math.pow(2.0, (int)myhand.keypose)))
                     {
-                        subscribers[i].Invoke();
+                        subscribers[i].invoke();
                     }*/
                 }
             }

@@ -27,23 +27,23 @@ namespace SparkleXRTemplates
 
         #region -Feature representing hand finger points-
 
-        FeatureGroupDataSource handFingerData;
+        protected FeatureGroupDataSource handFingerPointsData;
 
-		Hand _handData;
+        protected Hand _handData;
         public Hand handData
         {
             get
             {
-                if (handFingerData.deviceFindState == DeviceFindState.Found)
+                if (handFingerPointsData.deviceFindState == DeviceFindState.Found)
 				{
-                    if (!handFingerData.inputDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
+                    if (!handFingerPointsData.inputDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
 					{
-                        handFingerData.deviceFindState = DeviceFindState.NotFound;
-                        StartCoroutine(handFingerData.GetDevice());
+                        handFingerPointsData.deviceFindState = DeviceFindState.NotFound;
+                        StartCoroutine(handFingerPointsData.GetDevice());
                     }
                 }
-                 else if (handFingerData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(handFingerData.GetDevice());
+                 else if (handFingerPointsData.deviceFindState == DeviceFindState.NotFound)
+                    StartCoroutine(handFingerPointsData.GetDevice());
                  
                 return _handData;
 
@@ -78,7 +78,7 @@ namespace SparkleXRTemplates
             }
         }
 
-        Vector3 _handCenterPosition;
+        protected Vector3 _handCenterPosition;
         public Vector3 handCenterPosition
         {
             get
@@ -104,25 +104,29 @@ namespace SparkleXRTemplates
         protected void Start()
         {
             xrNodeType = XRNodeType.Hand;
+            FormFeatureGroupDataSource();
 
+        }
+
+        protected virtual void FormFeatureGroupDataSource()
+		{
             try
-			{
+            {
                 inputDeviceCharacteristics = (InputDeviceCharacteristics)((int)inputDeviceCharacteristics + (int)handedness + (int)InputDeviceCharacteristics.HandTracking);
 
 
-                handFingerData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.handData },
+                handFingerPointsData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.handData },
                     inputDeviceCharacteristics);
                 handSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.devicePosition, (InputFeatureUsage)CommonUsages.deviceRotation },
                     inputDeviceCharacteristics);
             }
             catch (Exception exc)
-			{
+            {
                 print(exc.Message);
-			}
+            }
 
-            
-            StartCoroutine(handFingerData.GetDevice());
-            StartCoroutine(handSimpleFeaturesData.GetDevice());
+            //StartCoroutine(handFingerData.GetDevice());
+            //StartCoroutine(handSimpleFeaturesData.GetDevice());
         }
     }
 }
