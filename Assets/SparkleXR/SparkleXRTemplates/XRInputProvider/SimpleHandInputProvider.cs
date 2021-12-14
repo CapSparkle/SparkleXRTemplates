@@ -55,10 +55,10 @@ namespace SparkleXRTemplates
 
         #region -Featrues representing simple hand data-
 
-        FeatureGroupDataSource handSimpleFeaturesData;
+        protected FeatureGroupDataSource handSimpleFeaturesData;
         
-        Quaternion _handOrientation = Quaternion.identity;
-        public Quaternion handOrientation
+        protected Quaternion _handOrientation = Quaternion.identity;
+        public virtual Quaternion handOrientation
         {
             get
             {
