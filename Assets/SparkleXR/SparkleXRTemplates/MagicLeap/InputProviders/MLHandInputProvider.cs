@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -104,7 +105,7 @@ namespace SparkleXRTemplates.MagicLeap
 
                     if(handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristRadial, out radialPosition))
 					{
-                        directionPlaneNormal = radialPosition - centerPosition;
+                        directionPlaneNormal = centerPosition - radialPosition;
                     }
                     else if(handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristUlnar, out ulnarPosition))
 					{
@@ -117,45 +118,72 @@ namespace SparkleXRTemplates.MagicLeap
                         return _handOrientation;
                     }
 
-                    handData
+                    directionPlaneNormal *= (handedness == Handedness.Left ? 1 : -1); 
 
+                    if (FindPositionOfAppropriateFingerPhalang(handData, out Vector3 phalangPosition))
+					{
+                        Vector3 forwardVector = Vector3.ProjectOnPlane(phalangPosition - centerPosition, directionPlaneNormal);
+                        Vector3 upwardVector = Vector3.Cross(forwardVector, directionPlaneNormal);
+                        _handOrientation =  Quaternion.LookRotation(forwardVector, upwardVector);
+					}
 
-
-                    if (!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristRadial, out ulnarPosition)
-                        && !handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristUlnar, out radialPosition))
-                    {
-                        
-                    }
                 }
                 else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
                     StartCoroutine(handSimpleFeaturesData.GetDevice());
 
                 return _handOrientation;
-
-
-                //Vector3 centerPosition = this.handCenterPosition;
-
-                //Vector3 ulnarPosition = handSimpleFeaturesData.de; 
-                //Vector3 radialPosition = Vector3.zero;
-
-               /* try
-				{
-                    ulnarPosition = MLHandDevice.Wrist.Ulnar.Position;
-                    print("ulnar position = " + ulnarPosition);
-                    radialPosition = MLHandDevice.Wrist.Radial.Position;
-                    print("radial position = " + radialPosition);
-                }
-                catch (Exception Exc)
-				{
-                    print(Exc.Message);
-                }*/
-
-
-                return Quaternion.LookRotation(Vector3.forward, Vector3.Cross(Vector3.forward, (centerPosition - ulnarPosition)));
 			}
 		}
 
-		private void Update()
+
+        private bool FindPositionOfAppropriateFingerPhalang(Hand hand, out Vector3 bonePosition)
+		{
+
+            List<HandFinger> fingers = new List<HandFinger>()
+            {
+                HandFinger.Index,
+                HandFinger.Middle,
+                HandFinger.Ring,
+                HandFinger.Pinky
+            };
+
+
+            List<Bone> bonesOut = new List<Bone>();
+
+            foreach (HandFinger finger in fingers)
+                if(hand.TryGetFingerBones(finger, bonesOut))
+                    foreach (Bone phalang in bonesOut)
+                        if (phalang.TryGetPosition(out bonePosition))
+                            return true;
+
+            //Only tip of thumb is an appropriate phalang to orientate on
+            if (hand.TryGetFingerBones(HandFinger.Thumb, bonesOut))
+                if ((bonesOut.Count == 5) && (bonesOut[4].TryGetPosition(out bonePosition)))
+                    return true;
+
+            bonePosition = Vector3.zero;
+            return false;
+		}
+
+        private bool ChooseAppropriateDataData(List<Bone> fingerBones, out Vector3 bonePosition)
+        {
+            /*if (fingerBones.Count != 5)
+            {
+                // Silent return due to number of valid cases where this may happen so we don't log it.
+                bonePosition = Vector3.zero;
+                return false;
+            }*/
+            List<Bone> bonesOut = new List<Bone>();
+
+            foreach (Bone phalang in fingerBones)
+                if (phalang.TryGetPosition(out bonePosition))
+                    return true;
+
+            bonePosition = Vector3.zero;
+            return false;
+        }
+
+        private void Update()
 		{
 			/*if (mySubscribers != null && mySubscribers.Count != 0)
 			{
