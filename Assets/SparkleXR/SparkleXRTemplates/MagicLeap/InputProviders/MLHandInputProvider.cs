@@ -98,27 +98,37 @@ namespace SparkleXRTemplates.MagicLeap
                 {
                     Vector3 centerPosition = handCenterPosition;
 
-                    
-
                     //The normal to the plane that is parallel to vector 3 of palm direction
                     Vector3 directionPlaneNormal;
 
-                    if(handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristRadial, out radialPosition))
+                    Vector3 MCPThumbBonePosition;
+                    List<Bone> bonesOut = new List<Bone>();
+                    if (handData.TryGetFingerBones(HandFinger.Thumb, bonesOut))
+					{
+                        if ((bonesOut.Count == 5) && (bonesOut[2].TryGetPosition(out MCPThumbBonePosition)))
+                        {
+                            directionPlaneNormal = centerPosition - MCPThumbBonePosition;
+                            directionPlaneNormal *= (handedness == Handedness.Left ? 1 : -1);
+                        }
+                    }
+                    else
+                    {
+                        handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
+                        StartCoroutine(handSimpleFeaturesData.GetDevice());
+                        return _handOrientation;
+                    }
+
+
+                    /*if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristRadial, out radialPosition))
 					{
                         directionPlaneNormal = centerPosition - radialPosition;
                     }
                     else if(handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristUlnar, out ulnarPosition))
 					{
                         directionPlaneNormal = ulnarPosition - centerPosition;
-                    }
-                    else
-					{
-                        handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
-                        StartCoroutine(handSimpleFeaturesData.GetDevice());
-                        return _handOrientation;
-                    }
+                    }*/
 
-                    directionPlaneNormal *= (handedness == Handedness.Left ? 1 : -1); 
+                    
 
                     if (FindPositionOfAppropriateFingerPhalang(handData, out Vector3 phalangPosition))
 					{
@@ -165,23 +175,6 @@ namespace SparkleXRTemplates.MagicLeap
             return false;
 		}
 
-        private bool ChooseAppropriateDataData(List<Bone> fingerBones, out Vector3 bonePosition)
-        {
-            /*if (fingerBones.Count != 5)
-            {
-                // Silent return due to number of valid cases where this may happen so we don't log it.
-                bonePosition = Vector3.zero;
-                return false;
-            }*/
-            List<Bone> bonesOut = new List<Bone>();
-
-            foreach (Bone phalang in fingerBones)
-                if (phalang.TryGetPosition(out bonePosition))
-                    return true;
-
-            bonePosition = Vector3.zero;
-            return false;
-        }
 
         private void Update()
 		{

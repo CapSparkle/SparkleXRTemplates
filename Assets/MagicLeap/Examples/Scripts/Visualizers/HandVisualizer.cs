@@ -210,6 +210,7 @@ namespace MagicLeap
             #if PLATFORM_LUMIN
             for (int i = 0; i < Hand.Wrist.KeyPoints.Count; ++i)
             {
+                print(Hand.Wrist.KeyPoints.Count);
                 _wrist.Add(CreateKeyPoint(Hand.Wrist.KeyPoints[i], _wristColor).transform);
             }
             #endif

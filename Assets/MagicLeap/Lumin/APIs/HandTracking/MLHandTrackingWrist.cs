@@ -14,11 +14,13 @@
 
 namespace UnityEngine.XR.MagicLeap
 {
+    using System;
     using System.Collections.Generic;
+    using System.Reflection;
 
     #if !UNITY_2019_3_OR_NEWER && PLATFORM_LUMIN
     using UnityEngine.Experimental.XR.MagicLeap;
-    #endif
+#endif
 
     /// <summary>
     /// MLHandTracking is the entry point for all the hand tracking data
@@ -76,7 +78,20 @@ namespace UnityEngine.XR.MagicLeap
             /// <summary>
             /// Gets all the valid key points combined into a list.
             /// </summary>
-            public List<KeyPoint> KeyPoints { get; private set; }
+            List<KeyPoint> _KeyPoints;
+            public List<KeyPoint> KeyPoints { 
+                get 
+                {
+                    return _KeyPoints;
+                }
+                private set 
+                {
+                    _KeyPoints = value;
+                    Debug.Log(_KeyPoints.Count);
+                    Debug.Log(Environment.StackTrace);
+                   
+                }
+            }
 
             /// <summary>
             /// Updates the state of the Wrist.
