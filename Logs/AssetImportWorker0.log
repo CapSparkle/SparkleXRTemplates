@@ -199,3 +199,99 @@ Received Import Request.
 Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c64f55239274d0657a71939ecad969a2') in 0.006401 seconds
   Import took 0.009415 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 1099.570767 seconds.
+  path: Assets/MagicLeap-Tools/Examples/HandInput/Scenes/HandInput.unity
+  artifactKey: Guid(9e59737e64d9ab541a216be82a696541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Examples/HandInput/Scenes/HandInput.unity using Guid(9e59737e64d9ab541a216be82a696541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8fc9cc7e3af45491dcac3577e5b6b4b') in 0.047767 seconds
+  Import took 0.053501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.821055 seconds.
+  path: Assets/MagicLeap-Tools/Code/Input/Hands/HandInput.cs
+  artifactKey: Guid(c00fc63e911d47d42b2f5df7943bb414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/HandInput.cs using Guid(c00fc63e911d47d42b2f5df7943bb414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5e2eb3f1999828e7e29f9a2ed75efa') in 0.015424 seconds
+  Import took 0.022043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002682 seconds.
+  path: Assets/MagicLeap-Tools/Code/Input/Hands/HandInput.cs
+  artifactKey: Guid(c00fc63e911d47d42b2f5df7943bb414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/HandInput.cs using Guid(c00fc63e911d47d42b2f5df7943bb414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5e2eb3f1999828e7e29f9a2ed75efa') in 0.005344 seconds
+  Import took 0.011154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 642.503888 seconds.
+  path: Assets/Plugins/Lumin/MagicLeapManifestSettings.asset
+  artifactKey: Guid(b67a1adadc7f24c669f43ab6328cdfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Lumin/MagicLeapManifestSettings.asset using Guid(b67a1adadc7f24c669f43ab6328cdfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ff0a8f0b9fab78f469d0c35aa158bc') in 0.013343 seconds
+  Import took 0.017270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.303529 seconds.
+  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHand.cs
+  artifactKey: Guid(2273246e336805147825dc93955e98b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHand.cs using Guid(2273246e336805147825dc93955e98b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0edf46af9de3bc8e6adc212fc2aa1b5') in 0.007610 seconds
+  Import took 0.010773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003597 seconds.
+  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHand.cs
+  artifactKey: Guid(2273246e336805147825dc93955e98b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHand.cs using Guid(2273246e336805147825dc93955e98b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0edf46af9de3bc8e6adc212fc2aa1b5') in 0.003747 seconds
+  Import took 0.007443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.106617 seconds.
+  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHandCollider.cs
+  artifactKey: Guid(c0f2b00a954796e44bb7c3a3bb0f2c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHandCollider.cs using Guid(c0f2b00a954796e44bb7c3a3bb0f2c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031139b0152179324ba387e2a14c155a') in 0.008327 seconds
+  Import took 0.011282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.447446 seconds.
+  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHandGesture.cs
+  artifactKey: Guid(b343f611120f3ba47a82ecfc22d186fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHandGesture.cs using Guid(b343f611120f3ba47a82ecfc22d186fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cef20a4773478c0e2738ef867f9573e') in 0.007700 seconds
+  Import took 0.010580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.425403 seconds.
+  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHandSkeleton.cs
+  artifactKey: Guid(f1e06c48447a6154ca525e67aadeba49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedHandSkeleton.cs using Guid(f1e06c48447a6154ca525e67aadeba49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12374491f3f643980452b7531a5ec881') in 0.008103 seconds
+  Import took 0.011029 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015809 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.130 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.02 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1960 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.1 MB.
+System memory in use after: 88.1 MB.
+
+Unloading 103 unused Assets to reduce memory usage. Loaded Objects now: 2415.
+Total: 16.666800 ms (FindLiveObjects: 0.315900 ms CreateObjectMapping: 0.116500 ms MarkObjects: 16.096300 ms  DeleteObjects: 0.136900 ms)
+

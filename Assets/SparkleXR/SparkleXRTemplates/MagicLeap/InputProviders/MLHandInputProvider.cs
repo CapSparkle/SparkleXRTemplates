@@ -132,9 +132,9 @@ namespace SparkleXRTemplates.MagicLeap
 
                     if (FindPositionOfAppropriateFingerPhalang(handData, out Vector3 phalangPosition))
 					{
-                        Vector3 forwardVector = Vector3.ProjectOnPlane(phalangPosition - centerPosition, directionPlaneNormal);
-                        Vector3 upwardVector = Vector3.Cross(forwardVector, directionPlaneNormal);
-                        _handOrientation =  Quaternion.LookRotation(forwardVector, upwardVector);
+                        //Vector3 forwardVector = Vector3.ProjectOnPlane(phalangPosition - centerPosition, directionPlaneNormal);
+                        //Vector3 upwardVector = Vector3.Cross(forwardVector, directionPlaneNormal);
+                        //_handOrientation =  Quaternion.LookRotation(forwardVector, upwardVector);
 					}
 
                 }
