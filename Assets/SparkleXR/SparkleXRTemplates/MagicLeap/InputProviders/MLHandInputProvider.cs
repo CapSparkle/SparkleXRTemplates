@@ -145,7 +145,232 @@ namespace SparkleXRTemplates.MagicLeap
 			}
 		}
 
+        Vector3 thumbPosition;
+        Vector3 wristCenter;
 
+        void TakeHandFeatureData()
+		{
+            List<Bone> bonesOut = new List<Bone>();
+
+            //thumbPosition
+            if (handData.TryGetFingerBones(HandFinger.Thumb, bonesOut))
+            {
+                if ((bonesOut.Count == 5) && (bonesOut[2].TryGetPosition(out Vector3 newThumbPosition)))
+                    thumbPosition = newThumbPosition;
+                else
+                    OnDataNotProvidedByDataSource(handSimpleFeaturesData, CommonUsages.handData);
+            }
+
+            //wristCenter
+            if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenter))
+                wristCenter = newWristCenter;
+            else
+                OnDataNotProvidedByDataSource(handSimpleFeaturesData, MagicLeapHandUsages.WristCenter);
+        }
+
+        void OnDataNotProvidedByDataSource<T>(FeatureGroupDataSource FGDataSource, InputFeatureUsage<T> featureNotProvided)
+		{
+            Debug.Log("The value of feature: " + featureNotProvided.name + " have not been provided at all or have not been provided correctly by device: " + FGDataSource.inputDevice.name);
+            if (FGDataSource.deviceFindState != DeviceFindState.Found)
+			{
+                FGDataSource.deviceFindState = DeviceFindState.NotFound;
+                StartCoroutine(FGDataSource.GetDevice());
+            }
+        }
+
+        Quaternion rotationOfHand;
+        Camera _mainCamera;
+
+        public void CalculateRotation()
+        {
+
+            //we need a hand to continue:
+            if (!_managedHand.Visible)
+            {
+                return;
+            }
+
+            //correct distances:
+            float thumbMcpToWristDistance = Vector3.Distance(thumbPosition, wristCenter) * .5f;
+            //fix the distance between the wrist and thumbMcp as it incorrectly expands as the hand gets further from the camera:
+            float distancePercentage = Mathf.Clamp01(Vector3.Distance(_mainCamera.transform.position, wristCenter) / .5f);
+            distancePercentage = 1 - Percentage(distancePercentage, .90f, 1) * .4f;
+            thumbMcpToWristDistance *= distancePercentage;
+            Vector3 wristToPalmDirection = Vector3.Normalize(Vector3.Normalize(HandCenter.positionFiltered - wristCenter));
+            Vector3 center = wristCenter + (wristToPalmDirection * thumbMcpToWristDistance);
+            Vector3 camToWristDirection = Vector3.Normalize(wristCenter - _mainCamera.transform.position);
+
+            //rays needed for planarity discovery for in/out palm facing direction:
+            Vector3 camToWrist = new Ray(wristCenter, camToWristDirection).GetPoint(1);
+            Vector3 camToThumbMcp = new Ray(thumbPosition, Vector3.Normalize(thumbPosition - _mainCamera.transform.position)).GetPoint(1);
+            Vector3 camToPalm = new Ray(center, Vector3.Normalize(center - _mainCamera.transform.position)).GetPoint(1);
+
+            //discover palm facing direction to camera:
+            Plane palmFacingPlane = new Plane(camToWrist, camToPalm, camToThumbMcp);
+            if (_managedHand.Hand.Type == MLHandTracking.HandType.Left)
+            {
+                palmFacingPlane.Flip();
+            }
+            float palmForwardFacing = Mathf.Sign(Vector3.Dot(palmFacingPlane.normal, _mainCamera.transform.forward));
+
+            //use thumb/palm/wrist alignment to determine amount of roll in the hand:
+            Vector3 toThumbMcp = Vector3.Normalize(thumbPosition - center);
+            Vector3 toPalm = Vector3.Normalize(center - wristCenter);
+            float handRollAmount = (1 - Vector3.Dot(toThumbMcp, toPalm)) * palmForwardFacing;
+
+            //where between the wrist and thumbMcp should we slide inwards to get the palm in the center:
+            Vector3 toPalmOrigin = Vector3.Lerp(wristCenter, thumbPosition, .35f);
+
+            //get a direction from the camera to toPalmOrigin as psuedo up for use in quaternion construction:
+            Vector3 toCam = Vector3.Normalize(_mainCamera.transform.position - toPalmOrigin);
+
+            //construct a quaternion that helps get angles needed between the wrist and thumbMCP to point towards the palm center:
+            Vector3 wristToThumbMcp = Vector3.Normalize(thumbPosition - wristCenter);
+            Quaternion towardsCamUpReference = Quaternion.identity;
+            if (wristToThumbMcp != Vector3.zero && toCam != Vector3.zero)
+            {
+                towardsCamUpReference = Quaternion.LookRotation(wristToThumbMcp, toCam);
+            }
+
+            //rotate the inwards vector depending on hand roll to know where to push the palm back:
+            float inwardsVectorRotation = 90;
+            if (_managedHand.Hand.Type == MLHandTracking.HandType.Left)
+            {
+                inwardsVectorRotation = -90;
+            }
+            towardsCamUpReference = Quaternion.AngleAxis(handRollAmount * inwardsVectorRotation, towardsCamUpReference * Vector3.forward) * towardsCamUpReference;
+            Vector3 inwardsVector = towardsCamUpReference * Vector3.up;
+
+            //slide palm location along inwards vector to get it into proper physical location in the center of the hand:
+            center = toPalmOrigin - inwardsVector * thumbMcpToWristDistance;
+            Vector3 deadCenter = center;
+
+            //as the hand flattens back out balance corrected location with originally provided location for better forward origin:
+            center = Vector3.Lerp(center, HandCenter.positionFiltered, Mathf.Abs(handRollAmount));
+
+            //get a forward using the corrected palm location:
+            Vector3 forward = Vector3.Normalize(center - wristCenter);
+
+            //switch back to physical center of hand - this reduces surface-to-surface movement of the center between back and palm:
+            center = deadCenter;
+
+            //get an initial hand up:
+            Plane handPlane = new Plane(wristCenter, thumbPosition, center);
+            if (_managedHand.Hand.Type == MLHandTracking.HandType.Left)
+            {
+                handPlane.Flip();
+            }
+            Vector3 up = handPlane.normal;
+
+            //find out how much the back of the hand is facing the camera so we have a safe set of features for a stronger forward: 
+            Vector3 centerToCam = Vector3.Normalize(_mainCamera.transform.position - wristCenter);
+            float facingDot = Vector3.Dot(centerToCam, up);
+
+            if (facingDot > .5f)
+            {
+                float handBackFacingCamAmount = Percentage(facingDot, .5f, 1);
+
+                //steer forward for more accuracy based on the visibility of the back of the hand:
+                if (_middleMCP.Visible)
+                {
+                    Vector3 toMiddleMcp = Vector3.Normalize(_middleMCP.positionFiltered - center);
+                    forward = Vector3.Lerp(forward, toMiddleMcp, handBackFacingCamAmount);
+                }
+                else if (_indexMCP.Visible)
+                {
+                    Vector3 inIndexMcp = Vector3.Normalize(_indexMCP.positionFiltered - center);
+                    forward = Vector3.Lerp(forward, inIndexMcp, handBackFacingCamAmount);
+                }
+            }
+
+            //make sure palm distance from wrist is consistant while also leveraging steered forward:
+            center = wristCenter + (forward * thumbMcpToWristDistance);
+
+            //an initial rotation of the hand:
+            Quaternion orientation = Quaternion.identity;
+            if (forward != Vector3.zero && up != Vector3.zero)
+            {
+                orientation = Quaternion.LookRotation(forward, up);
+            }
+
+            //as the hand rolls counter-clockwise the thumbMcp loses accuracy so we need to interpolate to the back of the hand's features:
+            if (_indexMCP.Visible && _middleMCP.Visible)
+            {
+                Vector3 knucklesVector = Vector3.Normalize(_middleMCP.positionFiltered - _indexMCP.positionFiltered);
+                float knucklesDot = Vector3.Dot(knucklesVector, Vector3.up);
+                if (knucklesDot > .5f)
+                {
+                    float counterClockwiseRoll = Percentage(Vector3.Dot(knucklesVector, Vector3.up), .35f, .7f);
+                    center = Vector3.Lerp(center, HandCenter.positionFiltered, counterClockwiseRoll);
+                    forward = Vector3.Lerp(forward, Vector3.Normalize(_middleMCP.positionFiltered - HandCenter.positionFiltered), counterClockwiseRoll);
+                    Plane backHandPlane = new Plane(HandCenter.positionFiltered, _indexMCP.positionFiltered, _middleMCP.positionFiltered);
+                    if (_managedHand.Hand.Type == MLHandTracking.HandType.Left)
+                    {
+                        backHandPlane.Flip();
+                    }
+                    up = Vector3.Lerp(up, backHandPlane.normal, counterClockwiseRoll);
+                    orientation = Quaternion.LookRotation(forward, up);
+                }
+            }
+
+            //as the wrist tilts away from the camera (with the thumb down) at extreme angles the hand center will move toward the thumb:
+            float handTiltAwayAmount = 1 - Percentage(Vector3.Distance(HandCenter.positionFiltered, wristCenter), .025f, .04f);
+            Vector3 handTiltAwayCorrectionPoint = wristCenter + camToWristDirection * thumbMcpToWristDistance;
+            center = Vector3.Lerp(center, handTiltAwayCorrectionPoint, handTiltAwayAmount);
+            forward = Vector3.Lerp(forward, Vector3.Normalize(handTiltAwayCorrectionPoint - wristCenter), handTiltAwayAmount);
+            Plane wristPlane = new Plane(wristCenter, thumbPosition, center);
+            if (_managedHand.Hand.Type == MLHandTracking.HandType.Left)
+            {
+                wristPlane.Flip();
+            }
+            up = Vector3.Lerp(up, wristPlane.normal, handTiltAwayAmount);
+            if (forward != Vector3.zero && up != Vector3.zero)
+            {
+                orientation = Quaternion.LookRotation(forward, up);
+            }
+
+            //steering for if thumb/index are not available from self-occlusion to help rotate the hand better outwards better:
+            float forwardUpAmount = Vector3.Dot(forward, Vector3.up);
+            if (forwardUpAmount > .7f && _indexMCP.Visible && _ringMCP.Visible)
+            {
+                float angle = 0;
+                if (_managedHand.Hand.Type == MLHandTracking.HandType.Right)
+                {
+                    Vector3 knucklesVector = Vector3.Normalize(_ringMCP.positionFiltered - _indexMCP.positionFiltered);
+                    angle = Vector3.Angle(knucklesVector, orientation * Vector3.right);
+                    angle *= -1;
+                }
+                else
+                {
+                    Vector3 knucklesVector = Vector3.Normalize(_indexMCP.positionFiltered - _ringMCP.positionFiltered);
+                    angle = Vector3.Angle(knucklesVector, orientation * Vector3.right);
+                }
+                Quaternion selfOcclusionSteering = Quaternion.AngleAxis(angle, forward);
+                orientation = selfOcclusionSteering * orientation;
+            }
+            else
+            {
+                //when palm is facing down we need to rotate some to compensate for an offset:
+                float rollCorrection = Mathf.Clamp01(Vector3.Dot(orientation * Vector3.up, Vector3.up));
+                float rollCorrectionAmount = -30;
+                if (_managedHand.Hand.Type == MLHandTracking.HandType.Left)
+                {
+                    rollCorrectionAmount = 30;
+                }
+                orientation = Quaternion.AngleAxis(rollCorrectionAmount * rollCorrection, forward) * orientation;
+            }
+
+
+            rotationOfHand = orientation;
+
+        }
+
+        private float Percentage(float value, float minimum, float maximum)
+        {
+            value -= minimum;
+            value = Mathf.Max(0, value);
+            return Mathf.Clamp01(value / (maximum - minimum));
+        }
         private bool FindPositionOfAppropriateFingerPhalang(Hand hand, out Vector3 bonePosition)
 		{
 
