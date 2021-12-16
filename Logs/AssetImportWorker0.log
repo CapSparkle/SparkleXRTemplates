@@ -103,3 +103,19 @@ Received Import Request.
 Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3275615299b48619fded3508ad25a41') in 0.004013 seconds
   Import took 0.011488 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 4186.068528 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
+  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883fb808137a811cbaddd904c7e434b7') in 0.009505 seconds
+  Import took 0.013201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.226937 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
+  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f451fe1c6efccde46679d6cc926628b9') in 0.004723 seconds
+  Import took 0.009266 seconds .
+

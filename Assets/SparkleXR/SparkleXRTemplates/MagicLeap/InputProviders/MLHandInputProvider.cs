@@ -358,18 +358,18 @@ namespace SparkleXRTemplates.MagicLeap
 
             //steering for if thumb/index are not available from self-occlusion to help rotate the hand better outwards better:
             float forwardUpAmount = Vector3.Dot(forward, Vector3.up);
-            if (forwardUpAmount > .7f && indexMCPPosition.Visible && _ringMCP.Visible)
+            if (forwardUpAmount > .7f && indexMCPPosition.Visible && ringMCPPosition.Visible)
             {
                 float angle = 0;
                 if (handedness == Handedness.Right)
                 {
-                    Vector3 knucklesVector = Vector3.Normalize(_ringMCP - indexMCPPosition);
+                    Vector3 knucklesVector = Vector3.Normalize(ringMCPPosition - indexMCPPosition);
                     angle = Vector3.Angle(knucklesVector, orientation * Vector3.right);
                     angle *= -1;
                 }
                 else
                 {
-                    Vector3 knucklesVector = Vector3.Normalize(indexMCPPosition - _ringMCP);
+                    Vector3 knucklesVector = Vector3.Normalize(indexMCPPosition - ringMCPPosition);
                     angle = Vector3.Angle(knucklesVector, orientation * Vector3.right);
                 }
                 Quaternion selfOcclusionSteering = Quaternion.AngleAxis(angle, forward);
