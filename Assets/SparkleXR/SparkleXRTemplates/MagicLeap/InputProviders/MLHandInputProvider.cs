@@ -7,7 +7,7 @@ using SparkleXRTemplates;
 using UnityEngine.XR;
 using UnityEngine.XR.MagicLeap;
 using UnityEngine.XR.InteractionSubsystems;
-
+using SparkleXRTemplates.MagicLeap.MagicLeapTools;
 
 namespace SparkleXRTemplates.MagicLeap
 {
@@ -145,6 +145,11 @@ namespace SparkleXRTemplates.MagicLeap
 			}
 		}
 
+        ManagedKeypoint thumbMCP;
+        ManagedKeypoint indexMCP;
+        ManagedKeypoint middleMCP;
+        ManagedKeypoint ringMCP;
+
         Vector3 thumbMCPPosition;
         Vector3 indexMCPPosition;
         Vector3 middleMCPPosition;
@@ -152,7 +157,7 @@ namespace SparkleXRTemplates.MagicLeap
 
         Vector3 wristCenter;
 
-        void TakeHandFeatureData()
+        void TakeAndHandleHandFeatureData()
 		{
             List<Bone> bonesOut = new List<Bone>();
 
@@ -189,12 +194,15 @@ namespace SparkleXRTemplates.MagicLeap
                     OnDataNotProvidedByDataSource(handSimpleFeaturesData, CommonUsages.handData);
             }
 
-
             //wristCenter
             if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenter))
                 wristCenter = newWristCenter;
             else
                 OnDataNotProvidedByDataSource(handSimpleFeaturesData, MagicLeapHandUsages.WristCenter);
+
+            //Update managed keypoint values used
+            thumbMCP.Update(handFingerPointsData.inputDevice, thumbMCPPosition, indexMCPPosition, handCenterPosition);
+
         }
 
         void OnDataNotProvidedByDataSource<T>(FeatureGroupDataSource FGDataSource, InputFeatureUsage<T> featureNotProvided)
