@@ -9,11 +9,7 @@ using UnityEngine.XR.MagicLeap;
 using UnityEngine.XR.InteractionSubsystems;
 
 namespace SparkleXRTemplates.MagicLeap
-{
-
-
-    //MagicLeapKeyPose
-    //MagicLeapKeyPoseGestureEvent
+{ 
 
     public class MLHandInputProvider : SimpleHandInputProvider
     {
@@ -81,7 +77,8 @@ namespace SparkleXRTemplates.MagicLeap
             MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
         }
 
-        Vector3 _wristCenterPosition;
+        public Vector3 _wristCenterPosition;
+
         protected Vector3 _handDirection;
         public Vector3 handDirection
         {
@@ -94,6 +91,7 @@ namespace SparkleXRTemplates.MagicLeap
                     if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenterPosition))
                     {
                         _wristCenterPosition = newWristCenterPosition;
+                        print("some wrist data" + _wristCenterPosition.ToString());
                     }
                     else
                     {
@@ -130,7 +128,7 @@ namespace SparkleXRTemplates.MagicLeap
                     {
                         Plane plane = new Plane();
                         plane.Set3Points(MPCThumbPosition, handWristCenter, handCenterPosition);
-                        _handOrientation = Quaternion.LookRotation(_handDirection, plane.normal);
+                        _handOrientation = Quaternion.LookRotation(handDirection, plane.normal);
                     }
                     else
 					{

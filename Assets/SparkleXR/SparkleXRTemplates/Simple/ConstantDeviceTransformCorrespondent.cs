@@ -19,8 +19,8 @@ namespace SparkleXRTemplates
 			transform.position = inputProvider.handCenterPosition;
 			transform.rotation = inputProvider.handOrientation;
 
-			print("rad = " + MLHandTracking.Left.Wrist.Radial.Position);
-			print("uln = " + MLHandTracking.Left.Wrist.Ulnar.Position);
+			//print("rad = " + MLHandTracking.Left.Wrist.Radial.Position);
+			//print("uln = " + MLHandTracking.Left.Wrist.Ulnar.Position);
 			/*Quaternion.identity * inputProvider.handOrientation;
 		print("x = " + inputProvider.handOrientation.x.ToString() +
 			"; y = " + inputProvider.handOrientation.y.ToString() +
