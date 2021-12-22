@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/staging' branch; Version is '2020.2.7f1 (c53830e277f1) revision 12924976'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1348; Version 2009; 64bit' Language: 'ru' Physical Memory: 16303 MB
+OS: 'Windows 10 Pro; OS build 19043.1415; Version 2009; 64bit' Language: 'ru' Physical Memory: 16303 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,14 +15,12 @@ C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52871
+60780
 Successfully changed project path to: C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 Using Asset Import Pipeline V2.
-Unable to join player connection multicast group.
-
-Refreshing native plugins compatible for Editor in 150.71 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 1.36 ms.
+Refreshing native plugins compatible for Editor in 65.53 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.70 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel/Assets
@@ -47,363 +45,107 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56256
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.003969 seconds.
+Registered in 0.002386 seconds.
 Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 86.33 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+Refreshing native plugins compatible for Editor in 36.63 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.077 seconds
+- Completed reload, in  1.013 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.024138 seconds.
+Registered in 0.015095 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.74 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.679 seconds
+- Completed reload, in  1.169 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.67 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
-Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 89.2 MB.
-System memory in use after: 89.2 MB.
+Refreshing native plugins compatible for Editor in 0.92 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1985 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.0 MB.
+System memory in use after: 89.1 MB.
 
-Unloading 102 unused Assets to reduce memory usage. Loaded Objects now: 2413.
-Total: 20.465700 ms (FindLiveObjects: 0.315200 ms CreateObjectMapping: 0.125900 ms MarkObjects: 19.891000 ms  DeleteObjects: 0.132000 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs
-  artifactKey: Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/Scripts/MLHandWristTiltProvider.cs using Guid(d4a3821d7e110a54bbe8ee6569f8219d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1718b65991f3eadd0288724ef7a7e004') in 0.032155 seconds
-  Import took 0.036322 seconds .
+Unloading 102 unused Assets to reduce memory usage. Loaded Objects now: 2414.
+Total: 15.677300 ms (FindLiveObjects: 0.369600 ms CreateObjectMapping: 0.077700 ms MarkObjects: 15.136100 ms  DeleteObjects: 0.092700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/MagicLeap/Core/Assets/Prefabs/MLHandTracking.prefab
-  artifactKey: Guid(6c94f4a72528e324a846f7b9539bf847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Core/Assets/Prefabs/MLHandTracking.prefab using Guid(6c94f4a72528e324a846f7b9539bf847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a283c084db1a1f3d8a1ce5ba9a317da6') in 0.032426 seconds
-  Import took 0.035239 seconds .
+  path: Assets/MagicLeap/Examples/Assets/Models/Controller/Materials/DepthMask.mat
+  artifactKey: Guid(e887ade6c40807047a86f5632bd21680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap/Examples/Assets/Models/Controller/Materials/DepthMask.mat using Guid(e887ade6c40807047a86f5632bd21680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7fdbab2eeb3845fc6f76c2c9063f156') in 0.179654 seconds
+  Import took 0.182616 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.743013 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab
-  artifactKey: Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab using Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f0135bfb730ece89e85caf8d85e9fb6') in 0.247310 seconds
-  Import took 0.252026 seconds .
+  Time since last request: 0.000385 seconds.
+  path: Assets/MagicLeap-Tools/Prefabs/Input/DesktopPointer.prefab
+  artifactKey: Guid(9ad431123e3bab14c8f5b24b69e25eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Prefabs/Input/DesktopPointer.prefab using Guid(9ad431123e3bab14c8f5b24b69e25eb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '994865a649f52c565a8359e70b017e13') in 0.035862 seconds
+  Import took 0.038874 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/MagicLeap/ArucoTracker/Prefabs/MLArucoTrackerBehavior.prefab
-  artifactKey: Guid(639460b5b22feb746922d7e2964d1d68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/ArucoTracker/Prefabs/MLArucoTrackerBehavior.prefab using Guid(639460b5b22feb746922d7e2964d1d68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd77760c1dfe59e27091513dea60955d0') in 0.044657 seconds
-  Import took 0.048155 seconds .
+  Time since last request: 877.894302 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
+  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e6c1878b4dff888d3e9d87d675a8af8') in 0.021371 seconds
+  Import took 0.026042 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/MagicLeap/Examples/Streaming/MediaPlayer/StreamingAssets/ML_Stereo3dSample_OverUnder.mp4
-  artifactKey: Guid(783d88b588998f148813981915a47940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Examples/Streaming/MediaPlayer/StreamingAssets/ML_Stereo3dSample_OverUnder.mp4 using Guid(783d88b588998f148813981915a47940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfef31ba4a397577333cdedd88ee6bd5') in 0.064789 seconds
-  Import took 0.069548 seconds .
+  Time since last request: 0.001005 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
+  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e6c1878b4dff888d3e9d87d675a8af8') in 0.003194 seconds
+  Import took 0.006850 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/MagicLeap/Examples/Assets/Textures/ML_Color_Wheel.png
-  artifactKey: Guid(fcc88c5a66cbb4644b596c26b5a38421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Examples/Assets/Textures/ML_Color_Wheel.png using Guid(fcc88c5a66cbb4644b596c26b5a38421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a223fe7fbf0829ea154be2754c4599') in 0.090422 seconds
-  Import took 0.094519 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/MagicLeap/Examples/Streaming/MediaPlayer/StreamingAssets/ML_Stereo3dSample_OverUnder.mp4
-  artifactKey: Guid(783d88b588998f148813981915a47940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Examples/Streaming/MediaPlayer/StreamingAssets/ML_Stereo3dSample_OverUnder.mp4 using Guid(783d88b588998f148813981915a47940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfef31ba4a397577333cdedd88ee6bd5') in 0.003149 seconds
-  Import took 0.007881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000233 seconds.
-  path: Assets/MagicLeap/Examples/Streaming/MediaPlayer/StreamingAssets/ML_Stereo3dSample_SBS.mp4
-  artifactKey: Guid(a8c6e29d601677a438b3137f5351eba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Examples/Streaming/MediaPlayer/StreamingAssets/ML_Stereo3dSample_SBS.mp4 using Guid(a8c6e29d601677a438b3137f5351eba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906ab2891ee30c1c03123c766b6b39f7') in 0.014530 seconds
-  Import took 0.020774 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000247 seconds.
-  path: Assets/MagicLeap/ArucoTracker/Prefabs/MLArucoMarkerExample.prefab
-  artifactKey: Guid(ee0952b1aaf4cec4d983fe4283642ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/ArucoTracker/Prefabs/MLArucoMarkerExample.prefab using Guid(ee0952b1aaf4cec4d983fe4283642ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2e7de80db3cbcace9cba12aeaf6282e') in 0.156441 seconds
-  Import took 0.161053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/MagicLeap/ArucoTracker/Prefabs/MLArucoTrackerVisualizer.prefab
-  artifactKey: Guid(b1d8150669d8dd6468f913a478878158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/ArucoTracker/Prefabs/MLArucoTrackerVisualizer.prefab using Guid(b1d8150669d8dd6468f913a478878158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '275bac8e56dbe6ca9471ded3d2d51de4') in 0.018215 seconds
-  Import took 0.022483 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.801104 seconds.
-  path: Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTracking.cs
-  artifactKey: Guid(f440e4e9799e09e48ac7476897dc102d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTracking.cs using Guid(f440e4e9799e09e48ac7476897dc102d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d4761efe14bc16425ce74a7ffa2780') in 0.002196 seconds
-  Import took 0.005806 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008592 seconds.
-  path: Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTracking.cs
-  artifactKey: Guid(f440e4e9799e09e48ac7476897dc102d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTracking.cs using Guid(f440e4e9799e09e48ac7476897dc102d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d4761efe14bc16425ce74a7ffa2780') in 0.002131 seconds
-  Import took 0.005604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.304869 seconds.
-  path: Assets/MagicLeap/Lumin/Deprecated/MLHandTracking.cs
-  artifactKey: Guid(8e8be54d6349ca24cbdc0beae18352eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Lumin/Deprecated/MLHandTracking.cs using Guid(8e8be54d6349ca24cbdc0beae18352eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b508f0dd443c4b558a270a618c849c') in 0.003073 seconds
-  Import took 0.006820 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.418426 seconds.
-  path: Assets/MagicLeap/Core/Scripts/MLHandTrackingBehavior.cs
-  artifactKey: Guid(530faf594e0304a51a14b4f11a3f6d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Core/Scripts/MLHandTrackingBehavior.cs using Guid(530faf594e0304a51a14b4f11a3f6d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d193afc0200e00810215001a8ed6ded') in 0.006337 seconds
-  Import took 0.011374 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.925434 seconds.
-  path: Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTrackingHand.cs
-  artifactKey: Guid(138827c122788834291eff60dd6bd39a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTrackingHand.cs using Guid(138827c122788834291eff60dd6bd39a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1db4969fce35f9906f9aaae6decaceb') in 0.005674 seconds
-  Import took 0.009229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.580716 seconds.
-  path: Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTrackingKeyPoint.cs
-  artifactKey: Guid(4479d07ae77a756478373f974f991c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTrackingKeyPoint.cs using Guid(4479d07ae77a756478373f974f991c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0c35f765950aaf256e8d41eecf3ab8e') in 0.005686 seconds
-  Import took 0.009420 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.719329 seconds.
-  path: Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTrackingKeyPoseManager.cs
-  artifactKey: Guid(0b6372b684ec7f346b473156a1732218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Lumin/APIs/HandTracking/MLHandTrackingKeyPoseManager.cs using Guid(0b6372b684ec7f346b473156a1732218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8570bd051387de1b7c0635f07e2380f') in 0.005601 seconds
-  Import took 0.009235 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.567600 seconds.
-  path: Assets/MagicLeap/Lumin/Bindings/MLHandTrackingNativeBindings.cs
-  artifactKey: Guid(8a1e705e4a051ec46971bf8c5fa7da28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Lumin/Bindings/MLHandTrackingNativeBindings.cs using Guid(8a1e705e4a051ec46971bf8c5fa7da28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '600e44f5e597d9adb91a2007305e7d19') in 0.006988 seconds
-  Import took 0.010555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.324806 seconds.
-  path: Assets/MagicLeap/Core/Scripts/StarterKit/MLHandTrackingStarterKit.cs
-  artifactKey: Guid(3fccf61e2bfff63449b06daf8681c18a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Core/Scripts/StarterKit/MLHandTrackingStarterKit.cs using Guid(3fccf61e2bfff63449b06daf8681c18a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292e2c7cd82c09272e684bbd1f923412') in 0.007951 seconds
-  Import took 0.012991 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.642671 seconds.
+  Time since last request: 0.675550 seconds.
   path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs
-  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a155e358a9b24236ba1e1ce6b9e6a64') in 0.005933 seconds
-  Import took 0.008941 seconds .
+  artifactKey: Guid(791d33dae58db1f42942b5cf9955b269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs using Guid(791d33dae58db1f42942b5cf9955b269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e69b67f77ee95054ac21ff2147639ff') in 0.003389 seconds
+  Import took 0.015056 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 326.783464 seconds.
-  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs
-  artifactKey: Guid(d14078eb3b4580441a3f0458f2438386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs using Guid(d14078eb3b4580441a3f0458f2438386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '417ffe5a3bd01b4ca71e67b342a8f4b6') in 0.005431 seconds
-  Import took 0.010171 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016710 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.180 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1954 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 316.630440 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
-  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57ede704bfd4aadf0b4672808d9eda8') in 0.011698 seconds
-  Import took 0.016371 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 36.824448 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
-  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c55663e035afca54c79f9efb702e7da') in 0.005239 seconds
-  Import took 0.009163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 59.185861 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
-  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49669bb984ad2f026adc0df908d90be5') in 0.004659 seconds
-  Import took 0.008882 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.949361 seconds.
-  path: Assets/MagicLeap/Examples/Assets/Materials/GestureKeypoint0.mat
-  artifactKey: Guid(08fc986de47cb43df8ce100ef51c7ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Examples/Assets/Materials/GestureKeypoint0.mat using Guid(08fc986de47cb43df8ce100ef51c7ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b9f79dc77d333b44401c56090f35b56') in 0.060594 seconds
-  Import took 0.064367 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000346 seconds.
-  path: Assets/MagicLeap/Examples/Assets/Materials/GestureKeypoint1.mat
-  artifactKey: Guid(0a51f43d1bd7c7f4a8f2c5d50eec741d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Examples/Assets/Materials/GestureKeypoint1.mat using Guid(0a51f43d1bd7c7f4a8f2c5d50eec741d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5324507d4cb5b4ef9d47c5d38315bf61') in 0.023061 seconds
-  Import took 0.026106 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000333 seconds.
-  path: Assets/MagicLeap/Examples/Assets/Materials/GestureKeypoint2.mat
-  artifactKey: Guid(15ed1ad0667428844bca787943971580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap/Examples/Assets/Materials/GestureKeypoint2.mat using Guid(15ed1ad0667428844bca787943971580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00aed068038cc8b7abf413c8d69cb611') in 0.025022 seconds
-  Import took 0.028449 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000369 seconds.
-  path: Assets/MagicLeap-Tools/Prefabs/Input/KeyPointVisualizer.prefab
-  artifactKey: Guid(85e80c1e3e91efa4ba9955a2bccff515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap-Tools/Prefabs/Input/KeyPointVisualizer.prefab using Guid(85e80c1e3e91efa4ba9955a2bccff515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff9ac0a5a7a63df431871708d7485979') in 0.057094 seconds
-  Import took 0.060590 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.608535 seconds.
-  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs
-  artifactKey: Guid(c7cfe5b0ad7861f43aba23300e0df832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs using Guid(c7cfe5b0ad7861f43aba23300e0df832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8728f7bdc304ecf4e4685366b5ab896c') in 0.003236 seconds
-  Import took 0.007315 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.173195 seconds.
-  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs
-  artifactKey: Guid(c7cfe5b0ad7861f43aba23300e0df832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs using Guid(c7cfe5b0ad7861f43aba23300e0df832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15ec13b3c2fce7cd82169dd016fc68ef') in 0.002920 seconds
-  Import took 0.007001 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.013621 seconds.
-  path: Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs
-  artifactKey: Guid(c7cfe5b0ad7861f43aba23300e0df832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Objects/ManagedKeypoint.cs using Guid(c7cfe5b0ad7861f43aba23300e0df832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd24f704d54f756b5fb88a1dc761ab14') in 0.002579 seconds
-  Import took 0.006990 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.269526 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
-  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e197be246b637bc133038e2f1680f2d') in 0.002899 seconds
-  Import took 0.006997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.583849 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
-  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd55dc93490968cf7e92603e88b325e77') in 0.003897 seconds
-  Import took 0.007845 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.079748 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs
-  artifactKey: Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ManagedKeypoint.cs using Guid(51989823bd79e9e429b497af5bb2c5fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e92bc1a507d5d0258b78293e0160fba') in 0.002896 seconds
-  Import took 0.006414 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 825.231047 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
-  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23258f6e8ba0daff725ef26adc5c43fe') in 0.006738 seconds
-  Import took 0.010952 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009740 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
-  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23258f6e8ba0daff725ef26adc5c43fe') in 0.003007 seconds
-  Import took 0.006332 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.907716 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
-  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '914bbbf649e4cff0543469c1fbb410cb') in 0.002638 seconds
-  Import took 0.006199 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1911.490310 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
-  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbac243fe009f276391a77e18c48b291') in 0.002938 seconds
-  Import took 0.006917 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 44.379497 seconds.
-  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs
-  artifactKey: Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/InputProviders/MLHandInputProvider.cs using Guid(f32cf3cd371066048b2b47c38d91a95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abaa60cb602b8c827eb09ca6f29fd791') in 0.004175 seconds
-  Import took 0.007754 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 90.353057 seconds.
-  path: Assets/MagicLeap-Tools/Code/Input/Hands/Visualizers/HandSkeletonVisualizer.cs
-  artifactKey: Guid(e984bf9263b8b154a8da652a76815f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MagicLeap-Tools/Code/Input/Hands/Visualizers/HandSkeletonVisualizer.cs using Guid(e984bf9263b8b154a8da652a76815f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea1ff06e632513bfed74cd37f9cb78b') in 0.007354 seconds
-  Import took 0.011884 seconds .
+Unloading 98 unused Assets to reduce memory usage. Loaded Objects now: 2458.
+Total: 17.070000 ms (FindLiveObjects: 0.348000 ms CreateObjectMapping: 0.089400 ms MarkObjects: 16.584500 ms  DeleteObjects: 0.046800 ms)
 
