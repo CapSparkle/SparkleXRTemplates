@@ -15,10 +15,7 @@ namespace SparkleXRTemplates
 		public List<Action<GameInteractor, float>> methodsToControll;
 
 		[SerializeField]
-		List<GameInteractorFloatAction> methodsTosControll;
-
-		[SerializeField]
-		List<UnityEvent<GameInteractor, float>> methodsTosControllss;
+		List<UnityEventGameInteractorFloat> methodsTosControll;
 
 		[SerializeField]
 		List<HandWristTilt> tiltGestureState;
@@ -28,17 +25,11 @@ namespace SparkleXRTemplates
 
 		List<SubscriptionBlock<float>> FormSubscriptionBlocks(GameInteractor interactor)
 		{
-			List<SubscriptionBlock<float>> ssubscriptionBlocks = new List<SubscriptionBlock<float>>();
-
-			List<GameInteractorFloatAction> subscriptionBlocks = new List<GameInteractorFloatAction>();
+			List<SubscriptionBlock<float>> subscriptionBlocks = new List<SubscriptionBlock<float>>();
 
 			for (int i = 0; i < methodsTosControll.Count; i++)
 			{
-				subscriptionBlocks.Add(new SubscriptionBlock<float>(
-					new List<Action<GameInteractor, float>> () {
-						methodsTosControll[i] 
-					}, 
-					interactor));
+				subscriptionBlocks.Add(new SubscriptionBlock<float>(methodsTosControll[i], interactor));
 			}
 
 			return subscriptionBlocks;

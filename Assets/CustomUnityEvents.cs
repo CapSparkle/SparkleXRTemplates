@@ -9,27 +9,14 @@ using SparkleXRTemplates;
 namespace SparkleXRTemplates
 {
 	[Serializable]
-	public class UnityEventMethodHolder : UnityEvent<GameInteractor, float> {
-	
+	public class UnityEventGameInteractor : UnityEvent<GameInteractor>
+	{
+
 	}
 
 	[Serializable]
-	public class GameInteractorFloatAction : UnityEvent<GameInteractor, float>
-	{
-
-		/*GameInteractor _interactor;
-
-
-		public GameInteractorFloatAction(GameInteractor interactor)
-		{
-			_interactor = interactor;
-		}
-
-		public void Notify(float f)
-		{
-			this.Invoke(_interactor, f);
-		}*/
-
+	public class UnityEventGameInteractorFloat : UnityEvent<GameInteractor, float> {
+	
 	}
 
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 //using Sirenix.Serialization;
 
 using UnityEngine.XR.InteractionSubsystems;
@@ -78,7 +79,7 @@ namespace SparkleXRTemplates.MagicLeap
 
         // method groups subscribed on the certain same gestures in certain state
         [SerializeField]
-        List<List<Action<GameInteractor>>> methodsToControll;
+        List<UnityEventGameInteractor> methodsToControll;
         [SerializeField]
         List<MLGestureMask> mlGestureMasks;
         [SerializeField]
