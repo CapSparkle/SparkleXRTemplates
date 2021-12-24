@@ -77,9 +77,11 @@ namespace SparkleXRTemplates.MagicLeap
             MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
         }
 
-        public Vector3 _wristCenterPosition;
+        public Vector3 previousPos;
+        public Vector3 _wristCenterPosition = Vector3.zero;
 
-        protected Vector3 _handDirection;
+        public Vector3 previousDir;
+        protected Vector3 _handDirection = Vector3.zero;
         public Vector3 handDirection
         {
             get
@@ -88,17 +90,22 @@ namespace SparkleXRTemplates.MagicLeap
                 {
                     Vector3 centerPosition = handCenterPosition;
 
-                    if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenterPosition))
+                    if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenterPosition) &&
+                        newWristCenterPosition != handCenterPosition)
                     {
+                        previousPos = _wristCenterPosition;
                         _wristCenterPosition = newWristCenterPosition;
-                        print("some wrist data" + _wristCenterPosition.ToString());
+                        //print("some wrist data" + _wristCenterPosition.ToString());
                     }
                     else
                     {
                         print("no MagicLeapHandUsages.WristCenter data presented. Old value in use");
                     }
 
+                    previousDir = _handDirection;
                     _handDirection = Vector3.Normalize(centerPosition - _wristCenterPosition);
+                    if (_handDirection.magnitude == 0)
+                        print("zero direction");
                 }
                 else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
                     StartCoroutine(handSimpleFeaturesData.GetDevice());
@@ -124,15 +131,23 @@ namespace SparkleXRTemplates.MagicLeap
                     if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 handWristCenter) &&
                         handData.TryGetFingerBones(HandFinger.Thumb, bonesOut) &&
                         bonesOut.Count == 5 &&
-                        bonesOut[2].TryGetPosition(out MPCThumbPosition))
+                        bonesOut[2].TryGetPosition(out MPCThumbPosition) &&
+                        MPCThumbPosition != handCenterPosition &&
+                        handWristCenter != handCenterPosition &&
+                        handCenterPosition != Vector3.zero)
                     {
                         Plane plane = new Plane();
                         plane.Set3Points(MPCThumbPosition, handWristCenter, handCenterPosition);
-                        _handOrientation = Quaternion.LookRotation(handDirection, plane.normal);
+
+                        if((handDirection.magnitude == 0) || plane.normal.magnitude == 0)
+						{
+                            print(_wristCenterPosition.ToString() + " - Wrist| " + handCenterPosition.ToString() + " - HCP| " + MPCThumbPosition.ToString() + " - Thumb| ");
+						}
+                            _handOrientation = Quaternion.LookRotation(handDirection, plane.normal);
                     }
                     else
 					{
-                        print("some to compute hand orientation isn't presented. Old value in use");
+                        print("some data to compute hand orientation isn't presented. Old value in use");
                     }
                 }
                 else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)

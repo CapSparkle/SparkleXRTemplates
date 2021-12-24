@@ -1988,6 +1988,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 2
+  m_PresetInfoIsWorld: 1
 --- !u!114 &8958096533629514024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,7 +2005,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &8958096533629514023
 MonoBehaviour:
   m_ObjectHideFlags: 0

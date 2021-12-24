@@ -23,14 +23,42 @@ namespace SparkleXRTemplates
         [SerializeField]
         SelectionController selectionPredicate;
 
-
-        #region -selection rules forming-
-
         [OdinSerialize]
-        public List<List<int>> minSelectRequirments = new List<List<int>>();
-        // Priority by list index
+        List<List<int>> _minSelectRequirments = new List<List<int>>();
 
-        /*void ParseSelectionPolicy()
+        public List<List<int>> minSelectRequirments
+		{
+            get
+			{
+                return _minSelectRequirments;
+			}
+            set
+			{
+                
+                for(int i = 0; i < value.Count; i ++)
+				{
+                    //sanitize
+                    value[i] = value[i].Distinct().ToList();
+
+                    //validate
+                    foreach (int selectorIndex in value[i])
+                        if ((selectorIndex >= selectors.Count()) ||
+                            selectorIndex < 0)
+                            return;
+
+                }
+
+                _minSelectRequirments = value;
+			}
+		}
+
+
+		#region -selection rules forming-
+
+
+		// Priority by list index
+
+		/*void ParseSelectionPolicy()
         {
             int i = 0;
             int list_index = -1;
@@ -102,19 +130,19 @@ namespace SparkleXRTemplates
             print("selection policy string is incorrect");
         }*/
 
-        #endregion -selection rules parsing-
+		#endregion -selection rules parsing-
 
 
-        int lastSelectingMinGroupIndex;
+		int selectGroupIndex;
         List<GameInteractable> ChooseInteractables()
         {
-            lastSelectingMinGroupIndex = 0;
+            selectGroupIndex = 0;
             List<GameInteractable> IntersectSet = new List<GameInteractable>() { };
-            foreach (List<int> selectorsSet in minSelectRequirments)
+            foreach (List<int> selectorsIndexGroup in minSelectRequirments)
             {
-                IntersectSet = selectors[selectorsSet[0]].selectedInteractables;
+                IntersectSet = selectors[selectorsIndexGroup[0]].selectedInteractables;
 
-                List<int> listOfInts = new List<int>(selectorsSet);
+                List<int> listOfInts = new List<int>(selectorsIndexGroup);
                 listOfInts.RemoveAt(0);
 
                 foreach (int selectorIndex in listOfInts)
@@ -128,13 +156,15 @@ namespace SparkleXRTemplates
                 if (IntersectSet.Count != 0)
                     return IntersectSet;
 
-                lastSelectingMinGroupIndex++;
+                selectGroupIndex++;
             }
+
+            selectGroupIndex = -1;
 
             return IntersectSet;
         }
 
-        public Action<List<GameInteractable>> SelectedInteractables;
+        public Action<List<GameInteractable>> OnSelectedInteractablesSet;
         List<GameInteractable> selectedSet = new List<GameInteractable>() { };
         List<GameInteractable> previousSelectedSet = new List<GameInteractable>() { };
 
@@ -145,7 +175,7 @@ namespace SparkleXRTemplates
         }
         void Start()
         {
-            SelectedInteractables += DummyMethod;
+            OnSelectedInteractablesSet += DummyMethod;
         }
 
         void Update()
@@ -153,20 +183,16 @@ namespace SparkleXRTemplates
             previousSelectedSet = selectedSet;
             selectedSet = ChooseInteractables();
 
-            switch (lastSelectingMinGroupIndex)
-            {
-                case 0 :
-                    selectedSet = selectors[0].SortInteractables(selectedSet);
-                    break;
-                case 1:
-                    print(selectedSet.Count);
-                    selectedSet = ManagerChooseRules.PrioritizeOneSelector(selectors[0], selectedSet);
-                    break;
-                default:
-                    break;
+            if(selectGroupIndex >= 0)
+			{
+                selectedSet = ManagerChooseRules.PrioritizeOneSelector(selectors[minSelectRequirments[selectGroupIndex][0]], selectedSet);
+            }
+            else
+			{
+                selectedSet = new List<GameInteractable>() { };
             }
 
-            SelectedInteractables(selectedSet);
+            OnSelectedInteractablesSet(selectedSet);
             correspondingGameInteractor.SetGameInteractables(selectedSet);
 
             //==== Debug output ==========

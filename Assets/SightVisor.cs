@@ -9,20 +9,28 @@ namespace SparkleXRTemplates.Examples
 {
     public class SightVisor : MonoBehaviour
     {
-        bool isSightVisorUp;
+        bool isSightVisorOn;
 
-        Transform upVisorPose;
-        Transform downVisorPose;
-
-        GameObject sightVisorModel;
-
-        GameObject visorInterface;
-
-        public void PushVisorInterace(GameInteractor interactor, Vector3 pushingHand)
-        {
+        public void TurnOn()
+		{
+            isSightVisorOn = true;
+            selectionGroupToggle.ToggleOnAdvancedSelecting();
 
         }
 
+        public void TurnOff()
+		{
+            isSightVisorOn = false;
+		}
+
+        [SerializeField]
+        GameObject sightVisorModel;
+
+        [SerializeField]
+        GameObject visorInterface;
+
+        [SerializeField]
+        SelectionGroupToggle selectionGroupToggle;
 
         // Start is called before the first frame update
         void Start()

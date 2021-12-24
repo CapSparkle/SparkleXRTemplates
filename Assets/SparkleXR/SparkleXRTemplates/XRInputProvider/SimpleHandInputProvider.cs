@@ -85,7 +85,8 @@ namespace SparkleXRTemplates
             {
                 if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
                 {
-                    if (!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out _handCenterPosition))
+                    if (!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out _handCenterPosition) &&
+                        _handCenterPosition != Vector3.zero)
                     {
                         handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
                         StartCoroutine(handSimpleFeaturesData.GetDevice());
