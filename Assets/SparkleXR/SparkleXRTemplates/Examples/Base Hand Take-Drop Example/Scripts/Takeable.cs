@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.Serialization;
+//using Sirenix.Serialization;
 
 
 namespace SparkleXRTemplates.Examples

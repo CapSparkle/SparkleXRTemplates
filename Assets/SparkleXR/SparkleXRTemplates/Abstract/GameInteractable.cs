@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
+//using Sirenix.OdinInspector;
+//using Sirenix.Serialization;
 using UnityEngine;
 
 namespace SparkleXRTemplates
 {
-    public abstract class GameInteractable : SerializedMonoBehaviour
+    public abstract class GameInteractable : MonoBehaviour
     {
-        [OdinSerialize]
+        [SerializeField]
         List<ControlsDescriptor> myControlls;
 
         public void Interact(GameInteractor interactor)

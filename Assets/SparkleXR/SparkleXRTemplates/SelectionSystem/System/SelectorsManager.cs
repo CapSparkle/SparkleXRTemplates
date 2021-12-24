@@ -6,12 +6,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Xml.Serialization;
-using Sirenix.Serialization;
-using Sirenix.OdinInspector;
+//using Sirenix.Serialization;
+//using Sirenix.OdinInspector;
 
 namespace SparkleXRTemplates
 {
-    public class SelectorsManager : SerializedMonoBehaviour
+    public class SelectorsManager : MonoBehaviour
     {
         [SerializeField] 
         GameInteractor correspondingGameInteractor;
@@ -23,7 +23,7 @@ namespace SparkleXRTemplates
         [SerializeField]
         SelectionController selectionPredicate;
 
-        [OdinSerialize]
+        [SerializeField]
         List<List<int>> _minSelectRequirments = new List<List<int>>();
 
         public List<List<int>> minSelectRequirments

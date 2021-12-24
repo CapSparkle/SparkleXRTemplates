@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-using Sirenix.Serialization;
+//using Sirenix.Serialization;
 
 using UnityEngine.XR.InteractionSubsystems;
 
@@ -15,10 +15,10 @@ namespace SparkleXRTemplates.MagicLeap
     {
         //TODO: add gesture drawer
 
-        [OdinSerialize]
+        [SerializeField]
         List<Action<GameInteractor>> methodsToControll;
 
-        [OdinSerialize]
+        [SerializeField]
         List<MLGestureMask> mlGestureMasks;
 
         // Start is called before the first frame update

@@ -20,6 +20,7 @@ namespace SparkleXRTemplates.Examples
 
         public void TurnOff()
 		{
+            selectionGroupToggle.ToggleOffAdvancedSelecting();
             isSightVisorOn = false;
 		}
 

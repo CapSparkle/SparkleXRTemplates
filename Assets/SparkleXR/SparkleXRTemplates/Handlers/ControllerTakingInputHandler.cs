@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.Serialization;
+//using Sirenix.Serialization;
 using SparkleXRTemplates.Examples;
 using UnityEngine;
 using UnityEngine.Events;

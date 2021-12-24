@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using Sirenix.Serialization;
+using UnityEngine;
+//using Sirenix.Serialization;
 
 using UnityEngine.XR.InteractionSubsystems;
 
@@ -26,29 +26,6 @@ namespace SparkleXRTemplates.MagicLeap
         NoPose = 256,
         NoHand = 512
     }
-
-    public class SubscriptionBlock
-	{
-        //On certain determined event from this interactor 
-        GameInteractor _interactor;
-
-        //Subscribed the following methods
-        List<Action<GameInteractor>> _observingMethods;
-
-		public SubscriptionBlock(List<Action<GameInteractor>> observingMethods, GameInteractor interactor)
-		{
-			_observingMethods = observingMethods;
-            _interactor = interactor;
-
-        }
-
-		public void Notify()
-		{
-            foreach (Action<GameInteractor> method in _observingMethods)
-                method(_interactor);
-        }
-	}
-
 
 	public class MLSimpleGestureControlsDescriptor : ControlsDescriptor
     {
@@ -100,11 +77,11 @@ namespace SparkleXRTemplates.MagicLeap
         //TODO: beautify inspector interface
 
         // method groups subscribed on the certain same gestures in certain state
-        [OdinSerialize]
+        [SerializeField]
         List<List<Action<GameInteractor>>> methodsToControll;
-        [OdinSerialize]
+        [SerializeField]
         List<MLGestureMask> mlGestureMasks;
-        [OdinSerialize]
+        [SerializeField]
         List<GestureState> gestureStates;
 
 
