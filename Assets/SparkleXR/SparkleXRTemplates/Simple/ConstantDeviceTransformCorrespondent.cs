@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.MagicLeap;
 using SparkleXRTemplates.MagicLeap;
+using MagicLeapTools;
 
 namespace SparkleXRTemplates
 {
@@ -12,15 +14,28 @@ namespace SparkleXRTemplates
         MLHandInputProvider inputProvider;
 
 		[SerializeField]
+		HandInput handInput;
+
+		[SerializeField]
 		XRNodeType deviceTypeToCorrespond = XRNodeType.Hand;
 
 		private void Update()
 		{
 			transform.position = inputProvider.handCenterPosition;
-			transform.rotation = inputProvider.handOrientation;
+
+			try
+			{
+				transform.rotation = HandInput.Left.Skeleton.Rotation;
+				print(HandInput.Right.Skeleton.Rotation.ToString());
+			}
+			catch(Exception exc)
+			{
+				print(exc.Message);
+			}
+	
 
 			//print("rad = " + MLHandTracking.Left.Wrist.Radial.Position);
-			//print("uln = " + MLHandTracking.Left.Wrist.Ulnar.Position);
+			
 			/*Quaternion.identity * inputProvider.handOrientation;
 		print("x = " + inputProvider.handOrientation.x.ToString() +
 			"; y = " + inputProvider.handOrientation.y.ToString() +

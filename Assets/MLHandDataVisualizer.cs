@@ -15,7 +15,7 @@ public class MLHandDataVisualizer : MonoBehaviour
     {
         Vector3 MPC = MLHandInputProvider.MPCThumbPosition;
         Vector3 palmCenter = MLHandInputProvider.handCenterPosition;
-        Vector3 wristCenter = MLHandInputProvider._wristCenterPosition;
+        Vector3 wristCenter = MLHandInputProvider.wristCenterPosition;
 
         one.SetPosition(0, wristCenter);
         one.SetPosition(1, palmCenter);

@@ -77,8 +77,16 @@ namespace SparkleXRTemplates.MagicLeap
             MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
         }
 
-        public Vector3 previousPos;
-        public Vector3 _wristCenterPosition = Vector3.zero;
+        public PositionSmoothier wrist, handCenter, MPCThumb;
+
+        //public Vector3 previousWristPos;
+        //public Vector3 wristCenterPosition = Vector3.zero;
+
+        //public Vector3 _handCenterPosition = Vector3.zero;
+
+        //public for debug purposes
+        //Vector3 MPCThumbPosition;
+
 
         public Vector3 previousDir;
         protected Vector3 _handDirection = Vector3.zero;
@@ -88,13 +96,13 @@ namespace SparkleXRTemplates.MagicLeap
             {
                 if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
                 {
-                    Vector3 centerPosition = handCenterPosition;
+                    _handCenterPosition = handCenterPosition;
 
                     if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenterPosition) &&
                         newWristCenterPosition != handCenterPosition)
                     {
-                        previousPos = _wristCenterPosition;
-                        _wristCenterPosition = newWristCenterPosition;
+                        previousWristPos = wristCenterPosition;
+                        wristCenterPosition = newWristCenterPosition;
                         //print("some wrist data" + _wristCenterPosition.ToString());
                     }
                     else
@@ -103,7 +111,7 @@ namespace SparkleXRTemplates.MagicLeap
                     }
 
                     previousDir = _handDirection;
-                    _handDirection = Vector3.Normalize(centerPosition - _wristCenterPosition);
+                    _handDirection = Vector3.Normalize(_handCenterPosition - wristCenterPosition);
                     if (_handDirection.magnitude == 0)
                         print("zero direction");
                 }
@@ -117,8 +125,6 @@ namespace SparkleXRTemplates.MagicLeap
         }
 
 
-        //public for debug purposes
-        public Vector3 MPCThumbPosition;
 
         public override Quaternion handOrientation
         {
@@ -141,7 +147,7 @@ namespace SparkleXRTemplates.MagicLeap
 
                         if((handDirection.magnitude == 0) || plane.normal.magnitude == 0)
 						{
-                            print(_wristCenterPosition.ToString() + " - Wrist| " + handCenterPosition.ToString() + " - HCP| " + MPCThumbPosition.ToString() + " - Thumb| ");
+                            print(wristCenterPosition.ToString() + " - Wrist| " + handCenterPosition.ToString() + " - HCP| " + MPCThumbPosition.ToString() + " - Thumb| ");
 						}
                             _handOrientation = Quaternion.LookRotation(handDirection, plane.normal);
                     }
