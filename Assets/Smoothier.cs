@@ -58,17 +58,17 @@ namespace SparkleXRTemplates
             {
                 foreach (Vector3 postion in positionHistory)
                     newSmoothedPosition += new Vector3(
-                        Mathf.Pow(postion.x, 2f),
-                        Mathf.Pow(postion.y, 2f),
-                        Mathf.Pow(postion.z, 2f)
+                        Mathf.Pow(postion.x, 3f),
+                        Mathf.Pow(postion.y, 3f),
+                        Mathf.Pow(postion.z, 3f)
                         );
 
                 newSmoothedPosition /= deepOfRemember;
 
                 newSmoothedPosition = new Vector3(
-                    Mathf.Sqrt(newSmoothedPosition.x),
-                    Mathf.Sqrt(newSmoothedPosition.y),
-                    Mathf.Sqrt(newSmoothedPosition.z)
+                    Mathf.Pow(newSmoothedPosition.x, 1f / 3f),
+                    Mathf.Pow(newSmoothedPosition.y, 1f / 3f),
+                    Mathf.Pow(newSmoothedPosition.z, 1f / 3f)
                     );
             }
 

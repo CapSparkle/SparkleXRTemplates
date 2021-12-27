@@ -19,7 +19,7 @@ public class SphereCastVisualizer : MonoBehaviour
     GameObject CylinderVisualizer;
     GameObject[] SphereModels = new GameObject[2] { null, null};
 
-    static float trasparency = 0.25f;
+    static float trasparency = 0.1f;
     
     [SerializeField]
     Color color = Color.clear;

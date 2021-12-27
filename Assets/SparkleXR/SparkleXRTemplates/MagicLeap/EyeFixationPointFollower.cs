@@ -14,6 +14,11 @@ namespace SparkleXRTemplates.MagicLeap
 {
     public class EyeFixationPointFollower : MonoBehaviour
     {
+        [SerializeField]
+        GameObject eyeGazeCastDirector;
+
+        PositionSmoothier gazeSmooth = new PositionSmoothier();
+
         void Start()
         {
             MLEyes.Start();
@@ -21,7 +26,8 @@ namespace SparkleXRTemplates.MagicLeap
 
         void Update()
         {
-            transform.position = MLEyes.FixationPoint;
+            transform.position = gazeSmooth.PerformSmoothing(MLEyes.FixationPoint);
+            eyeGazeCastDirector.transform.position = gazeSmooth.smoothedPosition + (gazeSmooth.smoothedPosition - Camera.main.transform.position).normalized;
         }
     }
 }

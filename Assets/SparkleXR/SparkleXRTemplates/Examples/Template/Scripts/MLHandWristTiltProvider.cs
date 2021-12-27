@@ -70,7 +70,7 @@ namespace SparkleXRTemplates.MagicLeap
 
             get
 			{
-                return (MLHandDevice.Middle.MCP.Position - MLHandDevice.Wrist.Center.Position).normalized;
+                return handDirection;
             }
         }
 

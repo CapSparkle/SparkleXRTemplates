@@ -23,10 +23,15 @@ namespace SparkleXRTemplates
         [SerializeField]
         SelectionController selectionPredicate;
 
+        //TODO: Add a visualisation in editor or reference to a config
         [SerializeField]
-        List<List<int>> _minSelectRequirments = new List<List<int>>();
+		List<List<int>> _minSelectRequirments = new List<List<int>>()
+		{
+            new List<int> (){ 0, 1 },
+            new List<int> (){ 0, 2 }
+		};
 
-        public List<List<int>> minSelectRequirments
+		public List<List<int>> minSelectRequirments
 		{
             get
 			{

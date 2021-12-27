@@ -11,6 +11,28 @@ namespace SparkleXRTemplates
     {
         public XRInputProvider myXRInputProvider;
 
+		private void Start()
+		{
+            gameInteractableLocked = null;
+		}
+
+		public bool LockGameInteractor(GameInteractable interactableLocking)
+		{
+            if (interactableLocking == null ||
+                gameInteractableLocked == null )
+			{
+                gameInteractableLocked = interactableLocking;
+                return true;
+            } 
+            else
+			{
+                return false;
+            }
+
+        }
+        
+        public GameInteractable gameInteractableLocked { get; private set; }
+
         List<GameInteractable> _currentGameInteractables = new List<GameInteractable>();
         public List<GameInteractable> currentGameInteractables
         {
@@ -26,6 +48,9 @@ namespace SparkleXRTemplates
 
         public void SetGameInteractables(List<GameInteractable> newGameInteractables)
         {
+            if (gameInteractableLocked != null)
+                return;
+
             IEnumerable<GameInteractable> toUninteract;
             if (currentGameInteractables != null && currentGameInteractables.Count != 0)
                 toUninteract = currentGameInteractables.Except(newGameInteractables);

@@ -77,7 +77,9 @@ namespace SparkleXRTemplates.MagicLeap
             MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
         }
 
-        public PositionSmoothier wrist, handCenter, MPCThumb;
+        public PositionSmoothier wrist = new PositionSmoothier(12);
+        public PositionSmoothier MPCThumb = new PositionSmoothier(12);
+        public PositionSmoothier handCenter = new PositionSmoothier(12);
 
         //public Vector3 previousWristPos;
         //public Vector3 wristCenterPosition = Vector3.zero;
@@ -96,13 +98,13 @@ namespace SparkleXRTemplates.MagicLeap
             {
                 if (handSimpleFeaturesData.deviceFindState == DeviceFindState.Found)
                 {
-                    _handCenterPosition = handCenterPosition;
+                    handCenter.PerformSmoothing(handCenterPosition);
 
                     if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenterPosition) &&
                         newWristCenterPosition != handCenterPosition)
                     {
-                        previousWristPos = wristCenterPosition;
-                        wristCenterPosition = newWristCenterPosition;
+                        //previousWristPos = wristCenterPosition;
+                        wrist.PerformSmoothing(newWristCenterPosition);
                         //print("some wrist data" + _wristCenterPosition.ToString());
                     }
                     else
@@ -111,7 +113,7 @@ namespace SparkleXRTemplates.MagicLeap
                     }
 
                     previousDir = _handDirection;
-                    _handDirection = Vector3.Normalize(_handCenterPosition - wristCenterPosition);
+                    _handDirection = Vector3.Normalize(handCenter.smoothedPosition - wrist.smoothedPosition);
                     if (_handDirection.magnitude == 0)
                         print("zero direction");
                 }
@@ -134,20 +136,20 @@ namespace SparkleXRTemplates.MagicLeap
                 {
                     List<Bone> bonesOut = new List<Bone>();
 
-                    if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 handWristCenter) &&
+                    if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenterPosition) &&
                         handData.TryGetFingerBones(HandFinger.Thumb, bonesOut) &&
                         bonesOut.Count == 5 &&
-                        bonesOut[2].TryGetPosition(out MPCThumbPosition) &&
+                        bonesOut[2].TryGetPosition(out Vector3 MPCThumbPosition) &&
                         MPCThumbPosition != handCenterPosition &&
-                        handWristCenter != handCenterPosition &&
+                        newWristCenterPosition != handCenterPosition &&
                         handCenterPosition != Vector3.zero)
                     {
                         Plane plane = new Plane();
-                        plane.Set3Points(MPCThumbPosition, handWristCenter, handCenterPosition);
+                        plane.Set3Points(MPCThumb.PerformSmoothing(MPCThumbPosition), wrist.PerformSmoothing(newWristCenterPosition), handCenter.PerformSmoothing(handCenterPosition));
 
                         if((handDirection.magnitude == 0) || plane.normal.magnitude == 0)
 						{
-                            print(wristCenterPosition.ToString() + " - Wrist| " + handCenterPosition.ToString() + " - HCP| " + MPCThumbPosition.ToString() + " - Thumb| ");
+                            print(wrist.smoothedPosition.ToString() + " - Wrist| " + handCenter.smoothedPosition.ToString() + " - HCP| " + MPCThumb.smoothedPosition.ToString() + " - Thumb| ");
 						}
                             _handOrientation = Quaternion.LookRotation(handDirection, plane.normal);
                     }

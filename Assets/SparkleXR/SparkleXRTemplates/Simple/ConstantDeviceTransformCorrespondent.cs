@@ -22,25 +22,10 @@ namespace SparkleXRTemplates
 		private void Update()
 		{
 			transform.position = inputProvider.handCenterPosition;
-
-			try
-			{
-				transform.rotation = HandInput.Left.Skeleton.Rotation;
-				print(HandInput.Right.Skeleton.Rotation.ToString());
-			}
-			catch(Exception exc)
-			{
-				print(exc.Message);
-			}
-	
+			transform.rotation = inputProvider.handOrientation;
+			transform.Rotate(new Vector3(55f, -5f, 0f), Space.Self);
 
 			//print("rad = " + MLHandTracking.Left.Wrist.Radial.Position);
-			
-			/*Quaternion.identity * inputProvider.handOrientation;
-		print("x = " + inputProvider.handOrientation.x.ToString() +
-			"; y = " + inputProvider.handOrientation.y.ToString() +
-			"; z = " + inputProvider.handOrientation.z.ToString() +
-			"; w = " + inputProvider.handOrientation.w.ToString()); */
 		}
 	}
 

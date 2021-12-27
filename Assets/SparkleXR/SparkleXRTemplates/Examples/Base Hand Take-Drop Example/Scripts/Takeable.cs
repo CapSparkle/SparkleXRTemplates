@@ -13,6 +13,9 @@ namespace SparkleXRTemplates.Examples
         [SerializeField]
         bool childToHoldingHand;
 
+        [SerializeField]
+        bool lockOnTake;
+
         protected string myDescription;
 
         protected Hand _holdingHand = null;
@@ -82,6 +85,11 @@ namespace SparkleXRTemplates.Examples
 
             holdingHand = takingHand;
 
+            if(lockOnTake)
+			{
+                interactor.LockGameInteractor(this);
+            }
+
             OnTakenBy(holdingHand);
         }
 
@@ -97,6 +105,11 @@ namespace SparkleXRTemplates.Examples
             if (holdingHand != dropingHand)
                 return;
 
+            if (lockOnTake)
+            {
+                holdingHand.LockGameInteractor(null);
+            }
+
             Drop();
         }
 
@@ -111,6 +124,8 @@ namespace SparkleXRTemplates.Examples
             if(RightBeforeDroppedBy != null)
                 RightBeforeDroppedBy?.Invoke(holdingHand);
             holdingHand = null;
+            
+
         }
     }
 }

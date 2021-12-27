@@ -80,7 +80,7 @@ namespace SparkleXRTemplates
                 int i = 0;
                 foreach (RaycastHit hit in hits)
                 {
-                    print("Sphere Caster (uid:" + m_selectorUID + ") " + "hit №" + i + " - " + hit.transform.name);
+                    //print("Sphere Caster (uid:" + m_selectorUID + ") " + "hit №" + i + " - " + hit.transform.name);
                     GameInteractable handler;
                     if (handler = hit.transform.GetComponent<GameInteractable>())
                         AddInteractable(handler);
@@ -91,7 +91,6 @@ namespace SparkleXRTemplates
             {
                 Collider[] colliders = Physics.OverlapSphere(castSource.position, _radius, includedLayers);
                 int i = 0;
-                print("i am working");
                 foreach (Collider collider in colliders)
                 {
                     print("Sphere Caster (uid:" + m_selectorUID + ") " + "hit №" + i + " - " + collider.transform.name);
