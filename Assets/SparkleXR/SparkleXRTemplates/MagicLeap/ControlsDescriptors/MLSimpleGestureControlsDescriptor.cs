@@ -94,13 +94,19 @@ namespace SparkleXRTemplates.MagicLeap
 
             for (int i = 0; i < methodsToControll.Count; i++)
             {
-                subscriptionBlocks.Add(new SubscriptionBlock(methodsToControll[i], interactor));
+                subscriptionBlocks.Add(new SubscriptionBlock(methodsToControll[i], interactor as GameInteractor));
             }
 
             return subscriptionBlocks;
         }
 
-        public override bool StartHandling(GameInteractor interactor)
+
+		private void Update()
+		{
+			
+		}
+
+		public override bool StartHandling(GameInteractor interactor)
         {
             if (!CheckInputProvider(interactor))
                 return false;
@@ -115,7 +121,11 @@ namespace SparkleXRTemplates.MagicLeap
                 subscriptions[interactor] = newSubscriptionBlocks;
 
                 for (int i = 0; i < subscriptions[interactor].Count; i++)
+				{
+                    print("some suka subscriptions i do");
                     mLHandInputProvider.AddGestureListener(subscriptions[interactor][i].Notify, mlGestureMasks[i], gestureStates[i]);
+                }
+                    
 
                 return true;
             }

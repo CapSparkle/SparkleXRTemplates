@@ -81,17 +81,7 @@ namespace SparkleXRTemplates.MagicLeap
         public PositionSmoothier MPCThumb = new PositionSmoothier(12);
         public PositionSmoothier handCenter = new PositionSmoothier(12);
 
-        //public Vector3 previousWristPos;
-        //public Vector3 wristCenterPosition = Vector3.zero;
-
-        //public Vector3 _handCenterPosition = Vector3.zero;
-
-        //public for debug purposes
-        //Vector3 MPCThumbPosition;
-
-
-        public Vector3 previousDir;
-        protected Vector3 _handDirection = Vector3.zero;
+        protected Vector3 _handDirection;
         public Vector3 handDirection
         {
             get
@@ -112,7 +102,7 @@ namespace SparkleXRTemplates.MagicLeap
                         print("no MagicLeapHandUsages.WristCenter data presented. Old value in use");
                     }
 
-                    previousDir = _handDirection;
+                    //previousDir = _handDirection;
                     _handDirection = Vector3.Normalize(handCenter.smoothedPosition - wrist.smoothedPosition);
                     if (_handDirection.magnitude == 0)
                         print("zero direction");
@@ -125,9 +115,6 @@ namespace SparkleXRTemplates.MagicLeap
                 return _handDirection;
             }
         }
-
-
-
         public override Quaternion handOrientation
         {
             get
@@ -169,72 +156,10 @@ namespace SparkleXRTemplates.MagicLeap
             }
         }
 
-        //Save for some time
-        /*void TakeAndHandleHandFeatureData()
+
+        protected void Update()
 		{
-            List<Bone> bonesOut = new List<Bone>();
-
-            //thumbMCPPosition
-            if (handData.TryGetFingerBones(HandFinger.Thumb, bonesOut))
-            {
-                if ((bonesOut.Count == 5) && (bonesOut[2].TryGetPosition(out Vector3 newThumbMCPPosition)))
-                    thumbMCPPosition = newThumbMCPPosition;
-                else
-                    OnDataNotProvidedByDataSource(handSimpleFeaturesData, CommonUsages.handData);
-            }
-
-            if (handData.TryGetFingerBones(HandFinger.Index, bonesOut))
-            {
-                if ((bonesOut.Count == 5) && (bonesOut[2].TryGetPosition(out Vector3 newIndexMCPPosition)))
-                    indexMCPPosition = newIndexMCPPosition;
-                else
-                    OnDataNotProvidedByDataSource(handSimpleFeaturesData, CommonUsages.handData);
-            }
-
-            if (handData.TryGetFingerBones(HandFinger.Middle, bonesOut))
-            {
-                if ((bonesOut.Count == 5) && (bonesOut[2].TryGetPosition(out Vector3 newRingMCPPosition)))
-                    ringMCPPosition = newRingMCPPosition;
-                else
-                    OnDataNotProvidedByDataSource(handSimpleFeaturesData, CommonUsages.handData);
-            }
-
-            if (handData.TryGetFingerBones(HandFinger.Middle, bonesOut))
-            {
-                if ((bonesOut.Count == 5) && (bonesOut[2].TryGetPosition(out Vector3 newMiddleMCPPosition)))
-                    middleMCPPosition = newMiddleMCPPosition;
-                else
-                    OnDataNotProvidedByDataSource(handSimpleFeaturesData, CommonUsages.handData);
-            }
-
-            //wristCenter
-            if (handSimpleFeaturesData.inputDevice.TryGetFeatureValue(MagicLeapHandUsages.WristCenter, out Vector3 newWristCenter))
-                wristCenter = newWristCenter;
-            else
-                OnDataNotProvidedByDataSource(handSimpleFeaturesData, MagicLeapHandUsages.WristCenter);
-
-            //Update managed keypoint values used
-            thumbMCP.Update(handFingerPointsData.inputDevice, thumbMCPPosition, indexMCPPosition, handCenterPosition);
-
-        }
-
-        void OnDataNotProvidedByDataSource<T>(FeatureGroupDataSource FGDataSource, InputFeatureUsage<T> featureNotProvided)
-		{
-            Debug.Log("The value of feature: " + featureNotProvided.name + " have not been provided at all or have not been provided correctly by device: " + FGDataSource.inputDevice.name);
-            if (FGDataSource.deviceFindState != DeviceFindState.Found)
-			{
-                FGDataSource.deviceFindState = DeviceFindState.NotFound;
-                StartCoroutine(FGDataSource.GetDevice());
-            }
-        }
-        */
-
-        private void Update()
-		{
-			if (mySubscribers != null && mySubscribers.Count != 0)
-			{
-                NotifyUpdatedGestures();
-            }
+            NotifyUpdatedGestures();
         }
 		
 
@@ -244,10 +169,12 @@ namespace SparkleXRTemplates.MagicLeap
 			{
                 if (gestureStates[i] == GestureState.Updated)
                 {
-                    /*if (mlgesturemasks[i].hasflag((mlgesturemask)math.pow(2.0, (int)myhand.keypose)))
+                    print("some UPDATEd gestures i have");
+                    if (mlGestureMasks[i].HasFlag((MLGestureMask)Mathf.Pow(2f, (int)MLHandDevice.KeyPose)))
                     {
-                        subscribers[i].invoke();
-                    }*/
+                        print("target gesture");
+                        mySubscribers[i].Invoke();
+                    }
                 }
             }
         }

@@ -125,6 +125,7 @@ namespace SparkleXRTemplates.MagicLeap
 
         void Update()
         {
+            base.Update();
             RecognizeTiltAngle();
             if (tiltAngle > upBentMinAngle)
                 currentGesture = HandWristTilt.WristBentUp;

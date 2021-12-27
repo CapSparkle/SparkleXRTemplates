@@ -49,6 +49,7 @@ namespace SparkleXRTemplates.Examples
         public Action<Hand> OnTakenBy;
         public void Take(GameInteractor interactor)
         {
+            print("take occured");
             Hand takingHand = interactor.GetComponent<Hand>();
 
             if (takingHand == null)
@@ -90,12 +91,14 @@ namespace SparkleXRTemplates.Examples
                 interactor.LockGameInteractor(this);
             }
 
-            OnTakenBy(holdingHand);
+            if (OnTakenBy != null)
+                OnTakenBy(holdingHand);
         }
 
         public Action<Hand> RightBeforeDroppedBy;
         public void TryDrop(GameInteractor interactor)
         {
+            print("drop occured");
             Hand dropingHand;
 
             if ((dropingHand = interactor.GetComponent<Hand>()) == null)

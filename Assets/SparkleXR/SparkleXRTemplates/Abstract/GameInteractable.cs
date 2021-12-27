@@ -15,6 +15,7 @@ namespace SparkleXRTemplates
         {
             foreach (ControlsDescriptor controls in myControlls)
             {
+                print("interacting with " + transform.name);
                 controls.StartHandling(interactor);
             }
         }

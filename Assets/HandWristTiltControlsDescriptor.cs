@@ -12,10 +12,9 @@ namespace SparkleXRTemplates
 
 	public class HandWristTiltControlsDescriptor : ControlsDescriptor
     {
-		public List<Action<GameInteractor, float>> methodsToControll;
 
 		[SerializeField]
-		List<UnityEventGameInteractorFloat> methodsTosControll;
+		List<UnityEventGameInteractorFloat> methodsToControll;
 
 		[SerializeField]
 		List<HandWristTilt> tiltGestureState;
@@ -27,9 +26,9 @@ namespace SparkleXRTemplates
 		{
 			List<SubscriptionBlock<float>> subscriptionBlocks = new List<SubscriptionBlock<float>>();
 
-			for (int i = 0; i < methodsTosControll.Count; i++)
+			for (int i = 0; i < methodsToControll.Count; i++)
 			{
-				subscriptionBlocks.Add(new SubscriptionBlock<float>(methodsTosControll[i], interactor));
+				subscriptionBlocks.Add(new SubscriptionBlock<float>(methodsToControll[i], interactor));
 			}
 
 			return subscriptionBlocks;

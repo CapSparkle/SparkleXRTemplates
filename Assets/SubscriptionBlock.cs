@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,7 +21,10 @@ namespace SparkleXRTemplates {
 
         public void Notify()
         {
-            _observingMethods.Invoke(_interactor);
+            Debug.Log(_interactor.ToString());
+            Debug.Log(_observingMethods.ToString());
+            //Debug.Log(typeof(_observingMethods));
+            _observingMethods.Invoke(_interactor as GameInteractor);
         }
     }
 
