@@ -77,9 +77,9 @@ namespace SparkleXRTemplates.MagicLeap
             MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
         }
 
-        public PositionSmoothier wrist = new PositionSmoothier(12);
-        public PositionSmoothier MPCThumb = new PositionSmoothier(12);
-        public PositionSmoothier handCenter = new PositionSmoothier(12);
+        public PositionSmoothier wrist = new PositionSmoothier(2);
+        public PositionSmoothier MPCThumb = new PositionSmoothier(2);
+        public PositionSmoothier handCenter = new PositionSmoothier(2);
 
         protected Vector3 _handDirection;
         public Vector3 handDirection

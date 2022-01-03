@@ -86,7 +86,7 @@ namespace SparkleXRTemplates.MagicLeap
         List<GestureState> gestureStates;
 
 
-        Dictionary<GameInteractor, List<SubscriptionBlock>> subscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock>>();
+        public Dictionary<GameInteractor, List<SubscriptionBlock>> subscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock>>();
 
         List<SubscriptionBlock> FormSubscriptionBlocks(GameInteractor interactor)
         {

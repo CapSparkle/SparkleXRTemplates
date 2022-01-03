@@ -36,8 +36,16 @@ namespace SparkleXRTemplates.Examples
                         _holdingHand.StateOfHand.Add(this, new StateLabel(StateLabelType.carrying, myDescription));
                     }
 
-
-                    GrippingDevice newGrippingDevice = value.GetComponent<GrippingDevice>();
+                    GrippingDevice newGrippingDevice = null;
+                    
+                    try
+					{
+                        newGrippingDevice = value.GetComponent<GrippingDevice>();
+                    }
+                    catch(Exception exc)
+					{
+                        Debug.Log(exc.Message);
+					}
 
                     if (currentlyGrippingDevice != newGrippingDevice)
                     {
