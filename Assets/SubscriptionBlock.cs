@@ -1,6 +1,4 @@
-using System;
-using System.Reflection;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,7 +22,14 @@ namespace SparkleXRTemplates {
             Debug.Log(_interactor.ToString());
             Debug.Log(_observingMethods.ToString());
             //Debug.Log(typeof(_observingMethods));
-            _observingMethods.Invoke(_interactor as GameInteractor);
+
+            int countOfSubscribers = _observingMethods.GetPersistentEventCount();
+
+            for (int i = 0; i < countOfSubscribers; i++)
+			{
+                UnityEngine.Object targetObject = _observingMethods.GetPersistentTarget(i);
+                targetObject.GetType().GetMethod(_observingMethods.GetPersistentMethodName(i)).Invoke(targetObject, new[] { _interactor });
+            }
         }
     }
 
