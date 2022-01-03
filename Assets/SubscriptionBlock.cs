@@ -27,6 +27,8 @@ namespace SparkleXRTemplates {
 
             for (int i = 0; i < countOfSubscribers; i++)
 			{
+                //Here is such a strange solution because if method with one parameter serializes via UnityEvent<T>
+                //it invokes only with parameter that is setup via inspector
                 UnityEngine.Object targetObject = _observingMethods.GetPersistentTarget(i);
                 targetObject.GetType().GetMethod(_observingMethods.GetPersistentMethodName(i)).Invoke(targetObject, new[] { _interactor });
             }
