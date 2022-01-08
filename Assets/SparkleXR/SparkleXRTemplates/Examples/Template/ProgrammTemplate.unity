@@ -1087,12 +1087,12 @@ PrefabInstance:
     - target: {fileID: -7071476275558885785, guid: fa49e460baf435b4780da7196c2ab473,
         type: 3}
       propertyPath: methodsToControll.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PullOrPush
+      value: Pull
       objectReference: {fileID: 0}
     - target: {fileID: -7071476275558885785, guid: fa49e460baf435b4780da7196c2ab473,
         type: 3}
       propertyPath: methodsToControll.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PullOrPush
+      value: Push
       objectReference: {fileID: 0}
     - target: {fileID: -7071476275558885785, guid: fa49e460baf435b4780da7196c2ab473,
         type: 3}
@@ -1242,15 +1242,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 494976, guid: fa49e460baf435b4780da7196c2ab473, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 494976, guid: fa49e460baf435b4780da7196c2ab473, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 494976, guid: fa49e460baf435b4780da7196c2ab473, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.53
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 494976, guid: fa49e460baf435b4780da7196c2ab473, type: 3}
       propertyPath: m_LocalRotation.w

@@ -76,7 +76,7 @@ namespace SparkleXRTemplates.Examples
         Vector3 targetVelocity = Vector3.zero;
         float velocityModifier = 1f;
 
-        public void PullOrPush(GameInteractor interactor, float pullPower)
+        public void Push(GameInteractor interactor, float pushPower)
         {
             GrippingDevice grippingDevice = interactor.GetComponent<GrippingDevice>();
             if (grippingDevice == null)
@@ -86,8 +86,21 @@ namespace SparkleXRTemplates.Examples
             if (holdingHand != grippingDevice.GetComponent<Hand>())
                 return;
 
-            targetVelocity = (transform.position - holdingHand.handPivot.position).normalized * velocityModifier * pullPower;
-            Debug.Log(pullPower.ToString());
+            targetVelocity = (transform.position - holdingHand.handPivot.position).normalized * velocityModifier * pushPower;
+        }
+
+
+        public void Pull(GameInteractor interactor, float pullPower)
+        {
+            GrippingDevice grippingDevice = interactor.GetComponent<GrippingDevice>();
+            if (grippingDevice == null)
+                return;
+
+
+            if (holdingHand != grippingDevice.GetComponent<Hand>())
+                return;
+
+            targetVelocity = (transform.position - holdingHand.handPivot.position).normalized * velocityModifier * pullPower * -1f;
         }
 
 
