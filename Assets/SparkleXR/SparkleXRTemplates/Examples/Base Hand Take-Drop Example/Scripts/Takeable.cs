@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 //using Sirenix.Serialization;
 
 
 namespace SparkleXRTemplates.Examples
 {
+    [Serializable]
+    public class UnityEventHand : UnityEvent<Hand> { }
+
     //[RequireComponent(typeof(TakingInputHandler))]
     public class Takeable : GameInteractable
     {
@@ -46,7 +48,8 @@ namespace SparkleXRTemplates.Examples
 
         private Transform previousParent;
 
-        public Action<Hand> OnTakenBy;
+        [SerializeField]
+        UnityEventHand OnTakenBy;
         public void Take(GameInteractor interactor)
         {
             print("take occured");
@@ -93,7 +96,7 @@ namespace SparkleXRTemplates.Examples
             }
 
             if (OnTakenBy != null)
-                OnTakenBy(holdingHand);
+                OnTakenBy.Invoke(holdingHand);
         }
 
         public Action<Hand> RightBeforeDroppedBy;
@@ -119,12 +122,12 @@ namespace SparkleXRTemplates.Examples
 
         protected void Drop()
 		{
+            print("drop");
             if (childToHoldingHand)
             {
                 transform.parent = previousParent;
             }
 
-            print("drop");
             if(RightBeforeDroppedBy != null)
                 RightBeforeDroppedBy?.Invoke(holdingHand);
             holdingHand = null;

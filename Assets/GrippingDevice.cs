@@ -12,6 +12,15 @@ public class GrippingDevice : MonoBehaviour
 
     public void TakeDamage(int damage)
 	{
+		HP -= damage;
 		OnDamageTaken();
+
+		if (HP <= 0)
+			ProccedGameOver();
+	}
+
+	void ProccedGameOver()
+	{
+		print("GameOver");
 	}
 }

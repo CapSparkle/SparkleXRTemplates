@@ -10,6 +10,8 @@ namespace SparkleXRTemplates.Examples
         [SerializeField]
         int damageOnTake = 1;
 
+        //Add haptic pulses
+
         public void DealDamage(Hand hand)
         {
             try

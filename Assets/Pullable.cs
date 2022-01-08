@@ -63,11 +63,6 @@ namespace SparkleXRTemplates.Examples
                     }
                 }
 
-                //GrippingDevice grippingDevice = holdingHand.GetComponent<GrippingDevice>();
-
-                if (currentlyGrippingDevice != null)
-                    currentlyGrippingDevice.OnDamageTaken += Drop;
-
                 targetVelocity = Vector3.zero;
             }
         }

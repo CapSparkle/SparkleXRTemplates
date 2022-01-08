@@ -1253,3 +1253,1380 @@ System memory in use after: 91.1 MB.
 Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2562.
 Total: 2.319200 ms (FindLiveObjects: 0.239100 ms CreateObjectMapping: 0.083800 ms MarkObjects: 1.956500 ms  DeleteObjects: 0.038500 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015109 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.914 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.03 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2566.
+Total: 1.961800 ms (FindLiveObjects: 0.200500 ms CreateObjectMapping: 0.070400 ms MarkObjects: 1.650700 ms  DeleteObjects: 0.039200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 11034.304218 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/added-file-dark@2x.png
+  artifactKey: Guid(c223e0c507e2c6549a2cb97441b62cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/added-file-dark@2x.png using Guid(c223e0c507e2c6549a2cb97441b62cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1e111062b2e789c4d3d42c0a400f7a') in 0.049613 seconds
+  Import took 0.053229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000364 seconds.
+  path: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineHeaderMarkerIcon.png
+  artifactKey: Guid(4f8d98ef7dbbe3d469e14c04722cbeed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineHeaderMarkerIcon.png using Guid(4f8d98ef7dbbe3d469e14c04722cbeed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9654fdbddc744301642c6e92759bf44') in 0.015095 seconds
+  Import took 0.018534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/Assets/Styles/ChangesGroupHeader.uss
+  artifactKey: Guid(7f8119d919033424caea4da5a9f91a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/Assets/Styles/ChangesGroupHeader.uss using Guid(7f8119d919033424caea4da5a9f91a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a449af88af340efc9ce196e1b073f6c') in 0.014116 seconds
+  Import took 0.017520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/Assets/Layouts/ChangesGroupHeader.uxml
+  artifactKey: Guid(19d5aba5e2682314190477298a0313fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/Assets/Layouts/ChangesGroupHeader.uxml using Guid(19d5aba5e2682314190477298a0313fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c278cee7184f162c2c950b12e9398de0') in 0.009580 seconds
+  Import took 0.013138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/added-file-light@2x.png
+  artifactKey: Guid(ec2e3aa6d0ab8ce4eac29b56d65d61d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/added-file-light@2x.png using Guid(ec2e3aa6d0ab8ce4eac29b56d65d61d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '230cc4cfe5301a665630816e146066e4') in 0.051444 seconds
+  Import took 0.055797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/added-file-light.png
+  artifactKey: Guid(397fff6c3885f8343bb65714f0064b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/added-file-light.png using Guid(397fff6c3885f8343bb65714f0064b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d3788683049f51af0aec3e70cbcb378') in 0.020173 seconds
+  Import took 0.023644 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012789 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.877 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.38 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2572.
+Total: 2.370400 ms (FindLiveObjects: 0.348500 ms CreateObjectMapping: 0.125000 ms MarkObjects: 1.853800 ms  DeleteObjects: 0.041400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013642 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.876 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.11 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2576.
+Total: 1.791500 ms (FindLiveObjects: 0.202000 ms CreateObjectMapping: 0.071100 ms MarkObjects: 1.482800 ms  DeleteObjects: 0.034700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014688 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.899 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.0 MB.
+System memory in use after: 91.1 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2580.
+Total: 2.417700 ms (FindLiveObjects: 0.254900 ms CreateObjectMapping: 0.099400 ms MarkObjects: 2.025300 ms  DeleteObjects: 0.036900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 419.516558 seconds.
+  path: Assets/Asteroids Pack/Assets/Prefabs/LavaDrop.prefab
+  artifactKey: Guid(04d0bf4be9447154188d86f6e3b8dce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Prefabs/LavaDrop.prefab using Guid(04d0bf4be9447154188d86f6e3b8dce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2661d94006142a7dca4b0747e586411d') in 0.129141 seconds
+  Import took 0.132884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.483163 seconds.
+  path: Assets/Asteroids
+  artifactKey: Guid(b0ab26a41395978459857c585a7e3345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids using Guid(b0ab26a41395978459857c585a7e3345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ba311599fd7c8d690e24c1952a2165') in 0.006235 seconds
+  Import took 0.009775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.372233 seconds.
+  path: Assets/Asteroids/GoldNugget.prefab
+  artifactKey: Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget.prefab using Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b94d98c9ef86683915e3a6ea1e61a3') in 0.026300 seconds
+  Import took 0.030879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.591665 seconds.
+  path: Assets/Asteroids/GoldNugget 1.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget 1.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6932e8247d7193ab79cf4cb2a6e78d5') in 0.020224 seconds
+  Import took 0.024344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.270782 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bff5652ac9e7b2c4385e9e9e2479172') in 0.018409 seconds
+  Import took 0.021880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.523575 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a7cdcda8d966188014bf30c50e1e0b6') in 0.018156 seconds
+  Import took 0.022248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.355266 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edbefb99523a37865b34bfb8c2fcb813') in 0.015291 seconds
+  Import took 0.018515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.906868 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab3090adde0065f358aabfa9bdaa8db5') in 0.014891 seconds
+  Import took 0.018510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008328 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab3090adde0065f358aabfa9bdaa8db5') in 0.016744 seconds
+  Import took 0.021140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.047392 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b8e03b308ad2947310e649dbc61124') in 0.016483 seconds
+  Import took 0.020602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004688 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b8e03b308ad2947310e649dbc61124') in 0.016890 seconds
+  Import took 0.020021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.092628 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffa2a8b0e6796e8327fe1b941d4a74bc') in 0.014577 seconds
+  Import took 0.018355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.278881 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f30d193873aa2ec3a1d911f2d73a0f4') in 0.015280 seconds
+  Import took 0.019588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.866929 seconds.
+  path: Assets/Asteroids Pack
+  artifactKey: Guid(ee0e06b8b915d5447a22adf2902dad1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack using Guid(ee0e06b8b915d5447a22adf2902dad1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '940127cb9d53f36b5ddcea1c26c4bb03') in 0.005866 seconds
+  Import took 0.017307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.990439 seconds.
+  path: Assets/Asteroids Pack/Assets
+  artifactKey: Guid(9fde4978a4811a34b80135ed529ada64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets using Guid(9fde4978a4811a34b80135ed529ada64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b1ff7ba0a3a16828b41ad883c7e42e4') in 0.005724 seconds
+  Import took 0.017795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.301269 seconds.
+  path: Assets/Asteroids Pack/Demo
+  artifactKey: Guid(0f5ed8ca28a91044c9ba3203db13d638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Demo using Guid(0f5ed8ca28a91044c9ba3203db13d638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6077c355f7f21498ae57b37b86758e3b') in 0.006192 seconds
+  Import took 0.009707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.453914 seconds.
+  path: Assets/Asteroids Pack/Assets/Prefabs
+  artifactKey: Guid(1b304eba045b7204f9e56955499b6eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Prefabs using Guid(1b304eba045b7204f9e56955499b6eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '379ce67f571a2c61f848f1aabf55fe77') in 0.005889 seconds
+  Import took 0.017693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042779 seconds.
+  path: Assets/Asteroids Pack/Assets/Prefabs/GoldNugget.prefab
+  artifactKey: Guid(fa49e460baf435b4780da7196c2ab473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Prefabs/GoldNugget.prefab using Guid(fa49e460baf435b4780da7196c2ab473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '692a7f5099411ebaab5717e6e5e8ba55') in 0.025956 seconds
+  Import took 0.029350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.882416 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/M_Lava01.mat
+  artifactKey: Guid(196a83e4fac7a644ebc189706f6c2082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/M_Lava01.mat using Guid(196a83e4fac7a644ebc189706f6c2082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef222c54b40dff5dd4b83c6d78e446c') in 0.114352 seconds
+  Import took 0.118344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Stylized Lava Materials/Lava03/T_Lava03_normal.png
+  artifactKey: Guid(6e88dfd7ec5417847a311c53434d14dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava03/T_Lava03_normal.png using Guid(6e88dfd7ec5417847a311c53434d14dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15c7bda896eb5144dc694d60fb309d84') in 0.066453 seconds
+  Import took 0.069733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/T_Lava01_metallic.png
+  artifactKey: Guid(9be07e88bf304ab4b8ec2efeab744e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/T_Lava01_metallic.png using Guid(9be07e88bf304ab4b8ec2efeab744e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77082f2bfda74174b2232dd44294d0b9') in 0.013438 seconds
+  Import took 0.016602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Stylized Lava Materials/Lava02/T_Lava02_emissive.png
+  artifactKey: Guid(5e1b3fdd9823e0849bd594e8c5f87f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava02/T_Lava02_emissive.png using Guid(5e1b3fdd9823e0849bd594e8c5f87f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '153315d4a9f22cec7d0b7f0779a37cc4') in 0.024928 seconds
+  Import took 0.028238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Stylized Lava Materials/Lava03/T_Lava03_metallic.png
+  artifactKey: Guid(b45c16963ac761d4cac39a870f8efe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava03/T_Lava03_metallic.png using Guid(b45c16963ac761d4cac39a870f8efe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '372ea86f0d6f313713241e89d62c21b0') in 0.021592 seconds
+  Import took 0.025307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Stylized Lava Materials/Lava04/T_Lava04_normal.png
+  artifactKey: Guid(4b17f1284a150504d9421155d6de7e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava04/T_Lava04_normal.png using Guid(4b17f1284a150504d9421155d6de7e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1313b3e0420deef8cc313e9cf1e139e4') in 0.099673 seconds
+  Import took 0.103166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000622 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/T_Lava01_ao.png
+  artifactKey: Guid(7385f77603e598042988b50728804452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/T_Lava01_ao.png using Guid(7385f77603e598042988b50728804452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b01474ac1247c0474b576dad429830b6') in 0.013382 seconds
+  Import took 0.016690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000467 seconds.
+  path: Assets/Stylized Lava Materials/Lava04/T_Lava04_metallic.png
+  artifactKey: Guid(1b0eddcd97673004da417fffdd79781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava04/T_Lava04_metallic.png using Guid(1b0eddcd97673004da417fffdd79781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30bbe42cf1611c6c79df21b02f032cfd') in 0.055923 seconds
+  Import took 0.059339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/Stylized Lava Materials/Lava04/T_Lava04_height.png
+  artifactKey: Guid(b940bed1b2c911144989312eb54a61a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava04/T_Lava04_height.png using Guid(b940bed1b2c911144989312eb54a61a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c2fa35085acbd7d450fd2739d9507de') in 0.019185 seconds
+  Import took 0.022612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Stylized Lava Materials/Lava04/T_Lava04_basecolor.png
+  artifactKey: Guid(8f675aa6c312b9b4ca5a685c881fc761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava04/T_Lava04_basecolor.png using Guid(8f675aa6c312b9b4ca5a685c881fc761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3e9b486e2832378a0a162dd7c5cfc1a') in 0.019453 seconds
+  Import took 0.023846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Stylized Lava Materials/Lava02/T_Lava02_height.png
+  artifactKey: Guid(372cb625b210c8947b9fb99adc83e72a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava02/T_Lava02_height.png using Guid(372cb625b210c8947b9fb99adc83e72a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd3c49400c20647308a79e23329a86e8') in 0.013089 seconds
+  Import took 0.016248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Stylized Lava Materials/Lava05/M_Lava05.mat
+  artifactKey: Guid(7ba8162d09542e34b9a72bb543447494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava05/M_Lava05.mat using Guid(7ba8162d09542e34b9a72bb543447494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e257ae83abc5d10803ea2381ee15d3c6') in 0.071414 seconds
+  Import took 0.074671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/T_Lava01_emissive.png
+  artifactKey: Guid(82e1f644fb8e5504393566f67abc8f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/T_Lava01_emissive.png using Guid(82e1f644fb8e5504393566f67abc8f19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fcad4174b22474b7b376c4745afdede') in 0.014956 seconds
+  Import took 0.018095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Stylized Lava Materials/Lava03/T_Lava03_basecolor.png
+  artifactKey: Guid(4921777c11d0755449b584725d342e2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava03/T_Lava03_basecolor.png using Guid(4921777c11d0755449b584725d342e2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5654129f80eac44fa8ed1bd6be06ed73') in 0.024188 seconds
+  Import took 0.027698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/M_Lava01_Variant01.mat
+  artifactKey: Guid(505fbbba9c5a99a4ba162ef4ee7c5736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/M_Lava01_Variant01.mat using Guid(505fbbba9c5a99a4ba162ef4ee7c5736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f9b6069e408ee7f33fe5141ab07e595') in 0.047578 seconds
+  Import took 0.051520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Stylized Lava Materials/Lava02/T_Lava02_normal.png
+  artifactKey: Guid(71610f3bc62fcfc4bb04f413e778e1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava02/T_Lava02_normal.png using Guid(71610f3bc62fcfc4bb04f413e778e1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0b9c95b350b2d4f59dcd1d4079f447a') in 0.029505 seconds
+  Import took 0.033141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Stylized Lava Materials/Lava02/M_Lava02.mat
+  artifactKey: Guid(9a526ccb9696d6545b3991e93bfb18bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava02/M_Lava02.mat using Guid(9a526ccb9696d6545b3991e93bfb18bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff19f4c1c9eff88b2539d8807afd96c7') in 0.036586 seconds
+  Import took 0.039530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Stylized Lava Materials/Lava02/T_Lava02_basecolor.png
+  artifactKey: Guid(c0cfa846b033b0c4c9c81856f53a734b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava02/T_Lava02_basecolor.png using Guid(c0cfa846b033b0c4c9c81856f53a734b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f97bd88e6473c6940f0863ee7bb7f2a') in 0.012903 seconds
+  Import took 0.016422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Stylized Lava Materials/Lava03/M_Lava03.mat
+  artifactKey: Guid(299166cc9328e484ba27f7c6c60bcc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava03/M_Lava03.mat using Guid(299166cc9328e484ba27f7c6c60bcc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2ad930cfc36f5c923e5fbe55e40e21') in 0.058068 seconds
+  Import took 0.062495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/T_Lava01_basecolor.png
+  artifactKey: Guid(d11561a80694bd64f9b27f8577d16fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/T_Lava01_basecolor.png using Guid(d11561a80694bd64f9b27f8577d16fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fca3dfaafafea04dc1771748f134702f') in 0.011344 seconds
+  Import took 0.014852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/T_Lava01_height.png
+  artifactKey: Guid(36c47b94cf58c1946b7412fa62d86076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/T_Lava01_height.png using Guid(36c47b94cf58c1946b7412fa62d86076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8f96cd1b7d8b205d4b2cf86b90717d') in 0.012452 seconds
+  Import took 0.015675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Stylized Lava Materials/Lava01/T_Lava01_normal.png
+  artifactKey: Guid(680e77cf49a6fae4dbb07ba51303bb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava01/T_Lava01_normal.png using Guid(680e77cf49a6fae4dbb07ba51303bb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45717b7af0deafc44b2b9887b93936e8') in 0.029123 seconds
+  Import took 0.032285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Stylized Lava Materials/Lava03/T_Lava03_height.png
+  artifactKey: Guid(ebe988e0fae69904da7059b5c9f618c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava03/T_Lava03_height.png using Guid(ebe988e0fae69904da7059b5c9f618c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b164065d7d13ce0a74d14287313fca2') in 0.012315 seconds
+  Import took 0.015865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Stylized Lava Materials/Lava05/T_Lava0_normal.png
+  artifactKey: Guid(14f8a22873eaa76469848d6c6030641b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava05/T_Lava0_normal.png using Guid(14f8a22873eaa76469848d6c6030641b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb007c7034f24da53fca927f16b28549') in 0.030435 seconds
+  Import took 0.033862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Stylized Lava Materials/Lava05/T_Lava0_height.png
+  artifactKey: Guid(c8a685e066a200d4f9f1c49279c41617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava05/T_Lava0_height.png using Guid(c8a685e066a200d4f9f1c49279c41617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0cdd4e3ebd9f7b1f120b14c22976705') in 0.011758 seconds
+  Import took 0.015148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Stylized Lava Materials/Lava05/T_Lava0_basecolor.png
+  artifactKey: Guid(091eb83e1f36425438bc51ecc5b2e952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava05/T_Lava0_basecolor.png using Guid(091eb83e1f36425438bc51ecc5b2e952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f18c74ad9d96dc31662d08b9c8f5ae0') in 0.012583 seconds
+  Import took 0.015738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Stylized Lava Materials/Lava04/M_Lava04.mat
+  artifactKey: Guid(530bb4bbf64f6a8498aac9f9a1644e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava04/M_Lava04.mat using Guid(530bb4bbf64f6a8498aac9f9a1644e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a82da37710aa0e014b400d1fb15c13d0') in 0.036692 seconds
+  Import took 0.040157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Stylized Lava Materials/Lava02/T_Lava02_metallic.png
+  artifactKey: Guid(87e60f60a1c94754780876b2c361f945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava02/T_Lava02_metallic.png using Guid(87e60f60a1c94754780876b2c361f945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7db8425eba3201b4d723b545469a201b') in 0.022943 seconds
+  Import took 0.026543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Stylized Lava Materials/Lava05/T_Lava0_metallic.png
+  artifactKey: Guid(a33cf7e1fa3e43149898e2f4762ad1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava05/T_Lava0_metallic.png using Guid(a33cf7e1fa3e43149898e2f4762ad1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef55fcc977b53aac58b60111d7305443') in 0.011548 seconds
+  Import took 0.014814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Stylized Lava Materials/Lava03/T_Lava03_emissive.png
+  artifactKey: Guid(f17b304801f7c1d47aaa274463ac04ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Stylized Lava Materials/Lava03/T_Lava03_emissive.png using Guid(f17b304801f7c1d47aaa274463ac04ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e6b419d7b2318ad8be6736d03dc726') in 0.021270 seconds
+  Import took 0.024484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.985425 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b5d5d54d2fd7477682d6632e67a0e16') in 0.080783 seconds
+  Import took 0.084747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.423861 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0cff9b7b803935f4d0ac66e466976c6') in 0.057409 seconds
+  Import took 0.060772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.224944 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f0ab0567539fdfe21ec5255c49c63e5') in 0.057957 seconds
+  Import took 0.061283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.014017 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad7c9d793561fc86f2d3da35dc836d63') in 0.099386 seconds
+  Import took 0.102871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.101990 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f87d516c1263c3c7dc15fb1f15f79dc') in 0.054430 seconds
+  Import took 0.058285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.970158 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b646ab3d825e964c99256d1a8cdb86a') in 0.100859 seconds
+  Import took 0.104298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.030650 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '364a46e1f18446796f7a17b1c7779781') in 0.090802 seconds
+  Import took 0.093981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.937592 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b80067b57e3bbe01cc8a4603ee5cb5af') in 0.035549 seconds
+  Import took 0.039303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.985847 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a5f4fe831c2363edc8cf9bb3f394bec') in 0.116172 seconds
+  Import took 0.119342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.710042 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0189b57f629e0914df41d01f5a0675ee') in 0.037671 seconds
+  Import took 0.041259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.957230 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6401a61687a3f2964f6b5f1003fd80e9') in 0.037561 seconds
+  Import took 0.041578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.793931 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30a8d8a7b8b70878b29f35076d0c5ceb') in 0.035425 seconds
+  Import took 0.038692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.170130 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ff46e4833252124e7a447880c7a2bac') in 0.052743 seconds
+  Import took 0.056908 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016137 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.83 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.914 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.2 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2585.
+Total: 1.992500 ms (FindLiveObjects: 0.214400 ms CreateObjectMapping: 0.077200 ms MarkObjects: 1.663200 ms  DeleteObjects: 0.036700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012471 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.904 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.2 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2589.
+Total: 1.938800 ms (FindLiveObjects: 0.286800 ms CreateObjectMapping: 0.076900 ms MarkObjects: 1.541800 ms  DeleteObjects: 0.032200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013173 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.840 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.14 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2593.
+Total: 2.025600 ms (FindLiveObjects: 0.201100 ms CreateObjectMapping: 0.070800 ms MarkObjects: 1.722300 ms  DeleteObjects: 0.030600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015067 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.863 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.07 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2597.
+Total: 1.991600 ms (FindLiveObjects: 0.209500 ms CreateObjectMapping: 0.074500 ms MarkObjects: 1.674900 ms  DeleteObjects: 0.031700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014382 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.875 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.10 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2601.
+Total: 2.182700 ms (FindLiveObjects: 0.194600 ms CreateObjectMapping: 0.071600 ms MarkObjects: 1.876000 ms  DeleteObjects: 0.039400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014020 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.842 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.24 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2605.
+Total: 2.127300 ms (FindLiveObjects: 0.251300 ms CreateObjectMapping: 0.073900 ms MarkObjects: 1.769300 ms  DeleteObjects: 0.031700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012240 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.59 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.852 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2609.
+Total: 2.377100 ms (FindLiveObjects: 0.213400 ms CreateObjectMapping: 0.074400 ms MarkObjects: 2.030900 ms  DeleteObjects: 0.056900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014572 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.900 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.17 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2613.
+Total: 2.085200 ms (FindLiveObjects: 0.225800 ms CreateObjectMapping: 0.080200 ms MarkObjects: 1.723800 ms  DeleteObjects: 0.054100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012641 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.862 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2617.
+Total: 2.047900 ms (FindLiveObjects: 0.234100 ms CreateObjectMapping: 0.083300 ms MarkObjects: 1.697500 ms  DeleteObjects: 0.032100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012249 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.858 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.00 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2621.
+Total: 2.104100 ms (FindLiveObjects: 0.267700 ms CreateObjectMapping: 0.080900 ms MarkObjects: 1.663700 ms  DeleteObjects: 0.090000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012497 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.837 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.04 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2625.
+Total: 1.880300 ms (FindLiveObjects: 0.234400 ms CreateObjectMapping: 0.064900 ms MarkObjects: 1.549000 ms  DeleteObjects: 0.030900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015770 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.893 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.20 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2629.
+Total: 2.097000 ms (FindLiveObjects: 0.209000 ms CreateObjectMapping: 0.081200 ms MarkObjects: 1.770500 ms  DeleteObjects: 0.035000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015968 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.905 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.28 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2633.
+Total: 2.145200 ms (FindLiveObjects: 0.251500 ms CreateObjectMapping: 0.079900 ms MarkObjects: 1.778600 ms  DeleteObjects: 0.033800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013687 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.874 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.44 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2637.
+Total: 2.073800 ms (FindLiveObjects: 0.369600 ms CreateObjectMapping: 0.136600 ms MarkObjects: 1.518100 ms  DeleteObjects: 0.048200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014927 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.908 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2641.
+Total: 1.949000 ms (FindLiveObjects: 0.240100 ms CreateObjectMapping: 0.073300 ms MarkObjects: 1.603600 ms  DeleteObjects: 0.031100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014145 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.875 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.25 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2645.
+Total: 2.084000 ms (FindLiveObjects: 0.247600 ms CreateObjectMapping: 0.078900 ms MarkObjects: 1.709200 ms  DeleteObjects: 0.047200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013808 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.841 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.08 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 91.5 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2649.
+Total: 2.295700 ms (FindLiveObjects: 0.309800 ms CreateObjectMapping: 0.085700 ms MarkObjects: 1.859000 ms  DeleteObjects: 0.039700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015020 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.848 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.04 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 91.6 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2653.
+Total: 2.314300 ms (FindLiveObjects: 0.293100 ms CreateObjectMapping: 0.111300 ms MarkObjects: 1.873000 ms  DeleteObjects: 0.035700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014919 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.847 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.20 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1944 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.3 MB.
+System memory in use after: 91.6 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2657.
+Total: 2.832500 ms (FindLiveObjects: 0.232000 ms CreateObjectMapping: 0.087800 ms MarkObjects: 2.464400 ms  DeleteObjects: 0.047300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1761.299126 seconds.
+  path: Assets/Asteroids/GoldNugget.prefab
+  artifactKey: Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget.prefab using Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6eb0b8a54db8ce3079adb2bd2e514e') in 0.079688 seconds
+  Import took 0.085889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Asteroids/LavaDrop.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c989db006e00b1f525af5f62b0d7b230') in 0.081068 seconds
+  Import took 0.084716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.342134 seconds.
+  path: Assets/Asteroids Pack/Assets/Meshes
+  artifactKey: Guid(dcc22de953633a94d97df742bcfb4c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Meshes using Guid(dcc22de953633a94d97df742bcfb4c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7890b665a9b3a915e5316125aac9180b') in 0.005677 seconds
+  Import took 0.010126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.807488 seconds.
+  path: Assets/Asteroids Pack/Assets/Textures
+  artifactKey: Guid(a294c4a3a11fab04097adc96fb9ae302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Textures using Guid(a294c4a3a11fab04097adc96fb9ae302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5a6ac7876be973763e787fcdec747a7') in 0.006250 seconds
+  Import took 0.009812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.468697 seconds.
+  path: Assets/Asteroids Pack/Assets/Scripts
+  artifactKey: Guid(bc2108dc18f35d347b43af0c3ccc9102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Scripts using Guid(bc2108dc18f35d347b43af0c3ccc9102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b8d961e5529ccec2ca2f0f79dbc565a') in 0.005915 seconds
+  Import took 0.009754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.419269 seconds.
+  path: Assets/Asteroids Pack/Assets/Textures/seamless_rock_texture.jpg
+  artifactKey: Guid(ddce39766e2a9ce48a69c914a4a29487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Textures/seamless_rock_texture.jpg using Guid(ddce39766e2a9ce48a69c914a4a29487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0296772a8253f44833c3104f584f4c93') in 0.023536 seconds
+  Import took 0.026988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Asteroids Pack/Assets/Textures/seamless_rock_texture_detail.jpg
+  artifactKey: Guid(12c40864f9ef9974592868faef1d76c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Textures/seamless_rock_texture_detail.jpg using Guid(12c40864f9ef9974592868faef1d76c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb738f20d4a629a6b576920ac1cdb92') in 0.058406 seconds
+  Import took 0.061574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.726415 seconds.
+  path: Assets/Asteroids/GoldNugget.prefab
+  artifactKey: Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget.prefab using Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea34062df4d26b6401580e188e7921b5') in 0.016807 seconds
+  Import took 0.020013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.904879 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1.prefab
+  artifactKey: Guid(5348a5abff5f36f4fae3d8af33e6d91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1.prefab using Guid(5348a5abff5f36f4fae3d8af33e6d91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff221489d79010bb9c4066d10f6c68a6') in 0.023052 seconds
+  Import took 0.026627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.952537 seconds.
+  path: Assets/Asteroids/GoldNugget_1.prefab
+  artifactKey: Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1.prefab using Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce52625bba7753ed528a62a641b989bd') in 0.061431 seconds
+  Import took 0.064914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.836735 seconds.
+  path: Assets/Asteroids/LavaDrop_1.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5097ca335523fe0f03b72df83e82a56c') in 0.084649 seconds
+  Import took 0.088055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.308161 seconds.
+  path: Assets/Asteroid Field Creator/Extras
+  artifactKey: Guid(db469959d6792a345967beb604b29a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Extras using Guid(db469959d6792a345967beb604b29a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67a215b28ff86f795a93c1c8f3f48660') in 0.006715 seconds
+  Import took 0.019171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.453356 seconds.
+  path: Assets/Asteroid Field Creator/Demo
+  artifactKey: Guid(d8c05c4eff843274bbd78616f7dd18b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo using Guid(d8c05c4eff843274bbd78616f7dd18b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a2005f6484b7b264fe9b43a5f4320ca') in 0.002202 seconds
+  Import took 0.006821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.959387 seconds.
+  path: Assets/Asteroid Field Creator/Demo/Demo Prefabs
+  artifactKey: Guid(2b407b6d52a601a4c8c78de7f2dd6e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo/Demo Prefabs using Guid(2b407b6d52a601a4c8c78de7f2dd6e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1aea4fbd0d40943cf4be77c8766c2f6') in 0.005748 seconds
+  Import took 0.017207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071281 seconds.
+  path: Assets/Asteroid Field Creator/Demo/Demo Prefabs/Complex Object.prefab
+  artifactKey: Guid(6ca9e9563a1c4cd4a8cb2286af0c84a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo/Demo Prefabs/Complex Object.prefab using Guid(6ca9e9563a1c4cd4a8cb2286af0c84a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38acd5bbf8567d9e4009e7ed6d3aae0a') in 0.018562 seconds
+  Import took 0.022196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Asteroid Field Creator/Demo/Demo Prefabs/Cylinder.prefab
+  artifactKey: Guid(31fbac11ffbc1bd4aa767480cf7c560d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo/Demo Prefabs/Cylinder.prefab using Guid(31fbac11ffbc1bd4aa767480cf7c560d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '024caa7595105d3d3da50b6b24248e8e') in 0.041687 seconds
+  Import took 0.044544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Assets/Asteroid Field Creator/Demo/Demo Prefabs/Sphere.prefab
+  artifactKey: Guid(dc52625dabdc86d478da1d5d2dffd714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo/Demo Prefabs/Sphere.prefab using Guid(dc52625dabdc86d478da1d5d2dffd714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90445a0ede4541e2305599c97b0d8470') in 0.022923 seconds
+  Import took 0.026103 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Asteroid Field Creator/Demo/Demo Prefabs/SpawnPoint.prefab
+  artifactKey: Guid(0a0802ba9b3f99d4f9b3bcb7160b6dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo/Demo Prefabs/SpawnPoint.prefab using Guid(0a0802ba9b3f99d4f9b3bcb7160b6dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d9d9e7333b02ad86e526b22e0134eba') in 0.008086 seconds
+  Import took 0.011442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Asteroid Field Creator/Demo/Demo Prefabs/Cube.prefab
+  artifactKey: Guid(655d79da6330bf24d83f62afe8fd7096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo/Demo Prefabs/Cube.prefab using Guid(655d79da6330bf24d83f62afe8fd7096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29beae2715ee21b7189892b5bd691f71') in 0.028083 seconds
+  Import took 0.031405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Asteroid Field Creator/Demo/Demo Prefabs/Eraser.prefab
+  artifactKey: Guid(fbaa33adb0ded204b96c5f0b60d32aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/Demo/Demo Prefabs/Eraser.prefab using Guid(fbaa33adb0ded204b96c5f0b60d32aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8430d1f4ea1d29e24b1ced38b3ab672') in 0.007845 seconds
+  Import took 0.012621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.016570 seconds.
+  path: Assets/Asteroids Pack/Assets/Prefabs/GoldNugget.prefab
+  artifactKey: Guid(fa49e460baf435b4780da7196c2ab473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Prefabs/GoldNugget.prefab using Guid(fa49e460baf435b4780da7196c2ab473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d029ffd6c160a7002e3822decb25e9f') in 0.016428 seconds
+  Import took 0.028676 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/Asteroids Pack/Assets/Prefabs/LavaDrop.prefab
+  artifactKey: Guid(04d0bf4be9447154188d86f6e3b8dce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Prefabs/LavaDrop.prefab using Guid(04d0bf4be9447154188d86f6e3b8dce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb7e474c9b08757a747176ccb9b5997') in 0.070451 seconds
+  Import took 0.073505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 270.427332 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(c1dc6c3363209014fb6cde4fcf346ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(c1dc6c3363209014fb6cde4fcf346ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91290d974d5ad2f03c02fe1fc4b6e587') in 0.042342 seconds
+  Import took 0.046891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.235963 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2.prefab
+  artifactKey: Guid(c1dc6c3363209014fb6cde4fcf346ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2.prefab using Guid(c1dc6c3363209014fb6cde4fcf346ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8ad910b63fbe7ab871c4944bb9e2fc5') in 0.065132 seconds
+  Import took 0.069050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.751331 seconds.
+  path: Assets/Asteroids/GoldNugget_1 1.prefab
+  artifactKey: Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1 1.prefab using Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4615ecd4479854fee3d2decca600fbb5') in 0.019180 seconds
+  Import took 0.022751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.185638 seconds.
+  path: Assets/Asteroids/GoldNugget_2.prefab
+  artifactKey: Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2.prefab using Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2864e42af7537db51d3523869408444d') in 0.024062 seconds
+  Import took 0.028090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.453185 seconds.
+  path: Assets/Asteroids/GoldNugget_2.prefab
+  artifactKey: Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2.prefab using Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8270279f62de216508b00d749f006f35') in 0.016694 seconds
+  Import took 0.020616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.936515 seconds.
+  path: Assets/Asteroids/LavaDrop_2.prefab
+  artifactKey: Guid(2696dc918d3d5694fb710103a1ddc226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2.prefab using Guid(2696dc918d3d5694fb710103a1ddc226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b01189959abd81a919dbc13c888b41fa') in 0.052328 seconds
+  Import took 0.056448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 406.310123 seconds.
+  path: Assets/Asteroid Field Creator/AFC Quick Start Guide.pdf
+  artifactKey: Guid(4ceedee9c5aff85478d38445760f9468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroid Field Creator/AFC Quick Start Guide.pdf using Guid(4ceedee9c5aff85478d38445760f9468) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b92afcdaee0f78d5dd4ae4ce31adfe9') in 0.020535 seconds
+  Import took 0.024093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.747694 seconds.
+  path: Assets/Asteroids Pack/Assets/Materials/large_asteroid.mat
+  artifactKey: Guid(0e47fa6aa96cfd044b946d9923d4a47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids Pack/Assets/Materials/large_asteroid.mat using Guid(0e47fa6aa96cfd044b946d9923d4a47a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57b50c47b84f2bb63498568d2bfab32') in 0.055069 seconds
+  Import took 0.058600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.470517 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1.prefab
+  artifactKey: Guid(5348a5abff5f36f4fae3d8af33e6d91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1.prefab using Guid(5348a5abff5f36f4fae3d8af33e6d91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bece4a37301f7efdd8782cdfc94f940') in 0.022690 seconds
+  Import took 0.026639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2.prefab
+  artifactKey: Guid(c1dc6c3363209014fb6cde4fcf346ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2.prefab using Guid(c1dc6c3363209014fb6cde4fcf346ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf0ab25e7df6256d2ba9e964441ef99') in 0.041961 seconds
+  Import took 0.045845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Asteroids/GoldNugget_2.prefab
+  artifactKey: Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2.prefab using Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4297e0182fc464f6a74e2897d9af0b93') in 0.017281 seconds
+  Import took 0.020693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/Asteroids/LavaDrop_2.prefab
+  artifactKey: Guid(2696dc918d3d5694fb710103a1ddc226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2.prefab using Guid(2696dc918d3d5694fb710103a1ddc226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02df81755e1fc9784b9be113c605cb11') in 0.042912 seconds
+  Import took 0.046415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Asteroids/GoldNugget_1.prefab
+  artifactKey: Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1.prefab using Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f44d837d1dfe590e0d59251d18d53b') in 0.020890 seconds
+  Import took 0.024274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Asteroids/LavaDrop_1.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211e31f851f676468420be8d82870b1b') in 0.048216 seconds
+  Import took 0.051454 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
