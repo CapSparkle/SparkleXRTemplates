@@ -87,6 +87,7 @@ namespace SparkleXRTemplates.Examples
                 return;
 
             targetVelocity = (transform.position - holdingHand.handPivot.position).normalized * velocityModifier * pullPower;
+            Debug.Log(pullPower.ToString());
         }
 
 

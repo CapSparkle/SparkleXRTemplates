@@ -19,8 +19,8 @@ namespace SparkleXRTemplates {
 
         public void Notify()
         {
-            Debug.Log(_interactor.ToString());
-            Debug.Log(_observingMethods.ToString());
+            //Debug.Log(_interactor.ToString());
+            //Debug.Log(_observingMethods.ToString());
             //Debug.Log(typeof(_observingMethods));
 
             int countOfSubscribers = _observingMethods.GetPersistentEventCount();

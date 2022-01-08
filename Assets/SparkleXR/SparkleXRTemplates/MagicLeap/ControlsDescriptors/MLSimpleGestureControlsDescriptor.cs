@@ -94,7 +94,7 @@ namespace SparkleXRTemplates.MagicLeap
 
             for (int i = 0; i < methodsToControll.Count; i++)
             {
-                subscriptionBlocks.Add(new SubscriptionBlock(methodsToControll[i], interactor as GameInteractor));
+                subscriptionBlocks.Add(new SubscriptionBlock(methodsToControll[i], interactor));
             }
 
             return subscriptionBlocks;
@@ -122,7 +122,6 @@ namespace SparkleXRTemplates.MagicLeap
 
                 for (int i = 0; i < subscriptions[interactor].Count; i++)
 				{
-                    print("some suka subscriptions i do");
                     mLHandInputProvider.AddGestureListener(subscriptions[interactor][i].Notify, mlGestureMasks[i], gestureStates[i]);
                 }
                     

@@ -74,6 +74,5 @@ namespace SparkleXRTemplates.Examples
 
             return false;
 		}
-
     }
 }

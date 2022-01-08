@@ -86,6 +86,7 @@ namespace SparkleXRTemplates.Examples
 
             holdingHand = takingHand;
 
+            //Lock interacting interactor 
             if(lockOnTake)
 			{
                 interactor.LockGameInteractor(this);

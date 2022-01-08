@@ -23,7 +23,7 @@ namespace SparkleXRTemplates
 		{
 			transform.position = inputProvider.handCenterPosition;
 			transform.rotation = inputProvider.handOrientation;
-			transform.Rotate(new Vector3(55f, -5f, 0f), Space.Self);
+			//transform.Rotate(new Vector3(55f, -5f, 0f), Space.Self);
 
 			//print("rad = " + MLHandTracking.Left.Wrist.Radial.Position);
 		}

@@ -2203,7 +2203,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   mlGestureMasks: 06000000f9030000
-  gestureStates: 0400000004000000
+  gestureStates: 0300000003000000
 --- !u!1 &1854969093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2347,8 @@ MonoBehaviour:
   TiltGesture: 1
   upBentMinAngle: 10
   downBentMinAngle: -5
+  lineRend1: {fileID: 1967579100}
+  lineRend2: {fileID: 229866790}
 --- !u!120 &1967579100
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2458,8 +2460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MLHandInputProvider: {fileID: 1967579099}
-  one: {fileID: 1967579100}
-  two: {fileID: 229866790}
+  one: {fileID: 0}
+  two: {fileID: 0}
 --- !u!1 &1011244537581709
 GameObject:
   m_ObjectHideFlags: 0

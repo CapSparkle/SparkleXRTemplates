@@ -18,15 +18,15 @@ public class MLHandDataVisualizer : MonoBehaviour
         Vector3 wristCenter = MLHandInputProvider.wristCenterPosition;
         */
 
-        Vector3 MPC = MLHandInputProvider.MPCThumb.smoothedPosition;
-        Vector3 palmCenter = MLHandInputProvider.handCenter.smoothedPosition;
-        Vector3 wristCenter = MLHandInputProvider.wrist.smoothedPosition;
+        //Vector3 MPC = MLHandInputProvider.MPCThumb.smoothedPosition;
+        //Vector3 palmCenter = MLHandInputProvider.handCenter.smoothedPosition;
+        ///Vector3 wristCenter = MLHandInputProvider.wrist.smoothedPosition;
 
 
-        one.SetPosition(0, wristCenter);
-        one.SetPosition(1, palmCenter);
+        //one.SetPosition(0, wristCenter);
+        //one.SetPosition(1, palmCenter);
 
-        two.SetPosition(0, wristCenter);
-        two.SetPosition(1, MPC);
+        //two.SetPosition(0, wristCenter);
+        //two.SetPosition(1, MPC);
     }
 }

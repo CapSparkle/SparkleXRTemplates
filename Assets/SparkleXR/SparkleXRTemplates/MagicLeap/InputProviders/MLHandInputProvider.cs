@@ -99,7 +99,7 @@ namespace SparkleXRTemplates.MagicLeap
                     }
                     else
                     {
-                        print("no MagicLeapHandUsages.WristCenter data presented. Old value in use");
+                        //print("no MagicLeapHandUsages.WristCenter data presented. Old value in use");
                     }
 
                     //previousDir = _handDirection;
@@ -169,10 +169,8 @@ namespace SparkleXRTemplates.MagicLeap
 			{
                 if (gestureStates[i] == GestureState.Updated)
                 {
-                    print("some UPDATEd gestures i have");
                     if (mlGestureMasks[i].HasFlag((MLGestureMask)Mathf.Pow(2f, (int)MLHandDevice.KeyPose)))
                     {
-                        print("target gesture");
                         mySubscribers[i].Invoke();
                     }
                 }
