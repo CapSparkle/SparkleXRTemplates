@@ -83,11 +83,11 @@ namespace SparkleXRTemplates
 
         protected void Interact(GameInteractable gameInteractable)
         {
-            gameInteractable.Interact(this);
+            gameInteractable.Interact(GetComponent<GameInteractor>());
         }
         protected virtual void UnInteract(GameInteractable gameInteractable)
         {
-            gameInteractable.UnInteract(this);
+            gameInteractable.UnInteract(GetComponent<GameInteractor>());
         }
     }
 }

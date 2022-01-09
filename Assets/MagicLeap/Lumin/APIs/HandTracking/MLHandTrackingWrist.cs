@@ -87,8 +87,6 @@ namespace UnityEngine.XR.MagicLeap
                 private set 
                 {
                     _KeyPoints = value;
-                    Debug.Log(_KeyPoints.Count);
-                    Debug.Log(Environment.StackTrace);
                    
                 }
             }

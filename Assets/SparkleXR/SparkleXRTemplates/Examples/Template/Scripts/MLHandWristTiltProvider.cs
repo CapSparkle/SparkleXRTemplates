@@ -16,6 +16,8 @@ namespace SparkleXRTemplates.MagicLeap
 
 	public class MLHandWristTiltProvider : MLHandInputProvider
     {
+
+
         List<Action<float>> mySubscribers = new List<Action<float>>();
         List<HandWristTilt> tiltGestureState = new List<HandWristTilt>();
 
@@ -55,31 +57,14 @@ namespace SparkleXRTemplates.MagicLeap
 
             get
 			{
-                return handDirection; // * Vector3.forward;
+                return handDirection;
             }
         }
 
         void Start()
         {
             base.Start();
-            //GetHandDevice();
         }
-
-        /*
-        void GetHandDevice()
-		{
-            try
-            {
-                if (handedness == Handedness.Right)
-                    handDevice = MLHandTracking.Right;
-                else if (handedness == Handedness.Left)
-                    handDevice = MLHandTracking.Left;
-            }
-            catch (Exception exc)
-            {
-                print(exc.Message);
-            }
-        }*/
 
         [SerializeField]
         LineRenderer lineRend1, lineRend2;

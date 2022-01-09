@@ -53,12 +53,6 @@ namespace SparkleXRTemplates
                     if (!currentInputDevice.isValid)
                         continue;
 
-                    //Debug.Log((uint)currentInputDevice.characteristics);
-                    //Debug.Log((uint)inputDeviceCharacteristics);
-                    //Debug.Log((uint)currentInputDevice.characteristics & (uint)inputDeviceCharacteristics);
-
-                    //if ((InputDeviceCharacteristics)((uint)currentInputDevice.characteristics & (uint)inputDeviceCharacteristics) != inputDeviceCharacteristics)
-                    //    continue;
 
                     currentDeviceInputFeatureUsages = new List<InputFeatureUsage>();
                     currentInputDevice.TryGetFeatureUsages(currentDeviceInputFeatureUsages);

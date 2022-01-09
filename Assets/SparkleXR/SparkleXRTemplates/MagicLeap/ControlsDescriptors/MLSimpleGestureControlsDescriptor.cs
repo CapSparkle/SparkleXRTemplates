@@ -28,7 +28,7 @@ namespace SparkleXRTemplates.MagicLeap
         NoHand = 512
     }
 
-	public class MLSimpleGestureControlsDescriptor : ControlsDescriptor
+    public class MLSimpleGestureControlsDescriptor : ControlsDescriptor
     {
         #region -tracking requests-
 
@@ -64,7 +64,7 @@ namespace SparkleXRTemplates.MagicLeap
 
         void Start()
         {
-            requiredXRNodetypeOfInputProvider = XRNodeType.Hand; 
+            requiredXRNodetypeOfInputProvider = XRNodeType.Hand;
 
             if (!isKeyPoseTrackingRequestsInitialized)
             {
@@ -73,12 +73,22 @@ namespace SparkleXRTemplates.MagicLeap
 
                 isKeyPoseTrackingRequestsInitialized = true;
             }
+
+
         }
 
-        //TODO: beautify inspector interface
+        private void OnEnable()
+        {
+            subscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock>>();
 
-        // method groups subscribed on the certain same gestures in certain state
-        [SerializeField]
+            foreach (KeyValuePair<GameInteractor, List<SubscriptionBlock>> kvp in subscriptions)
+                subscriptions.Remove(kvp.Key);
+        }
+
+		//TODO: beautify inspector interface
+
+		// method groups subscribed on the certain same gestures in certain state
+		[SerializeField]
         List<UnityEventGameInteractor> methodsToControll;
         [SerializeField]
         List<MLGestureMask> mlGestureMasks;
@@ -86,7 +96,8 @@ namespace SparkleXRTemplates.MagicLeap
         List<GestureState> gestureStates;
 
 
-        public Dictionary<GameInteractor, List<SubscriptionBlock>> subscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock>>();
+        public Dictionary<GameInteractor, List<SubscriptionBlock>> subscriptions;
+
 
         List<SubscriptionBlock> FormSubscriptionBlocks(GameInteractor interactor)
         {
@@ -99,12 +110,6 @@ namespace SparkleXRTemplates.MagicLeap
 
             return subscriptionBlocks;
         }
-
-
-		private void Update()
-		{
-			
-		}
 
 		public override bool StartHandling(GameInteractor interactor)
         {

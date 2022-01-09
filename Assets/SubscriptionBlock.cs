@@ -13,10 +13,13 @@ namespace SparkleXRTemplates {
 
         public SubscriptionBlock(UnityEvent<GameInteractor> observingMethods, GameInteractor interactor)
         {
+            Debug.Log("Subscr BLOCK CUNSTRUCTED");
             _observingMethods = observingMethods;
             _interactor = interactor;
+            callsCounter = 0;
         }
 
+        int callsCounter;
         public void Notify()
         {
             //Debug.Log(_interactor.ToString());
@@ -30,6 +33,8 @@ namespace SparkleXRTemplates {
                 //Here is such a strange solution because if method with one parameter serializes via UnityEvent<T>
                 //it invokes only with parameter that is setup via inspector
                 UnityEngine.Object targetObject = _observingMethods.GetPersistentTarget(i);
+                Debug.Log("CALL NUMBER " + callsCounter.ToString() + " of interactor: " + _interactor.ToString());
+                callsCounter += 1;
                 targetObject.GetType().GetMethod(_observingMethods.GetPersistentMethodName(i)).Invoke(targetObject, new[] { _interactor });
             }
         }

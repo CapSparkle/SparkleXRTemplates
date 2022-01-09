@@ -15,7 +15,8 @@ namespace SparkleXRTemplates.MagicLeap
     {
         protected MLHandTracking.Hand MLHandDevice;
 
-        List<Action> mySubscribers = new List<Action>();
+        
+        List<Action> mySubscribers;
 
         List<GestureState> gestureStates = new List<GestureState>();
         List<MLGestureMask> mlGestureMasks = new List<MLGestureMask>();
@@ -44,9 +45,23 @@ namespace SparkleXRTemplates.MagicLeap
             }
         }
 
-        protected void Start()
+		private void OnEnable()
+		{
+            Debug.Log("ON ENABLE AAA");
+            //mySubscribers.Clear();
+            //gestureStates.Clear();
+            //mlGestureMasks.Clear();
+
+            mySubscribers = new List<Action>();
+            gestureStates = new List<GestureState>();
+            mlGestureMasks = new List<MLGestureMask>();
+        }
+
+		protected void Start()
         {
             base.Start();
+
+
             #region -enable key poses-
             //TODO: bring that code block to the separate class
 
@@ -77,7 +92,15 @@ namespace SparkleXRTemplates.MagicLeap
             MLHandDevice.OnHandKeyPoseEnd += NotifyEndGestures;
         }
 
-        public PositionSmoothier wrist = new PositionSmoothier(2);
+		private void OnDestroy()
+		{
+
+            MLHandDevice.OnHandKeyPoseBegin -= NotifyBeginGestures;
+            MLHandDevice.OnHandKeyPoseEnd -= NotifyEndGestures;
+            print("deleted references on methods");
+        }
+
+		public PositionSmoothier wrist = new PositionSmoothier(2);
         public PositionSmoothier MPCThumb = new PositionSmoothier(2);
         public PositionSmoothier handCenter = new PositionSmoothier(2);
 

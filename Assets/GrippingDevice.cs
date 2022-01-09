@@ -1,12 +1,12 @@
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GrippingDevice : MonoBehaviour
 {
 	[SerializeField]
-	int HP = 10;
+	int HP = 1;
 
 	public Action OnDamageTaken;
 
@@ -21,6 +21,23 @@ public class GrippingDevice : MonoBehaviour
 
 	void ProccedGameOver()
 	{
-		print("GameOver");
+		if(inGameFlag)
+		{
+			inGameFlag = false;
+			print("GameOver");
+			Invoke("Restart", 5f);
+		}
+	}
+
+	bool inGameFlag;
+
+	void Restart()
+	{
+		SceneManager.LoadScene("AstraMiner", LoadSceneMode.Single);
+	}
+
+	private void OnEnable()
+	{
+		inGameFlag = true;
 	}
 }

@@ -237,7 +237,6 @@ GameObject:
   - component: {fileID: 6342120975979694250}
   - component: {fileID: 4813029298548926695}
   - component: {fileID: 8901734889550972150}
-  - component: {fileID: 647631293}
   - component: {fileID: 1856699598}
   m_Layer: 0
   m_Name: LavaDrop_1
@@ -350,10 +349,22 @@ MonoBehaviour:
   myControlls:
   - {fileID: 6342120975979694250}
   childToHoldingHand: 0
-  lockOnTake: 0
+  lockOnTake: 1
   OnTakenBy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8901734889550972150}
+        m_TargetAssemblyTypeName: SparkleXRTemplates.Examples.LavaDrop, Assembly-CSharp
+        m_MethodName: DealDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8901734889550972150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,24 +378,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageOnTake: 1
---- !u!114 &647631293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6342120974003381631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2792fe42ed308e4428e929c801a98345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myControlls: []
-  childToHoldingHand: 0
-  lockOnTake: 0
-  OnTakenBy:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1856699598
 MonoBehaviour:
   m_ObjectHideFlags: 0
