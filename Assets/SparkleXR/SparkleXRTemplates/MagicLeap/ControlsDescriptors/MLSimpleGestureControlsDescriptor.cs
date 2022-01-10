@@ -74,15 +74,7 @@ namespace SparkleXRTemplates.MagicLeap
                 isKeyPoseTrackingRequestsInitialized = true;
             }
 
-
-        }
-
-        private void OnEnable()
-        {
             subscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock>>();
-
-            foreach (KeyValuePair<GameInteractor, List<SubscriptionBlock>> kvp in subscriptions)
-                subscriptions.Remove(kvp.Key);
         }
 
 		//TODO: beautify inspector interface
@@ -97,7 +89,6 @@ namespace SparkleXRTemplates.MagicLeap
 
 
         public Dictionary<GameInteractor, List<SubscriptionBlock>> subscriptions;
-
 
         List<SubscriptionBlock> FormSubscriptionBlocks(GameInteractor interactor)
         {

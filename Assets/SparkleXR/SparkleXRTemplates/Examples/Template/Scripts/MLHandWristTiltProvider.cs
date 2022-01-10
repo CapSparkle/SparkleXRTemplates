@@ -17,9 +17,8 @@ namespace SparkleXRTemplates.MagicLeap
 	public class MLHandWristTiltProvider : MLHandInputProvider
     {
 
-
-        List<Action<float>> mySubscribers = new List<Action<float>>();
-        List<HandWristTilt> tiltGestureState = new List<HandWristTilt>();
+        List<Action<float>> mySubscribers;
+        List<HandWristTilt> tiltGestureState;
 
         public void AddGestureListener(Action<float> newSubscriber, HandWristTilt handWristTilt)
 		{
@@ -64,9 +63,14 @@ namespace SparkleXRTemplates.MagicLeap
         void Start()
         {
             base.Start();
+
+            print("CLEAR VARIABLES WRISTCONTROLLER");
+
+            mySubscribers = new List<Action<float>>();
+            tiltGestureState = new List<HandWristTilt>();
         }
 
-        [SerializeField]
+		[SerializeField]
         LineRenderer lineRend1, lineRend2;
 
         void RecognizeTiltGesture()

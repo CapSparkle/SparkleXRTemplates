@@ -14,12 +14,11 @@ namespace SparkleXRTemplates.MagicLeap
     public class MLHandInputProvider : SimpleHandInputProvider
     {
         protected MLHandTracking.Hand MLHandDevice;
-
         
         List<Action> mySubscribers;
 
-        List<GestureState> gestureStates = new List<GestureState>();
-        List<MLGestureMask> mlGestureMasks = new List<MLGestureMask>();
+        List<GestureState> gestureStates;
+        List<MLGestureMask> mlGestureMasks;
 
         protected override void FormFeatureGroupDataSource()
         {
@@ -45,22 +44,15 @@ namespace SparkleXRTemplates.MagicLeap
             }
         }
 
-		private void OnEnable()
-		{
-            Debug.Log("ON ENABLE AAA");
-            //mySubscribers.Clear();
-            //gestureStates.Clear();
-            //mlGestureMasks.Clear();
-
-            mySubscribers = new List<Action>();
-            gestureStates = new List<GestureState>();
-            mlGestureMasks = new List<MLGestureMask>();
-        }
-
 		protected void Start()
         {
             base.Start();
 
+            Debug.Log("CLEAR VARIABLES");
+
+            mySubscribers = new List<Action>();
+            gestureStates = new List<GestureState>();
+            mlGestureMasks = new List<MLGestureMask>();
 
             #region -enable key poses-
             //TODO: bring that code block to the separate class
@@ -94,10 +86,8 @@ namespace SparkleXRTemplates.MagicLeap
 
 		private void OnDestroy()
 		{
-
             MLHandDevice.OnHandKeyPoseBegin -= NotifyBeginGestures;
             MLHandDevice.OnHandKeyPoseEnd -= NotifyEndGestures;
-            print("deleted references on methods");
         }
 
 		public PositionSmoothier wrist = new PositionSmoothier(2);
