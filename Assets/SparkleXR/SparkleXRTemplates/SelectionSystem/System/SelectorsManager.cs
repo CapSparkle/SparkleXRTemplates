@@ -25,17 +25,17 @@ namespace SparkleXRTemplates
 
         //TODO: Add a visualisation in editor or reference to a config
         [SerializeField]
-		List<List<int>> _minSelectRequirments = new List<List<int>>()
+		List<List<int>> _minSelectRequirements = new List<List<int>>()
 		{
             new List<int> (){ 0, 1 },
             new List<int> (){ 0, 2 }
 		};
 
-		public List<List<int>> minSelectRequirments
+		public List<List<int>> minSelectRequirements
 		{
             get
 			{
-                return _minSelectRequirments;
+                return _minSelectRequirements;
 			}
             set
 			{
@@ -53,7 +53,7 @@ namespace SparkleXRTemplates
 
                 }
 
-                _minSelectRequirments = value;
+                _minSelectRequirements = value;
 			}
 		}
 
@@ -143,7 +143,7 @@ namespace SparkleXRTemplates
         {
             selectGroupIndex = 0;
             List<GameInteractable> IntersectSet = new List<GameInteractable>() { };
-            foreach (List<int> selectorsIndexGroup in minSelectRequirments)
+            foreach (List<int> selectorsIndexGroup in minSelectRequirements)
             {
                 IntersectSet = selectors[selectorsIndexGroup[0]].selectedInteractables;
 
@@ -190,7 +190,7 @@ namespace SparkleXRTemplates
 
             if(selectGroupIndex >= 0)
 			{
-                selectedSet = ManagerChooseRules.PrioritizeOneSelector(selectors[minSelectRequirments[selectGroupIndex][0]], selectedSet);
+                selectedSet = ManagerChooseRules.PrioritizeOneSelector(selectors[minSelectRequirements[selectGroupIndex][0]], selectedSet);
             }
             else
 			{

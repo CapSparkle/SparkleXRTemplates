@@ -13,18 +13,18 @@ public class SelectionGroupToggle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        minSelectRequirementsOnStart = selectorsManager.minSelectRequirments;
+        minSelectRequirementsOnStart = selectorsManager.minSelectRequirements;
         onlyFirstSelectReq = new List<List<int>>() { minSelectRequirementsOnStart[0] };
     }
 
     public void ToggleOnAdvancedSelecting()
 	{
-        selectorsManager.minSelectRequirments = minSelectRequirementsOnStart;
+        selectorsManager.minSelectRequirements = minSelectRequirementsOnStart;
 	}
 
     public void ToggleOffAdvancedSelecting()
 	{
-        selectorsManager.minSelectRequirments = onlyFirstSelectReq;
+        selectorsManager.minSelectRequirements = onlyFirstSelectReq;
 
     }
 }
