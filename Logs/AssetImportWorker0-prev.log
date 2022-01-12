@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/staging' branch; Version is '2020.2.7f1 (c53830e277f1) revision 12924976'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1415; Version 2009; 64bit' Language: 'ru' Physical Memory: 16303 MB
+OS: 'Windows 10 Pro; OS build 19043.1466; Version 2009; 64bit' Language: 'ru' Physical Memory: 16303 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,12 +15,12 @@ C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54517
+62296
 Successfully changed project path to: C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 70.68 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.76 ms.
+Refreshing native plugins compatible for Editor in 71.66 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.67 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Fesko/Documents/GitHub/SparkleXRTemplates-ML-devel/Assets
@@ -45,139 +45,195 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56032
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56420
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.002384 seconds.
+Registered in 0.002340 seconds.
 Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 40.67 ms, found 69 plugins.
+Refreshing native plugins compatible for Editor in 42.56 ms, found 69 plugins.
 Preloading 1 native plugins for Editor in 0.09 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.112 seconds
+- Completed reload, in  1.124 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013570 seconds.
+Registered in 0.011870 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 69 plugins.
+Refreshing native plugins compatible for Editor in 0.97 ms, found 69 plugins.
 Preloading 1 native plugins for Editor in 0.07 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.898 seconds
+- Completed reload, in  0.966 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.98 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1974 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 89.3 MB.
-System memory in use after: 89.4 MB.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1977 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
 
-Unloading 92 unused Assets to reduce memory usage. Loaded Objects now: 2358.
-Total: 1.970300 ms (FindLiveObjects: 0.171900 ms CreateObjectMapping: 0.075000 ms MarkObjects: 1.634000 ms  DeleteObjects: 0.088500 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Editor
-  artifactKey: Guid(120f57cb1cf6e4e4ebde9d2c6a176483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor using Guid(120f57cb1cf6e4e4ebde9d2c6a176483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f9e0b56389da77959b6a05b36e096b5') in 0.008636 seconds
-  Import took 0.021258 seconds .
+Unloading 92 unused Assets to reduce memory usage. Loaded Objects now: 2361.
+Total: 2.785000 ms (FindLiveObjects: 0.238800 ms CreateObjectMapping: 0.105900 ms MarkObjects: 2.298900 ms  DeleteObjects: 0.139900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.673927 seconds.
-  path: Assets/Editor/MaskFieldExample.cs
-  artifactKey: Guid(a0b3dd7f1e6bf8f498aa5773d63aad9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor/MaskFieldExample.cs using Guid(a0b3dd7f1e6bf8f498aa5773d63aad9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b54cc64898a2f69429f03b0942ff1b2e') in 0.043452 seconds
-  Import took 0.047787 seconds .
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48e0d878e5163c691bd0c734d23a60c') in 0.032067 seconds
+  Import took 0.035791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 116.424930 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f212c4adf2a747a1e83ce3749731723') in 0.004109 seconds
+  Import took 0.008036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.502560 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cdc7c02400b5e343ce97b3f27e59988') in 0.004621 seconds
+  Import took 0.012280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.898147 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06a48b447572a97892f083a16619efc1') in 0.003253 seconds
+  Import took 0.006402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.084971 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46ba3cf8025c2dbf894b0839b41ceb3b') in 0.002237 seconds
+  Import took 0.005295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.655297 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '595afa2dc4a61c158f8b9b39b8794987') in 0.003112 seconds
+  Import took 0.006315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.850675 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e915ec90744f843e87d2911ffeb528a6') in 0.002892 seconds
+  Import took 0.005826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.213781 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6159b21171d1b67b00e6e7ed9149902') in 0.003079 seconds
+  Import took 0.006337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.830825 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bce933d44703ab70bb7c2892cb0c70e2') in 0.003395 seconds
+  Import took 0.006300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.400679 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c711cc47839c08a8add8ad1b31117980') in 0.004153 seconds
+  Import took 0.009417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.790030 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bed163957b991afa014de3ba747e635') in 0.004605 seconds
+  Import took 0.008901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.112730 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7168afdd87863f0bd9e637b7b17ad2dd') in 0.002054 seconds
+  Import took 0.005331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.770162 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626427e762786442c0e6bc6cf540c349') in 0.003008 seconds
+  Import took 0.006280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.091800 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369c2df24fbf0c2fe4c904152c9051f3') in 0.003873 seconds
+  Import took 0.007296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.104025 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b20b4be90d4bfbc5ab5e7950e909ca3e') in 0.002280 seconds
+  Import took 0.006053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.996241 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44eabe61939807da6ce621f473f53df9') in 0.003503 seconds
+  Import took 0.006196 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.015270 seconds.
+Registered in 0.013563 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.942 seconds
+- Completed reload, in  0.773 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.01 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1946 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 87.5 MB.
-System memory in use after: 87.6 MB.
-
-Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2363.
-Total: 1.823400 ms (FindLiveObjects: 0.182300 ms CreateObjectMapping: 0.078700 ms MarkObjects: 1.524400 ms  DeleteObjects: 0.037100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013698 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.31 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.855 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.98 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 1946 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 87.5 MB.
-System memory in use after: 87.6 MB.
-
-Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2367.
-Total: 2.085600 ms (FindLiveObjects: 0.219700 ms CreateObjectMapping: 0.098000 ms MarkObjects: 1.726200 ms  DeleteObjects: 0.038900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 93.796546 seconds.
-  path: Assets/Editor/MaskFieldExample.cs
-  artifactKey: Guid(a0b3dd7f1e6bf8f498aa5773d63aad9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor/MaskFieldExample.cs using Guid(a0b3dd7f1e6bf8f498aa5773d63aad9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3ddb37429eb51616fbef1d76cf69356') in 0.006014 seconds
-  Import took 0.010000 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012523 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 69 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.872 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 69 plugins.
 Preloading 1 native plugins for Editor in 0.06 ms.
-Unloading 1947 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1948 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 87.5 MB.
-System memory in use after: 87.7 MB.
+System memory in use after: 87.6 MB.
 
-Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2372.
-Total: 1.921900 ms (FindLiveObjects: 0.179000 ms CreateObjectMapping: 0.068000 ms MarkObjects: 1.644200 ms  DeleteObjects: 0.029300 ms)
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2365.
+Total: 1.863400 ms (FindLiveObjects: 0.262400 ms CreateObjectMapping: 0.073700 ms MarkObjects: 1.494600 ms  DeleteObjects: 0.031600 ms)
 

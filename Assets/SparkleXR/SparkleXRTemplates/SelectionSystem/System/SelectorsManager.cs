@@ -17,7 +17,7 @@ namespace SparkleXRTemplates
         GameInteractor correspondingGameInteractor;
 
         [SerializeField]
-        List<Selector> selectors;
+        public List<Selector> selectors;
 
         //TODO: Apply to every GameInteractable from every selector
         [SerializeField]
