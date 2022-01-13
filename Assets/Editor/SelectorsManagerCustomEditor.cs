@@ -7,11 +7,66 @@ using SparkleXRTemplates;
 [CustomEditor(typeof(SelectorsManager))]
 public class SelectorsManagerCustomEditor : Editor
 {
+	GUIStyle pressedButtongGUIStyle = new GUIStyle();
+	GUIStyle unPressedButtongGUIStyle = new GUIStyle();
+
+	private void FormGUIStyles()
+	{
+		pressedButtongGUIStyle.normal.background = Resources.Load("LightBlueButtonUI") as Texture2D;
+		
+		pressedButtongGUIStyle.fixedHeight = 25;
+		pressedButtongGUIStyle.fixedWidth = 70;
+		
+		pressedButtongGUIStyle.margin.right = 5;
+		pressedButtongGUIStyle.margin.left = 5;
+		pressedButtongGUIStyle.margin.top = 1;
+		pressedButtongGUIStyle.margin.bottom = 5;
+
+		pressedButtongGUIStyle.padding.right = 5;
+		pressedButtongGUIStyle.padding.left = 4;
+		pressedButtongGUIStyle.padding.top = 1;
+		pressedButtongGUIStyle.padding.bottom = 1;
+
+		pressedButtongGUIStyle.alignment = TextAnchor.MiddleLeft;
+
+		pressedButtongGUIStyle.wordWrap = false;
+
+		pressedButtongGUIStyle.clipping = TextClipping.Clip;
+
+
+		unPressedButtongGUIStyle.normal.background = Resources.Load("LightGreyButtonUI") as Texture2D;
+
+		unPressedButtongGUIStyle.fixedHeight = 25;
+		unPressedButtongGUIStyle.fixedWidth = 70;
+
+		unPressedButtongGUIStyle.margin.right = 5;
+		unPressedButtongGUIStyle.margin.left = 5;
+		unPressedButtongGUIStyle.margin.top = 1;
+		unPressedButtongGUIStyle.margin.bottom = 5;
+
+		unPressedButtongGUIStyle.padding.right = 5;
+		unPressedButtongGUIStyle.padding.left = 4;
+		unPressedButtongGUIStyle.padding.top = 1;
+		unPressedButtongGUIStyle.padding.bottom = 1;
+
+		unPressedButtongGUIStyle.alignment = TextAnchor.MiddleLeft;
+
+		unPressedButtongGUIStyle.wordWrap = false;
+
+		unPressedButtongGUIStyle.clipping = TextClipping.Clip;
+	}
+
+	private void Awake()
+	{
+		FormGUIStyles();
+	}
+
 	SelectorsManager selectorsManager;
 	//public int configureSelectingGroups;
 
 	public override void OnInspectorGUI()
 	{
+		bool flag = true;
 		//base.OnInspectorGUI();
 		selectorsManager = (SelectorsManager)target;
 
@@ -35,27 +90,42 @@ public class SelectorsManagerCustomEditor : Editor
 			EditorGUILayout.BeginHorizontal();
 			for(int j = 0; j < numberOfSelectors; j ++)
 			{
+				
 				bool currentValue = selectorsManager.minSelectRequirements[i].Contains(j);
 
 				GUILayoutOption[] GUILayoutOptions = {
 					GUILayout.ExpandWidth(false),
-					GUILayout.ExpandHeight(false),
-					GUILayout.Width(25)
+					GUILayout.ExpandHeight(true),
+					//GUILayout.Width(70)
+					//GUILayout.
 				};
 
-				GUIStyle GUIStyle = new GUIStyle();
-				GUIStyle.fixedHeight = 25;
-				GUIStyle.fixedWidth = 25;
-				GUIStyle.normal.background = Texture2D.whiteTexture;
-				GUIStyle.normal.background = Resources.Load("asdasd") as Texture2D;
-				//GUIStyle.border = new RectOffset();
-				GUIStyle.margin.right = 0;
-				GUIStyle.margin.left = 0;
-				GUIStyle.margin.top = 15;
-				GUIStyle.margin.left = 0;
-				//GUIStyle.contentOffset = new Vector2(200f, 200f);
+				GUIStyle _GUIStyle = new GUIStyle();
+				_GUIStyle.normal.background = Resources.Load("LightBlueButtonUI") as Texture2D;
+				_GUIStyle.fixedHeight = 25;
+				_GUIStyle.fixedWidth = 70;
 
-				bool valueSet = EditorGUILayout.Toggle(selectorsManager.minSelectRequirements[i].Contains(j), GUIStyle, GUILayoutOptions);
+				_GUIStyle.margin.right = 5;
+				_GUIStyle.margin.left = 5;
+				_GUIStyle.margin.top = 1;
+				_GUIStyle.margin.bottom = 5;
+
+				_GUIStyle.padding.right = 5;
+				_GUIStyle.padding.left = 4;
+				_GUIStyle.padding.top = 1;
+				_GUIStyle.padding.bottom = 1;
+
+				_GUIStyle.alignment = TextAnchor.MiddleLeft;
+
+				_GUIStyle.wordWrap = false;
+
+				_GUIStyle.clipping = TextClipping.Clip;
+
+
+
+				GUIContent content = new GUIContent(j + ". " + selectorsManager.selectors[j].name);
+
+				bool valueSet = GUILayout.Button(content, unPressedButtongGUIStyle, GUILayoutOptions);
 				
 				if(valueSet != currentValue)
 				{
