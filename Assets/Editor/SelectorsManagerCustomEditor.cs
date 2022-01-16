@@ -10,10 +10,17 @@ public class SelectorsManagerCustomEditor : Editor
 	GUIStyle pressedButtongGUIStyle = new GUIStyle();
 	GUIStyle unPressedButtongGUIStyle = new GUIStyle();
 
+	GUILayoutOption[] GUILayoutOptions = 
+	{
+		GUILayout.ExpandWidth(false),
+		GUILayout.ExpandHeight(true),
+	};
+
+
 	private void FormGUIStyles()
 	{
 		pressedButtongGUIStyle.normal.background = Resources.Load("LightBlueButtonUI") as Texture2D;
-		
+
 		pressedButtongGUIStyle.fixedHeight = 25;
 		pressedButtongGUIStyle.fixedWidth = 70;
 		
@@ -35,6 +42,7 @@ public class SelectorsManagerCustomEditor : Editor
 
 
 		unPressedButtongGUIStyle.normal.background = Resources.Load("LightGreyButtonUI") as Texture2D;
+
 
 		unPressedButtongGUIStyle.fixedHeight = 25;
 		unPressedButtongGUIStyle.fixedWidth = 70;
@@ -62,12 +70,9 @@ public class SelectorsManagerCustomEditor : Editor
 	}
 
 	SelectorsManager selectorsManager;
-	//public int configureSelectingGroups;
 
 	public override void OnInspectorGUI()
 	{
-		bool flag = true;
-		//base.OnInspectorGUI();
 		selectorsManager = (SelectorsManager)target;
 
 		int currentCount = selectorsManager.minSelectRequirements.Count;
@@ -83,6 +88,7 @@ public class SelectorsManagerCustomEditor : Editor
 				selectorsManager.minSelectRequirements.Add(new List<int>());
 		}
 
+		
 		int numberOfSelectors = selectorsManager.selectors.Count;
 
 		for (int i = 0; i < currentCount; i++)
@@ -93,52 +99,22 @@ public class SelectorsManagerCustomEditor : Editor
 				
 				bool currentValue = selectorsManager.minSelectRequirements[i].Contains(j);
 
-				GUILayoutOption[] GUILayoutOptions = {
-					GUILayout.ExpandWidth(false),
-					GUILayout.ExpandHeight(true),
-					//GUILayout.Width(70)
-					//GUILayout.
-				};
-
-				GUIStyle _GUIStyle = new GUIStyle();
-				_GUIStyle.normal.background = Resources.Load("LightBlueButtonUI") as Texture2D;
-				_GUIStyle.fixedHeight = 25;
-				_GUIStyle.fixedWidth = 70;
-
-				_GUIStyle.margin.right = 5;
-				_GUIStyle.margin.left = 5;
-				_GUIStyle.margin.top = 1;
-				_GUIStyle.margin.bottom = 5;
-
-				_GUIStyle.padding.right = 5;
-				_GUIStyle.padding.left = 4;
-				_GUIStyle.padding.top = 1;
-				_GUIStyle.padding.bottom = 1;
-
-				_GUIStyle.alignment = TextAnchor.MiddleLeft;
-
-				_GUIStyle.wordWrap = false;
-
-				_GUIStyle.clipping = TextClipping.Clip;
-
-
 
 				GUIContent content = new GUIContent(j + ". " + selectorsManager.selectors[j].name);
 
-				bool valueSet = GUILayout.Button(content, unPressedButtongGUIStyle, GUILayoutOptions);
-				
-				if(valueSet != currentValue)
+				bool valueSet = GUILayout.Button(content, currentValue ? pressedButtongGUIStyle : unPressedButtongGUIStyle, GUILayoutOptions);
+
+
+				if (valueSet)
 				{
-					if(valueSet)
-						selectorsManager.minSelectRequirements[i].Add(j);
-					else
+					if(currentValue)
 						selectorsManager.minSelectRequirements[i].RemoveAll(x => { return x == j; });
+					else
+						selectorsManager.minSelectRequirements[i].Add(j);
 				}
 			}
 			EditorGUILayout.EndHorizontal();
 		}
-
-
 
 		base.serializedObject.ApplyModifiedProperties();
 	}
