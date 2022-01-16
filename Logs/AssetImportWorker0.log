@@ -437,3 +437,115 @@ System memory in use after: 88.9 MB.
 Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2431.
 Total: 1.781000 ms (FindLiveObjects: 0.176300 ms CreateObjectMapping: 0.066800 ms MarkObjects: 1.506400 ms  DeleteObjects: 0.030300 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 54.228485 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab
+  artifactKey: Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab using Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e175ab2b96bf6b11e750f0b11e6ecb3') in 0.192459 seconds
+  Import took 0.196083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1 1.prefab
+  artifactKey: Guid(a571d6779e6d8c442900a22dadf7a256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1 1.prefab using Guid(a571d6779e6d8c442900a22dadf7a256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c37ebc9d113ffece85e138a5ddc1db') in 0.059127 seconds
+  Import took 0.062824 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014983 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.947 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.32 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.8 MB.
+System memory in use after: 91.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2442.
+Total: 2.306800 ms (FindLiveObjects: 0.283200 ms CreateObjectMapping: 0.092200 ms MarkObjects: 1.894400 ms  DeleteObjects: 0.036100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015931 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.845 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.18 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.8 MB.
+System memory in use after: 91.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2446.
+Total: 1.850100 ms (FindLiveObjects: 0.235500 ms CreateObjectMapping: 0.090000 ms MarkObjects: 1.488500 ms  DeleteObjects: 0.035100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012704 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.10 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.8 MB.
+System memory in use after: 91.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2450.
+Total: 1.704600 ms (FindLiveObjects: 0.205700 ms CreateObjectMapping: 0.076700 ms MarkObjects: 1.390900 ms  DeleteObjects: 0.029900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018952 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.126 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.00 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.8 MB.
+System memory in use after: 91.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2455.
+Total: 1.866600 ms (FindLiveObjects: 0.180900 ms CreateObjectMapping: 0.066900 ms MarkObjects: 1.584200 ms  DeleteObjects: 0.033500 ms)
+
