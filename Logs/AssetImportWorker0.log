@@ -397,3 +397,43 @@ System memory in use after: 88.9 MB.
 Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2427.
 Total: 1.640300 ms (FindLiveObjects: 0.165700 ms CreateObjectMapping: 0.064300 ms MarkObjects: 1.380600 ms  DeleteObjects: 0.029000 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 675.996446 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef92e0219e49164bf2d6e49061f2545f') in 0.009468 seconds
+  Import took 0.014437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016198 seconds.
+  path: Assets/Editor/SelectorsManagerCustomEditor.cs
+  artifactKey: Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/SelectorsManagerCustomEditor.cs using Guid(fe42dee63b1025346ae74945113423f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef92e0219e49164bf2d6e49061f2545f') in 0.003291 seconds
+  Import took 0.006732 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015135 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.803 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.02 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.7 MB.
+System memory in use after: 88.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2431.
+Total: 1.781000 ms (FindLiveObjects: 0.176300 ms CreateObjectMapping: 0.066800 ms MarkObjects: 1.506400 ms  DeleteObjects: 0.030300 ms)
+
