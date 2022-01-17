@@ -60,11 +60,11 @@ namespace SparkleXRTemplates
                     if (!headSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out _headOrientation))
                     {
                         headSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
-                        StartCoroutine(headSimpleFeaturesData.GetDevice());
+                        StartCoroutine(headSimpleFeaturesData.FindDevice());
                     }
                 }
                 else if (headSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(headSimpleFeaturesData.GetDevice());
+                    StartCoroutine(headSimpleFeaturesData.FindDevice());
 
                 return _headOrientation;
             }
@@ -80,11 +80,11 @@ namespace SparkleXRTemplates
                     if (!headSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.devicePosition, out _headPosition))
                     {
                         headSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
-                        StartCoroutine(headSimpleFeaturesData.GetDevice());
+                        StartCoroutine(headSimpleFeaturesData.FindDevice());
                     }
                 }
                 else if (headSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(headSimpleFeaturesData.GetDevice());
+                    StartCoroutine(headSimpleFeaturesData.FindDevice());
 
                 return _headPosition;
             }
@@ -104,7 +104,7 @@ namespace SparkleXRTemplates
             headSimpleFeaturesData = new FeatureGroupDataSource(new List<InputFeatureUsage>() { (InputFeatureUsage)CommonUsages.devicePosition, (InputFeatureUsage)CommonUsages.deviceRotation },
                 inputDeviceCharacteristics);
 
-            StartCoroutine(headSimpleFeaturesData.GetDevice());
+            StartCoroutine(headSimpleFeaturesData.FindDevice());
         }
     }
 }

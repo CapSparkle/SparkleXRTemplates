@@ -47,9 +47,6 @@ namespace SparkleXRTemplates.MagicLeap
 		protected void Start()
         {
             base.Start();
-
-            Debug.Log("CLEAR VARIABLES");
-
             mySubscribers = new List<Action>();
             gestureStates = new List<GestureState>();
             mlGestureMasks = new List<MLGestureMask>();
@@ -121,7 +118,7 @@ namespace SparkleXRTemplates.MagicLeap
                         print("zero direction");
                 }
                 else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(handSimpleFeaturesData.GetDevice());
+                    StartCoroutine(handSimpleFeaturesData.FindDevice());
                 else
                     print("Appropriate device is being finding. Returning old value of handDirection variable");
 
@@ -159,7 +156,7 @@ namespace SparkleXRTemplates.MagicLeap
                     }
                 }
                 else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(handSimpleFeaturesData.GetDevice());
+                    StartCoroutine(handSimpleFeaturesData.FindDevice());
                 else
                     print("Appropriate device is being finding. Returning old value of handOrientation variable");
 

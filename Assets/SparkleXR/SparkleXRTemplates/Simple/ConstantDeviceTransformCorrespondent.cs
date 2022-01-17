@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.MagicLeap;
 using SparkleXRTemplates.MagicLeap;
-using MagicLeapTools;
 
 namespace SparkleXRTemplates
 {
@@ -12,9 +11,6 @@ namespace SparkleXRTemplates
     {
         [SerializeField]
         MLHandInputProvider inputProvider;
-
-		[SerializeField]
-		HandInput handInput;
 
 		[SerializeField]
 		XRNodeType deviceTypeToCorrespond = XRNodeType.Hand;

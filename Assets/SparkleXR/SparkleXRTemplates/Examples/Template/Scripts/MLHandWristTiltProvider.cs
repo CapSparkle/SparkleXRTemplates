@@ -64,8 +64,6 @@ namespace SparkleXRTemplates.MagicLeap
         {
             base.Start();
 
-            print("CLEAR VARIABLES WRISTCONTROLLER");
-
             mySubscribers = new List<Action<float>>();
             tiltGestureState = new List<HandWristTilt>();
         }

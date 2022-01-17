@@ -35,7 +35,7 @@ namespace SparkleXRTemplates
         }
 
         float checkPeriod = -1f;
-        public IEnumerator GetDevice()
+        public IEnumerator FindDevice()
         {
             deviceFindState = DeviceFindState.Finding;
 

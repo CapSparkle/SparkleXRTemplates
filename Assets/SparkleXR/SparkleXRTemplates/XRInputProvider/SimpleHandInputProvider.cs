@@ -39,11 +39,11 @@ namespace SparkleXRTemplates
                     if (!handFingerPointsData.inputDevice.TryGetFeatureValue(CommonUsages.handData, out _handData))
 					{
                         handFingerPointsData.deviceFindState = DeviceFindState.NotFound;
-                        StartCoroutine(handFingerPointsData.GetDevice());
+                        StartCoroutine(handFingerPointsData.FindDevice());
                     }
                 }
                  else if (handFingerPointsData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(handFingerPointsData.GetDevice());
+                    StartCoroutine(handFingerPointsData.FindDevice());
                  
                 return _handData;
 
@@ -68,11 +68,11 @@ namespace SparkleXRTemplates
                     if(!handSimpleFeaturesData.inputDevice.TryGetFeatureValue(CommonUsages.deviceRotation, out _handOrientation))
 					{
                         handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
-                        StartCoroutine(handSimpleFeaturesData.GetDevice());
+                        StartCoroutine(handSimpleFeaturesData.FindDevice());
                     }
                 }
                 else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(handSimpleFeaturesData.GetDevice());
+                    StartCoroutine(handSimpleFeaturesData.FindDevice());
 
                 return _handOrientation;
             }
@@ -89,11 +89,11 @@ namespace SparkleXRTemplates
                         _handCenterPosition != Vector3.zero)
                     {
                         handSimpleFeaturesData.deviceFindState = DeviceFindState.NotFound;
-                        StartCoroutine(handSimpleFeaturesData.GetDevice());
+                        StartCoroutine(handSimpleFeaturesData.FindDevice());
                     }
                 }
                 else if (handSimpleFeaturesData.deviceFindState == DeviceFindState.NotFound)
-                    StartCoroutine(handSimpleFeaturesData.GetDevice());
+                    StartCoroutine(handSimpleFeaturesData.FindDevice());
 
                 return _handCenterPosition;
             }
