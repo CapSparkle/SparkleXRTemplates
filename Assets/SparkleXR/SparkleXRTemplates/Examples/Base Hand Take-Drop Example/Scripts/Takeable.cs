@@ -52,7 +52,7 @@ namespace SparkleXRTemplates.Examples
         UnityEventHand OnTakenBy;
         public void Take(GameInteractor interactor)
         {
-            print("take occured");
+            print("TryTake occured");
             Hand takingHand = interactor.GetComponent<Hand>();
 
             if (takingHand == null)
@@ -102,7 +102,7 @@ namespace SparkleXRTemplates.Examples
         public Action<Hand> RightBeforeDroppedBy;
         public void TryDrop(GameInteractor interactor)
         {
-            print("drop occured");
+            print("TryDrop occured");
             Hand dropingHand;
 
             if ((dropingHand = interactor.GetComponent<Hand>()) == null)
@@ -133,6 +133,15 @@ namespace SparkleXRTemplates.Examples
             holdingHand = null;
             
 
+        }
+
+        //For test
+        public void TakeDropInterface(GameInteractor interactor, float triggerValue)
+		{
+            if (triggerValue > 0.95f)
+                Take(interactor);
+            else
+                TryDrop(interactor);
         }
     }
 }

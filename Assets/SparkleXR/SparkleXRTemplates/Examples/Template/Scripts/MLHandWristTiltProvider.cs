@@ -119,9 +119,9 @@ namespace SparkleXRTemplates.MagicLeap
             base.Update();
             RecognizeTiltGesture();
             if (tiltAngle > upBentMinAngle)
-				currentGesture = MagicLeap.TiltGesture.WristBentUp;
+				currentGesture = MagicLeap.TiltGesture.BentUp;
             else if (tiltAngle < downBentMinAngle)
-				currentGesture = MagicLeap.TiltGesture.WristBentDown;
+				currentGesture = MagicLeap.TiltGesture.BentDown;
             else
 			{
 				currentGesture = MagicLeap.TiltGesture.UndefindedTilt;
@@ -134,7 +134,7 @@ namespace SparkleXRTemplates.MagicLeap
 				{
                     if (tiltGestureState[i] == currentGesture)
 					{
-                        float degreesExceedingMinTiltThreshold = Mathf.Abs(tiltAngle - (currentGesture == MagicLeap.TiltGesture.WristBentUp ? upBentMinAngle : downBentMinAngle));
+                        float degreesExceedingMinTiltThreshold = Mathf.Abs(tiltAngle - (currentGesture == MagicLeap.TiltGesture.BentUp ? upBentMinAngle : downBentMinAngle));
                         mySubscribers[i](degreesExceedingMinTiltThreshold);
 					}
 				}

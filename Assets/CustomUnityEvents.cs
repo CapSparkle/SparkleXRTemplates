@@ -15,8 +15,20 @@ namespace SparkleXRTemplates
 	}
 
 	[Serializable]
+	public class UnityEventGameInteractorBool : UnityEvent<GameInteractor, bool>
+	{
+
+	}
+
+	[Serializable]
 	public class UnityEventGameInteractorFloat : UnityEvent<GameInteractor, float> {
 	
+	}
+
+	[Serializable]
+	public class UnityEventGameInteractorVector2 : UnityEvent<GameInteractor, Vector2>
+	{
+
 	}
 
 }

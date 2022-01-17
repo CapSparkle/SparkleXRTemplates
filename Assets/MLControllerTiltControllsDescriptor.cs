@@ -1,51 +1,71 @@
+
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SparkleXRTemplates;
+using UnityEngine.Events;
 
 namespace SparkleXRTemplates.MagicLeap
 {
     public class MLControllerTiltControllsDescriptor : ControlsDescriptor
 	{
+		/// <summary>
+		/// Methods to controll by trigger button
+		/// </summary>
 		[SerializeField]
 		List<UnityEventGameInteractorFloat> methodsToControll;
+
+		/*[SerializeField]
+		List<UnityEventGameInteractorBool> bumperMethods;
+
+		[SerializeField]
+		List<UnityEventGameInteractorBool> touchPadTouchMethods;
+
+		[SerializeField]
+		List<UnityEventGameInteractorVector2> touchPadPoseMethods;*/
 
 		[SerializeField]
 		List<TiltGesture> tiltGestureState;
 
 		//public List<UnityActionSer> ssd;
-		Dictionary<GameInteractor, List<SubscriptionBlock<float>>> subscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock<float>>>();
+		Dictionary<GameInteractor, List<SubscriptionBlock<float>>> triggerSubscriptions = new Dictionary<GameInteractor, List<SubscriptionBlock<float>>>();
 
-		List<SubscriptionBlock<float>> FormSubscriptionBlocks(GameInteractor interactor)
+		List<SubscriptionBlock<T>> FormSubscriptionBlocks<T>(GameInteractor interactor, List<UnityEvent<GameInteractor, T>> methods)
 		{
-			List<SubscriptionBlock<float>> subscriptionBlocks = new List<SubscriptionBlock<float>>();
+			List<SubscriptionBlock<T>> subscriptionBlocks = new List<SubscriptionBlock<T>>();
 
-			for (int i = 0; i < methodsToControll.Count; i++)
+			for (int i = 0; i < methods.Count; i++)
 			{
-				subscriptionBlocks.Add(new SubscriptionBlock<float>(methodsToControll[i], interactor));
+				subscriptionBlocks.Add(new SubscriptionBlock<T>(methods[i], interactor));
 			}
 
 			return subscriptionBlocks;
 		}
 
 
-		MLHandWristTiltProvider providerActing;
+		MLControllerTiltProvider providerActing;
 		public override bool StartHandling(GameInteractor interactor)
 		{
 			if (!CheckInputProvider(interactor))
 				return false;
 
-			MLHandWristTiltProvider newProviderActing = interactor.myXRInputProvider.GetComponent<MLHandWristTiltProvider>();
+			MLControllerTiltProvider newProviderActing = interactor.myXRInputProvider.GetComponent<MLControllerTiltProvider>();
 
 			if (newProviderActing != null)
 			{
-				providerActing = newProviderActing;
 
-				List<SubscriptionBlock<float>> newSubscriptionBlocks = FormSubscriptionBlocks(interactor);
-				subscriptions[interactor] = newSubscriptionBlocks;
+				var inputList = methodsToControll
+					.Select(x => (UnityEvent<GameInteractor, float>)x)
+					.ToList();
+
+				List<SubscriptionBlock<float>> newSubscriptionBlocks = FormSubscriptionBlocks(interactor, inputList);
+				
+				
+				triggerSubscriptions[interactor] = newSubscriptionBlocks;
+
 
 				for (int i = 0; i < methodsToControll.Count; i++)
-					providerActing.AddGestureListener(subscriptions[interactor][i].Notify, tiltGestureState[i]);
+					providerActing.AddGestureListener(triggerSubscriptions[interactor][i].Notify, tiltGestureState[i]);
 
 				return true;
 			}
@@ -55,14 +75,14 @@ namespace SparkleXRTemplates.MagicLeap
 
 		public override bool StopHandling(GameInteractor interactor)
 		{
-			MLHandWristTiltProvider newProviderActing = interactor.myXRInputProvider.GetComponent<MLHandWristTiltProvider>();
+			MLControllerTiltProvider newProviderActing = interactor.myXRInputProvider.GetComponent<MLControllerTiltProvider>();
 
 			if (newProviderActing != null && newProviderActing == providerActing)
 			{
-				foreach (SubscriptionBlock<float> subscriptionBlock in subscriptions[interactor])
+				foreach (SubscriptionBlock<float> subscriptionBlock in triggerSubscriptions[interactor])
 					providerActing.RemoveGestureListener(subscriptionBlock.Notify);
 
-				subscriptions.Remove(interactor);
+				triggerSubscriptions.Remove(interactor);
 
 				providerActing = null;
 				return true;

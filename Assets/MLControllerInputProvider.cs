@@ -17,22 +17,26 @@ namespace SparkleXRTemplates.MagicLeap
 
         FeatureGroupDataSource controllerData;
 
+        [HideInInspector]
+        public List<Action<bool>> bumperSubscribers;
 
-        List<Action<bool>> bumperSubscribers;
+        [HideInInspector]
+        public List<Action<bool>> touchSubscribers;
 
-        List<Action> touchSubscribers;
+        [HideInInspector]
+        public List<Action<Vector2>> touchPadPoseSubscribers;
 
-        List<Action<Vector2>> touchPadPoseSubscribers;
-
-        List<Action<float>> triggerSubscribers;
+        [HideInInspector]
+        public List<Action<float>> triggerSubscribers;
 
         protected void Start()
 		{
 			if (controllerConnectionHandler == null)
 				    controllerConnectionHandler = GetComponent<MLControllerConnectionHandlerBehavior>();
 
-            touchSubscribers = new List<Action>();
-			touchPadPoseSubscribers = new List<Action<Vector2>>();
+            touchSubscribers = new List<Action<bool>>();
+            touchSubscribers = new List<Action<bool>>();
+            touchPadPoseSubscribers = new List<Action<Vector2>>();
 			triggerSubscribers = new List<Action<float>>();
 
             try
@@ -102,8 +106,8 @@ namespace SparkleXRTemplates.MagicLeap
             {
                 if(this.touchPadTouch != touch)
 				{
-                    foreach (Action subscriber in touchSubscribers)
-                        subscriber.Invoke();
+                    foreach (Action<bool> subscriber in touchSubscribers)
+                        subscriber.Invoke(touch);
 
                     this.touchPadTouch = touch;
                 }
