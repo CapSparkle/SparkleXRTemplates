@@ -14,22 +14,9 @@ namespace SparkleXRTemplates.MagicLeap
         [SerializeField]
         MLHandInputProvider handInputProvider;
 
-        /*[SerializeField]
-        MLHandInputProvider handInputProvider;*/
-
         [SerializeField]
-        MLControllerConnectionHandlerBehavior _controllerConnectionHandler;
-        MLInput.Controller controller = null;
+        MLControllerInputProvider controllerInputProvider;
 
-
-        void Start()
-        {
-            if(_controllerConnectionHandler == null &&
-                deviceTypeToRefer == XRNodeType.Controller)
-			{
-                _controllerConnectionHandler = GetComponent<MLControllerConnectionHandlerBehavior>();
-			}
-        }
 
         // Update is called once per frame
         void Update()
@@ -41,20 +28,15 @@ namespace SparkleXRTemplates.MagicLeap
                     transform.rotation = handInputProvider.handOrientation;
                     break;
 
-                case (XRNodeType.HMD):
-                    break;
+                /*case (XRNodeType.HMD):
+                    break;*/
 
                 case (XRNodeType.Controller):
-                    if (controller != null)
-                    {
-                        transform.position = controller.Position;
-                        transform.rotation = controller.Orientation;
-                    }
-                    else
-                    {
-                        controller = _controllerConnectionHandler.ConnectedController;
-                        Debug.Log("no controller presented. try to take");
-                    }
+                    transform.position = controllerInputProvider.controllerPosition;
+                    transform.rotation = controllerInputProvider.controllerOrientation;
+                    break;
+
+                default:
                     break;
             }
         }

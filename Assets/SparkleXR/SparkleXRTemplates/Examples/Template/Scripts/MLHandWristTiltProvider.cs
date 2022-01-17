@@ -6,10 +6,10 @@ using UnityEngine.XR.MagicLeap;
 
 namespace SparkleXRTemplates.MagicLeap
 {
-	public enum HandWristTilt
+	public enum TiltGesture
 	{ 
-        WristBentUp,
-        WristBentDown,
+        BentUp,
+        BentDown,
         UndefindedTilt
     }
 
@@ -18,9 +18,9 @@ namespace SparkleXRTemplates.MagicLeap
     {
 
         List<Action<float>> mySubscribers;
-        List<HandWristTilt> tiltGestureState;
+        List<TiltGesture> tiltGestureState;
 
-        public void AddGestureListener(Action<float> newSubscriber, HandWristTilt handWristTilt)
+        public void AddGestureListener(Action<float> newSubscriber, TiltGesture handWristTilt)
 		{
             mySubscribers.Add(newSubscriber);
             tiltGestureState.Add(handWristTilt);
@@ -65,7 +65,7 @@ namespace SparkleXRTemplates.MagicLeap
             base.Start();
 
             mySubscribers = new List<Action<float>>();
-            tiltGestureState = new List<HandWristTilt>();
+            tiltGestureState = new List<TiltGesture>();
         }
 
 		[SerializeField]
@@ -109,7 +109,7 @@ namespace SparkleXRTemplates.MagicLeap
 
 		}
 
-        HandWristTilt currentGesture;
+        TiltGesture currentGesture;
 
         void Update()
         {
@@ -119,12 +119,12 @@ namespace SparkleXRTemplates.MagicLeap
             base.Update();
             RecognizeTiltGesture();
             if (tiltAngle > upBentMinAngle)
-                currentGesture = HandWristTilt.WristBentUp;
+				currentGesture = MagicLeap.TiltGesture.WristBentUp;
             else if (tiltAngle < downBentMinAngle)
-                currentGesture = HandWristTilt.WristBentDown;
+				currentGesture = MagicLeap.TiltGesture.WristBentDown;
             else
 			{
-                currentGesture = HandWristTilt.UndefindedTilt;
+				currentGesture = MagicLeap.TiltGesture.UndefindedTilt;
                 return;
             }
 
@@ -134,7 +134,7 @@ namespace SparkleXRTemplates.MagicLeap
 				{
                     if (tiltGestureState[i] == currentGesture)
 					{
-                        float degreesExceedingMinTiltThreshold = Mathf.Abs(tiltAngle - (currentGesture == HandWristTilt.WristBentUp ? upBentMinAngle : downBentMinAngle));
+                        float degreesExceedingMinTiltThreshold = Mathf.Abs(tiltAngle - (currentGesture == MagicLeap.TiltGesture.WristBentUp ? upBentMinAngle : downBentMinAngle));
                         mySubscribers[i](degreesExceedingMinTiltThreshold);
 					}
 				}

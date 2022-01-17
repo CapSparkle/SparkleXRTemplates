@@ -8,11 +8,12 @@ using UnityEngine.XR;
 
 namespace SparkleXRTemplates.MagicLeap
 {
+    [RequireComponent(typeof(MLControllerConnectionHandlerBehavior))]
     public class MLControllerInputProvider : XRInputProvider
     {
         [SerializeField]
         MLControllerConnectionHandlerBehavior controllerConnectionHandler = null;
-        MLInput.Controller controller = null;
+        //MLInput.Controller controller = null;
 
         FeatureGroupDataSource controllerData;
 
@@ -20,11 +21,12 @@ namespace SparkleXRTemplates.MagicLeap
         List<Action<bool>> bumperSubscribers;
 
         List<Action> touchSubscribers;
+
         List<Action<Vector2>> touchPadPoseSubscribers;
 
         List<Action<float>> triggerSubscribers;
 
-        void Start()
+        protected void Start()
 		{
 			if (controllerConnectionHandler == null)
 				    controllerConnectionHandler = GetComponent<MLControllerConnectionHandlerBehavior>();
@@ -53,15 +55,29 @@ namespace SparkleXRTemplates.MagicLeap
             }
         }
 
+        public bool bumperPressed { get; protected set; }
+        public float triggerValue { get; protected set; }
+        public Vector2 touchPadPose { get; protected set; }
+        public bool touchPadTouch { get; protected set; }
+        public Vector3 controllerPosition { get; protected set; }
+        public Quaternion controllerOrientation { get; protected set; }
 
-        bool previousIsBumberDown;
-		void Update()
+        protected void Update()
 		{
+            controllerPosition = controllerConnectionHandler.ConnectedController.Position;
+            controllerOrientation = controllerConnectionHandler.ConnectedController.Orientation;
+
             if (controllerData.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
             {
                 if (triggerValue > 0)
+                {
+                    this.triggerValue = triggerValue;
                     foreach (Action<float> subscriber in triggerSubscribers)
                         subscriber.Invoke(triggerValue);
+                }
+                else
+                    this.triggerValue = 0;
+
             }
             else if (controllerData.deviceFindState != DeviceFindState.Finding)
                 controllerData.FindDevice();
@@ -69,11 +85,14 @@ namespace SparkleXRTemplates.MagicLeap
 
             if (controllerData.inputDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool isBumperDown))
             {
-                if (previousIsBumberDown != isBumperDown)
+                if (this.bumperPressed != isBumperDown)
+				{
                     foreach (Action<bool> subscriber in bumperSubscribers)
                         subscriber.Invoke(isBumperDown);
 
-                previousIsBumberDown = isBumperDown;
+                    this.bumperPressed = isBumperDown;
+                }
+
             }
             else if (controllerData.deviceFindState != DeviceFindState.Finding)
                 controllerData.FindDevice();
@@ -81,8 +100,14 @@ namespace SparkleXRTemplates.MagicLeap
 
             if (controllerData.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxisTouch, out bool touch))
             {
-                foreach (Action subscriber in touchSubscribers)
+                if(this.touchPadTouch != touch)
+				{
+                    foreach (Action subscriber in touchSubscribers)
                         subscriber.Invoke();
+
+                    this.touchPadTouch = touch;
+                }
+
             }
             else if(controllerData.deviceFindState != DeviceFindState.Finding)
                 controllerData.FindDevice();
@@ -92,6 +117,8 @@ namespace SparkleXRTemplates.MagicLeap
             {
                 foreach (Action<Vector2> subscriber in touchPadPoseSubscribers)
                     subscriber.Invoke(touchValue);
+
+                this.touchPadPose = touchValue;
             }
             else if (controllerData.deviceFindState != DeviceFindState.Finding)
                 controllerData.FindDevice();

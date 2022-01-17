@@ -469,3 +469,307 @@ Received Import Request.
 Start importing Assets/MLControllerInputProvider.cs using Guid(476f614376245224bb47bb1e1e34813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d111bd13cded820295cf26a61dc9c18') in 0.004868 seconds
   Import took 0.007849 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013471 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.837 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.06 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1983 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.0 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2456.
+Total: 1.922800 ms (FindLiveObjects: 0.166700 ms CreateObjectMapping: 0.056400 ms MarkObjects: 1.666800 ms  DeleteObjects: 0.031800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 811.000581 seconds.
+  path: Assets/MLControllerInputProvider.cs
+  artifactKey: Guid(476f614376245224bb47bb1e1e34813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerInputProvider.cs using Guid(476f614376245224bb47bb1e1e34813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9ee88b68fe604a60ae765fae54301c') in 0.007129 seconds
+  Import took 0.011875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19098.099581 seconds.
+  path: Assets/MLControllerTilt.cs
+  artifactKey: Guid(7f8b13aa030d69e4f84d9b38a4e60d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTilt.cs using Guid(7f8b13aa030d69e4f84d9b38a4e60d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95372d473c8201c6fa3267c2f0b0955') in 0.013689 seconds
+  Import took 0.029938 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017952 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.029 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.18 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1983 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.0 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2460.
+Total: 2.102600 ms (FindLiveObjects: 0.222600 ms CreateObjectMapping: 0.088600 ms MarkObjects: 1.736900 ms  DeleteObjects: 0.052300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.692416 seconds.
+  path: Assets/MLControllerTiltInputProvider.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltInputProvider.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2cd3655052af79c9157e25ed7170e63') in 0.012056 seconds
+  Import took 0.015971 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014185 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.69 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.950 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.00 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.0 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2465.
+Total: 2.053800 ms (FindLiveObjects: 0.193200 ms CreateObjectMapping: 0.069900 ms MarkObjects: 1.754200 ms  DeleteObjects: 0.035100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.400539 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(476f614376245224bb47bb1e1e34813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(476f614376245224bb47bb1e1e34813e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0849b6c82d3f9fb9f68e3ee7964d0873') in 0.012237 seconds
+  Import took 0.016888 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015267 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.17 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.966 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.33 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.0 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2469.
+Total: 2.078000 ms (FindLiveObjects: 0.190200 ms CreateObjectMapping: 0.133700 ms MarkObjects: 1.718900 ms  DeleteObjects: 0.034300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013239 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.968 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.06 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.0 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2473.
+Total: 1.790000 ms (FindLiveObjects: 0.226000 ms CreateObjectMapping: 0.071100 ms MarkObjects: 1.423900 ms  DeleteObjects: 0.067100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.826223 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5404725768931a1a612e10d68afa9958') in 0.005917 seconds
+  Import took 0.009528 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016294 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.41 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.042 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.43 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.0 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2477.
+Total: 2.194700 ms (FindLiveObjects: 0.191500 ms CreateObjectMapping: 0.073500 ms MarkObjects: 1.891300 ms  DeleteObjects: 0.037100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 163.817306 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc782842ef7a71e4323e8b0ff7af808b') in 0.005282 seconds
+  Import took 0.009304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022328 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc782842ef7a71e4323e8b0ff7af808b') in 0.002452 seconds
+  Import took 0.005871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.143171 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a0d36fdcfde805b123117a7cb2706c6') in 0.002184 seconds
+  Import took 0.005729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.257503 seconds.
+  path: Assets/MLControllerTiltControllsDescriptor.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltControllsDescriptor.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf5bf2d20c05dbdd803ad8b3c2b8e4d') in 0.010729 seconds
+  Import took 0.014634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002791 seconds.
+  path: Assets/MLControllerTiltControllsDescriptor.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltControllsDescriptor.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf5bf2d20c05dbdd803ad8b3c2b8e4d') in 0.003827 seconds
+  Import took 0.007659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.044758 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc3242ad6e1ae2345be49336f3b1c85') in 0.057299 seconds
+  Import took 0.063936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1181.121222 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73e2d2e2727c14ddc6e142b79ec16ab9') in 0.012766 seconds
+  Import took 0.018815 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73e2d2e2727c14ddc6e142b79ec16ab9') in 0.008639 seconds
+  Import took 0.013486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6496.489083 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f34137c909279ccb12392af31133c88') in 0.003587 seconds
+  Import took 0.008724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 618.724339 seconds.
+  path: Assets/MLControllerTiltProvider.cs
+  artifactKey: Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltProvider.cs using Guid(838b3951b83dd164f980cd9ba3b4dc36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '098f52c1c4fa17a28cf17f64542c6f91') in 0.003977 seconds
+  Import took 0.009559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.392871 seconds.
+  path: Assets/MLControllerTiltControllsDescriptor.cs
+  artifactKey: Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MLControllerTiltControllsDescriptor.cs using Guid(f814d18a6e4f02548a830eaec73e9bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd151ed6b0461e1816184d8a5cf0930') in 0.010884 seconds
+  Import took 0.016409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.579259 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlsDescriptors/MLAdvancedGestureControllsDescriptor.cs
+  artifactKey: Guid(67a9dd590827c644ba48d1cadc8f55e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlsDescriptors/MLAdvancedGestureControllsDescriptor.cs using Guid(67a9dd590827c644ba48d1cadc8f55e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8189d7e614fd81e6c157aeba0e9350a4') in 0.009644 seconds
+  Import took 0.014129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000731 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlsDescriptors/MLAdvancedGestureControllsDescriptor.cs
+  artifactKey: Guid(67a9dd590827c644ba48d1cadc8f55e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/MagicLeap/ControlsDescriptors/MLAdvancedGestureControllsDescriptor.cs using Guid(67a9dd590827c644ba48d1cadc8f55e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8189d7e614fd81e6c157aeba0e9350a4') in 0.005311 seconds
+  Import took 0.008818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.802972 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Abstract/ControlsDescriptor.cs
+  artifactKey: Guid(9526ce8aaa4a32f4fac0e5505bc4bc55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Abstract/ControlsDescriptor.cs using Guid(9526ce8aaa4a32f4fac0e5505bc4bc55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a478f3a71aae35557c3d43950d9a1c') in 0.011190 seconds
+  Import took 0.014662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000691 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Abstract/ControlsDescriptor.cs
+  artifactKey: Guid(9526ce8aaa4a32f4fac0e5505bc4bc55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Abstract/ControlsDescriptor.cs using Guid(9526ce8aaa4a32f4fac0e5505bc4bc55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a478f3a71aae35557c3d43950d9a1c') in 0.005221 seconds
+  Import took 0.008197 seconds .
+

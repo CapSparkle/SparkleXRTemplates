@@ -1,16 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using SparkleXRTemplates;
 
-//TODO: undepend from magic leap
-using SparkleXRTemplates.MagicLeap;
-
-namespace SparkleXRTemplates
+namespace SparkleXRTemplates.MagicLeap
 {
-	public class HandWristTiltControlsDescriptor : ControlsDescriptor
-    {
+    public class MLControllerTiltControllsDescriptor : ControlsDescriptor
+	{
 		[SerializeField]
 		List<UnityEventGameInteractorFloat> methodsToControll;
 
@@ -81,5 +77,5 @@ namespace SparkleXRTemplates
 			requiredXRNodetypeOfInputProvider = XRNodeType.Hand;
 		}
 	}
-}
 
+}
