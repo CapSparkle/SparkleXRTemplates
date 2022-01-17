@@ -1213,3 +1213,35 @@ System memory in use after: 92.3 MB.
 Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2529.
 Total: 1.745400 ms (FindLiveObjects: 0.200800 ms CreateObjectMapping: 0.073500 ms MarkObjects: 1.440600 ms  DeleteObjects: 0.029600 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1956.911210 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc849910c69d8b47b6084131386a5ec') in 0.083064 seconds
+  Import took 0.088368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.059442 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/AstraMiner.unity
+  artifactKey: Guid(32f6721386ce761408ed603eb19e8dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/AstraMiner.unity using Guid(32f6721386ce761408ed603eb19e8dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d471066a5d5586fabe013591e7c094') in 0.008840 seconds
+  Import took 0.012265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.754182 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/AstraMiner 1.unity
+  artifactKey: Guid(2ab47b8876b310945b2c908c0fa25165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/AstraMiner 1.unity using Guid(2ab47b8876b310945b2c908c0fa25165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d613d6e1b863792580846921cd7288') in 0.006732 seconds
+  Import took 0.010691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.408156 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Examples/Template/AstraMine_WithController.unity
+  artifactKey: Guid(2ab47b8876b310945b2c908c0fa25165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Examples/Template/AstraMine_WithController.unity using Guid(2ab47b8876b310945b2c908c0fa25165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '965656986ab8f633109e6b856e8edb07') in 0.006795 seconds
+  Import took 0.010430 seconds .
+
