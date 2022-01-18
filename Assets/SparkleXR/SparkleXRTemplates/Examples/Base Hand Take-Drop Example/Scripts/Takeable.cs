@@ -55,12 +55,10 @@ namespace SparkleXRTemplates.Examples
             print("TryTake occured");
             Hand takingHand = interactor.GetComponent<Hand>();
 
-            if (takingHand == null)
-                return;
-
 
             if (holdingHand != null ||
                 takingHand == null ||
+                takingHand == holdingHand ||
                 takingHand.busy)
                 return;
 

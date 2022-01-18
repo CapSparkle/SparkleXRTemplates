@@ -31,10 +31,13 @@ namespace SparkleXRTemplates.MagicLeap
 
         protected void Start()
 		{
-			if (controllerConnectionHandler == null)
+            xrNodeType = XRNodeType.Controller;
+
+
+            if (controllerConnectionHandler == null)
 				    controllerConnectionHandler = GetComponent<MLControllerConnectionHandlerBehavior>();
 
-            touchSubscribers = new List<Action<bool>>();
+            bumperSubscribers = new List<Action<bool>>();
             touchSubscribers = new List<Action<bool>>();
             touchPadPoseSubscribers = new List<Action<Vector2>>();
 			triggerSubscribers = new List<Action<float>>();
@@ -81,6 +84,8 @@ namespace SparkleXRTemplates.MagicLeap
                     this.triggerValue = triggerValue;
                     foreach (Action<float> subscriber in triggerSubscribers)
                         subscriber.Invoke(triggerValue);
+
+                    print(triggerSubscribers.Count);
                 }
                 else
                     this.triggerValue = 0;

@@ -1218,7 +1218,6 @@ GameObject:
   - component: {fileID: 1305855752}
   - component: {fileID: 1305855756}
   - component: {fileID: 1305855751}
-  - component: {fileID: 1305855758}
   - component: {fileID: 1305855755}
   - component: {fileID: 1305855757}
   - component: {fileID: 1305855750}
@@ -1363,7 +1362,7 @@ MonoBehaviour:
   myControlls:
   - {fileID: 1305855757}
   - {fileID: 1305855750}
-  childToHoldingHand: 0
+  childToHoldingHand: 1
   lockOnTake: 1
   OnTakenBy:
     m_PersistentCalls:
@@ -1415,19 +1414,6 @@ MonoBehaviour:
   bumperMethods: []
   touchPadTouchMethods: []
   touchPadPoseMethods: []
---- !u!114 &1305855758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305855749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ce991f16fdb5c48be6fb38c0487893, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 1
 --- !u!1 &1385039949
 GameObject:
   m_ObjectHideFlags: 0

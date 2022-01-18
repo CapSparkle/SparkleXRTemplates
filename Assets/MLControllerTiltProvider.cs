@@ -59,6 +59,8 @@ namespace SparkleXRTemplates.MagicLeap
         {
             base.Start();
 
+            xrNodeType = XRNodeType.Controller;
+
             mySubscribers = new List<Action<float>>();
             tiltGestureState = new List<TiltGesture>();
         }

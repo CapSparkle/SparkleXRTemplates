@@ -45,11 +45,15 @@ namespace SparkleXRTemplates.MagicLeap
 		{
 			if (!CheckInputProvider(interactor))
 				return false;
+				
 
 			MLControllerInputProvider newProviderActing = interactor.myXRInputProvider.GetComponent<MLControllerInputProvider>();
 
+			print(newProviderActing.name + " " + newProviderActing.GetType().ToString());
+
 			if (newProviderActing != null)
 			{
+				providerActing = newProviderActing;
 
 				var triggerMethodsCasted = triggerMethods
 					.Select(x => (UnityEvent<GameInteractor, float>)x)
@@ -74,13 +78,17 @@ namespace SparkleXRTemplates.MagicLeap
 				touchPadTouchSubscriptions[interactor] = newtouchPadTouchSubscriptionBlocks;
 				touchPadPoseSubscriptions[interactor] = newtouchPadPoseSubscriptionBlocks;
 
+
+				print(triggerSubscriptions[interactor].Count);
+
 				for (int i = 0; i < newTriggerSubscriptionBlocks.Count; i++)
 					providerActing.triggerSubscribers.Add(triggerSubscriptions[interactor][i].Notify);
+
 				for (int i = 0; i < newBumperSubscriptionBlocks.Count; i++)
 					providerActing.bumperSubscribers.Add(bumperSubscriptions[interactor][i].Notify);
-				for (int i = 0; i < newTriggerSubscriptionBlocks.Count; i++)
+				for (int i = 0; i < newtouchPadTouchSubscriptionBlocks.Count; i++)
 					providerActing.touchSubscribers.Add(touchPadTouchSubscriptions[interactor][i].Notify);
-				for (int i = 0; i < newTriggerSubscriptionBlocks.Count; i++)
+				for (int i = 0; i < newtouchPadPoseSubscriptionBlocks.Count; i++)
 					providerActing.touchPadPoseSubscribers.Add(touchPadPoseSubscriptions[interactor][i].Notify);
 
 				return true;
@@ -105,6 +113,9 @@ namespace SparkleXRTemplates.MagicLeap
 					providerActing.touchPadPoseSubscribers.Remove(subscriptionBlock.Notify);
 
 				triggerSubscriptions.Remove(interactor);
+				bumperSubscriptions.Remove(interactor);
+				touchPadTouchSubscriptions.Remove(interactor);
+				touchPadPoseSubscriptions.Remove(interactor);
 
 				providerActing = null;
 				return true;
@@ -116,7 +127,7 @@ namespace SparkleXRTemplates.MagicLeap
 
 		private void Start()
 		{
-			requiredXRNodetypeOfInputProvider = XRNodeType.Hand;
+			requiredXRNodetypeOfInputProvider = XRNodeType.Controller;
 		}
 	}
 }
