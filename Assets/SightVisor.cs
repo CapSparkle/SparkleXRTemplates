@@ -14,13 +14,11 @@ namespace SparkleXRTemplates.Examples
         public void TurnOn()
 		{
             isSightVisorOn = true;
-            selectionGroupToggle.ToggleOnAdvancedSelecting();
 
         }
 
         public void TurnOff()
 		{
-            selectionGroupToggle.ToggleOffAdvancedSelecting();
             isSightVisorOn = false;
 		}
 
@@ -29,9 +27,6 @@ namespace SparkleXRTemplates.Examples
 
         [SerializeField]
         GameObject visorInterface;
-
-        [SerializeField]
-        SelectionGroupToggle selectionGroupToggle;
 
         // Start is called before the first frame update
         void Start()

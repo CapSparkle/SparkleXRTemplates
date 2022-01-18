@@ -11,8 +11,65 @@ using System.Xml.Serialization;
 
 namespace SparkleXRTemplates
 {
-    public class SelectorsManager : MonoBehaviour
+
+	[Serializable]
+	public class ListListIntSerializer
+	{
+        [SerializeField]
+        List<int> storeForData;
+
+        [SerializeField]
+        List<int> dataMarkUp;
+        public ListListIntSerializer(List<List<int>> dataToStore)
+		{
+            storeForData = new List<int>();
+            dataMarkUp = new List<int>();
+
+            foreach (List<int> intList in dataToStore)
+			{
+                storeForData.AddRange(intList);
+                dataMarkUp.Add(intList.Count);
+            }
+		}
+
+        public List<List<int>> ReleaseFromStore()
+		{
+            int dataStoreIndex = 0;
+
+            if (storeForData.Count > 0)
+            {
+                return dataMarkUp.Select((x) =>
+                {
+                    List<int> returnList = storeForData.GetRange(dataStoreIndex, x);
+                    dataStoreIndex += x;
+                    return returnList;
+                })
+                    .ToList();
+            }
+            else
+                return new List<List<int>>();
+
+
+        }
+
+    }
+
+
+	public class SelectorsManager : MonoBehaviour, ISerializationCallbackReceiver
     {
+        [SerializeField]
+        ListListIntSerializer store;
+
+        public void OnBeforeSerialize()
+		{
+            store = new ListListIntSerializer(selectRequirements);
+        }
+
+        public void OnAfterDeserialize()
+        {
+            selectRequirements = store.ReleaseFromStore();
+        }
+
         [SerializeField] 
         GameInteractor correspondingGameInteractor;
 
@@ -23,15 +80,11 @@ namespace SparkleXRTemplates
         [SerializeField]
         SelectionController selectionPredicate;
 
-        //TODO: Add a visualisation in editor or reference to a config
-        [SerializeField]
-		List<List<int>> _minSelectRequirements = new List<List<int>>()
-		{
-            new List<int> (){ 0, 1 },
-            new List<int> (){ 0, 2 }
-		};
 
-		public List<List<int>> minSelectRequirements
+        [SerializeField]
+        public List<List<int>> selectRequirements = new List<List<int>>();
+
+		/*public List<List<int>> minSelectRequirements
 		{
             get
 			{
@@ -55,7 +108,7 @@ namespace SparkleXRTemplates
 
                 _minSelectRequirements = value;
 			}
-		}
+		}*/
 
 
 		#region -selection rules forming-
@@ -143,8 +196,14 @@ namespace SparkleXRTemplates
         {
             selectGroupIndex = 0;
             List<GameInteractable> IntersectSet = new List<GameInteractable>() { };
-            foreach (List<int> selectorsIndexGroup in minSelectRequirements)
+            foreach (List<int> selectorsIndexGroup in selectRequirements)
             {
+                if (selectorsIndexGroup.Count < 1)
+				{
+                    selectGroupIndex++;
+                    continue;
+                }
+
                 IntersectSet = selectors[selectorsIndexGroup[0]].selectedInteractables;
 
                 List<int> listOfInts = new List<int>(selectorsIndexGroup);
@@ -190,7 +249,7 @@ namespace SparkleXRTemplates
 
             if(selectGroupIndex >= 0)
 			{
-                selectedSet = ManagerChooseRules.PrioritizeOneSelector(selectors[minSelectRequirements[selectGroupIndex][0]], selectedSet);
+                selectedSet = ManagerChooseRules.PrioritizeOneSelector(selectors[selectRequirements[selectGroupIndex][0]], selectedSet);
             }
             else
 			{

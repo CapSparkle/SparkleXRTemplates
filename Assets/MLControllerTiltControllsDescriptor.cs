@@ -54,7 +54,7 @@ namespace SparkleXRTemplates.MagicLeap
 			if (newProviderActing != null)
 			{
 
-				var inputList = methodsToControll
+				List<UnityEvent<GameInteractor, float>> inputList = methodsToControll
 					.Select(x => (UnityEvent<GameInteractor, float>)x)
 					.ToList();
 
@@ -94,7 +94,7 @@ namespace SparkleXRTemplates.MagicLeap
 
 		private void Start()
 		{
-			requiredXRNodetypeOfInputProvider = XRNodeType.Hand;
+			requiredXRNodetypeOfInputProvider = XRNodeType.Controller;
 		}
 	}
 

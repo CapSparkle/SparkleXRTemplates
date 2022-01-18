@@ -41,7 +41,7 @@ namespace SparkleXRTemplates.MagicLeap
 
             try
             {
-                inputDeviceCharacteristics = (InputDeviceCharacteristics)(inputDeviceCharacteristics | InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.HeldInHand);
+                inputDeviceCharacteristics = (inputDeviceCharacteristics | InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.HeldInHand);
 
 
                 controllerData = new FeatureGroupDataSource(new List<InputFeatureUsage>() 
@@ -52,6 +52,9 @@ namespace SparkleXRTemplates.MagicLeap
                     (InputFeatureUsage)CommonUsages.primary2DAxisTouch
                 },
                     inputDeviceCharacteristics);
+
+                print("Why am i here?");
+                StartCoroutine(controllerData.FindDevice());
             }
             catch (Exception exc)
             {
@@ -84,7 +87,7 @@ namespace SparkleXRTemplates.MagicLeap
 
             }
             else if (controllerData.deviceFindState != DeviceFindState.Finding)
-                controllerData.FindDevice();
+                StartCoroutine(controllerData.FindDevice());
 
 
             if (controllerData.inputDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool isBumperDown))
@@ -99,7 +102,7 @@ namespace SparkleXRTemplates.MagicLeap
 
             }
             else if (controllerData.deviceFindState != DeviceFindState.Finding)
-                controllerData.FindDevice();
+                StartCoroutine(controllerData.FindDevice());
 
 
             if (controllerData.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxisTouch, out bool touch))
@@ -114,7 +117,7 @@ namespace SparkleXRTemplates.MagicLeap
 
             }
             else if(controllerData.deviceFindState != DeviceFindState.Finding)
-                controllerData.FindDevice();
+                StartCoroutine(controllerData.FindDevice());
 
 
             if (controllerData.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 touchValue))
@@ -125,7 +128,7 @@ namespace SparkleXRTemplates.MagicLeap
                 this.touchPadPose = touchValue;
             }
             else if (controllerData.deviceFindState != DeviceFindState.Finding)
-                controllerData.FindDevice();
+                StartCoroutine(controllerData.FindDevice());
         }
     }
 }

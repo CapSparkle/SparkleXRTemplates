@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEditor;
 using SparkleXRTemplates;
 
 [CustomEditor(typeof(SelectorsManager))]
 public class SelectorsManagerCustomEditor : Editor
 {
+
 	GUIStyle pressedButtongGUIStyle = new GUIStyle();
 	GUIStyle unPressedButtongGUIStyle = new GUIStyle();
 
@@ -73,31 +75,34 @@ public class SelectorsManagerCustomEditor : Editor
 
 	public override void OnInspectorGUI()
 	{
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("correspondingGameInteractor"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("selectionPredicate"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("selectors"));
+
 		selectorsManager = (SelectorsManager)target;
 
-		int currentCount = selectorsManager.minSelectRequirements.Count;
+		int currentCount = selectorsManager.selectRequirements.Count;
 		int countSet = EditorGUILayout.IntField("Number of Selecting Groups", currentCount);
 
-		if(currentCount > countSet)
+		if (currentCount > countSet)
 		{
-			selectorsManager.minSelectRequirements.RemoveRange(countSet, currentCount - countSet);
+			selectorsManager.selectRequirements.RemoveRange(countSet, currentCount - countSet);
 		}
-		else if(currentCount < countSet)
+		else if (currentCount < countSet)
 		{
-			for(int i = 0; i < countSet - currentCount; i ++)
-				selectorsManager.minSelectRequirements.Add(new List<int>());
+			for (int i = 0; i < countSet - currentCount; i++)
+				selectorsManager.selectRequirements.Add(new List<int>());
 		}
 
-		
 		int numberOfSelectors = selectorsManager.selectors.Count;
 
 		for (int i = 0; i < currentCount; i++)
 		{
 			EditorGUILayout.BeginHorizontal();
-			for(int j = 0; j < numberOfSelectors; j ++)
+			for (int j = 0; j < numberOfSelectors; j++)
 			{
-				
-				bool currentValue = selectorsManager.minSelectRequirements[i].Contains(j);
+
+				bool currentValue = selectorsManager.selectRequirements[i].Contains(j);
 
 
 				GUIContent content = new GUIContent(j + ". " + selectorsManager.selectors[j].name);
@@ -107,15 +112,28 @@ public class SelectorsManagerCustomEditor : Editor
 
 				if (valueSet)
 				{
-					if(currentValue)
-						selectorsManager.minSelectRequirements[i].RemoveAll(x => { return x == j; });
+					if (currentValue)
+						selectorsManager.selectRequirements[i].RemoveAll(x => { return x == j; });
 					else
-						selectorsManager.minSelectRequirements[i].Add(j);
+						selectorsManager.selectRequirements[i].Add(j);
 				}
 			}
 			EditorGUILayout.EndHorizontal();
 		}
 
-		base.serializedObject.ApplyModifiedProperties();
+
+
+		if (GUI.changed)
+		{
+			EditorUtility.SetDirty(target);
+		}
+
+		serializedObject.ApplyModifiedProperties();
 	}
+
+	/*public override void OnInspectorGUI()
+	{
+		
+
+	}*/
 }

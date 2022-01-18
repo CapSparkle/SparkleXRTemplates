@@ -37,6 +37,7 @@ namespace SparkleXRTemplates
         float checkPeriod = -1f;
         public IEnumerator FindDevice()
         {
+            Debug.Log("here");
             deviceFindState = DeviceFindState.Finding;
 
             while (deviceFindState != DeviceFindState.Found)
@@ -46,6 +47,8 @@ namespace SparkleXRTemplates
                 List<InputFeatureUsage> currentDeviceInputFeatureUsages;
 
                 InputDevices.GetDevicesWithCharacteristics(inputDeviceCharacteristics ,inputDevices);
+
+                Debug.Log("devices number" + inputDevices.Count.ToString());
 
                 foreach (InputDevice currentInputDevice in inputDevices)
                 {
