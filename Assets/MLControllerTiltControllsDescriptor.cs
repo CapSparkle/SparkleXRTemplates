@@ -53,17 +53,16 @@ namespace SparkleXRTemplates.MagicLeap
 
 			if (newProviderActing != null)
 			{
+				providerActing = newProviderActing;
 
 				List<UnityEvent<GameInteractor, float>> inputList = methodsToControll
 					.Select(x => (UnityEvent<GameInteractor, float>)x)
 					.ToList();
 
 				List<SubscriptionBlock<float>> newSubscriptionBlocks = FormSubscriptionBlocks(interactor, inputList);
-				
-				
+
 				triggerSubscriptions[interactor] = newSubscriptionBlocks;
-
-
+				
 				for (int i = 0; i < methodsToControll.Count; i++)
 					providerActing.AddGestureListener(triggerSubscriptions[interactor][i].Notify, tiltGestureState[i]);
 

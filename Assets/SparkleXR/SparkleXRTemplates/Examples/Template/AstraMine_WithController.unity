@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 1305855757}
   - component: {fileID: 1305855750}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Holme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
