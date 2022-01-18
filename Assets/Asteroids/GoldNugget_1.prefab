@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f51579e14abea439ec72dc308178ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredXRNodetypeOfInputProvider: 0
+  requiredXRNodetypeOfInputProvider: 1
   methodsToControll:
   - m_PersistentCalls:
       m_Calls:

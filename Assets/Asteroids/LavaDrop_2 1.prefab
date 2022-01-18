@@ -408,12 +408,12 @@ GameObject:
   - component: {fileID: 8107975576330207898}
   - component: {fileID: 8107975576333065436}
   - component: {fileID: 3225825140512019809}
-  - component: {fileID: 8107975577214202559}
   - component: {fileID: 7659986474170422002}
   - component: {fileID: 5985210303276973795}
   - component: {fileID: 1507748969}
+  - component: {fileID: -5895418479713410774}
   m_Layer: 0
-  m_Name: LavaDrop_2
+  m_Name: LavaDrop_2 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,50 +464,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.8420498
   m_Center: {x: 0.043750465, y: 0, z: 0}
---- !u!114 &8107975577214202559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8107975576330002282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f51579e14abea439ec72dc308178ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredXRNodetypeOfInputProvider: 1
-  methodsToControll:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7659986474170422002}
-        m_TargetAssemblyTypeName: SparkleXRTemplates.Examples.Takeable, Assembly-CSharp
-        m_MethodName: Take
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7659986474170422002}
-        m_TargetAssemblyTypeName: SparkleXRTemplates.Examples.Takeable, Assembly-CSharp
-        m_MethodName: TryDrop
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  mlGestureMasks: 06000000f9030000
-  gestureStates: 0300000003000000
 --- !u!114 &7659986474170422002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myControlls:
-  - {fileID: 8107975577214202559}
+  - {fileID: -5895418479713410774}
   childToHoldingHand: 0
   lockOnTake: 1
   OnTakenBy:
@@ -576,3 +532,34 @@ MonoBehaviour:
   collidersToHide: []
   ShowColliders: 1
   HasCollision: 0
+--- !u!114 &-5895418479713410774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8107975576330002282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43afd944b2450fc4ba742723a75e8fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredXRNodetypeOfInputProvider: 0
+  triggerMethods:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7659986474170422002}
+        m_TargetAssemblyTypeName: SparkleXRTemplates.Examples.Takeable, Assembly-CSharp
+        m_MethodName: TakeDropInterface
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  bumperMethods: []
+  touchPadTouchMethods: []
+  touchPadPoseMethods: []

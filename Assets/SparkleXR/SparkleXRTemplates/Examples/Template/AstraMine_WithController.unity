@@ -266,7 +266,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99713140}
-  - component: {fileID: 99713142}
   - component: {fileID: 99713141}
   m_Layer: 2
   m_Name: MovingPartOfController
@@ -307,19 +306,6 @@ MonoBehaviour:
   deviceTypeToRefer: 0
   handInputProvider: {fileID: 0}
   controllerInputProvider: {fileID: 1967579099}
---- !u!135 &99713142
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99713139}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.05
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &107706309
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,16 +780,16 @@ MonoBehaviour:
   totalObjects: 0
   valueForProgressBar: 0
   objectPrefabs:
-  - {fileID: 4102681120391610974, guid: 5348a5abff5f36f4fae3d8af33e6d91c, type: 3}
-  - {fileID: 3323593297490651319, guid: c1dc6c3363209014fb6cde4fcf346ff8, type: 3}
-  - {fileID: 6342120974003381631, guid: 9429a3179275af243b1425e7608d1083, type: 3}
-  - {fileID: 999504293370429970, guid: 7644bf3946bd38545ad5c4fc79211e19, type: 3}
-  - {fileID: 6342120974003381631, guid: 5ab0d8e7248bc8844ac448d610252140, type: 3}
-  - {fileID: 8107975576330002282, guid: 2696dc918d3d5694fb710103a1ddc226, type: 3}
-  - {fileID: 4102681120391610974, guid: 5348a5abff5f36f4fae3d8af33e6d91c, type: 3}
-  - {fileID: 3323593297490651319, guid: c1dc6c3363209014fb6cde4fcf346ff8, type: 3}
+  - {fileID: 4102681120391610974, guid: 6cf63064f8fed4f44b29c005ed4ff18d, type: 3}
+  - {fileID: 3323593297490651319, guid: 04604712a55f62643bae94f1539f330f, type: 3}
+  - {fileID: 6342120974003381631, guid: 51116c64ea2bf8844aba48ffe7caacb5, type: 3}
+  - {fileID: 999504293370429970, guid: 8ea039098f52ed249853ab9042550a4e, type: 3}
+  - {fileID: 6342120974003381631, guid: 2798bc649bc8bc445a1762bb3bcf12a8, type: 3}
+  - {fileID: 8107975576330002282, guid: 0abce74f5695c164e9edc2ea08c1a2e3, type: 3}
+  - {fileID: 4102681120391610974, guid: 6cf63064f8fed4f44b29c005ed4ff18d, type: 3}
+  - {fileID: 3323593297490651319, guid: 04604712a55f62643bae94f1539f330f, type: 3}
   keepPrefabLink: 1
-  placementAttempts: 30
+  placementAttempts: 120
   rotateDegresPerAttempt: 2
   randomScale: 1
   scaleMinSize: 0.05
@@ -1091,7 +1077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &903047869
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,7 +1127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1101350616
 Transform:
   m_ObjectHideFlags: 0
@@ -1362,7 +1348,7 @@ MonoBehaviour:
   myControlls:
   - {fileID: 1305855757}
   - {fileID: 1305855750}
-  childToHoldingHand: 1
+  childToHoldingHand: 0
   lockOnTake: 1
   OnTakenBy:
     m_PersistentCalls:
@@ -1595,80 +1581,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 65.342, y: -30, z: 0}
---- !u!1001 &1890966759
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003173519, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003381631, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_Name
-      value: LavaDrop_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342120974003381631, guid: 5ab0d8e7248bc8844ac448d610252140,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5ab0d8e7248bc8844ac448d610252140, type: 3}
 --- !u!1 &1967579097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,7 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerConnectionHandler: {fileID: 1967579102}
-  pressActionOfGesture: 0
+  pressActionOfGesture: 1
   upBentMinAngle: 15
   downBentMinAngle: -15
   lineRend1: {fileID: 1967579100}
@@ -1956,7 +1868,7 @@ Transform:
   - {fileID: 99713140}
   - {fileID: 508050467}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151083335285336510
 GameObject:

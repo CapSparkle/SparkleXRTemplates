@@ -74,8 +74,11 @@ namespace SparkleXRTemplates.MagicLeap
 
         protected void Update()
 		{
-            controllerPosition = controllerConnectionHandler.ConnectedController.Position;
-            controllerOrientation = controllerConnectionHandler.ConnectedController.Orientation;
+			if(controllerConnectionHandler != null)
+			{
+                controllerPosition = controllerConnectionHandler.ConnectedController.Position;
+                controllerOrientation = controllerConnectionHandler.ConnectedController.Orientation;
+            }
 
             if (controllerData.inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
             {

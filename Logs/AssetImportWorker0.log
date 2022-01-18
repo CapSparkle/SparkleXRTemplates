@@ -2565,3 +2565,851 @@ System memory in use after: 92.9 MB.
 Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2808.
 Total: 2.096600 ms (FindLiveObjects: 0.227300 ms CreateObjectMapping: 0.076700 ms MarkObjects: 1.758800 ms  DeleteObjects: 0.032700 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016234 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.98 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.020 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.96 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Unloading 1986 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.7 MB.
+System memory in use after: 92.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2812.
+Total: 2.693400 ms (FindLiveObjects: 0.242600 ms CreateObjectMapping: 0.123100 ms MarkObjects: 2.279500 ms  DeleteObjects: 0.047000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014490 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.866 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.00 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 1986 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.7 MB.
+System memory in use after: 92.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2816.
+Total: 2.201100 ms (FindLiveObjects: 0.262200 ms CreateObjectMapping: 0.083700 ms MarkObjects: 1.820900 ms  DeleteObjects: 0.033300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013283 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.835 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.12 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1986 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.7 MB.
+System memory in use after: 92.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2820.
+Total: 2.079700 ms (FindLiveObjects: 0.256800 ms CreateObjectMapping: 0.102400 ms MarkObjects: 1.687300 ms  DeleteObjects: 0.031900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012276 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.050 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.07 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 1986 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.7 MB.
+System memory in use after: 92.9 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2824.
+Total: 2.490100 ms (FindLiveObjects: 0.257600 ms CreateObjectMapping: 0.097200 ms MarkObjects: 2.090900 ms  DeleteObjects: 0.043400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 9727.566329 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69a715f005cc1fe113fe7c6b8629357e') in 0.156780 seconds
+  Import took 0.161314 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.870601 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f08817ae00736f9be818098ce49f9bb') in 0.118331 seconds
+  Import took 0.122335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.914060 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3253244271f104331df8c804ea52f7db') in 0.071226 seconds
+  Import took 0.075124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000547 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3253244271f104331df8c804ea52f7db') in 0.047456 seconds
+  Import took 0.051181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.637620 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '973072daa901330674737d39e9ee5a9c') in 0.047825 seconds
+  Import took 0.052177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.417281 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b84600b3cce3cd682ef25fd0df0a6159') in 0.027744 seconds
+  Import took 0.031755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.223763 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d973324a9cd8f189ecca96af582f67a') in 0.022703 seconds
+  Import took 0.027291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.392263 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24b52687695312941eebc009ec0f987e') in 0.034843 seconds
+  Import took 0.039071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.827020 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcbf29ac4562f96e76baec0b373f9081') in 0.034263 seconds
+  Import took 0.038948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008153 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcbf29ac4562f96e76baec0b373f9081') in 0.024649 seconds
+  Import took 0.027806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.283965 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43cc9cee5427718fded8bed675784372') in 0.025755 seconds
+  Import took 0.029583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021424 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43cc9cee5427718fded8bed675784372') in 0.019854 seconds
+  Import took 0.023211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.326986 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd220df63c679d046fcd0eeae4b551778') in 0.026584 seconds
+  Import took 0.030575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.753101 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c2e4b7508bdacfe9000f5c8111c37db') in 0.024772 seconds
+  Import took 0.027953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.503920 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '082008856319798174471d4f27757897') in 0.026368 seconds
+  Import took 0.030287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.890223 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caf20ed62780a469018c68321b505b63') in 0.021848 seconds
+  Import took 0.025599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.732330 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '169a59b10c20d52d207841994f8c84e2') in 0.022719 seconds
+  Import took 0.027056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.905918 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3abe4b5e23f91a63b49d5721963da409') in 0.021546 seconds
+  Import took 0.025604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.555479 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ad2694956d6a65678ee0d5c48a4419') in 0.021302 seconds
+  Import took 0.025276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.726665 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '112deeaeeae3f96b40ad415a9655a040') in 0.020488 seconds
+  Import took 0.024266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.644637 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab
+  artifactKey: Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1.prefab using Guid(0cb0d2263a950a74d913d90f122f456f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12edc8fcd4473e829a1b0ddda596eb16') in 0.071391 seconds
+  Import took 0.075397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1 1.prefab
+  artifactKey: Guid(a571d6779e6d8c442900a22dadf7a256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SparkleXR/SparkleXRTemplates/Prefabs/AdvancedInput(ML) #1 1.prefab using Guid(a571d6779e6d8c442900a22dadf7a256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e751fa7d6754e84e7cf4dd8c97842641') in 0.023997 seconds
+  Import took 0.028579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.550790 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26ccb6ea158c0842017c46c6c0c7ccc4') in 0.025478 seconds
+  Import took 0.029582 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.571754 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39e5444f81ebb14e1d1659c91d462cf8') in 0.022031 seconds
+  Import took 0.026422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008920 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39e5444f81ebb14e1d1659c91d462cf8') in 0.025692 seconds
+  Import took 0.028981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.448788 seconds.
+  path: Assets/Asteroids/DummyAsteroid_1 1.prefab
+  artifactKey: Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_1 1.prefab using Guid(6cf63064f8fed4f44b29c005ed4ff18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0da4ca53531a7d79a843da930764ee9') in 0.022030 seconds
+  Import took 0.026395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.224974 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a96ad81f774628e55972f78ecc6d76e6') in 0.109505 seconds
+  Import took 0.113219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.177684 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba3c97711ce6291097fb8dc129b4fcbf') in 0.037992 seconds
+  Import took 0.041207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.922021 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0a5bd3f4d777c76bd017cfc337b45b8') in 0.125237 seconds
+  Import took 0.129114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.975096 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48317c8ce82ecc00f83c4ce6fcf5f2f4') in 0.071398 seconds
+  Import took 0.074939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.808124 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f93d63eeaea2470449d8aa042dd77307') in 0.209890 seconds
+  Import took 0.213348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.076823 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e778614e1fb11e97c25c1593a3676c1') in 0.072803 seconds
+  Import took 0.077245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.949498 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1161525f5725d3c8c7f1a093defe9ba') in 0.072871 seconds
+  Import took 0.077125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.396294 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcc45cda01e0e572d9c41b35ca117449') in 0.069721 seconds
+  Import took 0.073483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.385933 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd9cec46ef69f632f1c24f224f2a9aee') in 0.077849 seconds
+  Import took 0.081637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.112746 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ec10bb14c4c62c108628cdca705032') in 0.080282 seconds
+  Import took 0.083961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.828044 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52957cc13387b9b707014dd044d189eb') in 0.022126 seconds
+  Import took 0.026276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008522 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52957cc13387b9b707014dd044d189eb') in 0.131940 seconds
+  Import took 0.135558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.117482 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00ed18ce818bf883da9d265620f1cdd') in 0.019737 seconds
+  Import took 0.023746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005202 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00ed18ce818bf883da9d265620f1cdd') in 0.016031 seconds
+  Import took 0.019688 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.491774 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c5079c206e4c17ef73a78b9767c21d') in 0.027901 seconds
+  Import took 0.031731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.907162 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '030a61d9a91758bc0a922aaf172bc017') in 0.014009 seconds
+  Import took 0.017891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.600792 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f0d4667167a6f9cb11a1222294a795f') in 0.020864 seconds
+  Import took 0.024432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.470584 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6abb73ff5e56071e0ca91c9a9a9cc0b7') in 0.030997 seconds
+  Import took 0.034196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.784618 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94b60b957e505902d9cca408e0d157a2') in 0.024284 seconds
+  Import took 0.027730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.590921 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90e8339b5dbce24a6f8b9ee5d91095c8') in 0.105109 seconds
+  Import took 0.108972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.181325 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf2c3f1715979a38a0c21a3e91323be2') in 0.020410 seconds
+  Import took 0.024678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.938578 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6934f12a6b57ebbce8f84ca3935b173') in 0.028243 seconds
+  Import took 0.032392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.456382 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa76b672f9169042b4618edb7e8347ae') in 0.130146 seconds
+  Import took 0.134234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.324744 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b155bac6899922976f07c00ccce04c5') in 0.112013 seconds
+  Import took 0.115922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.482703 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e9fc53ef3e261f22118815a5ba6af6') in 0.066059 seconds
+  Import took 0.070421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.424185 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d720bc44c280c3f969748bafaeea63b') in 0.093538 seconds
+  Import took 0.097240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002365 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d720bc44c280c3f969748bafaeea63b') in 0.136110 seconds
+  Import took 0.139306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.003996 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '606902e042dfed765ff006612ed96732') in 0.265433 seconds
+  Import took 0.269514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.590365 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0f78a98b1e606fa6052ab660be81041') in 0.111605 seconds
+  Import took 0.115497 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.268443 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '510e3842d580902dcfc883cd8cd43495') in 0.223874 seconds
+  Import took 0.228848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.695772 seconds.
+  path: Assets/Asteroids/LavaDrop_2.prefab
+  artifactKey: Guid(2696dc918d3d5694fb710103a1ddc226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2.prefab using Guid(2696dc918d3d5694fb710103a1ddc226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4f4d89d0645ccdff1c57164e5560504') in 0.125984 seconds
+  Import took 0.129844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.126745 seconds.
+  path: Assets/Asteroids/LavaDrop_1.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a4884b96b6ecda309003c68a3b798d') in 0.093292 seconds
+  Import took 0.097466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000817 seconds.
+  path: Assets/Asteroids/LavaDrop_1.prefab
+  artifactKey: Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1.prefab using Guid(5ab0d8e7248bc8844ac448d610252140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a4884b96b6ecda309003c68a3b798d') in 0.092147 seconds
+  Import took 0.095470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.639609 seconds.
+  path: Assets/Asteroids/GoldNugget_2.prefab
+  artifactKey: Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2.prefab using Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ab5f7a29cf082db485294bc70fd5dc9') in 0.031263 seconds
+  Import took 0.034868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.388426 seconds.
+  path: Assets/Asteroids/GoldNugget_2.prefab
+  artifactKey: Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2.prefab using Guid(7644bf3946bd38545ad5c4fc79211e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a11640db83ad3123352005b9b3798e') in 0.021723 seconds
+  Import took 0.025325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.261257 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a4664c7eb60ae58e0b0f7ca20776146') in 0.022639 seconds
+  Import took 0.026654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.592001 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d73919d1cfbf43325ae3831b7b69bdb') in 0.028776 seconds
+  Import took 0.032498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.371085 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '217a4257d3610f5a02d292061bc96648') in 0.021978 seconds
+  Import took 0.026325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.547820 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651a850c9806ab4b5c0d4bbc99ff1e91') in 0.022074 seconds
+  Import took 0.025621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.957590 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '337bac4b73b206d0b381328aa535694c') in 0.020472 seconds
+  Import took 0.024074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.334006 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1128ade660de39cceb0776b7ad925a40') in 0.021612 seconds
+  Import took 0.025239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.531201 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6959d1d106f80c4a7e69052a20000f8a') in 0.017409 seconds
+  Import took 0.020552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.844233 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8422283d62488017980169459ef7f540') in 0.016759 seconds
+  Import took 0.020139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.563258 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a0372a7595bedc04b4c5a9fa456b35a') in 0.015720 seconds
+  Import took 0.019586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.749172 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cf2b150b15b0eb320782655fb0b6026') in 0.017533 seconds
+  Import took 0.021319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.321403 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4628006abb17a0f1bd5dc4a35fbf6711') in 0.016041 seconds
+  Import took 0.020284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.746472 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091b75e23921d2f83bf151385726bc3a') in 0.016638 seconds
+  Import took 0.020201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.194722 seconds.
+  path: Assets/Asteroids/GoldNugget_1.prefab
+  artifactKey: Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1.prefab using Guid(9429a3179275af243b1425e7608d1083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4193483d4a7d718b769353412a611f0') in 0.022579 seconds
+  Import took 0.026157 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014526 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.928 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.13 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1986 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.9 MB.
+System memory in use after: 93.2 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2829.
+Total: 2.508200 ms (FindLiveObjects: 0.399900 ms CreateObjectMapping: 0.114200 ms MarkObjects: 1.925100 ms  DeleteObjects: 0.067600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012347 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.897 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.19 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Unloading 1986 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.9 MB.
+System memory in use after: 93.2 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2833.
+Total: 2.420300 ms (FindLiveObjects: 0.240300 ms CreateObjectMapping: 0.091900 ms MarkObjects: 2.052800 ms  DeleteObjects: 0.034200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 331.977630 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c4f13bc496203b81ad53bacee9eafa9') in 0.125429 seconds
+  Import took 0.137866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.104188 seconds.
+  path: Assets/Asteroids/DummyAsteroid_2 1.prefab
+  artifactKey: Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/DummyAsteroid_2 1.prefab using Guid(04604712a55f62643bae94f1539f330f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa691a9a01a557a7cbc77b2a368e6ae') in 0.074353 seconds
+  Import took 0.077645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.192128 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fe52843285ab8ac253c2cf10cfb5efc') in 0.020179 seconds
+  Import took 0.023513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.351405 seconds.
+  path: Assets/Asteroids/GoldNugget_1_1.prefab
+  artifactKey: Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_1_1.prefab using Guid(51116c64ea2bf8844aba48ffe7caacb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95ddfbaa11983540af79819195b281fd') in 0.015517 seconds
+  Import took 0.019745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.393063 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c739a9f9bb1678813fd3a56d39a7549b') in 0.019748 seconds
+  Import took 0.023194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.163309 seconds.
+  path: Assets/Asteroids/GoldNugget_2 1.prefab
+  artifactKey: Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/GoldNugget_2 1.prefab using Guid(8ea039098f52ed249853ab9042550a4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d7f18ecabd24e96430dda57492dc556') in 0.018040 seconds
+  Import took 0.021663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.368229 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d624e565f8d916b86bf81ebec86c47d') in 0.116434 seconds
+  Import took 0.120808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.854286 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0c931f25a44a30a83d55f2be72d23e') in 0.093324 seconds
+  Import took 0.097477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.434172 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cef588bb4aa1f60a0d5ac6483760e572') in 0.086263 seconds
+  Import took 0.089794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002046 seconds.
+  path: Assets/Asteroids/LavaDrop_1 1.prefab
+  artifactKey: Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_1 1.prefab using Guid(2798bc649bc8bc445a1762bb3bcf12a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cef588bb4aa1f60a0d5ac6483760e572') in 0.064190 seconds
+  Import took 0.067760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.112113 seconds.
+  path: Assets/Asteroids/LavaDrop_2 1.prefab
+  artifactKey: Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asteroids/LavaDrop_2 1.prefab using Guid(0abce74f5695c164e9edc2ea08c1a2e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bbc5ab5a9876383e8797c66c5912715') in 0.099604 seconds
+  Import took 0.103708 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014081 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.918 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.22 ms, found 69 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1986 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.0 MB.
+System memory in use after: 93.2 MB.
+
+Unloading 87 unused Assets to reduce memory usage. Loaded Objects now: 2838.
+Total: 3.168500 ms (FindLiveObjects: 0.323100 ms CreateObjectMapping: 0.116600 ms MarkObjects: 2.674300 ms  DeleteObjects: 0.053300 ms)
+
