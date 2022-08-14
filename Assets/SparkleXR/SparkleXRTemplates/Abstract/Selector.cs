@@ -26,10 +26,8 @@ namespace SparkleXRTemplates
             }
             protected set
             {
-                print("change occured!");
                 foreach(GameInteractable interactable in value)
                 {
-                    print("Try add an GameInteractable");
                     AddInteractable(interactable);
                 }
             }

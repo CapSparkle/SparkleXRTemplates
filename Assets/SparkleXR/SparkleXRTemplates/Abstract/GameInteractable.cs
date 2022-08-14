@@ -15,14 +15,12 @@ namespace SparkleXRTemplates
         {
             foreach (ControlsDescriptor controls in myControlls)
             {
-                print("interacting with " + transform.name);
                 controls.StartHandling(interactor);
             }
         }
 
         public void UnInteract(GameInteractor interactor)
         {
-            print("uninteract");
             foreach (ControlsDescriptor controls in myControlls)
             {
                 controls.StopHandling(interactor);

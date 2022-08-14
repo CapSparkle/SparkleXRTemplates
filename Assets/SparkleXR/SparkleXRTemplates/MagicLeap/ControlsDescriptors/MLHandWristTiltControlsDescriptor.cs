@@ -9,7 +9,7 @@ using SparkleXRTemplates.MagicLeap;
 
 namespace SparkleXRTemplates
 {
-	public class HandWristTiltControlsDescriptor : ControlsDescriptor
+	public class MLHandWristTiltControlsDescriptor : ControlsDescriptor
     {
 		[SerializeField]
 		List<UnityEventGameInteractorFloat> methodsToControll;

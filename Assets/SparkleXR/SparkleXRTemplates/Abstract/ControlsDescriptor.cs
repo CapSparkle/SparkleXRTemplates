@@ -25,9 +25,7 @@ namespace SparkleXRTemplates
 
 
         protected bool CheckInputProvider(GameInteractor interactor)
-        {
-            print(requiredXRNodetypeOfInputProvider.ToString() + " " + interactor.myXRInputProvider.xrNodeType.ToString());
-                
+        {       
             if (interactor.myXRInputProvider.xrNodeType == requiredXRNodetypeOfInputProvider)
                 return true;
             else
