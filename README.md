@@ -1,6 +1,9 @@
 # SparkleXRTemplates
 
 __! The project development is stoped at 2021 !__
+__! You should consider it as a sketch or a prototype without any proveen stability !__ 
+
+
 <br />
 Framework for Unity XR development:
 - Providing modules truly usable out-of-the box. Which are not ones (from well-known frameworks) with a bunch of responsibilities and thousands of codelines to be rewritten for each project.  
