@@ -18,7 +18,7 @@ https://drive.google.com/file/d/1lL2xttva5YtjcTJ-lUWvRUfO_8NbFa3v/view?usp=shari
 
 
 ## Advanced selection system
-Advanced selection system allows to combine several XR inputs to create comfortable user experience
+Advanced selection system allows to combine several XR input sources to create comfortable user experience
 <br />
 Scheme #1 Foreground noise-resistant selection
 ![Example_1](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/a8ff7ef7-61bb-440f-9b86-ad3c1c70c858)
