@@ -1,6 +1,7 @@
 # SparkleXRTemplates
 
 __! The project development is stoped at 2021 !__
+<br />
 __! You should consider it as a sketch or a prototype without any proveen stability !__ 
 
 
