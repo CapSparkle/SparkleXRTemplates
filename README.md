@@ -2,7 +2,7 @@
 
 __! The project development is stoped at 2021 !__
 <br />
-__! You should consider it as a proof of concept or a prototype without any proveen stability !__ 
+__! You should consider it as a proof of concept or a prototype without any prooven stability !__ 
 
 
 <br />
