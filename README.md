@@ -35,3 +35,13 @@ In the following example green cube is selected.
 ![Illustrate](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/7e28d9ea-7cdf-49e8-808f-0801b90933e8)
 <br />
 User have missed to point straight at it, but thanks to eye focus point data (visualized as sphere on screenshot) and additional "finger_2" selector it is stil selected. We don't expect amazing accuracy from the user - we try to understand him instead! 
+<br />
+<br />
+You can configure your own selecting system creating logical rule (Disjunctive normal form) for aggregating selecting results from several selectors. You also can have as much selectors as you want and configure them with their own selecting predicates.
+![unnamed](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/14a82102-f865-4de6-bc63-3a5a57c9ba66)
+For example here we see the followng configuration:
+- Check if there is something selected by HandRaycast and EyeGaze
+- Then check if there is something selected only by HandRaycast
+- Then check if there is something selected by HandRaycast and EyeGaze selector
+<br />
+If at any step there will be selected object it will be choosen to interact with (prioritizing first rule over second, second over third and so on)
