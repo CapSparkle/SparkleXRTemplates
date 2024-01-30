@@ -25,4 +25,5 @@ Example #1 Foreground noise-resistant selection
 <br />
 This algorithm understands users intentions using both her eyes focus point and hand pointing direction. In space with tight interactive object placement simple raycast selecting algoritm tend to select the several objects to interact with. But high priority space by sight focus point resolves ambiguosity
 <br />
+<br />
 Example #2 Accuracy-asisntant selection
