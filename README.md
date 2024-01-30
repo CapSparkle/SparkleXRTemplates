@@ -20,10 +20,18 @@ https://drive.google.com/file/d/1lL2xttva5YtjcTJ-lUWvRUfO_8NbFa3v/view?usp=shari
 ## Advanced selection system
 Advanced selection system allows to combine several XR inputs to create comfortable user experience
 <br />
-Example #1 Foreground noise-resistant selection
-![Example_1](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/0d6751a3-aa61-4a14-8cf8-75341888e058)
+Scheme #1 Foreground noise-resistant selection
+![Example_1](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/a8ff7ef7-61bb-440f-9b86-ad3c1c70c858)
 <br />
-This algorithm understands users intentions using both her eyes focus point and hand pointing direction. In space with tight interactive object placement simple raycast selecting algoritm tend to select the several objects to interact with. But high priority space by sight focus point resolves ambiguosity
+This algorithm "understands" users intentions using both her eyes focus point and hand pointing direction. In space with tight interactive object placement simple raycast selecting algoritm tend to select the several objects to interact with. But high priority space by sight focus point resolves ambiguosity
 <br />
 <br />
-Example #2 Accuracy-asisntant selection
+Scheme #2 Accuracy-asisntant selection
+![Example_2](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/600578e9-ba32-44f2-bbbe-e7865f2af94c)
+Algorithm decreases requirements for pointing accuracy using additional spherecast selector for hand finger. If there is no objects selected by ray ("finger_1" selector) it checks if there any objects selected by "finger_2". And it also prioritises objects from "high priority space by eye focus point.
+<br />
+<br />
+In the following example green cube is selected. 
+![Illustrate](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/7e28d9ea-7cdf-49e8-808f-0801b90933e8)
+<br />
+User have missed to point straight at it, but thanks to eye focus point data (visualized as sphere on screenshot) and additional "finger_2" selector it is stil selected. We don't expect amazing accuracy from the user - we try to understand him instead! 
