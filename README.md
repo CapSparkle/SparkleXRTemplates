@@ -1,6 +1,6 @@
 # SparkleXRTemplates
 Example presented in Assets/SparkleXR/SparkleXRTemplates/Examples/Template. 
-</ br>
+< br/>
 This should be run using it with MagicLeap or with MagicLeap Lab Simulator
 
 draw.io UML class diagrams:
