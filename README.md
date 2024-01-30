@@ -37,7 +37,7 @@ In the following example green cube is selected.
 User have missed to point straight at it, but thanks to eye focus point data (visualized as sphere on screenshot) and additional "finger_2" selector it is stil selected. We don't expect amazing accuracy from the user - we try to understand him instead! 
 <br />
 <br />
-You can configure your own selecting system creating logical rule (Disjunctive normal form) for aggregating selecting results from several selectors. You also can have as much selectors as you want and configure them with their own selecting predicates.
+You can configure your own selecting system creating logical rule (Disjunctive normal form) for aggregating selecting results from several selectors <br /> (You also can have as much selectors as you want and configure them with their own selecting predicates)
 ![unnamed](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/14a82102-f865-4de6-bc63-3a5a57c9ba66)
 <br />
 For example here we see the followng configuration:
