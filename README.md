@@ -28,7 +28,7 @@ This algorithm "understands" users intentions using both her eyes focus point an
 <br />
 Scheme #2 Accuracy-asisntant selection
 ![Example_2](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/600578e9-ba32-44f2-bbbe-e7865f2af94c)
-Algorithm decreases requirements for pointing accuracy using additional spherecast selector for hand finger. If there is no objects selected by ray ("finger_1" selector) it checks if there any objects selected by "finger_2". And it also prioritises objects from "high priority space by eye focus point.
+Algorithm decreases requirements for pointing accuracy using additional spherecast selector for hand finger. If there is no objects selected by ray ("finger_1" selector) it checks if there any objects selected by "finger_2". And it also prioritises objects from "high priority space" by eye focus point.
 <br />
 <br />
 In the following example green cube is selected. 
@@ -39,6 +39,7 @@ User have missed to point straight at it, but thanks to eye focus point data (vi
 <br />
 You can configure your own selecting system creating logical rule (Disjunctive normal form) for aggregating selecting results from several selectors. You also can have as much selectors as you want and configure them with their own selecting predicates.
 ![unnamed](https://github.com/CapSparkle/SparkleXRTemplates/assets/25351821/14a82102-f865-4de6-bc63-3a5a57c9ba66)
+<br />
 For example here we see the followng configuration:
 - Check if there is something selected by HandRaycast and EyeGaze
 - Then check if there is something selected only by HandRaycast
