@@ -17,6 +17,7 @@ https://drive.google.com/file/d/1lsO_GHqIjDzBl5lddKW1vuFHeGU6Kvwp/view?usp=shari
 https://drive.google.com/file/d/1lL2xttva5YtjcTJ-lUWvRUfO_8NbFa3v/view?usp=sharing
 
 
+## Advanced selection system
 Advanced selection system allows to combine several XR inputs to create comfortable user experience
 <br />
 Example #1 Foreground noise-resistant selection
