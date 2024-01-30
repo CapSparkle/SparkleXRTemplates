@@ -7,7 +7,7 @@ __! You should consider it as a proof of concept or a prototype without any proo
 
 <br />
 
-Framework for Unity XR development:
+This framework for Unity XR development:
 - Providing modules truly usable out-of-the box. Which are not ones (from well-known frameworks) with a bunch of responsibilities and thousands of codelines to be rewritten for each project.  
 - Having flexible architecture simple to extend
 - Maintaining at least sequence cohesion and data structure coupling for all modules.
