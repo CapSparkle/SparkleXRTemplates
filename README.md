@@ -19,6 +19,8 @@ This should be run using it with MagicLeap or with MagicLeap Lab Simulator
 
 draw.io UML class diagrams:
 - for core library modules
+![image](https://github.com/user-attachments/assets/1db5764f-657f-4b1c-859d-96db934a3146)
+
 https://drive.google.com/file/d/1lsO_GHqIjDzBl5lddKW1vuFHeGU6Kvwp/view?usp=sharing
 
 - for MagicLeap astra miner game example
