@@ -19,11 +19,11 @@ This should be run using it with MagicLeap or with MagicLeap Lab Simulator
 
 draw.io UML class diagrams:
 - for core library modules
+https://github.com/CapSparkle/SparkleXRTemplates/blob/main/architecture_core.drawio
 ![image](https://github.com/user-attachments/assets/1db5764f-657f-4b1c-859d-96db934a3146)
 
-https://drive.google.com/file/d/1lsO_GHqIjDzBl5lddKW1vuFHeGU6Kvwp/view?usp=sharing
-
 - for MagicLeap astra miner game example
+https://github.com/CapSparkle/SparkleXRTemplates/blob/main/architecture_template.drawio
 https://drive.google.com/file/d/1lL2xttva5YtjcTJ-lUWvRUfO_8NbFa3v/view?usp=sharing
 
 
