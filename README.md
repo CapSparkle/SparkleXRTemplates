@@ -17,14 +17,13 @@ Example presented in Assets/SparkleXR/SparkleXRTemplates/Examples/Template.
 <br />
 This should be run using it with MagicLeap or with MagicLeap Lab Simulator
 
-draw.io UML class diagrams:
+draw.io UML class diagrams (open with draw.io):
 - for core library modules
 https://github.com/CapSparkle/SparkleXRTemplates/blob/main/architecture_core.drawio
 ![image](https://github.com/user-attachments/assets/1db5764f-657f-4b1c-859d-96db934a3146)
 
 - for MagicLeap astra miner game example
 https://github.com/CapSparkle/SparkleXRTemplates/blob/main/architecture_template.drawio
-https://drive.google.com/file/d/1lL2xttva5YtjcTJ-lUWvRUfO_8NbFa3v/view?usp=sharing
 
 
 ## Advanced selection system
